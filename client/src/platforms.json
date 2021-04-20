@@ -1,0 +1,22 @@
+[
+    {
+        "id": "netflix",
+        "title": "Netflix",
+        "icon": "/services/netflix.jpg"
+    },
+    {
+        "id": "disney_plus",
+        "title": "Disney+",
+        "icon": "/services/disney.png"
+    },
+    {
+        "id": "amazon_prime",
+        "title": "Amazone Prime",
+        "icon": "/services/prime.jpg"
+    },
+    {
+        "id": "hulu",
+        "title": "Hulu",
+        "icon": "/services/hulu.jpg"
+    }
+]

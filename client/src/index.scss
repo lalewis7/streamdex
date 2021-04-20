@@ -1,0 +1,17 @@
+
+// import all bootstrap files
+// https://getbootstrap.com/docs/4.0/getting-started/theming/
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$enable-gradients: true;
+
+.showcase-gradient:after {
+    display: inline-block;
+    background: linear-gradient(to top, rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
