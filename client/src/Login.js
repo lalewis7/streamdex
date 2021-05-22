@@ -348,7 +348,7 @@ class Login extends React.Component {
             if (res.ok){
                 res.text().then(token => {
                     // save token
-                    Storage.setToken(token);
+                    this.props.setToken(token);
                     // remove login page
                     $('#loginModal').modal('hide');
                     // update self info
@@ -358,15 +358,8 @@ class Login extends React.Component {
                     })
                     .then(res => res.json())
                     .then(self => {
-                        Storage.setUsername(self.username);
-                        Storage.setID(self.id);
-                        Storage.setEmail(self.email);
-                        Storage.setAdmin(self.admin);
-                        Storage.setEmailVerified(self.email_verified);
-                    })
-                    .then(() => {
-                        this.props.update();
-                    })
+                        this.props.setUser(self);
+                    });
                 });
             }
             // incorrect credentials
@@ -392,7 +385,7 @@ class Login extends React.Component {
             </div>
             <div class="modal-body">
                 <form onSubmit={this.login}>
-                    <LoginForm getData = {this.loginDataCB} passwordClass = {this.state.passwordClass}/>
+                    <LoginForm getData = {this.loginDataCB} passwordClass = {this.state.passwordClass} />
                     <button type="submit" class="btn btn-primary btn-block">LOGIN</button>
                     <button type="button" class="btn btn-outline-secondary btn-block" onClick={this.swapPage}>SIGN UP</button>
                 </form>

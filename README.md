@@ -27,3 +27,8 @@
 Ideas
 
 Watchlist so users are notified when a selected film becomes available on one of the platforms they have
+
+Front Page
+
+"Discover new shows from all your favorite streaming services."
+"Disover now"

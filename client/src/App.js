@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // import react router components
 import {
@@ -20,13 +22,41 @@ import Settings from './Settings.js';
 import Profile from './Profile.js';
 import Streams from './Streams.js';
 
-function App() {
+class App extends React.Component{
+  constructor(props) {
+    super(props);
 
-  return (
-    <div>
+    this.state = {
+      token: sessionStorage.getItem('token'),
+      user: sessionStorage.getItem('user') ? JSON.parse(sessionStorage.getItem('user')) : null,
+    }
+
+    this.setToken = this.setToken.bind(this);
+    this.setUser = this.setUser.bind(this);
+
+  }
+
+  setToken(val) {
+    if (val!=null)
+      sessionStorage.setItem("token", val);
+    else
+      sessionStorage.removeItem("token");
+    this.setState({token: val});
+  }
+
+  setUser(val){
+    if (val!=null)
+      sessionStorage.setItem("user", JSON.stringify(val));
+    else
+      sessionStorage.removeItem("user");
+    this.setState({user: val});
+  }
+
+  render(){
+    return (<div>
       <BrowserRouter>
-        <Nav />
-        <Login update = {() => {this.forceUpdate().bind(this)}}/>
+        <Nav setToken={this.setToken} state = {{token: this.state.token, user: this.state.user}}/>
+        <Login setToken={this.setToken} setUser={this.setUser} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/discover" component={Discover} />
@@ -37,8 +67,18 @@ function App() {
           <Route render={() => <NotFound/>} />
         </Switch>
       </BrowserRouter>
+    </div>);
+  }
+
+}
+
+function AppExport() {
+
+  return (
+    <div>
+      <App />
     </div>
   );
 }
 
-export default App;
+export default AppExport;

@@ -37,13 +37,13 @@ class Nav extends React.Component{
     }
 
     logout (evt) {
-        Storage.removeToken();
-        this.forceUpdate();
+        this.props.setToken(null);
     }
 
     render(){
         var accItem = <a class="dropdown-item" href="#" onClick={this.logout}>Logout</a>;
-        if (!Storage.getToken()){
+        console.log(this.props);
+        if (!this.props.state.token || this.props.state.token == null){
             accItem = <button type="button" class="dropdown-item dropdown-primary" data-toggle="modal" data-target="#loginModal">
                 Sign Up / Login
             </button>;
