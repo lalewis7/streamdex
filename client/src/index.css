@@ -81,3 +81,8 @@ input:checked + .slider:before {
   background-color: #007bff;
   color: white;
 }
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}

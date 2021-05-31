@@ -11,16 +11,16 @@ import {
 } from "react-router-dom";
 
 // import all pages
-import Home from './Home.js';
-import Discover from './Discover.js';
-import NotFound from './NotFound.js';
-import Search from './Search.js';
-import Nav from './Nav.js';
-import Title from './Title.js';
-import Login from './Login.js';
-import Settings from './Settings.js';
-import Profile from './Profile.js';
-import Streams from './Streams.js';
+import Home from './pages/Home.js';
+import Discover from './pages/Discover.js';
+import NotFound from './pages/NotFound.js';
+import Search from './pages/Search.js';
+import Nav from './pages/Nav.js';
+import Title from './pages/TitlePage.js';
+import Login from './comps/Login.js';
+import Settings from './comps/Settings.js';
+import Profile from './pages/Profile.js';
+import Streams from './pages/Streams.js';
 
 class App extends React.Component{
   constructor(props) {
@@ -53,7 +53,7 @@ class App extends React.Component{
   }
 
   render(){
-    return (<div>
+    return (<div class="min-vh-100 d-flex flex-column">
       <BrowserRouter>
         <Nav setToken={this.setToken} state = {{token: this.state.token, user: this.state.user}}/>
         <Login setToken={this.setToken} setUser={this.setUser} />

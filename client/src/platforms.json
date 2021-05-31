@@ -18,5 +18,25 @@
         "id": "hulu",
         "title": "Hulu",
         "icon": "/services/hulu.jpg"
+    },
+    {
+        "id": "hbo_max",
+        "title": "HBO Max",
+        "icon": "/services/hbo_max.png"
+    },
+    {
+        "id": "yt_prem",
+        "title": "YouTube Premium",
+        "icon": "/services/yt_prem.png"
+    },
+    {
+        "id": "peacock",
+        "title": "Peacock",
+        "icon": "/services/peacock.png"
+    },
+    {
+        "id": "espn_plus",
+        "title": "ESPN+",
+        "icon": "/services/espn.png"
     }
 ]

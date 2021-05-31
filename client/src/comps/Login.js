@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from "react-router-dom";
-import Config from './config.js';
+import Config from '../config.js';
 import $ from 'jquery'; 
 
-var Storage = require('./storage.js');
-var Validate = require('./validate.js');
+var Storage = require('../storage.js');
+var Validate = require('../validate.js');
 
 /**
  * Contains all inputs and labels for signup form
@@ -173,22 +173,22 @@ class SignupForm extends React.Component {
     render(){
         return <div>
             <div class="form-group">
-                <label for="signupUsername">Username</label>
+                <label for="signupUsername" class="form-label">Username</label>
                 <input type="text" class={"form-control "+this.state.usernameClass} id="signupUsername" placeholder="Username" value={this.state.username} onChange={this.usernameChange} onBlur={this.usernameValidate}/>
                 <div class="invalid-feedback">{this.state.usernameInvalid}</div>
             </div>
             <div class="form-group">
-                <label for="signupEmail">Email</label>
+                <label for="signupEmail" class="form-label">Email</label>
                 <input type="email" class={"form-control "+this.state.emailClass} id="signupEmail" placeholder="Email" value={this.state.email} onChange={this.emailChange} onBlur={this.emailValidate}/>
                 <div class="invalid-feedback">Email invalid.</div>
             </div>
             <div class="form-group">
-                <label for="signupPassword">Password</label>
+                <label for="signupPassword" class="form-label">Password</label>
                 <input type="password" class={"form-control "+this.state.passwordClass} id="signupPassword" placeholder="Password" value={this.state.password} onChange={this.passwordChange} onBlur={this.passwordValidate}/>
                 <div class="invalid-feedback">Password must be 8-64 characters long.</div>
             </div>
             <div class="form-group">
-                <label for="signupPasswordConfirm">Confirm Password</label>
+                <label for="signupPasswordConfirm" class="form-label">Confirm Password</label>
                 <input type="password" class={"form-control "+this.state.passwordConfirmClass} id="signupPasswordConfirm" placeholder="Confirm Password" value={this.state.passwordConfirm} onChange={this.passwordConfirmChange} />
                 <div class="invalid-feedback">Passwords do not match.</div>
             </div>
@@ -236,11 +236,11 @@ class LoginForm extends React.Component {
     render(){
         return <div>
             <div class="form-group">
-                <label for="loginUsername">Username / Email</label>
+                <label for="loginUsername" class="form-label">Username / Email</label>
                 <input type="text" class="form-control" id="loginUsername" placeholder="Username or Email" value={this.state.user} name="user" onChange={this.handleChange}/>
             </div>
             <div class="form-group">
-                <label for="loginPassword">Password</label>
+                <label for="loginPassword" class="form-label">Password</label>
                 <input type="password" class={"form-control "+this.props.passwordClass} id="loginPassword" placeholder="Password" value={this.state.password} name="loginPassword" onChange={this.passwordChange} />
                 <div class="invalid-feedback">Username or password incorrect. Please try again.</div>
             </div>

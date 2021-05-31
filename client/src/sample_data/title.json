@@ -1,0 +1,26 @@
+{
+    "id": "1",
+    "img": "/frozen.jpg",
+    "title": "Frozen",
+    "trailer": "R-cdIvgBCWY",
+    "year": "2013",
+    "runtime": "132",
+    "mpaa": "pg",
+    "tags": ["family", "animation", "comedy", "adventure"],
+    "description": "When their kingdom becomes trapped in perpetual winter, fearless Anna (Kristen Bell) joins forces with mountaineer Kristoff (Jonathan Groff) and his reindeer sidekick to find Anna's sister, Snow Queen Elsa (Idina Menzel), and break her icy spell. Although their epic journey leads them to encounters with mystical trolls, a comedic snowman (Josh Gad), harsh conditions, and magic at every turn, Anna and Kristoff bravely push onward in a race to save their kingdom from winter's cold grip.",
+    "imdb_rating": "",
+    "links": [
+        {
+            "platform": "yt_prem",
+            "link": "https://www.hulu.com/watch/acf691ac-4339-4a0e-ab6e-b263799142bc"
+        },
+        {
+            "platform": "peacock",
+            "link": "https://www.disneyplus.com/video/8e06a8b7-d667-4e31-939d-f40a6dd78a88?pid=AssistantSearch"
+        },
+        {
+            "platform": "hbo_max",
+            "link": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.5aa9f6f7-cb2a-37b4-277e-c31c18ab8cb4?autoplay=1&ref_=atv_cf_strg_wb"
+        }
+    ]
+}

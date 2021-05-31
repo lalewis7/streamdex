@@ -1,11 +1,11 @@
 import React, { Profiler } from 'react';
 import ReactDOM from 'react-dom';
 
-import Settings from './Settings.js';
+import Settings from '../comps/Settings.js';
 
-var Validate = require('./validate.js');
-var Config = require('./config.js');
-var Storage = require('./storage.js');
+var Validate = require('../validate.js');
+var Config = require('../config.js');
+var Storage = require('../storage.js');
 
 class Profile extends React.Component{
 
@@ -114,32 +114,33 @@ class Profile extends React.Component{
     render(){
         var content = <div>
             <form>
-                <div class="form-group">
-                    <label for="accUsername">Username</label>
+                <h4>User Information</h4>
+                <div class="mb-3">
+                    <label for="accUsername" class="form-label">Username</label>
                     <input type="text" class={"form-control "+this.state.usernameClass} id="accUsername" placeholder="Username" value={this.state.username} onChange={this.usernameChange} onBlur={this.usernameValidate}/>
                     <div class="invalid-feedback">{this.state.usernameInvalid}</div>
                 </div>
-                <div class="form-group">
-                    <label for="accEmail">Email</label>
+                <div class="mb-3">
+                    <label for="accEmail" class="form-label">Email</label>
                     <input type="email" class={"form-control "+this.state.emailClass} id="accEmail" placeholder="Email" value={this.state.email} onChange={this.emailChange} onBlur={this.emailValidate}/>
                     <div class="invalid-feedback">Email invalid.</div>
                 </div>
                 <hr/>
                 <h4>Change Password</h4>
-                <div class="form-group">
-                    <label for="accCurentPassword">Current Password</label>
+                <div class="mb-3">
+                    <label for="accCurentPassword" class="form-label">Current Password</label>
                     <input type="password" class="form-control " id="accCurentPassword" placeholder="Current Password" value={this.state.currentPassword} onChange={this.currentPasswordChange} />
                     <small id="passwordHelpBlock" class="form-text text-muted">
                         Your current password is required to change your password.
                     </small>
                 </div>
-                <div class="form-group">
-                    <label for="accPassword">New Password</label>
+                <div class="mb-3">
+                    <label for="accPassword" class="form-label">New Password</label>
                     <input type="password" class={"form-control "+this.state.newPasswordClass} id="accPassword" placeholder="New Password" value={this.state.newPassword} onChange={this.newPasswordChange} onBlur={this.newPasswordValidate}/>
                     <div class="invalid-feedback">Password must be 8-64 characters long.</div>
                 </div>
-                <div class="form-group">
-                    <label for="accPasswordConfirm">Confirm Password</label>
+                <div class="mb-3">
+                    <label for="accPasswordConfirm" class="form-label">Confirm Password</label>
                     <input type="password" class={"form-control "+this.state.newPasswordConfClass} id="accPasswordConfirm" placeholder="Confirm Password" value={this.state.newPasswordConf} onChange={this.newPasswordConfChange} />
                     <div class="invalid-feedback">Passwords do not match.</div>
                 </div>
