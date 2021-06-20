@@ -1,0 +1,795 @@
+2021-06-19 11:27:37 [info]: API listening at http://localhost:9000
+2021-06-19 11:29:14 [info]: API listening at http://localhost:9000
+2021-06-19 11:29:17 [info]: ::1 (POST) /titles
+2021-06-19 11:59:39 [info]: API listening at http://localhost:9000
+2021-06-19 11:59:44 [info]: ::1 (POST) /titles
+2021-06-19 12:00:06 [info]: API listening at http://localhost:9000
+2021-06-19 12:00:08 [info]: ::1 (POST) /titles
+2021-06-19 12:00:33 [info]: API listening at http://localhost:9000
+2021-06-19 12:00:35 [info]: ::1 (POST) /titles
+2021-06-19 12:09:49 [info]: API listening at http://localhost:9000
+2021-06-19 12:09:52 [info]: ::1 (POST) /titles
+2021-06-19 12:10:39 [info]: ::1 (POST) /users
+2021-06-19 12:12:01 [info]: API listening at http://localhost:9000
+2021-06-19 12:12:05 [info]: ::1 (POST) /users
+2021-06-19 12:12:05 [error]: Error: Missing handle parameter.
+    at Object.createUser (D:\streamfinder\api\model_functions\user.js:93:31)
+    at D:\streamfinder\api\routes\users.js:32:17
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\streamfinder\api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\streamfinder\api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at D:\streamfinder\api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\streamfinder\api\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\streamfinder\api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\streamfinder\api\node_modules\express\lib\router\index.js:174:3)
+2021-06-19 12:12:35 [info]: API listening at http://localhost:9000
+2021-06-19 12:12:38 [info]: ::1 (POST) /users
+2021-06-19 12:12:38 [error]: undefined
+2021-06-19 12:13:35 [info]: API listening at http://localhost:9000
+2021-06-19 12:13:37 [info]: ::1 (POST) /users
+2021-06-19 12:13:37 [error]: Error: Missing handle parameter.
+    at Object.createUser (D:\streamfinder\api\model_functions\user.js:93:31)
+    at D:\streamfinder\api\routes\users.js:32:17
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\streamfinder\api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\streamfinder\api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at D:\streamfinder\api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\streamfinder\api\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\streamfinder\api\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\streamfinder\api\node_modules\express\lib\router\index.js:174:3)
+2021-06-19 12:13:47 [info]: API listening at http://localhost:9000
+2021-06-19 12:13:49 [info]: ::1 (POST) /users
+2021-06-19 12:13:49 [error]: undefined
+2021-06-19 12:14:05 [info]: API listening at http://localhost:9000
+2021-06-19 12:14:07 [info]: ::1 (POST) /users
+2021-06-19 12:14:07 [error]: Missing handle parameter.
+2021-06-19 12:17:56 [info]: API listening at http://localhost:9000
+2021-06-19 12:17:59 [info]: ::1 (POST) /users
+2021-06-19 12:18:45 [info]: ::1 (POST) /titles
+2021-06-19 12:18:50 [info]: API listening at http://localhost:9000
+2021-06-19 12:18:52 [info]: ::1 (POST) /titles
+2021-06-19 12:19:33 [info]: API listening at http://localhost:9000
+2021-06-19 12:19:37 [info]: ::1 (POST) /titles
+2021-06-19 12:20:21 [info]: API listening at http://localhost:9000
+2021-06-19 12:20:24 [info]: ::1 (POST) /titles
+2021-06-19 12:20:24 [error]: Error: ER_NO_SUCH_TABLE: Table 'streamfinder.titles' doesn't exist
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.getTitlesByID (D:\streamfinder\api\controllers\title.js:6:21)
+    at getNewID (D:\streamfinder\api\models\title.js:118:28)
+    at Show.insert (D:\streamfinder\api\models\title.js:67:26)
+    at Show.insert (D:\streamfinder\api\models\show.js:30:21)
+    at Object.createTitle (D:\streamfinder\api\model_functions\title.js:16:18)
+    at D:\streamfinder\api\routes\titles.js:18:18
+2021-06-19 12:20:48 [info]: ::1 (POST) /titles
+2021-06-19 12:20:48 [error]: ReferenceError: sha256 is not defined
+    at Show.insert (D:\streamfinder\api\models\title.js:69:43)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.insert (D:\streamfinder\api\models\show.js:30:9)
+2021-06-19 12:21:20 [info]: API listening at http://localhost:9000
+2021-06-19 12:21:23 [info]: ::1 (POST) /titles
+2021-06-19 12:21:23 [error]: Error: input is invalid type
+    at nodeMethod (D:\streamfinder\api\node_modules\js-sha256\src\sha256.js:91:17)
+    at Show.insert (D:\streamfinder\api\models\title.js:70:43)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.insert (D:\streamfinder\api\models\show.js:30:9)
+2021-06-19 12:22:14 [info]: API listening at http://localhost:9000
+2021-06-19 12:22:17 [info]: ::1 (POST) /titles
+2021-06-19 12:22:17 [error]: Error: ER_BAD_NULL_ERROR: Column 'title_id' cannot be null
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertTitle (D:\streamfinder\api\controllers\title.js:10:21)
+    at Show.insert (D:\streamfinder\api\models\title.js:72:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.insert (D:\streamfinder\api\models\show.js:30:9)
+2021-06-19 12:23:35 [info]: API listening at http://localhost:9000
+2021-06-19 12:23:37 [info]: ::1 (POST) /titles
+2021-06-19 12:46:48 [info]: API listening at http://localhost:9000
+2021-06-19 12:47:41 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 12:47:41 [error]: Error: ER_BAD_FIELD_ERROR: Unknown column 'id' in 'where clause'
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.selectMoviesByID (D:\streamfinder\api\controllers\movie.js:6:21)
+    at D:\streamfinder\api\model_functions\title.js:38:36
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 12:48:13 [info]: API listening at http://localhost:9000
+2021-06-19 12:48:16 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 12:48:30 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 12:48:34 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 12:48:45 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 12:50:29 [info]: API listening at http://localhost:9000
+2021-06-19 12:50:32 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 12:50:49 [info]: API listening at http://localhost:9000
+2021-06-19 12:50:51 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 12:50:51 [error]: TypeError: this.seasons is not iterable
+    at Show.save (D:\streamfinder\api\models\show.js:46:35)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 12:51:34 [info]: API listening at http://localhost:9000
+2021-06-19 12:52:13 [info]: API listening at http://localhost:9000
+2021-06-19 12:52:16 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 12:53:14 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:02:53 [info]: API listening at http://localhost:9000
+2021-06-19 13:02:54 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:02:54 [error]: TypeError: data[key].initValue is not a function
+    at Show.edit (D:\streamfinder\api\models\model.js:41:45)
+    at D:\streamfinder\api\model_functions\title.js:44:26
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 13:03:34 [info]: API listening at http://localhost:9000
+2021-06-19 13:03:36 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:03:36 [error]: TypeError: this.value is not iterable
+    at SeasonsAttribute.getValue (D:\streamfinder\api\models\show.js:89:30)
+    at Show.get (D:\streamfinder\api\models\model.js:54:39)
+    at Show.save (D:\streamfinder\api\models\title.js:76:22)
+    at Show.save (D:\streamfinder\api\models\show.js:34:21)
+    at D:\streamfinder\api\model_functions\title.js:45:33
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 13:07:24 [info]: API listening at http://localhost:9000
+2021-06-19 13:07:26 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:08:14 [info]: API listening at http://localhost:9000
+2021-06-19 13:08:17 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:10:41 [info]: API listening at http://localhost:9000
+2021-06-19 13:10:48 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:11:14 [info]: API listening at http://localhost:9000
+2021-06-19 13:11:16 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:11:48 [info]: API listening at http://localhost:9000
+2021-06-19 13:11:50 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:12:22 [info]: API listening at http://localhost:9000
+2021-06-19 13:12:24 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:13:22 [info]: API listening at http://localhost:9000
+2021-06-19 13:13:25 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:13:50 [info]: API listening at http://localhost:9000
+2021-06-19 13:13:56 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:13:56 [error]: ReferenceError: crypto is not defined
+    at getNewID (D:\streamfinder\api\models\season.js:215:14)
+    at Season.insert (D:\streamfinder\api\models\season.js:75:26)
+    at Show.save (D:\streamfinder\api\models\show.js:54:21)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 13:15:03 [info]: API listening at http://localhost:9000
+2021-06-19 13:15:05 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:15:05 [error]: Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertSeason (D:\streamfinder\api\controllers\season.js:26:21)
+    at Season.insert (D:\streamfinder\api\models\season.js:82:32)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:54:13)
+2021-06-19 13:35:37 [info]: API listening at http://localhost:9000
+2021-06-19 13:35:39 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:35:39 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertSeason (D:\streamfinder\api\controllers\season.js:26:21)
+    at Season.insert (D:\streamfinder\api\models\season.js:82:32)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:54:13)
+2021-06-19 13:42:11 [info]: API listening at http://localhost:9000
+2021-06-19 13:42:13 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:45:27 [info]: API listening at http://localhost:9000
+2021-06-19 13:45:37 [info]: API listening at http://localhost:9000
+2021-06-19 13:45:39 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:45:39 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c806a0fff00005b96942277995f27a77' for key 'seasons.PRIMARY'
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertSeason (D:\streamfinder\api\controllers\season.js:26:21)
+    at Season.insert (D:\streamfinder\api\models\season.js:81:32)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:54:13)
+2021-06-19 13:47:07 [info]: API listening at http://localhost:9000
+2021-06-19 13:47:11 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:47:11 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c806a0fff00005b96942277995f27a77' for key 'seasons.PRIMARY'
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertSeason (D:\streamfinder\api\controllers\season.js:26:21)
+    at Season.insert (D:\streamfinder\api\models\season.js:81:32)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:54:13)
+2021-06-19 13:47:42 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:48:04 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:49:16 [info]: API listening at http://localhost:9000
+2021-06-19 13:49:18 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:49:49 [info]: API listening at http://localhost:9000
+2021-06-19 13:49:51 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:49:51 [error]: TypeError: val.delete is not a function
+    at Show.save (D:\streamfinder\api\models\show.js:41:33)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 13:51:47 [info]: API listening at http://localhost:9000
+2021-06-19 13:51:50 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 13:51:50 [error]: Error: ER_NO_SUCH_TABLE: Table 'streamfinder.season' doesn't exist
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateSeason (D:\streamfinder\api\controllers\season.js:30:21)
+    at Season.save (D:\streamfinder\api\models\season.js:86:32)
+    at Show.save (D:\streamfinder\api\models\show.js:53:29)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 16:14:27 [info]: API listening at http://localhost:9000
+2021-06-19 16:14:29 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:14:29 [error]: Error: ER_NO_SUCH_TABLE: Table 'streamfinder.season' doesn't exist
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateSeason (D:\streamfinder\api\controllers\season.js:30:21)
+    at Season.save (D:\streamfinder\api\models\season.js:86:32)
+    at Show.save (D:\streamfinder\api\models\show.js:53:29)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 16:17:19 [info]: API listening at http://localhost:9000
+2021-06-19 16:17:22 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:17:22 [error]: TypeError: linkController.getSeasonEpisodes is not a function
+    at Season.save (D:\streamfinder\api\models\season.js:95:47)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:53:21)
+2021-06-19 16:18:08 [info]: API listening at http://localhost:9000
+2021-06-19 16:18:11 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:18:30 [info]: API listening at http://localhost:9000
+2021-06-19 16:18:32 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:20:27 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:20:40 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:21:06 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:22:18 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:22:40 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:23:19 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:23:19 [error]: ReferenceError: StringAttribute is not defined
+    at new Episode (D:\streamfinder\api\models\episode.js:8:17)
+    at EpisodesAttribute.validate (D:\streamfinder\api\models\season.js:175:22)
+    at Season.validate (D:\streamfinder\api\models\model.js:31:41)
+    at SeasonsAttribute.validate (D:\streamfinder\api\models\show.js:79:35)
+    at Show.validate (D:\streamfinder\api\models\model.js:31:41)
+    at Show.edit (D:\streamfinder\api\models\model.js:38:26)
+    at D:\streamfinder\api\model_functions\title.js:44:26
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 16:23:24 [info]: API listening at http://localhost:9000
+2021-06-19 16:23:26 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:23:26 [error]: ReferenceError: StringAttribute is not defined
+    at new Episode (D:\streamfinder\api\models\episode.js:8:17)
+    at EpisodesAttribute.validate (D:\streamfinder\api\models\season.js:175:22)
+    at Season.validate (D:\streamfinder\api\models\model.js:31:41)
+    at SeasonsAttribute.validate (D:\streamfinder\api\models\show.js:78:35)
+    at Show.validate (D:\streamfinder\api\models\model.js:31:41)
+    at Show.edit (D:\streamfinder\api\models\model.js:38:26)
+    at D:\streamfinder\api\model_functions\title.js:44:26
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 16:24:00 [info]: API listening at http://localhost:9000
+2021-06-19 16:24:02 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:24:02 [error]: TypeError: val.get is not a function
+    at EpisodesAttribute.getValue (D:\streamfinder\api\models\season.js:184:27)
+    at Season.get (D:\streamfinder\api\models\model.js:54:39)
+    at SeasonsAttribute.getValue (D:\streamfinder\api\models\show.js:97:27)
+    at Show.get (D:\streamfinder\api\models\model.js:54:39)
+    at Show.save (D:\streamfinder\api\models\title.js:75:22)
+    at Show.save (D:\streamfinder\api\models\show.js:34:21)
+    at D:\streamfinder\api\model_functions\title.js:45:33
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 16:31:39 [info]: API listening at http://localhost:9000
+2021-06-19 16:31:42 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:31:42 [error]: ReferenceError: season is not defined
+    at EpisodesAttribute.initValue (D:\streamfinder\api\models\season.js:185:31)
+    at Season.edit (D:\streamfinder\api\models\model.js:41:45)
+    at SeasonsAttribute.initValue (D:\streamfinder\api\models\show.js:87:24)
+    at Show.edit (D:\streamfinder\api\models\model.js:41:45)
+    at D:\streamfinder\api\model_functions\title.js:44:26
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 16:32:00 [info]: API listening at http://localhost:9000
+2021-06-19 16:32:03 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:32:42 [info]: API listening at http://localhost:9000
+2021-06-19 16:32:46 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:32:46 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c806a0fff00005b96942277995f27a77' for key 'episodes.PRIMARY'
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertEpisode (D:\streamfinder\api\controllers\episode.js:11:21)
+    at Season.save (D:\streamfinder\api\models\season.js:90:37)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:52:21)
+2021-06-19 16:33:33 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:34:59 [info]: API listening at http://localhost:9000
+2021-06-19 16:35:02 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:35:47 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:37:53 [info]: API listening at http://localhost:9000
+2021-06-19 16:38:34 [info]: API listening at http://localhost:9000
+2021-06-19 16:38:37 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:38:37 [error]: TypeError: newLink.get is not a function
+    at Season.save (D:\streamfinder\api\models\season.js:104:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:52:21)
+2021-06-19 16:39:11 [info]: API listening at http://localhost:9000
+2021-06-19 16:39:14 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:39:14 [error]: TypeError: s.links.value is not iterable
+    at Season.save (D:\streamfinder\api\models\season.js:103:44)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:52:21)
+2021-06-19 16:39:59 [info]: API listening at http://localhost:9000
+2021-06-19 16:40:02 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:40:03 [error]: ReferenceError: l is not defined
+    at Season.save (D:\streamfinder\api\models\season.js:114:83)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:52:21)
+2021-06-19 16:41:17 [info]: API listening at http://localhost:9000
+2021-06-19 16:41:20 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:42:13 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:42:13 [error]: Error: ER_BAD_NULL_ERROR: Column 'season_id' cannot be null
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertSeasonLink (D:\streamfinder\api\controllers\season.links.js:14:21)
+    at Season.save (D:\streamfinder\api\models\season.js:113:34)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:52:21)
+2021-06-19 16:42:37 [info]: API listening at http://localhost:9000
+2021-06-19 16:42:39 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:42:40 [error]: Error: ER_BAD_NULL_ERROR: Column 'season_id' cannot be null
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertSeasonLink (D:\streamfinder\api\controllers\season.links.js:14:21)
+    at Season.save (D:\streamfinder\api\models\season.js:113:34)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:52:21)
+2021-06-19 16:43:05 [info]: API listening at http://localhost:9000
+2021-06-19 16:43:07 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:44:43 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:44:43 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c806a0fff00005b96942277995f27a77-b7e9c247427e82e21bb4e0e26b6455d' for key 'seasonlinks.PRIMARY'
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertSeasonLink (D:\streamfinder\api\controllers\season.links.js:14:21)
+    at Season.save (D:\streamfinder\api\models\season.js:113:34)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:52:21)
+2021-06-19 16:58:39 [info]: API listening at http://localhost:9000
+2021-06-19 16:58:42 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 16:58:55 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:01:43 [info]: API listening at http://localhost:9000
+2021-06-19 17:01:45 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:01:59 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:02:10 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:02:23 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:11:42 [info]: API listening at http://localhost:9000
+2021-06-19 17:11:45 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:11:55 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:15:41 [info]: API listening at http://localhost:9000
+2021-06-19 17:15:55 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:16:06 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:16:39 [info]: API listening at http://localhost:9000
+2021-06-19 17:16:44 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:16:49 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:18:17 [info]: API listening at http://localhost:9000
+2021-06-19 17:18:20 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:18:20 [error]: ReferenceError: link is not defined
+    at Season.init (D:\streamfinder\api\models\season.js:72:21)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.init (D:\streamfinder\api\models\show.js:27:13)
+2021-06-19 17:18:27 [info]: API listening at http://localhost:9000
+2021-06-19 17:18:30 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:20:48 [info]: API listening at http://localhost:9000
+2021-06-19 17:20:54 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:21:05 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:21:40 [info]: API listening at http://localhost:9000
+2021-06-19 17:21:43 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:24:43 [info]: API listening at http://localhost:9000
+2021-06-19 17:24:46 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:26:14 [info]: API listening at http://localhost:9000
+2021-06-19 17:26:17 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:27:14 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:27:29 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:31:02 [info]: API listening at http://localhost:9000
+2021-06-19 17:31:04 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 17:31:55 [info]: API listening at http://localhost:9000
+2021-06-19 17:32:00 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:07:32 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:10:23 [info]: API listening at http://localhost:9000
+2021-06-19 18:10:26 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:10:26 [error]: TypeError: li.init is not a function
+    at Season.init (D:\streamfinder\api\models\season.js:78:22)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.init (D:\streamfinder\api\models\show.js:27:13)
+2021-06-19 18:11:28 [info]: API listening at http://localhost:9000
+2021-06-19 18:11:33 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:13:42 [info]: API listening at http://localhost:9000
+2021-06-19 18:13:45 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:14:33 [info]: API listening at http://localhost:9000
+2021-06-19 18:14:35 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:15:16 [info]: API listening at http://localhost:9000
+2021-06-19 18:15:19 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:16:09 [info]: API listening at http://localhost:9000
+2021-06-19 18:16:12 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:16:30 [info]: API listening at http://localhost:9000
+2021-06-19 18:16:33 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:17:17 [info]: API listening at http://localhost:9000
+2021-06-19 18:17:19 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:18:00 [info]: API listening at http://localhost:9000
+2021-06-19 18:18:03 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:18:03 [error]: TypeError: season.edit is not a function
+    at SeasonsAttribute.initValue (D:\streamfinder\api\models\show.js:98:24)
+    at Show.edit (D:\streamfinder\api\models\model.js:41:45)
+    at D:\streamfinder\api\model_functions\title.js:44:26
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 18:19:31 [info]: API listening at http://localhost:9000
+2021-06-19 18:19:34 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:20:05 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:23:28 [info]: API listening at http://localhost:9000
+2021-06-19 18:23:32 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:23:38 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:23:48 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:26:43 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:27:09 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:27:10 [error]: TypeError: ep.init is not a function
+    at Season.init (D:\streamfinder\api\models\season.js:70:22)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.init (D:\streamfinder\api\models\show.js:27:13)
+2021-06-19 18:27:46 [info]: API listening at http://localhost:9000
+2021-06-19 18:27:48 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:28:08 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 18:28:28 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:00:22 [info]: API listening at http://localhost:9000
+2021-06-19 19:00:58 [info]: ::1 (GET) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:01:47 [info]: API listening at http://localhost:9000
+2021-06-19 19:01:49 [info]: ::1 (GET) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:04:15 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:04:15 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c806a0fff00005b96942277995f27a77' for key 'titlegenres.PRIMARY'
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertGenre (D:\streamfinder\api\controllers\title.genre.js:10:21)
+    at Show.save (D:\streamfinder\api\models\title.js:85:39)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:37:9)
+2021-06-19 19:05:56 [info]: API listening at http://localhost:9000
+2021-06-19 19:05:59 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:05:59 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c806a0fff00005b96942277995f27a77' for key 'titlegenres.PRIMARY'
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertGenre (D:\streamfinder\api\controllers\title.genre.js:10:21)
+    at Show.save (D:\streamfinder\api\models\title.js:79:35)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:37:9)
+2021-06-19 19:07:17 [info]: API listening at http://localhost:9000
+2021-06-19 19:07:20 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:07:20 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c806a0fff00005b96942277995f27a77' for key 'titlegenres.PRIMARY'
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertGenre (D:\streamfinder\api\controllers\title.genre.js:10:21)
+    at Show.save (D:\streamfinder\api\models\title.js:79:35)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+    at async Show.save (D:\streamfinder\api\models\show.js:37:9)
+2021-06-19 19:07:59 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:08:07 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:08:19 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:08:26 [info]: ::1 (GET) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:08:59 [info]: ::1 (PUT) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:09:03 [info]: ::1 (GET) /titles/c806a0fff00005b96942277995f27a77
+2021-06-19 19:09:32 [info]: ::1 (POST) /titles
+2021-06-19 19:11:13 [info]: API listening at http://localhost:9000
+2021-06-19 19:11:25 [info]: ::1 (POST) /titles
+2021-06-19 19:11:47 [info]: ::1 (GET) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:12:12 [info]: ::1 (PUT) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:12:14 [info]: ::1 (GET) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:12:24 [info]: ::1 (PUT) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:12:26 [info]: ::1 (GET) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:12:41 [info]: ::1 (PUT) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:12:43 [info]: ::1 (GET) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:13:08 [info]: ::1 (PUT) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:13:10 [info]: ::1 (GET) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:14:46 [info]: ::1 (PUT) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:14:48 [info]: ::1 (GET) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:15:04 [info]: ::1 (PUT) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:15:07 [info]: ::1 (GET) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:15:37 [info]: ::1 (PUT) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 19:15:40 [info]: ::1 (GET) /titles/78139ee3a77a51ed6978220888edd098
+2021-06-19 21:56:43 [info]: ::1 (POST) /titles
+2021-06-19 21:56:52 [info]: API listening at http://localhost:9000
+2021-06-19 21:56:54 [info]: ::1 (POST) /titles
+2021-06-19 21:57:11 [info]: API listening at http://localhost:9000
+2021-06-19 21:57:15 [info]: ::1 (POST) /titles
+2021-06-19 21:57:15 [error]: ReferenceError: crypto is not defined
+    at getNewID (D:\streamfinder\api\models\movie.js:174:18)
+    at Movie.insert (D:\streamfinder\api\models\movie.js:47:26)
+    at Object.createTitle (D:\streamfinder\api\model_functions\title.js:31:18)
+    at D:\streamfinder\api\routes\titles.js:18:18
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\streamfinder\api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\streamfinder\api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at D:\streamfinder\api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\streamfinder\api\node_modules\express\lib\router\index.js:335:12)
+2021-06-19 21:57:33 [info]: API listening at http://localhost:9000
+2021-06-19 21:57:35 [info]: ::1 (POST) /titles
+2021-06-19 21:57:35 [error]: Error: ER_BAD_NULL_ERROR: Column 'title_id' cannot be null
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertMovie (D:\streamfinder\api\controllers\movie.js:10:21)
+    at Movie.insert (D:\streamfinder\api\models\movie.js:54:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 22:00:27 [info]: API listening at http://localhost:9000
+2021-06-19 22:00:30 [info]: ::1 (POST) /titles
+2021-06-19 22:00:30 [error]: Error: ER_DATA_TOO_LONG: Data too long for column 'title_id' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertMovie (D:\streamfinder\api\controllers\movie.js:10:21)
+    at Movie.insert (D:\streamfinder\api\models\movie.js:60:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 22:01:41 [info]: API listening at http://localhost:9000
+2021-06-19 22:01:44 [info]: ::1 (POST) /titles
+2021-06-19 22:01:44 [error]: ReferenceError: getNewID is not defined
+    at Movie.insert (D:\streamfinder\api\models\movie.js:53:20)
+    at Object.createTitle (D:\streamfinder\api\model_functions\title.js:31:18)
+    at D:\streamfinder\api\routes\titles.js:18:18
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\streamfinder\api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\streamfinder\api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at D:\streamfinder\api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\streamfinder\api\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\streamfinder\api\node_modules\express\lib\router\index.js:275:10)
+2021-06-19 22:02:39 [info]: API listening at http://localhost:9000
+2021-06-19 22:02:41 [info]: ::1 (POST) /titles
+2021-06-19 22:02:41 [error]: ReferenceError: m is not defined
+    at Movie.insert (D:\streamfinder\api\models\movie.js:55:43)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-19 22:03:01 [info]: API listening at http://localhost:9000
+2021-06-19 22:03:03 [info]: ::1 (POST) /titles
+2021-06-19 22:05:55 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:06:08 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:09:00 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:11:11 [info]: API listening at http://localhost:9000
+2021-06-19 22:11:15 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:14:37 [info]: API listening at http://localhost:9000
+2021-06-19 22:14:39 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:15:28 [info]: API listening at http://localhost:9000
+2021-06-19 22:15:42 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:16:06 [info]: API listening at http://localhost:9000
+2021-06-19 22:16:10 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:16:39 [info]: API listening at http://localhost:9000
+2021-06-19 22:16:43 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:16:53 [info]: API listening at http://localhost:9000
+2021-06-19 22:16:56 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:17:16 [info]: API listening at http://localhost:9000
+2021-06-19 22:17:18 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:20:00 [info]: API listening at http://localhost:9000
+2021-06-19 22:20:02 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:20:49 [info]: API listening at http://localhost:9000
+2021-06-19 22:20:53 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:23:38 [info]: API listening at http://localhost:9000
+2021-06-19 22:23:41 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:24:15 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:24:29 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:25:23 [info]: API listening at http://localhost:9000
+2021-06-19 22:25:25 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:25:34 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:26:06 [info]: API listening at http://localhost:9000
+2021-06-19 22:26:11 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:26:19 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:28:27 [info]: API listening at http://localhost:9000
+2021-06-19 22:28:30 [info]: ::1 (GET) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:29:53 [info]: API listening at http://localhost:9000
+2021-06-19 22:29:56 [info]: ::1 (GET) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:30:27 [info]: ::1 (PUT) /titles/bf037dbe11036e31af77a267082a82f7
+2021-06-19 22:30:30 [info]: ::1 (GET) /titles/bf037dbe11036e31af77a267082a82f7

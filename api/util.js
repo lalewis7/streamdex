@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const config = require('./config.js');
+const config = require('./config.json');
 const winston = require('winston');
 require('winston-daily-rotate-file');
 
@@ -36,7 +36,7 @@ module.exports = {
      * @param {String} sql sql query
      * @param {Array} values values in query with placeholder '?'
      */
-    dbPromise(sql, values){
+    dbPromise(sql, ...values){
         return new Promise((res, rej) => {
             pool.query({sql: sql, values: values}, (err, rows) => {
                 if (err) rej(err);

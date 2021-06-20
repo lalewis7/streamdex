@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Footer from '../comps/Footer.js';
 
 class Home extends React.Component {
 
@@ -10,9 +11,10 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div class="bg-light">
-                <div class="container">
-                    <div class="row vh-100">
+            <>
+            <div class="bg-light h-100">
+                <div class="container h-100">
+                    <div class="row h-100">
                         <div class="col">
                             <div class="row mt-5 mb-4">
                                 <div class="col-md-10">
@@ -30,6 +32,8 @@ class Home extends React.Component {
                     </div>
                 </div>
             </div>
+            <Footer />
+            </>
         );
     }
 

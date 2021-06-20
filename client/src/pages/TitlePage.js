@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Title from '../comps/Title.js';
 
+import Footer from '../comps/Footer.js';
+
 class TitlePage extends React.Component {
 
     constructor(props){
@@ -10,7 +12,8 @@ class TitlePage extends React.Component {
 
     render(){
         return (
-            <div class="bg-secondary flex-fill">
+            <>
+            <div class=" flex-fill">
                 <div class="container">
                     <div class="row py-4">
                         <div class="col d-flex justify-content-center flex-grow-1">
@@ -19,6 +22,8 @@ class TitlePage extends React.Component {
                     </div>
                 </div>
             </div>
+            <Footer />
+            </>
         );
     }
 

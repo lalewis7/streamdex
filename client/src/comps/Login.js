@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from "react-router-dom";
 import Config from '../config.js';
-import $ from 'jquery'; 
+//import $ from 'jquery';
 
 var Storage = require('../storage.js');
 var Validate = require('../validate.js');
@@ -171,28 +171,60 @@ class SignupForm extends React.Component {
     }
 
     render(){
-        return <div>
-            <div class="form-group">
-                <label for="signupUsername" class="form-label">Username</label>
-                <input type="text" class={"form-control "+this.state.usernameClass} id="signupUsername" placeholder="Username" value={this.state.username} onChange={this.usernameChange} onBlur={this.usernameValidate}/>
-                <div class="invalid-feedback">{this.state.usernameInvalid}</div>
+        return <>
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="input-group">
+                        <span class="input-group-text" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg>
+                        </span>
+                        <input type="text" class={"form-control "+this.state.usernameClass} id="signupUsername" placeholder="Username" value={this.state.username} onChange={this.usernameChange} onBlur={this.usernameValidate}/>
+                        <div class="invalid-feedback">{this.state.usernameInvalid}</div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="signupEmail" class="form-label">Email</label>
-                <input type="email" class={"form-control "+this.state.emailClass} id="signupEmail" placeholder="Email" value={this.state.email} onChange={this.emailChange} onBlur={this.emailValidate}/>
-                <div class="invalid-feedback">Email invalid.</div>
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="input-group">
+                        <span class="input-group-text" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.15em" height="1.15em" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                            </svg>
+                        </span>
+                        <input type="email" class={"form-control "+this.state.emailClass} id="signupEmail" placeholder="Email" value={this.state.email} onChange={this.emailChange} onBlur={this.emailValidate}/>
+                        <div class="invalid-feedback">Email invalid.</div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="signupPassword" class="form-label">Password</label>
-                <input type="password" class={"form-control "+this.state.passwordClass} id="signupPassword" placeholder="Password" value={this.state.password} onChange={this.passwordChange} onBlur={this.passwordValidate}/>
-                <div class="invalid-feedback">Password must be 8-64 characters long.</div>
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="input-group">
+                        <span class="input-group-text" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.15em" height="1.15em" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                            </svg>
+                        </span>
+                        <input type="password" class={"form-control "+this.state.passwordClass} id="signupPassword" placeholder="Password" value={this.state.password} onChange={this.passwordChange} onBlur={this.passwordValidate}/>
+                        <div class="invalid-feedback">Password must be 8-64 characters long.</div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="signupPasswordConfirm" class="form-label">Confirm Password</label>
-                <input type="password" class={"form-control "+this.state.passwordConfirmClass} id="signupPasswordConfirm" placeholder="Confirm Password" value={this.state.passwordConfirm} onChange={this.passwordConfirmChange} />
-                <div class="invalid-feedback">Passwords do not match.</div>
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="input-group">
+                        <span class="input-group-text" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.15em" height="1.15em" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                            </svg>
+                        </span>
+                        <input type="password" class={"form-control "+this.state.passwordConfirmClass} id="signupPasswordConfirm" placeholder="Confirm Password" value={this.state.passwordConfirm} onChange={this.passwordConfirmChange} />
+                        <div class="invalid-feedback">Passwords do not match.</div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     }
 
 }
@@ -234,17 +266,33 @@ class LoginForm extends React.Component {
     }
 
     render(){
-        return <div>
-            <div class="form-group">
-                <label for="loginUsername" class="form-label">Username / Email</label>
-                <input type="text" class="form-control" id="loginUsername" placeholder="Username or Email" value={this.state.user} name="user" onChange={this.handleChange}/>
+        return <>
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="input-group">
+                        <span class="input-group-text" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.15em" height="1.15em" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                            </svg>
+                        </span>
+                        <input type="text" class="form-control" id="loginUsername" placeholder="Email" value={this.state.user} name="user" onChange={this.handleChange}/>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="loginPassword" class="form-label">Password</label>
-                <input type="password" class={"form-control "+this.props.passwordClass} id="loginPassword" placeholder="Password" value={this.state.password} name="loginPassword" onChange={this.passwordChange} />
-                <div class="invalid-feedback">Username or password incorrect. Please try again.</div>
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="input-group">
+                        <span class="input-group-text" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.15em" height="1.15em" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                            </svg>
+                        </span>
+                        <input type="password" class={"form-control "+this.props.passwordClass} id="loginPassword" placeholder="Password" value={this.state.password} name="loginPassword" onChange={this.passwordChange} />
+                        <div class="invalid-feedback">Username or password incorrect. Please try again.</div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     }
 
 }
@@ -323,7 +371,7 @@ class Login extends React.Component {
                 err => {
                     console.log(err);
                 });
-                $('#loginModal').modal('hide');
+                window.$('#loginModal').modal('hide');
         }, err => {
             console.log(err);
         })
@@ -350,7 +398,7 @@ class Login extends React.Component {
                     // save token
                     this.props.setToken(token);
                     // remove login page
-                    $('#loginModal').modal('hide');
+                    window.$('#loginModal').modal('hide');
                     // update self info
                     fetch(Config.API+"self", {
                         method: 'GET',
@@ -380,27 +428,57 @@ class Login extends React.Component {
 
     render(){
         var formContents = (<div>
-            <div class="modal-header">
-                <h5 class="modal-title text-center" id="exampleModalLabel">Login</h5>
-            </div>
             <div class="modal-body">
                 <form onSubmit={this.login}>
-                    <LoginForm getData = {this.loginDataCB} passwordClass = {this.state.passwordClass} />
-                    <button type="submit" class="btn btn-primary btn-block">LOGIN</button>
-                    <button type="button" class="btn btn-outline-secondary btn-block" onClick={this.swapPage}>SIGN UP</button>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="text-center m-4 mt-1">LOGIN</h3>
+                            </div>
+                        </div>
+                        <LoginForm getData = {this.loginDataCB} passwordClass = {this.state.passwordClass} />
+                        <div class="row">
+                            <div class="col-12 d-grid">
+                                <button type="submit" class="btn btn-primary">LOGIN</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="text-center mt-3">
+                                Not a member?
+                                <a href="javacript:void(0);" class="link-secondary ms-1" onClick={this.swapPage}>Sign up now</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>);
         if (!this.state.showLoginPage)
             formContents = <div>
-                <div class="modal-header">
-                    <h5 class="modal-title text-center" id="exampleModalLabel">Sign Up</h5>
-                </div>
                 <div class="modal-body">
                     <form onSubmit={this.signup}>
-                        <SignupForm getData = {this.signupDataCB} />
-                        <button type="submit" class="btn btn-primary btn-block">SIGN UP</button>
-                        <button type="button" class="btn btn-outline-secondary btn-block" onClick={this.swapPage}>LOGIN</button>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="text-center m-4 mt-1">SIGN UP</h3>
+                                </div>
+                            </div>
+                            <SignupForm getData = {this.signupDataCB} />
+                            <div class="row">
+                                <div class="col-12 d-grid">
+                                    <button type="submit" class="btn btn-primary">SIGN UP</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="text-center mt-3">
+                                    Already a member?
+                                    <a href="javacript:void(0);" class="link-secondary ms-1" onClick={this.swapPage}>Login now</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var sha256 = require('js-sha256');
 
-var authModel = require('../models/auth.js');
+var Token = require('../models/token.js');
 
 router.get('/', (req, res) => {
     // header values
@@ -11,12 +11,12 @@ router.get('/', (req, res) => {
 
     // check values exist
     if (!user)
-        res.status(400).send("Missing user parameter.");
+        return res.status(400).send("Missing user parameter.");
     if (!pass)
-        res.status(400).send("Missing password paramter.");
+        return res.status(400).send("Missing password paramter.");
 
     // get token from auth model
-    authModel.getToken(user, sha256(pass))
+    Token.getToken(user, sha256(pass))
     // success
     .then(token => {
         res.status(200).send(token);
@@ -28,15 +28,15 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    res.sendStatus(403);
+    res.sendStatus(405);
 });
 
 router.put('/', (req, res) => {
-    res.sendStatus(403);
+    res.sendStatus(405);
 });
 
 router.delete('/', (req, res) => {
-    res.sendStatus(403);
+    res.sendStatus(405);
 });
 
 module.exports = router;

@@ -6,9 +6,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // import bootstrap & jquery files
-import 'jquery/dist/jquery.min.js';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'jquery/dist/jquery.min.js';
+//window.$ = window.jQuery = require('jquery')
+//import 'bootstrap';
+//import 'bootstrap/dist/js/bootstrap.min.js';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+global.jQuery = $;
+const bootstrap = require('bootstrap');
+console.log(bootstrap)
 
 ReactDOM.render(
   <React.StrictMode>

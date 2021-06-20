@@ -1,0 +1,154 @@
+2021-06-15 14:56:48 [info]: API listening at http://localhost:9000
+2021-06-15 14:56:56 [info]: ::1 (GET) /auth
+2021-06-15 14:57:17 [info]: ::1 (GET) /users/452d341c136763dc
+2021-06-15 14:59:12 [info]: API listening at http://localhost:9000
+2021-06-15 14:59:16 [info]: ::1 (GET) /users/452d341c136763dc
+2021-06-15 14:59:42 [info]: ::1 (GET) /users/452d341c136763dc
+2021-06-15 15:00:02 [info]: ::1 (GET) /users/452d341c136763dc
+2021-06-15 15:00:11 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:00:14 [info]: ::1 (GET) /users/452d341c136763dc
+2021-06-15 15:02:29 [info]: API listening at http://localhost:9000
+2021-06-15 15:02:35 [info]: ::1 (GET) /users/452d341c136763dc
+2021-06-15 15:02:35 [error]: TypeError: data.map is not a function
+    at new Model (D:\streamfinder\api\models\model.js:7:18)
+    at new User (D:\streamfinder\api\models\user.js:21:13)
+    at D:\streamfinder\api\models\user.js:81:24
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-15 15:07:24 [info]: API listening at http://localhost:9000
+2021-06-15 15:07:43 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:07:46 [info]: ::1 (GET) /users/452d341c136763dc
+2021-06-15 15:07:56 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:08:52 [info]: API listening at http://localhost:9000
+2021-06-15 15:08:55 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:08:55 [error]: Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertUserStream (D:\streamfinder\api\controllers\user.streams.js:14:21)
+    at D:\streamfinder\api\models\user.js:180:57
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-15 15:12:43 [info]: API listening at http://localhost:9000
+2021-06-15 15:12:48 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:12:48 [error]: Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertUserStream (D:\streamfinder\api\controllers\user.streams.js:14:21)
+    at D:\streamfinder\api\models\user.js:182:57
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-15 15:13:58 [info]: API listening at http://localhost:9000
+2021-06-15 15:14:00 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:14:45 [info]: API listening at http://localhost:9000
+2021-06-15 15:14:48 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:15:47 [info]: API listening at http://localhost:9000
+2021-06-15 15:15:49 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:15:49 [error]: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', `edit` = false, `visible` = true, `admin` = true, `def` = '', `val` = NULL, `v' at line 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.deleteUserStream (D:\streamfinder\api\controllers\user.streams.js:18:21)
+    at D:\streamfinder\api\models\user.js:173:57
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-15 15:16:10 [info]: API listening at http://localhost:9000
+2021-06-15 15:16:13 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:16:29 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:17:57 [info]: API listening at http://localhost:9000
+2021-06-15 15:18:08 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:18:20 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:18:20 [error]: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', `platform` = 'netflix'' at line 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.deleteUserStream (D:\streamfinder\api\controllers\user.streams.js:18:21)
+    at D:\streamfinder\api\models\user.js:173:57
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-15 15:19:16 [info]: API listening at http://localhost:9000
+2021-06-15 15:19:19 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:19:19 [error]: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', `platform` = 'netflix'' at line 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.deleteUserStream (D:\streamfinder\api\controllers\user.streams.js:18:21)
+    at D:\streamfinder\api\models\user.js:173:57
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-06-15 15:23:08 [info]: API listening at http://localhost:9000
+2021-06-15 15:23:10 [info]: ::1 (PUT) /users/452d341c136763dc
+2021-06-15 15:23:10 [error]: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', `platform` = 'netflix'' at line 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.deleteUserStream (D:\streamfinder\api\controllers\user.streams.js:18:21)
+    at D:\streamfinder\api\models\user.js:173:57
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)

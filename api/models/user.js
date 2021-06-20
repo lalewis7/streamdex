@@ -1,139 +1,138 @@
 const crypto = require('crypto');
 const { sha256 } = require('js-sha256');
-var authController = require('../controllers/auth.js');
+
+// controllers
+var tokenController = require('../controllers/token.js');
 var userController = require('../controllers/user.js');
+var userStreamsController = require('../controllers/user.streams.js');
+var userRatingsController = require('../controllers/user.rating.js');
+
+// models
 var model = require('./model.js');
+
+// helpers
 var validate = require('../validate.js');
-var config = require('../config.js');
+var config = require('../config.json');
+const util = require('../util.js');
+    
+class User extends model.Model {
 
-module.exports = {
-    User: class User extends model.Model {
-        constructor(data){
-            super([
-                model.getAttributeConfig('id', false, true, true, ''),
-                model.getAttributeConfig('handle', true, true, false, ''),
-                model.getAttributeConfig('email', true, true, false, ''),
-                model.getAttributeConfig('email_ver', true, true, true, false),
-                model.getAttributeConfig('password', true, false, false, ''),
-                model.getAttributeConfig('admin', true, true, true, false),
-            ], data);
-        }
-    },
-
-    /**
-     * Finds all users in database.
-     */
-    getUsers(){
-        // get users
-        return userController.findAllUsers()
-            .then(users => {
-                // convert to class
-                var userArray = [];
-                for (let i = 0; i < users.length; i++){
-                    userArray.push(new User(users[i]));
-                }
-                return userArray;
-            });
-    },
-
-    /**
-     * Searches for a user matching the id.
-     * @param {String} id 
-     */
-    getUserByID(id){
-        // search for user
-        return userController.findUsersByID(id)
-            .then(users => {
-                // user does not exist
-                if (users.length == 0)
-                    throw "User does not exist.";
-                return new User(users[0]);
-            });
-    },
-
-    /**
-     * Finds the user who the token is addessed to. Throws an error if the token does not exist or owner cannot be found.
-     * Require that tokens not be expired using active parameter.
-     * @param {String} token 
-     * @param {Boolean} active
-     */
-    getUserByToken(token, active = true){
-        // search for token
-        return authController.selectTokensByToken(token)
-            .then(tokens => {
-                // token does not exist
-                if (tokens.length == 0)
-                    throw "Invalid token.";
-                // token has expired
-                if (active && tokens[0].expires < Date.now())
-                    throw "Token expired.";
-                // find owner of token
-                return userController.findUsersByID(tokens[0].user);
+    constructor(data){
+        super([
+            new model.StringAttribute({
+                name: "id",
+                db_name: "user_id",
+                editable: false,
+                visible: true,
+                adminProtected: true
+            }),
+            new model.StringAttribute({
+                name: "handle",
+                editable: true,
+                visible: true,
+                adminProtected: false,
+                validate: validate.handle
+            }),
+            new model.StringAttribute({
+                name: "email",
+                editable: true,
+                visible: true,
+                adminProtected: false,
+                validate: validate.email
+            }),
+            new model.StringAttribute({
+                name: "password",
+                editable: true,
+                visible: true,
+                adminProtected: false,
+                validate: validate.password
+            }),
+            new model.BooleanAttribute({
+                name: "locked",
+                editable: true,
+                visible: true,
+                adminProtected: true,
+            }),
+            new model.BooleanAttribute({
+                name: "admin",
+                editable: true,
+                visible: true,
+                adminProtected: true,
+            }),
+            new UserStreamsAttribute({
+                name: "streams",
+                editable: true,
+                visible: true,
+                adminProtected: false
             })
-            .then(users => {
-                // owner does not exist
-                if (users.length == 0)
-                    throw "User does not exist.";
-                return new User(users[0]);
-            });
-    },
-
-    /**
-     * Inserts a new user into the database assuming the all the data is valid.
-     * @param {Object} data user data
-     */
-    createUser(data){
-        // ensure all parameters exist
-        if (!data.handle)
-            throw "Missing handle parameter.";
-        if (!data.email)
-            throw "Missing email parameter.";
-        if (!data.password)
-            throw "Missing password parameter.";
-        // validate information
-        if (!validate.handle(data.handle))
-            throw "Handle invalid.";
-        if (!validate.email(data.email))
-            throw "Email invalid.";
-        if (!validate.password(data.password))
-            throw "Password invalid.";
-        // create user obj and populate information
-        var user = new this.User();
-        user.edit(data, false);
-        // make sure handle is available
-        return userController.findUsersByHandle(data.handle).then(users => {
-            if (users.length > 0)
-                throw "Handle taken.";
-            return getNewID()
-        })
-        // get new user id
-        .then(id => {
-            // update id and password
-            user.forceEdit({id: id, password: sha256(data.password)});
-            // get user data
-            let u = user.get();
-            // add to db
-            return userController.insertUser(u.id, u.handle, u.email, u.email_ver, u.password, u.admin);
-        });
-    },
-
-    /**
-     * TODO
-     * @param {Object} data 
-     */
-    editUser(data){
-        // TODO
-    },
-
-    /**
-     * TODO
-     * @param {String} id 
-     */
-    deleteUser(id){
-        // TODO
+        ], data);
     }
+
+    async init(){
+        const streams = await userStreamsController.findAllUserStreams(this.get().id);
+        for (let stream of streams)
+            this.streams.value.push(stream.platform);
+    }
+
+    async insert(){
+        // make sure handle is available
+        const users = await userController.findUsersByHandle(this.get().handle);
+        if (users.length > 0)
+            throw new Error("Handle taken.");
+        const id = await getNewID();
+        // update id and password
+        this.override({ id: id, password: sha256(this.get().password) });
+        let u = this.get();
+        await userController.insertUser(u.id, u.handle, u.email, u.password, u.locked, u.admin);
+    }
+
+    async save(){
+        let u = this.get(false);
+        await userController.updateUserByID(u.id, u.handle, u.email, u.password, u.locked, u.admin);
+        const oldStreams = await userStreamsController.findAllUserStreams(this.get().id);
+        const newStreams = u.streams;
+        var commands = [];
+        oldStreamLoop: for (let oldStream of oldStreams) {
+            for (let newStream of newStreams)
+                if (oldStream.platform === newStream)
+                    continue oldStreamLoop;
+            // old stream not in new stream (delete)
+            commands.push(userStreamsController.deleteUserStream(this.get().id, oldStream.platform));
+        }
+        newStreamLoop: for (let newStream of newStreams) {
+            for (let oldStream of oldStreams)
+                if (oldStream.platform === newStream)
+                    continue newStreamLoop;
+            // new stream not found in old stream (create)
+            commands.push(userStreamsController.insertUserStream(this.get().id, newStream));
+        }
+        await Promise.all(commands);
+    }
+
+    async delete(){
+        let u = this.get(false);
+        await userController.deleteUser(u.id);
+        await userStreamsController.deleteAllUserStreams(u.id);
+    }
+
 }
 
+class UserStreamsAttribute extends model.Attribute {
+
+    constructor(conf){
+        super(conf);
+        this.defaultValue = [];
+        this.validate = (val) => {
+            if (typeof val !== 'object' || !Array.isArray(val))
+                return false;
+            for (let v of val)
+                if (typeof v !== 'string')
+                    return false;
+            return true;
+        };
+    }
+
+}
 
 /**
  * Creates random id that has not already been assigned to user.
@@ -149,3 +148,5 @@ function getNewID(){
         return getNewID();
     })
 }
+
+module.exports = User;

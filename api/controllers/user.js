@@ -3,80 +3,49 @@ Controller for user queries and everything related.
 */
 
 var util = require('../util.js');
+var config = require('../config.json');
 
 module.exports = {
-    /**
-     * Finds all users in database.
-     */
-    findAllUsers(){
-        return util.dbPromise('SELECT * FROM users', []);
+
+    /* ------------- TOKEN METHODS ------------- */
+
+     findUsersWithEmailPassword(email, password){
+        return util.dbPromise('SELECT * FROM users WHERE email = ? AND password = ?', email, password);
     },
 
-    /**
-     * Finds all users with matching id.
-     * @param {String} id 
-     */
-    findUsersByID(id){
-        return util.dbPromise('SELECT * FROM users WHERE id = ?', [id]);
-    },
-
-    /**
-     * Finds all users with a matching handle.
-     * @param {String} handle 
-     */
-    findUsersByHandle(handle){
-        return util.dbPromise('SELECT * FROM users WHERE handle = ?', [handle]);
-    },
-
-    /**
-     * Finds all users with matching email and password.
-     * @param {String} email 
-     * @param {String} password 
-     */
-    findUsersWithEmailPassword(email, password){
-        return util.dbPromise('SELECT * FROM users WHERE email = ? AND password = ?', [email, password]);
-    },
-
-    /**
-     * Finds all users with matching handle and password.
-     * @param {String} handle 
-     * @param {String} password 
-     */
     findUsersWithHandlePassword(handle, password){
-        return util.dbPromise('SELECT * FROM users WHERE handle = ? AND password = ?', [handle, password]);
+        return util.dbPromise('SELECT * FROM users WHERE handle = ? AND password = ?', handle, password);
     },
 
-    /**
-     * Updates user information with matching id.
-     * @param {String} id 
-     * @param {String} handle 
-     * @param {String} email 
-     * @param {Boolean} email_ver 
-     * @param {String} password 
-     * @param {Boolean} admin 
-     */
-    updateUserByID(id, handle, email, email_ver, password, admin){
-        return util.dbPromise('UPDATE users SET handle = ?, email = ?, email_ver = ?, password = ?, admin = ? WHERE id = ?', [handle, email, email_ver, password, admin, id]);
+    /* ------------- /users METHODS ------------- */
+
+    findAllUsers(page = 0){
+        return util.dbPromise('SELECT * FROM users LIMIT ? OFFSET ?', config.user_page_length, page*config.user_page_length);
     },
 
-    /**
-     * Inserts user into database with given values.
-     * @param {String} id 
-     * @param {String} handle 
-     * @param {String} email 
-     * @param {Boolean} email_ver 
-     * @param {String} password 
-     * @param {Boolean} admin 
-     */
-    insertUser(id, handle, email, email_ver, password, admin){
-        return util.dbPromise('INSERT INTO users(id, handle, email, email_ver, password, admin) VALUES (?, ?, ?, ?, ?, ?)', [id, handle, email, email_ver, password, admin]);
+    searchAllUsers(search, page = 0){
+        return util.dbPromise('SELECT * FROM users WHERE MATCH(handle, email) AGAINST (? IN NATURAL LANGUAGE MODE) LIMIT ? OFFSET ?', search, config.user_page_length, page*config.user_page_length);
     },
 
-    /**
-     * Deletes users with matching id.
-     * @param {String} id 
-     */
-    deleteUser(id){
-        return util.dbPromise('DELETE FROM users WHERE id = ?', [id]);
+    insertUser(user_id, handle, email, password, locked, admin){
+        return util.dbPromise('INSERT INTO users(user_id, handle, email, password, locked, admin) VALUES (?, ?, ?, ?, ?, ?)', user_id, handle, email, password, locked, admin);
+    },
+
+    /* ------------- /users/:userId METHODS ------------- */
+
+    findUsersByID(user_id){
+        return util.dbPromise('SELECT * FROM users WHERE user_id = ?', user_id);
+    },
+
+    findUsersByHandle(handle){
+        return util.dbPromise('SELECT * FROM users WHERE handle = ?', handle);
+    },
+
+    updateUserByID(user_id, handle, email, password, locked, admin){
+        return util.dbPromise('UPDATE users SET handle = ?, email = ?, password = ?, locked = ?, admin = ? WHERE user_id = ?', handle, email, password, locked ? 1 : 0, admin ? 1 : 0, user_id);
+    },
+
+    deleteUser(user_id){
+        return util.dbPromise('DELETE FROM users WHERE user_id = ?', user_id);
     }
 }

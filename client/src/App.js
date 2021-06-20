@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -53,7 +52,7 @@ class App extends React.Component{
   }
 
   render(){
-    return (<div class="min-vh-100 d-flex flex-column">
+    return (<div class="vh-100 d-flex flex-column">
       <BrowserRouter>
         <Nav setToken={this.setToken} state = {{token: this.state.token, user: this.state.user}}/>
         <Login setToken={this.setToken} setUser={this.setUser} />

@@ -1,5 +1,5 @@
 var userController = require('./controllers/user.js');
-var authController = require('./controllers/auth.js');
+var tokenController = require('./controllers/token.js');
 var util = require('./util.js');
 
 /**
@@ -18,13 +18,13 @@ module.exports = function (req, res, next){
         next();
     else
         // find token
-        authController.selectTokensByToken(token)
+        tokenController.selectTokensByToken(token)
             .then(tokens => {
                 // token does not exist
                 if (tokens.length == 0)
                     next();
                 // find user for token
-                return userController.findUsersByID(tokens[0].user);
+                return userController.findUsersByID(tokens[0].user_id);
             })
             .then(users => {
                 // user does not exist

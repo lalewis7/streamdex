@@ -5,10 +5,14 @@
         "host": "localhost",
         "user": "api",
         "password": "552cea5751affd5e67d8f95725258c4f2d334d22df455130ca0f9652be8c1fdddc91a80d5e00fc4034bfa4af805fc7fba06731311f2641dab1bef383d4b6fc8a",
-        "database": "moviefinder"
+        "database": "streamfinder"
     },
     "token_lifetime": 86400000,
     "token_length": 64,
-    "user_id_length": 16,
-    "title_id_length": 32
+    "user_id_length": 8,
+    "title_id_length": 16,
+    "season_id_length": 16,
+    "user_rating_page_length": 20,
+    "user_page_length": 20,
+    "title_page_length": 30
 }

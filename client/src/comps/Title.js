@@ -47,6 +47,7 @@ class Title extends React.Component{
                 </div>
             );
         return (
+            <>
             <div class="card bg-light w-100" style={{"max-width": "767.98px"}}>
             <div class="card-body">
                 <div class="container-fluid p-0">
@@ -55,6 +56,7 @@ class Title extends React.Component{
                 </div>
             </div>
             </div>
+            </>
         );
     }
 }

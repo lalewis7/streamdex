@@ -1,110 +1,170 @@
-var movieController = require('../controllers/movie.js');
-var model = require('./model.js');
-var config = require('../config.js');
+// controllers
+const movieController = require('../controllers/movie.js');
+const linkController = require('../controllers/movie.links.js');
 
-module.exports = {
-    Movie: class Movie extends model.Model {
-        constructor(data) {
-            super([
-                model.getAttributeConfig('id', false, true, true, ''),
-                model.getAttributeConfig('title', true, true, true, ''),
-                model.getAttributeConfig('mpaa', true, true, true, ''),
-                model.getAttributeConfig('year', true, true, true, 0),
-                model.getAttributeConfig('trailer', true, true, true, ''),
-                model.getAttributeConfig('runtime', true, true, true, 0),
-                model.getAttributeConfig('links', true, true, true, []),
-                model.getAttributeConfig('tags', true, true, true, []),
-                model.getAttributeConfig('description', true, true, true, '')
-            ], data);
-        }
-    },
+// models
+const model = require('./model.js');
+const Title = require('./title.js');
 
-    getMovie(id){
-        var movie = new this.Movie();
-        // search for movies
-        return movieController.selectMoviesByID(id)
-            .then(movies => {
-                // check if movie exists
-                if (movies.length == 0)
-                    throw "Movie does not exists.";
-                movie.forceEdit(movies[0]);
-                return movieController.selectMovieLinksByMovie(movie.get().id);
+// helpers
+var config = require('../config.json');
+
+class Movie extends Title {
+
+    constructor(data) {
+        super([
+            new model.DateAttribute({
+                name: "rel_date",
+                editable: true,
+                visible: true,
+                adminProtected: true
+            }),
+            new model.StringAttribute({
+                name: "trailer",
+                editable: true,
+                visible: true,
+                adminProtected: true
+            }),
+            new model.NumberAttribute({
+                name: "runtime",
+                editable: true,
+                visible: true,
+                adminProtected: true
+            }),
+            new MovieLinksAttribute({
+                name: "links",
+                editable: true,
+                visible: true,
+                adminProtected: true
             })
-            // add links
-            .then(links => {
-                var linkData = [];
-                // format link data
-                links.map(link => {
-                    linkData.push({platform: link.platform, link: link.link, cost: link.cost});
-                });
-                // add to movie obj
-                movie.forceEdit({links: linkData});
-                return movieController.selectMovieTagsByID(id);
-            })
-            // add tags
-            .then(tags => {
-                var tagData = [];
-                // format tag data
-                tags.map(tag => {
-                    tagData.push(tag.tag);
-                });
-                // add tags to movie obj
-                movie.forceEdit({tags: tagData});
-                return movie.getViewable();
-            })
-    },
-
-    createMovie(data, admin){
-        // check that all parameters exist
-        if (!data.title)
-            throw "Missing title parameter.";
-        if (!data.mpaa)
-            throw "Missing mpaa parameter.";
-        if (!data.year)
-            throw "Missing year parameter.";
-        if (!data.trailer)
-            throw "Missing trailer parameter.";
-        if (!data.runtime)
-            throw "Missing runtime parameter.";
-        if (!data.description)
-            throw "Missing description patameter.";
-        // check that all data is valid ? - TODO
-        // create movie object
-        var movie = new Movie();
-        // edit data
-        movie.edit(data, admin);
-        // get new id
-        return getNewID()
-            .then(id => {
-                // add id
-                movie.forceEdit({id: id});
-                // get data
-                var movieData = movie.get();
-                // insert movie
-                return movieController.insertMovie(movieData.id, movieData.title, movieData.mpaa, movieData.year, movieData.trailer, movieData.runtime);
-            });
-    },
-
-    editMovie(movie){},
-
-    deleteMovie(id){},
-
-    addMovieLink(data, admin){
-        
+        ], data)
     }
+
+    async init(){
+        await super.init();
+        // links
+        const links = await linkController.getMovieLinks(this.get().id);
+        for (let val of links){
+            let li = new MovieLink(val);
+            this.links.value.push(li);
+        }
+    }
+
+    async insert(){
+        await super.insert();
+        let m = this.get();
+        await movieController.insertMovie(m.id, m.rel_date, m.trailer, m.runtime);
+    }
+
+    async save(){
+        await super.save();
+        let m = this.get();
+        await movieController.updateMovie(m.id, m.rel_date, m.trailer, m.runtime);
+        // links
+        // delete not included links
+        const oldLinks = await linkController.getMovieLinks(m.id);
+        outer: for (let l of oldLinks){
+            let lVal = new MovieLink(l).get();
+            for (let val of m.links){
+                if (val.platform == lVal.platform)
+                    continue outer;
+            }
+            await linkController.deleteMovieLink(lVal.title_id, lVal.platform);
+        }
+        // add / edit new links
+        outer: for (let val of m.links){
+            for (let oldLink of oldLinks){
+                let old = new MovieLink(oldLink).get();
+                // make edits
+                if (val.platform == old.platform){
+                    await linkController.editMovieLink(val.title_id, val.platform, val.link, val.available);
+                    continue outer;
+                }
+            }
+            // does not yet exist make new one
+            await linkController.insertMovieLink(val.title_id, val.platform, val.link, val.available);
+        }
+    }
+
+    async delete(){
+        await super.delete();
+        let val = this.get();
+        await movieController.deleteMovie(val.id);
+        await linkController.deleteAllMovieLinks(val.id);
+    }
+
 }
 
-/**
- * Creates random id that has not already been assigned to a movie.
- */
-function getNewID(){
-    // create random id
-    let id = 'm'+crypto.randomBytes(config.title_id_length).toString('hex');
-    return movieController.selectMoviesByID(id).then(movs => {
-        // id does not exist
-        if (movs.length == 0)
-            return id;
-        // id exists try again
-        return getNewID();
-    })
+class MovieLink extends model.Model {
+
+    constructor(data) {
+        super([
+            new model.StringAttribute({
+                name: "title_id",
+                editable: false,
+                visible: false,
+                adminProtected: true
+            }),
+            new model.StringAttribute({
+                name: "platform",
+                editable: true,
+                visible: true,
+                adminProtected: true
+            }),
+            new model.StringAttribute({
+                name: "link",
+                editable: true,
+                visible: true,
+                adminProtected: true,
+            }),
+            new model.BooleanAttribute({
+                name: "available",
+                defaultValue: true,
+                editable: true,
+                visible: false,
+                adminProtected: true
+            }),
+        ], data);
+    }
+
 }
+
+class MovieLinksAttribute extends model.Attribute {
+
+    constructor(config) {
+        super(config);
+        this.defaultValue = [];
+        this.validate = (val) => {
+            if (typeof val !== 'object' || !Array.isArray(val))
+                return false;
+            for (let v of val)
+                if (!new MovieLink().validate(v, {admin: true}))
+                    return false;
+            return true;
+        };
+        this.initValue = (model, val, requester) => {
+            let links = [];
+            for (let v of val){
+                let link;
+                for (let e of model.links.value)
+                    if (e.get().platform == v.platform)
+                        link = e;
+                if (link == undefined)
+                    link = new MovieLink({title_id:  model.get().id});
+                link.edit(v, requester);
+                links.push(link);
+            }
+            return links;
+        }
+    }
+
+    getValue(visibleOnly){
+        let vals = [];
+        for (let val of this.value)
+            vals.push(val.get(visibleOnly));
+        return vals;
+    }
+
+}
+
+module.exports = Movie;

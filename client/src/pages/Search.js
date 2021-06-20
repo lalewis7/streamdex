@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
+import Footer from '../comps/Footer.js';
 
 class Search extends React.Component{
 
@@ -11,6 +12,9 @@ class Search extends React.Component{
             movies: [
                 {id: '1', img: '/frozen.jpg', title: 'Frozen'},
                 {id: '2', img: '/frozen2.jpg', title: 'Frozen 2'},
+                {id: '3', img: '/moana.jpg', title: 'Moana'},
+                {id: '3', img: '/moana.jpg', title: 'Moana'},
+                {id: '3', img: '/moana.jpg', title: 'Moana'},
                 {id: '3', img: '/moana.jpg', title: 'Moana'}
             ]
         }
@@ -31,7 +35,7 @@ class Search extends React.Component{
         }
 
         return (
-            <a class="card text-center m-2 bg-gradient-primary" style={{maxWidth: '180px'}} onMouseEnter={hover} onMouseLeave={hover} href="/title/1238910">
+            <a class="card text-center bg-gradient-primary" style={{maxWidth: '160px'}} onMouseEnter={hover} onMouseLeave={hover} href="/title/1238910">
                 <div class="d-flex flex-row">
                     <div class={movie.hovering ? 'showcase-gradient' : ''}>
                         <img src={movie.img} class="card-img" alt="..." style={{maxHeight: '400px', fitContent: 'cover'}}/>
@@ -48,15 +52,18 @@ class Search extends React.Component{
 
     render(){
         return (
-            <div>
-                <div class="p-3">
-                    <div class="d-flex flex-wrap">
+            <>
+            <div class="h-100">
+                <div class="container pt-3 h-100 d-flex flex-column">
+                    <div class="row g-3">
                         {this.state.movies.map(movie => (
-                            <div>{this.renderMovie(movie)}</div>
+                            <div class="col-lg-auto col-md-3 col-sm-4 col-auto">{this.renderMovie(movie)}</div>
                         ))}
                     </div>
                 </div>
             </div>
+            <Footer />
+            </>
         );
     }
 }

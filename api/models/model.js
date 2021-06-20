@@ -1,79 +1,145 @@
-/**
- * Model parent does automatic validation of data given attribute configuration from getAttributeConfig().
- */
-module.exports = {
-    Model: class Model {
-        constructor(attr, data){
-            attr.map(a => {
-                this[a.name] = a;
-                if (data && data[a.name])
-                    this[a.name].value = data[a.name];
+class Model {
+
+    constructor(attr, data){
+        attr.map(a => {
+            this[a.name] = a;
+            // from database
+            if (data){
+                let val = data[a.name];
+                if (a.db_name)
+                    val = data[a.db_name];
+                if (val === undefined)
+                    this[a.name].value = a.defaultValue;
+                else if (a.convertDbValue)
+                    this[a.name].value = a.convertDbValue(val);
                 else
-                    this[a.name].value = a.def;
-            });
-        }
-
-        /**
-         * Edit the model while not overriding uneditable data or data that is admin protected without correct priv
-         * @param {Object} data new data
-         * @param {Boolean} admin user admin status
-         */
-        edit(data, admin){
-            for (let key in data){
-                let attr = this[key];
-                // if attribute exists
-                // and the attribute can be edited
-                // and if it's admin protected user has admin priv
-                if (data && attr && attr.edit && (!attr.admin || (admin && attr.admin))){
-                    this[key].value = data[key];
-                }
+                    this[a.name].value = val;
             }
-        }
-
-        /**
-         * Edits the data of the model regardless of editable and admin settings.
-         * @param {Object} data new data
-         */
-        forceEdit(data){
-            for (let key in data){
-                if (this[key])
-                    this[key].value = data[key];
+            else {
+                this[a.name].value = a.defaultValue;
             }
-        }
-
-        /**
-         * Gets a viewable version of the data that can be sent to the user.
-         */
-        getViewable(){
-            var data = {};
-            for (let key in this){
-                if (this[key].visible)
-                    data[key] = this[key].value;
-            }
-            return data;
-        }
-
-        /**
-         * Gets all data (should not be sent to user may contain unviewable data).
-         */
-        get(){
-            var data = {};
-            for (let key in this){
-                data[key] = this[key].value;
-            }
-            return data;
-        }
-    },
-    
-    /**
-     * Creates and attribute config variable used in Model constructor.
-     * @param {String} name name of the attribute.
-     * @param {Boolean} editable can the attribute be edited in put calls.
-     * @param {Boolean} visible is the attribute visible in get calls.
-     * @param {Boolean} admin_protected does the user require admin privelege to edit.
-     * @param {Object} default_value the default value if one is not provided or does not priviliege to set.
-     */
-    getAttributeConfig(name, editable, visible, admin_protected, default_value){
-        return {name: name, edit: editable, visible: visible, admin: admin_protected, def: default_value};
+        });
     }
+
+    validate(data, requester){
+        let fails = [];
+        for (let key in data){
+            let attr = this[key];
+            if (!attr || // attribute does not exist
+                !attr.editable || // attribute is not editable
+                (attr.adminProtected && !requester.admin) || // attribute is admin protected and requester is not admin
+                (attr.validate && !attr.validate(data[key]))) // attribute has validate fn and it does not pass
+                fails.push(key);
+        }
+        return fails;
+    }
+
+    edit(data, requester){
+        let fails = this.validate(data, requester);
+        for (let key in data){
+            if (!fails.includes(key))
+                this[key].value = this[key].initValue(this, data[key], requester);
+        }
+    }
+
+    override(data){
+        for (let key in data)
+            this[key].value = data[key];
+    }
+
+    get(visibleOnly = false){
+        let data = {};
+        for (let key in this)
+            if (!visibleOnly || this[key].visible)
+                data[key] = this[key].getValue(visibleOnly);
+        return data;
+    }
+
+}
+
+class Attribute {
+    
+    constructor(config){
+        this.name = undefined;
+        this.db_name = undefined;
+        this.editable = false;
+        this.visible = true;
+        this.adminProtected = false;
+        this.validate = (val) => {return true};
+        this.convertDbValue = (val) => {return val};
+        this.initValue = (model, val, requester) => {return val};
+        this.defaultValue = undefined;
+        this.value = undefined;
+        // update with any custom config given
+        for (let key in config)
+            this[key] = config[key];
+    }
+
+    getValue(visibleOnly) {
+        return this.value;
+    }
+
+}
+
+class StringAttribute extends Attribute {
+
+    constructor(config){
+        super(config);
+        this.defaultValue = "";
+        this.validate = (val) => {return typeof val === "string";};
+        // update with any custom config given
+        for (let key in config)
+            this[key] = config[key];
+    }
+
+}
+
+class NumberAttribute extends Attribute {
+
+    constructor(config) {
+        super(config);
+        this.defaultValue = 0;
+        this.validate = (val) => {return typeof val === "number";};
+        // update with any custom config given
+        for (let key in config)
+            this[key] = config[key];
+    }
+
+}
+
+class BooleanAttribute extends Attribute {
+
+    constructor(config) {
+        super(config);
+        this.defaultValue = false;
+        this.validate = (val) => {return typeof val === "boolean";};
+        this.convertDbValue = (val) => {return val == 1 ? true : false;};
+        // update with any custom config given
+        for (let key in config)
+            this[key] = config[key];
+    }
+
+}
+
+class DateAttribute extends Attribute {
+    
+    constructor(config) {
+        super(config);
+        this.defaultValue = null;
+        this.validate = (val) => {return typeof val.getMonth === 'function';};
+        this.convertDbValue = (val) => {return new Date(val)};
+        // update with any custom config given
+        for (let key in config)
+            this[key] = config[key];
+    }
+
+}
+
+module.exports = {
+    Model, 
+    Attribute, 
+    StringAttribute, 
+    NumberAttribute, 
+    BooleanAttribute,
+    DateAttribute
 }

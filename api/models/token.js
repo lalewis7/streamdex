@@ -1,7 +1,11 @@
 const crypto = require('crypto');
-var authController = require('../controllers/auth.js');
+
+// controllers
+var authController = require('../controllers/token.js');
 var userController = require('../controllers/user.js');
-var config = require('../config.js');
+
+// helpers
+var config = require('../config.json');
 var util = require('../util.js');
 
 module.exports = {
@@ -10,7 +14,7 @@ module.exports = {
      * @param {String} user 
      * @param {String} pass 
      */
-    getToken(user, pass){
+    getToken(handle, pass){
         var id;
         /*
         1. First check if user exists with email and password.
@@ -21,11 +25,11 @@ module.exports = {
         6. Create random tokens and check to make sure that they do not already exist.
         7. Once new token is found insert into database and return token to user.
         */
-        return userController.findUsersWithEmailPassword(user, pass)
+        return userController.findUsersWithEmailPassword(handle, pass)
             .then(users => {
                 // no matches with email & password
                 if (users.length == 0)
-                    return userController.findUsersWithHandlePassword(user, pass);
+                    return userController.findUsersWithHandlePassword(handle, pass);
                 return users;
             })
             .then(users => {
@@ -36,10 +40,10 @@ module.exports = {
             })
             .then(user => {
                 if (user === null)
-                    throw "Email/Username or password incorrect.";
-                id = user.id;
+                    throw new Error("Email/Username or password incorrect.");
+                id = user.user_id;
                 // search for existing token
-                return authController.selectActiveUserTokens(user.id);
+                return authController.selectActiveUserTokens(user.user_id);
             })
             .then(tokens => {
                 // does not have active token
