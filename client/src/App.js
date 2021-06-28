@@ -1,68 +1,33 @@
-import './App.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 
-// import react router components
-import {
-  BrowserRouter,
-  Switch,
-  Route
-} from "react-router-dom";
+// components
+import Header from './comps/Header/Header.js';
+import LoginSignup from './comps/LoginSignup/LoginSignup.js';
 
-// import all pages
-import Home from './pages/Home.js';
-import Discover from './pages/Discover.js';
-import NotFound from './pages/NotFound.js';
-import Search from './pages/Search.js';
-import Nav from './pages/Nav.js';
-import Title from './pages/TitlePage.js';
-import Login from './comps/Login.js';
-import Settings from './comps/Settings.js';
-import Profile from './pages/Profile.js';
-import Streams from './pages/Streams.js';
+// pages
+import Home from './pages/Home/Home.js';
+import Discover from './pages/Discover/Discover.js';
+import NotFound from './pages/NotFound/NotFound.js';
+import Search from './pages/Search/Search.js';
+import Title from './pages/Title/Title.js';
+import Settings from './pages/Settings/Settings.js';
+import Test from './pages/Test/Test.js';
 
 class App extends React.Component{
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      token: sessionStorage.getItem('token'),
-      user: sessionStorage.getItem('user') ? JSON.parse(sessionStorage.getItem('user')) : null,
-    }
-
-    this.setToken = this.setToken.bind(this);
-    this.setUser = this.setUser.bind(this);
-
-  }
-
-  setToken(val) {
-    if (val!=null)
-      sessionStorage.setItem("token", val);
-    else
-      sessionStorage.removeItem("token");
-    this.setState({token: val});
-  }
-
-  setUser(val){
-    if (val!=null)
-      sessionStorage.setItem("user", JSON.stringify(val));
-    else
-      sessionStorage.removeItem("user");
-    this.setState({user: val});
-  }
 
   render(){
-    return (<div class="vh-100 d-flex flex-column">
+    return (<div id="app-main" class="min-vh-100 d-flex flex-column bg-main">
       <BrowserRouter>
-        <Nav setToken={this.setToken} state = {{token: this.state.token, user: this.state.user}}/>
-        <Login setToken={this.setToken} setUser={this.setUser} />
+        <Header />
+        <LoginSignup />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/discover" component={Discover} />
           <Route path="/search" component={Search} />
           <Route path="/title/:id" component={Title} />
-          <Route path="/account" component={Profile} />
-          <Route path="/streams" component={Streams} />
+          <Route path="/settings" component={Settings} />
+          <Route path="/test" component={Test} />
           <Route render={() => <NotFound/>} />
         </Switch>
       </BrowserRouter>
@@ -74,9 +39,9 @@ class App extends React.Component{
 function AppExport() {
 
   return (
-    <div>
+    <>
       <App />
-    </div>
+    </>
   );
 }
 

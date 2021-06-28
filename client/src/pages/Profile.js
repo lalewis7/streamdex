@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 import Settings from '../comps/Settings.js';
 
-var Validate = require('../validate.js');
-var Config = require('../config.js');
-var Storage = require('../storage.js');
+var Validate = require('../util/validate.js');
+var Config = require('../util/config.js');
+var Storage = require('../util/storage.js');
 
 class Profile extends React.Component{
 

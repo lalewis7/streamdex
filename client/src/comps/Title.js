@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Config from '../config.js';
+import Config from '../util/config.js';
 import TitlePreview from './TitlePreview.js';
 import TitleDetails from './TitleDetails.js';
 
-import platforms from '../platforms.json';
+import platforms from '../util/platforms.json';
 import sample_title from '../sample_data/title.json';
 
 class Title extends React.Component{

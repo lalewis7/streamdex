@@ -1,0 +1,8 @@
+#header-searchbar::placeholder{
+    color: var(--text-head2);
+}
+
+#header-searchbar:focus{
+    background-color: var(--bg-highlight);
+    color: var(--text-head);
+}

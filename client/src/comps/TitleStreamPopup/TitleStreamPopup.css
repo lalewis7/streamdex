@@ -1,0 +1,18 @@
+#title-stream-popup-body{
+    background-color: #110505;
+}
+
+.stream-icon-lg{
+    width: 64px;
+    height: 64px;
+}
+
+.flag-icon {
+    width: 64px;
+    height: 32px;
+}
+
+#countries-list{
+    max-height: 300px;
+    overflow-y: auto;
+}

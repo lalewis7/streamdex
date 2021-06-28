@@ -1,0 +1,9 @@
+.settings-select-2{
+    border: 1px solid #5F5656;
+    background-color: var(--bg-highlight);
+}
+
+.settings-select-2:hover{
+    background-color: var(--bg-highlight2);
+    color: var(--text-head);
+}

@@ -1,7 +1,7 @@
 import React, { Profiler } from 'react';
 import ReactDOM from 'react-dom';
 
-import Footer from '../comps/Footer.js';
+import Footer from './Footer/Footer.js';
 
 class Settings extends React.Component{
 

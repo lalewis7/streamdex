@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -12,12 +11,10 @@ import reportWebVitals from './reportWebVitals';
 //import 'bootstrap/dist/js/bootstrap.min.js';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
-global.jQuery = $;
+
 const bootstrap = require('bootstrap');
 console.log(bootstrap)
+
 
 ReactDOM.render(
   <React.StrictMode>

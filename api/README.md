@@ -4,7 +4,7 @@
 
 ### Users
 
-- `users(id, handle, email, password, locked, admin)`
+- `users(id, handle, email, password, country, locked, admin)`
 - `userstreams(user, platform)`
 - `tokens(token, user, created, expires)`
 - `rating(user, title, upvote)`
@@ -12,16 +12,18 @@
 
 ### Title
 
-- `title(title_id, title, cover_image, maturity_rating, description)`
+- `title(title_id, title, type, cover_image, maturity_rating, trailer, description)`
 - `titlegenre(title_id, genre)`
-- `movies(title_id, rel_date, trailer, runtime)`
-- `season(title_id, season_id, season_number, rel_date, trailer)`
-- `episode(title_id, season_id, season_number, episode_number, name, runtime, description)`
+- `movies(title_id, rel_date, runtime)`
+- `season(title_id, season_id, season_number, rel_date)`
+- `episode(season_id, episode_id, episode_number, name, runtime, description)`
 
 ### Links
 
-- `movielinks(title_id, platform, link, available)`
-- `seasonlinks(title_id, season_number, platform, link, available)`
+- `link(title_id, platform, link)`
+- `movielink(title_id, platform, country, rel_date, available)`
+- `seasonlink(title_id, platform, season_id, country, rel_date, available)`
+- `episodelink(title_id, platform, episode_id, country, rel_date, available)`
 
 ## API design
 
@@ -74,7 +76,23 @@ Models make up the structure of the data. They use controllers to interact with 
     "email": "sample@mail.com",
     "password": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
     "admin": false,
+    "country": "USA",
     "streams": ["netflix", "hulu"]
+}
+```
+
+### Title
+```json
+{
+    "title_id": "7e3ff9765e6310664a1e983bc454589cc577bd3230e95f5e511c274b50c49c2e",
+    "title": "Frozen",
+    "type": "movie",
+    "thumbnail": "frozen.png",
+    "maturity": "PG",
+    "description": "Animated kids movie about princess in frozen castle",
+    /* For logged in users */
+    "available": true,
+    "available_in_country": false
 }
 ```
 
@@ -83,6 +101,7 @@ Models make up the structure of the data. They use controllers to interact with 
 {
     "title_id": "7e3ff9765e6310664a1e983bc454589cc577bd3230e95f5e511c274b50c49c2e",
     "title": "Frozen",
+    "type": "movie",
     "thumbnail": "frozen.png",
     "maturity": "PG",
     "description": "Animated kids movie about princess in frozen castle",
@@ -97,6 +116,12 @@ Models make up the structure of the data. They use controllers to interact with 
             "platform": "netflix",
             "link": "https://www.google.com/"
         }
+    ],
+    "availability": [
+        {
+            "platform": "netflix",
+            "countries": ["USA"]
+        }
     ]
 }
 ```
@@ -106,19 +131,26 @@ Models make up the structure of the data. They use controllers to interact with 
 {
     "title_id": "5e3ff9765e6310664a1e983bc454589cc577bd3230e95f5e511c274b50c49c2e",
     "title": "Spongebob Squarepants",
+    "type": "series",
     "cover_image": "spongebob.png",
     "maturity_rating": "PG",
     "description": "Animated kids show about a sponge that lives under the sea",
+    "links": [
+        {
+            "platform": "netflix",
+            "link": "https://www.google.com/"
+        }
+    ],
     "seasons":[
         {
             "season_id": "5e3ff9765e6310664a1e983bc45458",
             "season_number": 1,
             "rel_date": "",
             "trailer": "R-cdIvgBCWY",
-            "links": [
+            "availability": [
                 {
                     "platform": "netflix",
-                    "link": "https://www.google.com/"
+                    "countries": ["USA", "UK"]
                 }
             ],
             "episodes": [
@@ -126,7 +158,13 @@ Models make up the structure of the data. They use controllers to interact with 
                     "episode_number": 1,
                     "name": "pineapple under the sea",
                     "runtime": 24,
-                    "description": "spongebob squarepants lives in a pineapple"
+                    "description": "spongebob squarepants lives in a pineapple",
+                    "availability": [
+                        {
+                            "platform": "netflix",
+                            "countries": ["USA", "UK"]
+                        }
+                    ]
                 }
             ]
         }

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var Utils = require('../utils.js');
+var Utils = require('../util/utils.js');
 
 class TitlePreview extends React.Component {
 

@@ -71,3 +71,19 @@
 2021-06-20 00:26:51 [info]: API listening at http://localhost:9000
 2021-06-20 00:26:54 [info]: ::1 (GET) /titles?q=blah
 2021-06-20 00:27:11 [info]: ::1 (GET) /titles?q=test
+2021-06-20 00:48:20 [info]: API listening at http://localhost:9000
+2021-06-20 01:02:20 [info]: ::1 (GET) /titles/?q=rick%20and%20morty
+2021-06-20 01:02:20 [info]: ::1 (GET) /titles/?q=rick%20and%20morty
+2021-06-20 01:02:20 [info]: ::1 (GET) /titles/?q=rick%20and%20morty
+2021-06-20 01:03:33 [info]: ::1 (GET) /titles/?q=rick%20and%20morty
+2021-06-20 01:03:52 [info]: ::1 (GET) /titles?q=rick
+2021-06-20 01:04:07 [info]: ::1 (GET) /titles/807adc6de64d53e84837aa7383e90a6c
+2021-06-20 01:04:13 [info]: ::1 (GET) /titles/807adc6de64d53e84837aa7383e90a6c
+2021-06-20 01:04:48 [info]: ::1 (PUT) /titles/807adc6de64d53e84837aa7383e90a6c
+2021-06-20 01:04:54 [info]: ::1 (GET) /titles/?q=rick%20and%20morty
+2021-06-20 01:16:59 [info]: ::1 (GET) /title/1238910
+2021-06-20 01:17:47 [info]: ::1 (GET) /title/1238910
+2021-06-20 01:17:50 [info]: ::1 (GET) /titles/?q=rick%20and%20morty
+2021-06-20 01:17:51 [info]: ::1 (GET) /title/807adc6de64d53e84837aa7383e90a6c
+2021-06-20 01:18:20 [info]: ::1 (GET) /titles/?q=blah
+2021-06-20 01:18:22 [info]: ::1 (GET) /title/78139ee3a77a51ed6978220888edd098

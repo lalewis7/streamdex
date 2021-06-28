@@ -1,0 +1,20 @@
+.stream-settings-check{
+    background-color: #110505;
+    border-color: #5F5656;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.stream-settings-check:checked {
+    background-color: #741212;
+    border-color: #741212;
+}
+
+.stream-select-item:hover{
+    cursor: pointer;
+}
+
+.stream-settings-list{
+    max-height: 400px;
+    overflow-y: auto;
+}

@@ -5,6 +5,101 @@
 
 $enable-gradients: true;
 
+@font-face {
+    font-family: 'broadway';
+    src: url('./fonts/broadway/Broadway3D.ttf');
+}
+
+@font-face {
+    font-family: 'bungee';
+    src: url('./fonts/bungee/Bungee/Bungee-Regular.woff');
+}
+
+@font-face {
+    font-family: 'bungee-shade';
+    src: url('./fonts/bungee/Bungee/Bungee-Shade.woff');
+}
+
+@font-face {
+    font-family: 'rialto';
+    src: url('./fonts/rialto_nf/RialtoNF.woff');
+}
+
+/*
+:root{
+    --bg-main: #110505;
+    --bg-header: #540C0C;
+    --bg-highlight: #1B0808;
+    --bg-highlight2: #1B0808;
+
+    --text-head: white;
+    --text-head2: #5F5656;
+    --text-main: #999090;
+}
+*/
+
+:root{
+    --bg-main: #180A0A;
+    --bg-header: #180A0A;
+    --bg-highlight: #2C1313;
+    --bg-highlight2: #381818;
+
+    --text-head: white;
+    --text-head2: #7D7373;
+    --text-head3: #5F5858;
+    --text-main: #999090;
+}
+
+.bg-main{
+    background-color: var(--bg-main);
+}
+
+.bg-header{
+    background-color: var(--bg-header);
+}
+
+.bg-highlight{
+    background-color: var(--bg-highlight);
+}
+
+.bg-highlight2{
+    background-color: var(--bg-highlight2);
+}
+
+.text-main{
+    color: var(--text-main);
+}
+
+.text-head{
+    color: var(--text-head);
+}
+
+.text-head2{
+    color: var(--text-head2);
+}
+
+.text-head2:hover{
+    color: var(--text-head2);
+}
+
+.text-logo{
+    font-family: 'rialto';
+    //color: #540C0C;
+}
+
+/*
+
+BG-Main
+BG-Highlight
+BG-Highlight2
+
+TXT-HEAD
+TXT-HEAD2
+TXT-HEAD3
+TXT-P
+
+*/
+
 .showcase-gradient:after {
     display: inline-block;
     background: linear-gradient(to top, rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));
@@ -15,3 +110,47 @@ $enable-gradients: true;
     width: 100%;
     height: 100%;
 }
+
+/*
+
+header: 540C0C
+gray text: 5F5656
+pop-bg: #1B0808
+
+*/
+
+/*
+.bg-main {
+    background-color: #110505;
+}
+
+.bg-header {
+    background-color: #540C0C;
+}
+
+.bg-alt {
+    background-color: #1B0808;
+}
+
+.text-logo {
+    color: white;
+    font-family: 'rialto';
+}
+
+.text-head1{
+    color: white;
+}
+
+.text-head2{
+    color: #5F5656;
+    font-family: 'rialto';
+}
+
+.text-main{
+    color: #999090;
+}
+
+.filter-text{
+    color: #5F5656;
+}
+*/

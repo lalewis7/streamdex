@@ -1,0 +1,34 @@
+{
+    "title_id": "7e3ff9765e6310664a1e983bc454589cc577bd3230e95f5e511c274b50c49c2e",
+    "title": "Frozen",
+    "type": "movie",
+    "thumbnail": "frozen.jpg",
+    "maturity": "PG",
+    "description": "When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister Anna teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.",
+    "rel_date": "",
+    "trailer": "R-cdIvgBCWY",
+    "runtime": 132,
+    "genres": [
+        "kids", "animated"
+    ],
+    "links": [
+        {
+            "platform": "netflix",
+            "link": "https://www.google.com/"
+        },
+        {
+            "platform": "hulu",
+            "link": "https://www.google.com/"
+        }
+    ],
+    "availability": [
+        {
+            "platform": "netflix",
+            "countries": ["US", "FR", "AF", "AX", "AL", "AG", "BS", "AT", "AR"]
+        },
+        {
+            "platform": "hulu",
+            "countries": ["US", "FR", "JP"]
+        }
+    ]
+}

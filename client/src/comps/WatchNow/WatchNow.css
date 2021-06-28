@@ -1,0 +1,18 @@
+.stream-filter{
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.stream-filter-item{
+    background-color: #110505;
+    color: #999090;
+}
+
+.stream-filter-item:hover{
+    background-color: #1B0808;
+    color: #999090;
+}
+
+.filter-streams-button{
+    line-height: 0;
+}
