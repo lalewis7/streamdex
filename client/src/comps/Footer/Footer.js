@@ -8,15 +8,15 @@ class Footer extends React.Component {
 
     render(){
         return (
-            <div class="container-fluid">
-                <div class="row p-3 bg-dark justify-content-center">
+            <footer class="container-fluid">
+                <div class="row p-3 justify-content-center">
                     <div class="col-auto navbar-dark">
                         <a class="" href="/">
                             <img src="/streamlogo.png" width="50" height="50" class="d-inline-block align-text-top"/>
                         </a>
                     </div>
                 </div>
-                <div class="row bg-dark justify-content-center p-3 pt-0">
+                <div class="row justify-content-center p-3 pt-0">
                     <div class="col-6 border-end border-1 border-light d-flex justify-content-end">
                         <a class="text-decoration-none text-light" href="#">Contact Us</a>
                     </div>
@@ -24,7 +24,7 @@ class Footer extends React.Component {
                         <a class="text-decoration-none text-light" href="#">About</a>
                     </div>
                 </div>
-            </div>
+            </footer>
         );
     }
 

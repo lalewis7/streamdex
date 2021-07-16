@@ -27,6 +27,28 @@
 
 ## API design
 
+URL | GET | POST | PUT | DELETE
+--- | --- | --- | --- | --- |
+`/auth` | **200** | 405 | 405 | 405 |
+`/users` | **200** | **201** | 405 | 405 |
+`/users/:userId` | **200** | 405 | **200** | **200** |
+`/titles` | **200** | **201** | 405 | 405 |
+`/titles/:titleId` | **200** | 405 | **200** | **200** |
+`/titles/:titleId/links` | **200** | 405 | 405 | 405 |
+`/titles/:titleId/links/:platform` | **200** | **201** | **200** | **200** |
+`/titles/:titleId/availability` | **200** | 405 | 405 | 405 |
+`/titles/:titleId/availability/:platform` | **200** | **201** | 405 | 405 |
+`/titles/:titleId/seasons` | **200** | **201** | 405 | 405 |
+`/seasons/:seasonId` | **200** | 405 | **200** | **200** |
+`/seasons/:seasonId/availability` | **200** | 405 | 405 | 405 |
+`/seasons/:seasonId/availability/:platform` | **200** | **201** | 405 | 405 |
+`/seasons/:seasonId/episodes` | **200** | **201** | 405 | 405 |
+`/episodes/:episodeId` | **200** | 405 | **200** | **200** |
+`/episodes/:episodeId/availability` | **200** | 405 | 405 | 405 |
+`/episodes/:episodeId/availability/:platform` | **200** | **201** | 405 | 405 |
+
+### Details
+
 `/auth` => use login credentials to be granted token for further use of the api
 - `[GET]` email/handle and password in header returns valid token for user
 - `[POST]` 405
@@ -57,8 +79,26 @@
 - `[PUT]` make changes to titles (admin reserved)
 - `[DELETE]` remove the title
 
+`/titles/:titleId/links` => make changes to title links
+
+`/titles/:titleId/availability` => make changes to title availability
+
+`/seasons`
+
+`/seasons/:seasonId`
+
+`/seasons/:seasonId/availability`
+
+`/episodes`
+
+`/episodes/episodeId`
+
+`/episodes/episodeId/availability`
+
 
 ## Code Structure
+
+
 
 ### Controllers
 
@@ -91,8 +131,7 @@ Models make up the structure of the data. They use controllers to interact with 
     "maturity": "PG",
     "description": "Animated kids movie about princess in frozen castle",
     /* For logged in users */
-    "available": true,
-    "available_in_country": false
+    "available": true
 }
 ```
 

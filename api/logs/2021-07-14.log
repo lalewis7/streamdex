@@ -1,0 +1,1060 @@
+2021-07-14 00:06:18 [info]: API listening at http://localhost:9000
+2021-07-14 00:06:21 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:08:06 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:08:06 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2022' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:08:22 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:08:35 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:08:43 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:08:43 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2022-13-08' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:08:49 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:08:54 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:08:54 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2022-12-32' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:08:58 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:09:20 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:09:20 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2022-2-31' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:09:41 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:09:41 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '20-2-31' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:09:48 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:09:48 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2050-2-31' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:09:55 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:09:55 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2023-2-31' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:10:24 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:10:30 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:10:36 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:10:44 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:10:44 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '-2-3' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:24:34 [info]: API listening at http://localhost:9000
+2021-07-14 00:24:36 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:24:45 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:25:00 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:25:00 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2-14-3' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:27:45 [info]: API listening at http://localhost:9000
+2021-07-14 00:27:49 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:27:49 [error]: TypeError: val.getFullYear is not a function
+    at DateAttribute.validate (D:\streamfinder\api\models\model.js:135:34)
+    at Movie.validate (D:\streamfinder\api\models\model.js:31:41)
+    at Movie.edit (D:\streamfinder\api\models\model.js:38:26)
+    at D:\streamfinder\api\model_functions\common.js:65:27
+    at new Promise (<anonymous>)
+    at editModel (D:\streamfinder\api\model_functions\common.js:64:12)
+    at D:\streamfinder\api\model_functions\title.js:68:32
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:28:32 [info]: API listening at http://localhost:9000
+2021-07-14 00:28:35 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:28:35 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2-14-3' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:39:21 [info]: API listening at http://localhost:9000
+2021-07-14 00:39:24 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:39:24 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2-14-3' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:42:40 [info]: API listening at http://localhost:9000
+2021-07-14 00:42:42 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:42:42 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2-14-3' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:44:23 [info]: API listening at http://localhost:9000
+2021-07-14 00:44:28 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:44:28 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2-14-3' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:44:32 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:44:32 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2-14-3d' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:45:05 [info]: API listening at http://localhost:9000
+2021-07-14 00:45:07 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:45:07 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2-14-3d' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:45:35 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:45:35 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2-14-d' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:46:00 [info]: API listening at http://localhost:9000
+2021-07-14 00:46:03 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:46:03 [error]: Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '2-14-d' for column 'rel_date' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:47:22 [info]: API listening at http://localhost:9000
+2021-07-14 00:47:24 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:47:24 [error]: ReferenceError: dataSplit is not defined
+    at DateAttribute.validate (D:\streamfinder\api\models\model.js:138:24)
+    at Movie.validate (D:\streamfinder\api\models\model.js:31:41)
+    at Movie.edit (D:\streamfinder\api\models\model.js:38:26)
+    at D:\streamfinder\api\model_functions\common.js:65:27
+    at new Promise (<anonymous>)
+    at editModel (D:\streamfinder\api\model_functions\common.js:64:12)
+    at D:\streamfinder\api\model_functions\title.js:68:32
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 00:47:45 [info]: API listening at http://localhost:9000
+2021-07-14 00:47:49 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:47:57 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:53:07 [info]: API listening at http://localhost:9000
+2021-07-14 00:53:11 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:53:16 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:53:22 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:53:32 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:54:11 [info]: API listening at http://localhost:9000
+2021-07-14 00:54:14 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:54:58 [info]: API listening at http://localhost:9000
+2021-07-14 00:55:01 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:55:28 [info]: API listening at http://localhost:9000
+2021-07-14 00:55:31 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:55:35 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:55:41 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:55:44 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:55:49 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:55:57 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:56:09 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:56:23 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 00:57:21 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 01:00:41 [info]: API listening at http://localhost:9000
+2021-07-14 01:00:43 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 01:00:43 [error]: TypeError: Cannot set property 'value' of undefined
+    at Movie.override (D:\streamfinder\api\models\model.js:49:29)
+    at D:\streamfinder\api\model_functions\title.js:106:31
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 01:01:34 [info]: API listening at http://localhost:9000
+2021-07-14 01:01:36 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 01:01:36 [error]: TypeError: Cannot set property 'value' of undefined
+    at Movie.override (D:\streamfinder\api\models\model.js:49:29)
+    at D:\streamfinder\api\model_functions\title.js:107:31
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 01:04:00 [info]: API listening at http://localhost:9000
+2021-07-14 01:04:03 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 01:04:03 [error]: ReferenceError: movie is not defined
+    at D:\streamfinder\api\model_functions\title.js:108:25
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 01:04:44 [info]: API listening at http://localhost:9000
+2021-07-14 01:04:46 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 01:05:08 [info]: API listening at http://localhost:9000
+2021-07-14 01:05:10 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:23:31 [info]: API listening at http://localhost:9000
+2021-07-14 02:23:34 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:23:34 [error]: TypeError: val.split is not a function
+    at DateAttribute.convertDbValue (D:\streamfinder\api\models\model.js:183:28)
+    at D:\streamfinder\api\models\model.js:14:44
+    at Array.map (<anonymous>)
+    at new Model (D:\streamfinder\api\models\model.js:4:14)
+    at new Title (D:\streamfinder\api\models\title.js:18:9)
+    at new Movie (D:\streamfinder\api\models\movie.js:16:9)
+    at D:\streamfinder\api\model_functions\title.js:106:33
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 02:25:18 [info]: API listening at http://localhost:9000
+2021-07-14 02:25:21 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:25:21 [error]: TypeError: val.split is not a function
+    at DateAttribute.convertDbValue (D:\streamfinder\api\models\model.js:183:28)
+    at D:\streamfinder\api\models\model.js:14:44
+    at Array.map (<anonymous>)
+    at new Model (D:\streamfinder\api\models\model.js:4:14)
+    at new Title (D:\streamfinder\api\models\title.js:18:9)
+    at new Movie (D:\streamfinder\api\models\movie.js:16:9)
+    at D:\streamfinder\api\model_functions\title.js:106:33
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 02:25:34 [info]: API listening at http://localhost:9000
+2021-07-14 02:25:37 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:25:37 [error]: TypeError: val.split is not a function
+    at DateAttribute.convertDbValue (D:\streamfinder\api\models\model.js:184:28)
+    at D:\streamfinder\api\models\model.js:14:44
+    at Array.map (<anonymous>)
+    at new Model (D:\streamfinder\api\models\model.js:4:14)
+    at new Title (D:\streamfinder\api\models\title.js:18:9)
+    at new Movie (D:\streamfinder\api\models\movie.js:16:9)
+    at D:\streamfinder\api\model_functions\title.js:106:33
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 02:25:50 [info]: API listening at http://localhost:9000
+2021-07-14 02:25:54 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:25:54 [error]: TypeError: val.split is not a function
+    at DateAttribute.convertDbValue (D:\streamfinder\api\models\model.js:184:28)
+    at D:\streamfinder\api\models\model.js:14:44
+    at Array.map (<anonymous>)
+    at new Model (D:\streamfinder\api\models\model.js:4:14)
+    at new Title (D:\streamfinder\api\models\title.js:18:9)
+    at new Movie (D:\streamfinder\api\models\movie.js:16:9)
+    at D:\streamfinder\api\model_functions\title.js:106:33
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 02:27:15 [info]: API listening at http://localhost:9000
+2021-07-14 02:27:18 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:27:18 [error]: SyntaxError: Unexpected token S in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at DateAttribute.convertDbValue (D:\streamfinder\api\models\model.js:182:30)
+    at D:\streamfinder\api\models\model.js:14:44
+    at Array.map (<anonymous>)
+    at new Model (D:\streamfinder\api\models\model.js:4:14)
+    at new Title (D:\streamfinder\api\models\title.js:18:9)
+    at new Movie (D:\streamfinder\api\models\movie.js:16:9)
+    at D:\streamfinder\api\model_functions\title.js:106:33
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 02:27:29 [info]: API listening at http://localhost:9000
+2021-07-14 02:27:31 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:27:31 [error]: TypeError: val.split is not a function
+    at DateAttribute.convertDbValue (D:\streamfinder\api\models\model.js:184:28)
+    at D:\streamfinder\api\models\model.js:14:44
+    at Array.map (<anonymous>)
+    at new Model (D:\streamfinder\api\models\model.js:4:14)
+    at new Title (D:\streamfinder\api\models\title.js:18:9)
+    at new Movie (D:\streamfinder\api\models\movie.js:16:9)
+    at D:\streamfinder\api\model_functions\title.js:106:33
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 02:27:58 [info]: API listening at http://localhost:9000
+2021-07-14 02:28:00 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:29:25 [info]: API listening at http://localhost:9000
+2021-07-14 02:29:27 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:30:31 [info]: API listening at http://localhost:9000
+2021-07-14 02:30:33 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:31:43 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:31:45 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:32:04 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:32:06 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:32:19 [info]: API listening at http://localhost:9000
+2021-07-14 02:32:33 [info]: ::1 (DELETE) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:33:13 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:33:26 [info]: ::1 (PUT) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:34:17 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:34:42 [info]: ::1 (DELETE) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:34:45 [info]: ::1 (GET) /titles/63bc7340e5b5e0ff971ac68e4dc98365
+2021-07-14 02:35:17 [info]: ::1 (POST) /titles
+2021-07-14 02:35:26 [info]: ::1 (POST) /titles
+2021-07-14 02:35:44 [info]: ::1 (POST) /titles
+2021-07-14 02:36:03 [info]: ::1 (POST) /titles
+2021-07-14 02:36:14 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 02:36:27 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/links
+2021-07-14 02:36:34 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/links/3
+2021-07-14 02:37:18 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 02:37:21 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/links
+2021-07-14 02:39:10 [info]: API listening at http://localhost:9000
+2021-07-14 02:39:15 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 02:42:04 [info]: API listening at http://localhost:9000
+2021-07-14 02:42:07 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 03:44:54 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/links
+2021-07-14 03:45:31 [info]: API listening at http://localhost:9000
+2021-07-14 03:45:33 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/links
+2021-07-14 03:45:49 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 03:45:49 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'da9c985110156d0027e6ead301f06690-netflix' for key 'links.PRIMARY'
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertLink (D:\streamfinder\api\controllers\links.js:14:21)
+    at Link.insert (D:\streamfinder\api\models\links.js:235:31)
+    at D:\streamfinder\api\model_functions\title.js:193:25
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 11:47:22 [info]: API listening at http://localhost:9000
+2021-07-14 11:47:27 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:47:27 [error]: ReferenceError: linkController is not defined
+    at D:\streamfinder\api\model_functions\title.js:189:13
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 11:47:46 [info]: API listening at http://localhost:9000
+2021-07-14 11:47:49 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:49:30 [info]: API listening at http://localhost:9000
+2021-07-14 11:49:37 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:49:40 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/links
+2021-07-14 11:49:56 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:50:09 [info]: ::1 (PUT) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:50:17 [info]: ::1 (PUT) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:50:30 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:50:44 [info]: ::1 (PUT) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:50:46 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:50:59 [info]: ::1 (DELETE) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:51:09 [info]: ::1 (DELETE) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:51:11 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/links
+2021-07-14 11:51:16 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/links/netflix
+2021-07-14 11:51:18 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/links
+2021-07-14 11:51:33 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 11:51:42 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:51:42 [error]: ReferenceError: platform is not defined
+    at D:\streamfinder\api\model_functions\title.js:271:67
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 11:52:07 [info]: API listening at http://localhost:9000
+2021-07-14 11:52:11 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:52:31 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:52:38 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:53:38 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:53:48 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:53:52 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:56:13 [info]: API listening at http://localhost:9000
+2021-07-14 11:56:17 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:56:22 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:56:29 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:56:29 [error]: ReferenceError: platform is not defined
+    at D:\streamfinder\api\models\links.js:31:35
+    at Array.map (<anonymous>)
+    at Availability.init (D:\streamfinder\api\models\links.js:30:15)
+    at D:\streamfinder\api\model_functions\title.js:275:23
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 11:57:16 [info]: API listening at http://localhost:9000
+2021-07-14 11:57:19 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:57:24 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:57:29 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:58:19 [info]: API listening at http://localhost:9000
+2021-07-14 11:58:21 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:58:42 [info]: API listening at http://localhost:9000
+2021-07-14 11:58:45 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 11:58:49 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:01:29 [info]: API listening at http://localhost:9000
+2021-07-14 12:01:32 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:05:30 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:06:46 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:10:42 [info]: ::1 (POST) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:14:34 [info]: API listening at http://localhost:9000
+2021-07-14 12:14:39 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:15:18 [info]: API listening at http://localhost:9000
+2021-07-14 12:15:22 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:16:06 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:16:34 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:16:41 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:21:16 [info]: API listening at http://localhost:9000
+2021-07-14 12:21:21 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:21:40 [info]: API listening at http://localhost:9000
+2021-07-14 12:21:42 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:22:34 [info]: API listening at http://localhost:9000
+2021-07-14 12:22:37 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:24:18 [info]: API listening at http://localhost:9000
+2021-07-14 12:24:20 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:25:04 [info]: API listening at http://localhost:9000
+2021-07-14 12:25:06 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:26:27 [info]: API listening at http://localhost:9000
+2021-07-14 12:26:30 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:26:39 [info]: API listening at http://localhost:9000
+2021-07-14 12:26:41 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:28:11 [info]: API listening at http://localhost:9000
+2021-07-14 12:28:14 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:28:42 [info]: API listening at http://localhost:9000
+2021-07-14 12:28:44 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:29:20 [info]: API listening at http://localhost:9000
+2021-07-14 12:29:22 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:30:00 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:30:00 [error]: TypeError: link.get is not a function
+    at D:\streamfinder\api\models\links.js:31:22
+    at Array.map (<anonymous>)
+    at Availability.init (D:\streamfinder\api\models\links.js:30:15)
+    at D:\streamfinder\api\model_functions\title.js:275:23
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 12:32:58 [info]: API listening at http://localhost:9000
+2021-07-14 12:33:00 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:33:00 [error]: TypeError: link.get is not a function
+    at D:\streamfinder\api\models\links.js:31:22
+    at Array.map (<anonymous>)
+    at Availability.init (D:\streamfinder\api\models\links.js:30:15)
+    at D:\streamfinder\api\model_functions\title.js:275:23
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 12:34:24 [info]: API listening at http://localhost:9000
+2021-07-14 12:34:28 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:34:33 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690/availability/netflix
+2021-07-14 12:34:36 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:35:24 [info]: API listening at http://localhost:9000
+2021-07-14 12:35:26 [info]: ::1 (GET) /titles/da9c985110156d0027e6ead301f06690
+2021-07-14 12:35:53 [info]: ::1 (POST) /titles
+2021-07-14 12:36:09 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 12:36:23 [info]: ::1 (PUT) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 12:36:26 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 12:36:38 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834/availability/netflix
+2021-07-14 12:36:43 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834/availability/netflix
+2021-07-14 12:36:52 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/availability/netflix
+2021-07-14 12:37:01 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/links/netflix
+2021-07-14 12:37:05 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 12:37:13 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:37:17 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:37:26 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:38:05 [info]: API listening at http://localhost:9000
+2021-07-14 12:38:07 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:38:25 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:38:25 [error]: TypeError: seasonController.getSeasonByID is not a function
+    at getNewID (D:\streamfinder\api\models\season.js:135:29)
+    at Season.insert (D:\streamfinder\api\models\season.js:73:26)
+    at D:\streamfinder\api\model_functions\title.js:342:27
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 12:38:56 [info]: API listening at http://localhost:9000
+2021-07-14 12:38:58 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:38:59 [error]: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?)' at line 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertSeason (D:\streamfinder\api\controllers\season.js:22:21)
+    at Season.insert (D:\streamfinder\api\models\season.js:77:32)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 12:41:47 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:41:47 [error]: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?)' at line 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertSeason (D:\streamfinder\api\controllers\season.js:22:21)
+    at Season.insert (D:\streamfinder\api\models\season.js:77:32)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 12:42:20 [info]: API listening at http://localhost:9000
+2021-07-14 12:42:39 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:42:51 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:43:28 [info]: API listening at http://localhost:9000
+2021-07-14 12:43:32 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:43:39 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:44:09 [info]: API listening at http://localhost:9000
+2021-07-14 12:44:10 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 12:44:32 [info]: ::1 (GET) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:44:40 [info]: ::1 (PUT) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:44:49 [info]: ::1 (PUT) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:45:04 [info]: ::1 (PUT) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:45:13 [info]: ::1 (GET) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:45:18 [info]: ::1 (PUT) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:45:20 [info]: ::1 (GET) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:45:23 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 12:47:55 [info]: API listening at http://localhost:9000
+2021-07-14 12:48:03 [info]: ::1 (PUT) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:48:05 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 12:54:11 [info]: API listening at http://localhost:9000
+2021-07-14 12:54:33 [info]: ::1 (PUT) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:56:25 [info]: API listening at http://localhost:9000
+2021-07-14 12:57:12 [info]: ::1 (PUT) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:57:17 [info]: ::1 (GET) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:57:20 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 12:57:36 [info]: API listening at http://localhost:9000
+2021-07-14 12:57:52 [info]: ::1 (GET) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:57:57 [info]: ::1 (PUT) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:58:00 [info]: ::1 (GET) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 12:58:02 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 12:58:19 [info]: ::1 (GET) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability
+2021-07-14 12:58:23 [info]: ::1 (POST) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability/netflix
+2021-07-14 12:58:44 [info]: ::1 (POST) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability/netflix
+2021-07-14 12:59:53 [info]: API listening at http://localhost:9000
+2021-07-14 12:59:59 [info]: ::1 (GET) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability
+2021-07-14 13:00:01 [info]: ::1 (POST) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability/netflix
+2021-07-14 13:00:33 [info]: API listening at http://localhost:9000
+2021-07-14 13:00:37 [info]: ::1 (GET) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability
+2021-07-14 13:00:39 [info]: ::1 (POST) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability/netflix
+2021-07-14 13:01:17 [info]: ::1 (POST) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability/netflix
+2021-07-14 13:03:17 [info]: API listening at http://localhost:9000
+2021-07-14 13:03:48 [info]: ::1 (POST) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability/netflix
+2021-07-14 13:04:48 [info]: API listening at http://localhost:9000
+2021-07-14 13:04:50 [info]: ::1 (POST) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability/netflix
+2021-07-14 13:05:45 [info]: API listening at http://localhost:9000
+2021-07-14 13:05:48 [info]: ::1 (POST) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability/netflix
+2021-07-14 13:05:51 [info]: ::1 (GET) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability
+2021-07-14 13:05:58 [info]: ::1 (POST) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability/netflix
+2021-07-14 13:06:00 [info]: ::1 (GET) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability
+2021-07-14 13:06:05 [info]: ::1 (POST) /seasons/1d3f10d336a91c94154f9aeb9ebb4968/availability/netflix
+2021-07-14 13:06:08 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 13:06:34 [info]: ::1 (DELETE) /seasons/1d3f10d336a91c94154f9aeb9ebb4968
+2021-07-14 13:06:34 [error]: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND season_id = '1d3f10d336a91c94154f9aeb9ebb4968'' at line 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.deleteAllEpisode (D:\streamfinder\api\controllers\episode.js:29:21)
+    at Season.delete (D:\streamfinder\api\models\season.js:89:33)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 13:08:05 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 13:08:15 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 13:08:28 [info]: ::1 (POST) /seasons/35422fc2093fa3c8ac9cc5d9b706da52/availability/netflix
+2021-07-14 13:08:30 [info]: ::1 (GET) /seasons/35422fc2093fa3c8ac9cc5d9b706da52/availability
+2021-07-14 13:08:32 [info]: ::1 (GET) /seasons/35422fc2093fa3c8ac9cc5d9b706da52
+2021-07-14 13:08:36 [info]: ::1 (PUT) /seasons/35422fc2093fa3c8ac9cc5d9b706da52
+2021-07-14 13:08:40 [info]: ::1 (GET) /seasons/35422fc2093fa3c8ac9cc5d9b706da52
+2021-07-14 13:08:47 [info]: ::1 (DELETE) /seasons/35422fc2093fa3c8ac9cc5d9b706da52
+2021-07-14 13:08:47 [error]: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND season_id = '35422fc2093fa3c8ac9cc5d9b706da52'' at line 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.deleteAllEpisode (D:\streamfinder\api\controllers\episode.js:29:21)
+    at Season.delete (D:\streamfinder\api\models\season.js:89:33)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 13:09:13 [info]: API listening at http://localhost:9000
+2021-07-14 13:09:20 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 13:09:29 [info]: ::1 (POST) /seasons/ed52f27559c78100c757833f202884b4/availability/netflix
+2021-07-14 13:09:33 [info]: ::1 (PUT) /seasons/ed52f27559c78100c757833f202884b4
+2021-07-14 13:09:37 [info]: ::1 (GET) /seasons/ed52f27559c78100c757833f202884b4
+2021-07-14 13:09:41 [info]: ::1 (DELETE) /seasons/ed52f27559c78100c757833f202884b4
+2021-07-14 13:09:44 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 13:10:42 [info]: ::1 (POST) /titles/371a9967d4d7f5438447eb450ccf1834/seasons
+2021-07-14 13:10:58 [info]: ::1 (GET) /seasons/fabce30b41761f4edc84301aeb811ea3/availability
+2021-07-14 13:11:01 [info]: ::1 (POST) /seasons/fabce30b41761f4edc84301aeb811ea3/availability/netflix
+2021-07-14 13:11:05 [info]: ::1 (PUT) /seasons/fabce30b41761f4edc84301aeb811ea3
+2021-07-14 13:11:09 [info]: ::1 (GET) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:11:11 [info]: ::1 (POST) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:11:18 [info]: ::1 (POST) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:11:32 [info]: ::1 (POST) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:11:32 [error]: ReferenceError: config is not defined
+    at getNewID (D:\streamfinder\api\models\episode.js:96:33)
+    at Episode.insert (D:\streamfinder\api\models\episode.js:74:26)
+    at D:\streamfinder\api\model_functions\season.js:117:28
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 13:13:58 [info]: API listening at http://localhost:9000
+2021-07-14 13:14:13 [info]: ::1 (POST) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:14:13 [error]: TypeError [ERR_INVALID_ARG_TYPE]: The "size" argument must be of type number. Received type undefined
+    at validateNumber (internal/validators.js:112:11)
+    at assertSize (internal/crypto/random.js:32:3)
+    at Object.randomBytes (internal/crypto/random.js:48:10)
+    at getNewID (D:\streamfinder\api\models\episode.js:97:21)
+    at Episode.insert (D:\streamfinder\api\models\episode.js:75:26)
+    at D:\streamfinder\api\model_functions\season.js:117:28
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 13:14:43 [info]: API listening at http://localhost:9000
+2021-07-14 13:14:46 [info]: ::1 (POST) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:18:35 [info]: API listening at http://localhost:9000
+2021-07-14 13:18:38 [info]: ::1 (POST) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:19:26 [info]: API listening at http://localhost:9000
+2021-07-14 13:19:42 [info]: API listening at http://localhost:9000
+2021-07-14 13:20:13 [info]: ::1 (POST) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:21:21 [info]: API listening at http://localhost:9000
+2021-07-14 13:21:24 [info]: ::1 (POST) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:21:36 [info]: ::1 (GET) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:22:13 [info]: API listening at http://localhost:9000
+2021-07-14 13:22:17 [info]: ::1 (GET) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:22:37 [info]: ::1 (GET) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:23:03 [info]: ::1 (GET) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:23:10 [info]: ::1 (PUT) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:23:18 [info]: ::1 (PUT) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:23:33 [info]: ::1 (PUT) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:23:36 [info]: ::1 (GET) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:25:26 [info]: ::1 (PUT) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:25:29 [info]: ::1 (GET) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:26:11 [info]: API listening at http://localhost:9000
+2021-07-14 13:26:15 [info]: ::1 (PUT) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:26:19 [info]: ::1 (GET) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:27:41 [info]: API listening at http://localhost:9000
+2021-07-14 13:27:45 [info]: ::1 (PUT) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:27:47 [info]: ::1 (GET) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:27:54 [info]: ::1 (GET) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability
+2021-07-14 13:27:58 [info]: ::1 (POST) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability/netflix
+2021-07-14 13:28:06 [info]: ::1 (POST) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability/netflix
+2021-07-14 13:28:06 [error]: ReferenceError: platform is not defined
+    at D:\streamfinder\api\model_functions\episode.js:70:65
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 13:28:33 [info]: API listening at http://localhost:9000
+2021-07-14 13:28:43 [info]: ::1 (POST) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability/netflix
+2021-07-14 13:28:59 [info]: API listening at http://localhost:9000
+2021-07-14 13:29:01 [info]: ::1 (POST) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability/netflix
+2021-07-14 13:29:19 [info]: ::1 (POST) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability/netflix
+2021-07-14 13:29:26 [info]: ::1 (POST) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability/netflix
+2021-07-14 13:30:24 [info]: API listening at http://localhost:9000
+2021-07-14 13:30:27 [info]: ::1 (POST) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability/netflix
+2021-07-14 13:30:55 [info]: API listening at http://localhost:9000
+2021-07-14 13:30:58 [info]: ::1 (POST) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability/netflix
+2021-07-14 13:31:01 [info]: ::1 (GET) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability
+2021-07-14 13:31:30 [info]: API listening at http://localhost:9000
+2021-07-14 13:31:33 [info]: ::1 (POST) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability/netflix
+2021-07-14 13:31:38 [info]: ::1 (GET) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57/availability
+2021-07-14 13:31:42 [info]: ::1 (GET) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:31:45 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 13:31:56 [info]: ::1 (DELETE) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:32:04 [info]: ::1 (DELETE) /episodes/ea1a31883a6f21ae1d0d4d28b34dae57
+2021-07-14 13:32:09 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 13:32:17 [info]: ::1 (POST) /seasons/fabce30b41761f4edc84301aeb811ea3/episodes
+2021-07-14 13:32:28 [info]: ::1 (POST) /episodes/2aa19e34c71a94da78e3851652dae9ca/availability/netflix
+2021-07-14 13:32:33 [info]: ::1 (PUT) /episodes/2aa19e34c71a94da78e3851652dae9ca
+2021-07-14 13:32:36 [info]: ::1 (GET) /episodes/2aa19e34c71a94da78e3851652dae9ca
+2021-07-14 13:32:39 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-14 15:05:51 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 15:07:21 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 15:08:39 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 16:39:11 [info]: ::1 (GET) /titles/?q=show
+2021-07-14 16:42:06 [info]: ::1 (GET) /titles/?q=rick%20and%20morty
+2021-07-14 16:48:05 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 16:48:34 [info]: ::1 (GET) /titles/?q=show
+2021-07-14 16:52:02 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 16:52:17 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 16:55:10 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 16:55:16 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 16:55:28 [info]: ::1 (GET) /titles/?q=show
+2021-07-14 16:55:57 [info]: ::1 (GET) /titles/?q=show
+2021-07-14 16:56:32 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 16:56:53 [info]: ::1 (GET) /titles/?q=ric
+2021-07-14 16:57:17 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 16:57:32 [info]: ::1 (GET) /titles/?q=show
+2021-07-14 16:59:35 [info]: ::1 (GET) /titles/?q=show
+2021-07-14 16:59:38 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 16:59:44 [info]: ::1 (GET) /titles/?q=show
+2021-07-14 16:59:48 [info]: ::1 (GET) /titles/?q=rick%20and%20morty
+2021-07-14 20:26:37 [info]: ::1 (GET) /titles/?q=rick%20and%20morty
+2021-07-14 20:33:55 [info]: ::1 (GET) /titles/807adc6de64d53e84837aa7383e90a6c
+2021-07-14 20:34:12 [info]: ::1 (GET) /titles/807adc6de64d53e84837aa7383e90a6c
+2021-07-14 20:36:43 [info]: ::1 (GET) /titles/807adc6de64d53e84837aa7383e90a6c
+2021-07-14 20:37:16 [info]: ::1 (GET) /titles/807adc6de64d53e84837aa7383e90a6c
+2021-07-14 20:41:04 [info]: ::1 (GET) /titles
+2021-07-14 20:41:33 [info]: ::1 (POST) /titles
+2021-07-14 20:43:58 [info]: ::1 (PUT) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:43:58 [error]: Error: ER_DATA_TOO_LONG: Data too long for column 'trailer' at row 1
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.updateMovie (D:\streamfinder\api\controllers\movie.js:14:21)
+    at Movie.save (D:\streamfinder\api\models\movie.js:59:31)
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-14 20:44:11 [info]: ::1 (PUT) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:44:23 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:46:34 [info]: ::1 (PUT) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:46:39 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:47:22 [info]: ::1 (PUT) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:47:24 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:47:38 [info]: ::1 (GET) /titles/?q=moana
+2021-07-14 20:47:40 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:47:56 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:48:53 [info]: ::1 (PUT) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:48:57 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:49:06 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:49:40 [info]: ::1 (PUT) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:49:42 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:52:06 [info]: ::1 (POST) /titles/273b352a34374b898a850afd13c09b8f/links/disney_plus
+2021-07-14 20:52:22 [info]: ::1 (POST) /titles/273b352a34374b898a850afd13c09b8f/availability/disney_plus
+2021-07-14 20:52:26 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:52:36 [info]: ::1 (POST) /titles/273b352a34374b898a850afd13c09b8f/availability/disney_plus
+2021-07-14 20:52:38 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 20:57:45 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 21:04:22 [info]: ::1 (GET) /titles/?q=moana
+2021-07-14 21:04:41 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 21:06:06 [info]: ::1 (POST) /titles
+2021-07-14 21:06:18 [info]: ::1 (GET) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 21:08:58 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-14 21:09:22 [info]: ::1 (PUT) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 21:09:27 [info]: ::1 (GET) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 21:11:01 [info]: ::1 (PUT) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 21:11:04 [info]: ::1 (GET) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 21:11:52 [info]: ::1 (PUT) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 21:11:54 [info]: ::1 (GET) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 21:12:37 [info]: ::1 (POST) /titles/4fc63cc45cb72566136015b9dcf1cf46/links/netflix
+2021-07-14 21:13:44 [info]: ::1 (POST) /titles/4fc63cc45cb72566136015b9dcf1cf46/links/amazon_prime
+2021-07-14 21:13:47 [info]: ::1 (GET) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 21:14:12 [info]: ::1 (POST) /titles/4fc63cc45cb72566136015b9dcf1cf46/seasons
+2021-07-14 21:14:28 [info]: ::1 (GET) /seasons/629093fc324c495a4c360000a5c11043
+2021-07-14 21:15:32 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/availability/amazon_prime
+2021-07-14 21:15:54 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:15:57 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:00 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:03 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:06 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:10 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:13 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:16 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:18 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:22 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:24 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:28 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:31 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:34 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:36 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:39 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:42 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:45 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:49 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:53 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/episodes
+2021-07-14 21:16:55 [info]: ::1 (GET) /seasons/629093fc324c495a4c360000a5c11043
+2021-07-14 21:17:30 [info]: ::1 (GET) /episodes/ee6f225d6c8732b296a661ca8c48977c
+2021-07-14 21:19:23 [info]: ::1 (PUT) /episodes/ee6f225d6c8732b296a661ca8c48977c
+2021-07-14 21:19:30 [info]: ::1 (POST) /episodes/ee6f225d6c8732b296a661ca8c48977c/availability/amazon_prime
+2021-07-14 21:19:53 [info]: ::1 (GET) /seasons/629093fc324c495a4c360000a5c11043
+2021-07-14 21:21:01 [info]: API listening at http://localhost:9000
+2021-07-14 21:21:04 [info]: ::1 (GET) /seasons/629093fc324c495a4c360000a5c11043
+2021-07-14 21:23:28 [info]: ::1 (PUT) /episodes/7de2c052df733cf8c7cb032b4f549dbf
+2021-07-14 21:23:30 [info]: ::1 (POST) /episodes/7de2c052df733cf8c7cb032b4f549dbf/availability/amazon_prime
+2021-07-14 21:24:21 [info]: ::1 (PUT) /episodes/48c5501014930542477edc9053b7d5e9
+2021-07-14 21:24:23 [info]: ::1 (POST) /episodes/48c5501014930542477edc9053b7d5e9/availability/amazon_prime
+2021-07-14 21:25:02 [info]: ::1 (PUT) /episodes/c8f4ad3ab24bc506f8d7288917cbefcb
+2021-07-14 21:25:04 [info]: ::1 (POST) /episodes/c8f4ad3ab24bc506f8d7288917cbefcb/availability/amazon_prime
+2021-07-14 21:25:37 [info]: ::1 (PUT) /episodes/0a5f863b782e9fe6aa9b934931da0e50
+2021-07-14 21:25:39 [info]: ::1 (POST) /episodes/0a5f863b782e9fe6aa9b934931da0e50/availability/amazon_prime
+2021-07-14 21:26:10 [info]: ::1 (PUT) /episodes/e4650f01205058103f88ba58ce9c800f
+2021-07-14 21:26:11 [info]: ::1 (POST) /episodes/e4650f01205058103f88ba58ce9c800f/availability/amazon_prime
+2021-07-14 21:26:54 [info]: ::1 (PUT) /episodes/cb870c3a7da91acc6be2ae749ad83c10
+2021-07-14 21:26:55 [info]: ::1 (POST) /episodes/cb870c3a7da91acc6be2ae749ad83c10/availability/amazon_prime
+2021-07-14 21:27:53 [info]: ::1 (PUT) /episodes/3ec3790736ca304615155b41751661ba
+2021-07-14 21:27:54 [info]: ::1 (POST) /episodes/3ec3790736ca304615155b41751661ba/availability/amazon_prime
+2021-07-14 21:28:27 [info]: ::1 (PUT) /episodes/45f9c7758389951003aad56018a94eb1
+2021-07-14 21:28:28 [info]: ::1 (POST) /episodes/45f9c7758389951003aad56018a94eb1/availability/amazon_prime
+2021-07-14 21:28:58 [info]: ::1 (PUT) /episodes/a648e516fcbb492b5232d3deee916e59
+2021-07-14 21:29:00 [info]: ::1 (POST) /episodes/a648e516fcbb492b5232d3deee916e59/availability/amazon_prime
+2021-07-14 21:29:22 [info]: ::1 (PUT) /episodes/098e8ac7217d4cc1fed662a112e14dec
+2021-07-14 21:29:23 [info]: ::1 (POST) /episodes/098e8ac7217d4cc1fed662a112e14dec/availability/amazon_prime
+2021-07-14 21:29:59 [info]: ::1 (PUT) /episodes/899e6a567f3a9ba4c19613378653ee8d
+2021-07-14 21:30:01 [info]: ::1 (POST) /episodes/899e6a567f3a9ba4c19613378653ee8d/availability/amazon_prime
+2021-07-14 21:30:32 [info]: ::1 (PUT) /episodes/cf2900987cd55223f7f9e1a04b065c32
+2021-07-14 21:30:33 [info]: ::1 (POST) /episodes/cf2900987cd55223f7f9e1a04b065c32/availability/amazon_prime
+2021-07-14 21:30:54 [info]: ::1 (PUT) /episodes/4295df8d9aec711d70be029800d1fad8
+2021-07-14 21:30:55 [info]: ::1 (POST) /episodes/4295df8d9aec711d70be029800d1fad8/availability/amazon_prime
+2021-07-14 21:31:26 [info]: ::1 (PUT) /episodes/0fdd02bbd8574016e85955a4082fa758
+2021-07-14 21:31:27 [info]: ::1 (POST) /episodes/0fdd02bbd8574016e85955a4082fa758/availability/amazon_prime
+2021-07-14 21:32:00 [info]: ::1 (PUT) /episodes/6b6840e3504673b142a2d26b1d2ebfb2
+2021-07-14 21:32:01 [info]: ::1 (POST) /episodes/6b6840e3504673b142a2d26b1d2ebfb2/availability/amazon_prime
+2021-07-14 21:32:30 [info]: ::1 (PUT) /episodes/fc5dc4c240583c946d249a11abd9dd92
+2021-07-14 21:32:31 [info]: ::1 (POST) /episodes/fc5dc4c240583c946d249a11abd9dd92/availability/amazon_prime
+2021-07-14 21:32:56 [info]: ::1 (PUT) /episodes/7bbd9448e0f787fe6273bf761dfb71ac
+2021-07-14 21:32:57 [info]: ::1 (POST) /episodes/7bbd9448e0f787fe6273bf761dfb71ac/availability/amazon_prime
+2021-07-14 21:33:20 [info]: ::1 (PUT) /episodes/574a3404adeb31e0bcb8576637a06674
+2021-07-14 21:33:22 [info]: ::1 (POST) /episodes/574a3404adeb31e0bcb8576637a06674/availability/amazon_prime
+2021-07-14 21:33:45 [info]: ::1 (PUT) /episodes/574a3404adeb31e0bcb8576637a06674
+2021-07-14 21:33:47 [info]: ::1 (POST) /episodes/574a3404adeb31e0bcb8576637a06674/availability/amazon_prime
+2021-07-14 21:34:05 [info]: ::1 (PUT) /episodes/574a3404adeb31e0bcb8576637a06674
+2021-07-14 21:34:19 [info]: ::1 (PUT) /episodes/fe8bbeafd0e6970fc3150d8ffe4ed7c8
+2021-07-14 21:34:20 [info]: ::1 (POST) /episodes/fe8bbeafd0e6970fc3150d8ffe4ed7c8/availability/amazon_prime
+2021-07-14 21:34:30 [info]: ::1 (GET) /titles/?q=avatar
+2021-07-14 21:34:33 [info]: ::1 (GET) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 21:35:15 [info]: ::1 (POST) /seasons/629093fc324c495a4c360000a5c11043/availability/netflix
+2021-07-14 21:35:19 [info]: ::1 (GET) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 21:36:00 [info]: ::1 (PUT) /seasons/629093fc324c495a4c360000a5c11043
+2021-07-14 21:36:04 [info]: ::1 (GET) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 23:56:10 [info]: ::1 (GET) /titles/?q=
+2021-07-14 23:56:15 [info]: ::1 (GET) /titles/?q=moana
+2021-07-14 23:56:18 [info]: ::1 (GET) /titles/?q=rick
+2021-07-14 23:56:25 [info]: ::1 (GET) /titles/?q=avatar
+2021-07-14 23:56:32 [info]: ::1 (GET) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-14 23:57:18 [info]: ::1 (GET) /titles/?q=rick%20and%20morty
+2021-07-14 23:57:19 [info]: ::1 (GET) /titles/807adc6de64d53e84837aa7383e90a6c

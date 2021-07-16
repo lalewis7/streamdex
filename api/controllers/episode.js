@@ -3,16 +3,35 @@ var config = require('../config.json');
 
 module.exports = {
 
-    getSeasonEpisodes(title_id, season_id){
-        return util.dbPromise("SELECT * FROM episodes WHERE title_id = ? AND season_id = ?", title_id, season_id);
+    getEpisode(episode_id){
+        return util.dbPromise("SELECT * FROM episodes WHERE episode_id = ?", episode_id);
     },
 
-    insertEpisode(title_id, season_id, episode_number, name, runtime, description){
-        return util.dbPromise("INSERT INTO episodes (title_id, season_id, episode_number, name, runtime, description) VALUES (?, ?, ?, ?, ?, ?)", title_id, season_id, episode_number, name, runtime, description);
+    getSeasonEpisodes(season_id){
+        return util.dbPromise("SELECT * FROM episodes WHERE season_id = ? ORDER BY episode_number ASC", season_id);
     },
 
-    deleteAllEpisode(title_id, season_id){
-        return util.dbPromise("DELETE FROM episodes WHERE title_id = ? AND season_id = ?", title_id, season_id);
+    insertEpisode(season_id, episode_id, episode_number, name, runtime, description, rel_date){
+        return util.dbPromise("INSERT INTO episodes (season_id, episode_id, episode_number, name, runtime, description, rel_date) VALUES (?, ?, ?, ?, ?, ?, ?)", 
+            season_id, episode_id, episode_number, name, runtime, description, rel_date);
+    },
+
+    updateEpisode(episode_id, episode_number, name, runtime, description, rel_date){
+        return util.dbPromise("UPDATE episodes SET episode_number = ?, name = ?, runtime = ?, description = ?, rel_date = ? WHERE episode_id = ?", 
+            episode_number, name, runtime, description, rel_date, episode_id);
+    },
+
+    editEpisode(season_id, episode_id, episode_number, name, runtime, description, rel_date){
+        return util.dbPromise("INSERT INTO episodes (season_id, episode_id, episode_number, name, runtime, description, rel_date) VALUES (?, ?, ?, ?, ?, ?, ?)", 
+            season_id, episode_id, episode_number, name, runtime, description, rel_date);
+    },
+
+    deleteEpisode(episode_id){
+        return util.dbPromise("DELETE FROM episodes WHERE episode_id = ?", episode_id);
+    },
+
+    deleteAllEpisode(season_id){
+        return util.dbPromise("DELETE FROM episodes WHERE season_id = ?", season_id);
     }
 
 }

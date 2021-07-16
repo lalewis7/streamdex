@@ -20,13 +20,7 @@ router.get('/', (req, res) => {
                 viewableUsers.push(user.get(true));
             res.status(200).send(viewableUsers);
         })
-        .catch(err => {
-            if (err.stack){
-                util.logger().error(err.stack);
-                res.sendStatus(500);
-            } else
-                res.status(400).send(err);
-        })
+        .catch(util.handleResponseError(res));
 });
 
 // create user
@@ -35,13 +29,7 @@ router.post('/', (req, res) => {
         .then(() => {
             res.sendStatus(201);
         })
-        .catch(err => {
-            if (err.stack){
-                util.logger().error(err.stack);
-                res.sendStatus(500);
-            } else
-                res.status(400).send(err);
-        });
+        .catch(util.handleResponseError(res));
 });
 
 // dne
@@ -70,13 +58,7 @@ router.get('/:userId', (req, res) => {
         .then(user => {
             res.status(200).send(user.get(true));
         })
-        .catch(err => {
-            if (err.stack){
-                util.logger().error(err.stack);
-                res.sendStatus(500);
-            } else
-                res.status(400).send(err);
-        })
+        .catch(util.handleResponseError(res));
 })
 
 // dne
@@ -96,13 +78,7 @@ router.put('/:userId', (req, res) => {
         .then(() => {
             res.sendStatus(200);
         })
-        .catch(err => {
-            if (err.stack){
-                util.logger().error(err.stack);
-                res.sendStatus(500);
-            } else
-                res.status(400).send(err);
-        });
+        .catch(util.handleResponseError(res));
 });
 
 // dne
@@ -117,13 +93,7 @@ router.delete('/:userId', (req, res) => {
         .then(() => {
             res.sendStatus(200);
         })
-        .catch(err => {
-            if (err.stack){
-                util.logger().error(err.stack);
-                res.sendStatus(500);
-            } else
-                res.status(400).send(err);
-        })
+        .catch(util.handleResponseError(res));
 })
 
 module.exports = router;

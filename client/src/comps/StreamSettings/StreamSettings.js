@@ -22,13 +22,13 @@ class StreamSettings extends React.Component {
 
     streamPill(icon, name, id){
         return <li>
-            <label class="d-flex flex-row justify-content-between align-items-center p-2 rounded-pill my-1 settings-select-2 stream-select-item">
+            <label class="d-flex flex-row justify-content-between align-items-center p-2 rounded-3 my-1 settings-select stream-select-item">
                 <div class="d-flex flex-row align-items-center">
                     <img class="rounded-circle" src={icon} style={{width: '40px', height: '40px'}}/>
-                    <h5 class="m-0 ms-2">{name}</h5>
+                    <h5 class="m-0 ms-2 text-head">{name}</h5>
                 </div>
                 <div class="form-check me-2">
-                    <input class="form-check-input stream-settings-check" type="checkbox" id={id+"_enabled"} name={id+"_enabled"} onChange={this.pillChanged} checked={this.state[id+"_enabled"]}/>
+                    <input class="form-check-input" type="checkbox" id={id+"_enabled"} name={id+"_enabled"} onChange={this.pillChanged} checked={this.state[id+"_enabled"]}/>
                 </div>
             </label>
             </li>
@@ -37,8 +37,7 @@ class StreamSettings extends React.Component {
     render(){
         return <>
             <div class="row">
-                <div class="col stream-settings-list pe-3">
-                    <input type="text" placeholder="Search" class="form-control mb-2"/>
+                <div class="col pe-3">
                     <ul class="list-group list-unstyled">
                         {Platforms.map(service => (
                             <div>{this.streamPill(service.icon, service.title, service.id)}</div>

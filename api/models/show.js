@@ -12,7 +12,7 @@ class Show extends Title {
         super([
             new SeasonsAttribute({
                 name: "seasons",
-                editable: true,
+                editable: false,
                 visible: true,
                 adminProtected: true
             })

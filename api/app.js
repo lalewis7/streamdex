@@ -7,11 +7,13 @@ var auth = require('./token_auth.js');
 var util = require('./util.js');
 
 // import routes
-var indexRouter = require('./routes/index.js');
-var usersRouter = require('./routes/users.js');
-var authRouter = require('./routes/auth.js');
-var handleRouter = require('./routes/handle.js');
-var titlesRouter = require('./routes/titles.js');
+const indexRouter = require('./routes/index.js');
+const usersRouter = require('./routes/users.js');
+const authRouter = require('./routes/auth.js');
+const handleRouter = require('./routes/handle.js');
+const titlesRouter = require('./routes/titles.js');
+const seasonsRouter = require('./routes/seasons.js');
+const episodesRouter = require('./routes/episodes.js')
 
 // middleware
 app.use(express.json());
@@ -25,6 +27,8 @@ app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/handle', handleRouter);
 app.use('/titles', titlesRouter);
+app.use('/seasons', seasonsRouter);
+app.use('/episodes', episodesRouter);
 
 // start server
 app.listen(config.port, () => {

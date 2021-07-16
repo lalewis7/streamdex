@@ -5,6 +5,9 @@ const tokenController = require('../controllers/token.js');
 // models
 const User = require('../models/user.js');
 
+// helpers
+const {editModel} = require('./common.js');
+
 /**
  * Finds all users in database using optional queries.
  * Queries:
@@ -45,7 +48,7 @@ function getUserByID(id){
         .then(users => {
             // user does not exist
             if (users.length == 0)
-                return Promise.reject("User does not exist.");
+                return Promise.reject({http_msg: "User does not exist.", http_code: 404});
             user = new User(users[0]);
             return user.init();
         })
@@ -103,8 +106,10 @@ function createUser(data){
     let invalid = user.validate(data, {admin: false});
     if (invalid.length > 0)
         return Promise.reject(invalid[0] + " invalid.");
-    user.edit(data, {admin: false});
-    return user.insert();
+    return editModel(user, data, {admin: false})
+        .then(user => {
+            return user.insert();
+        })
 }
 
 /**
@@ -124,9 +129,11 @@ function editUser(id, admin, data){
             return user.init();
         })
         .then(() => {
-            user.edit(data, {admin: admin});
+            return editModel(user, data, {admin: admin});
+        })
+        .then(user => {
             return user.save();
-        });
+        })
 }
 
 /**

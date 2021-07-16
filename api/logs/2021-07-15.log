@@ -1,0 +1,65 @@
+2021-07-15 13:05:28 [info]: API listening at http://localhost:9000
+2021-07-15 13:22:10 [info]: ::1 (GET) /auth
+2021-07-15 13:22:17 [info]: ::1 (GET) /auth
+2021-07-15 13:24:18 [info]: API listening at http://localhost:9000
+2021-07-15 13:24:23 [info]: ::1 (GET) /auth
+2021-07-15 13:25:16 [info]: ::1 (GET) /auth
+2021-07-15 13:28:35 [info]: ::1 (GET) /auth
+2021-07-15 13:29:58 [info]: ::1 (GET) /auth
+2021-07-15 13:29:58 [info]: ::1 (GET) /self
+2021-07-15 13:29:58 [error]: Cannot read property 'user_id' of undefined
+2021-07-15 13:31:55 [info]: ::1 (GET) /auth
+2021-07-15 13:31:55 [info]: ::1 (GET) /self
+2021-07-15 13:31:55 [error]: Cannot read property 'user_id' of undefined
+2021-07-15 13:32:10 [info]: ::1 (GET) /auth
+2021-07-15 13:32:10 [info]: ::1 (GET) /self
+2021-07-15 13:34:01 [info]: ::1 (GET) /auth
+2021-07-15 13:34:01 [info]: ::1 (GET) /self
+2021-07-15 13:34:17 [info]: ::1 (GET) /auth
+2021-07-15 13:34:17 [info]: ::1 (GET) /self
+2021-07-15 13:43:06 [info]: ::1 (GET) /auth
+2021-07-15 13:43:06 [info]: ::1 (GET) /self
+2021-07-15 13:45:39 [info]: ::1 (GET) /auth
+2021-07-15 13:45:39 [info]: ::1 (GET) /self
+2021-07-15 13:46:14 [info]: ::1 (GET) /auth
+2021-07-15 13:46:29 [info]: ::1 (GET) /users/self
+2021-07-15 13:46:54 [info]: ::1 (GET) /auth
+2021-07-15 13:46:54 [info]: ::1 (GET) //users/self
+2021-07-15 13:47:08 [info]: ::1 (GET) /auth
+2021-07-15 13:47:08 [info]: ::1 (GET) /users/self
+2021-07-15 17:11:58 [info]: ::1 (GET) /users/self
+2021-07-15 17:11:59 [info]: ::1 (GET) /users/self
+2021-07-15 17:12:58 [info]: ::1 (GET) /users/self
+2021-07-15 17:13:01 [info]: ::1 (GET) /users/self
+2021-07-15 17:13:17 [info]: ::1 (GET) /users/self
+2021-07-15 17:25:27 [info]: ::1 (GET) /auth
+2021-07-15 17:25:27 [info]: ::1 (GET) /users/self
+2021-07-15 17:28:03 [info]: ::1 (GET) /auth
+2021-07-15 17:28:55 [info]: ::1 (GET) /auth
+2021-07-15 17:29:29 [info]: ::1 (GET) /auth
+2021-07-15 17:29:34 [info]: ::1 (GET) /auth
+2021-07-15 17:44:08 [info]: ::1 (GET) /auth
+2021-07-15 17:44:13 [info]: ::1 (GET) /auth
+2021-07-15 17:44:40 [info]: ::1 (GET) /auth
+2021-07-15 17:44:40 [error]: Error: Email/Username or password incorrect.
+    at D:\streamfinder\api\models\token.js:43:27
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-15 17:44:45 [info]: ::1 (GET) /auth
+2021-07-15 17:44:45 [info]: ::1 (GET) /users/self
+2021-07-15 20:00:20 [info]: ::1 (GET) /users/self
+2021-07-15 20:01:34 [info]: ::1 (GET) /auth
+2021-07-15 20:01:34 [info]: ::1 (GET) /users/self
+2021-07-15 20:02:13 [info]: ::1 (GET) /auth
+2021-07-15 20:02:13 [info]: ::1 (GET) /users/self
+2021-07-15 20:02:54 [info]: ::1 (GET) /titles/?q=moana
+2021-07-15 20:02:55 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-15 20:03:10 [info]: ::1 (GET) /titles/?q=avatar
+2021-07-15 20:04:34 [info]: ::1 (GET) /titles/?q=avatar
+2021-07-15 20:05:16 [info]: ::1 (GET) /titles/?q=rick%20and%20morty
+2021-07-15 20:05:19 [info]: ::1 (GET) /titles/371a9967d4d7f5438447eb450ccf1834
+2021-07-15 20:06:18 [info]: ::1 (GET) /titles/?q=moana
+2021-07-15 20:06:19 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-15 20:11:10 [info]: ::1 (GET) /titles/?q=avatar
+2021-07-15 20:11:14 [info]: ::1 (GET) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-15 20:12:08 [info]: ::1 (GET) /auth
+2021-07-15 20:12:08 [info]: ::1 (GET) /users/self

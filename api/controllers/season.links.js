@@ -2,24 +2,25 @@ var util = require('../util.js');
 
 module.exports = {
     
-    getSeasonLinks(title_id, season_id){
-        return util.dbPromise("SELECT * FROM seasonlinks WHERE title_id = ? AND season_id = ?", title_id, season_id);
+    getSeasonLinks(season_id){
+        return util.dbPromise("SELECT * FROM seasonlinks WHERE (season_id, platform, country, timestamp) IN (SELECT season_id, platform, country, max(timestamp) from seasonlinks group by season_id, platform, country) AND season_id = ?", season_id);
     },
 
-    editSeasonLink(title_id, season_id, platform, link, available){
-        return util.dbPromise("UPDATE seasonlinks SET platform = ?, link = ?, available = ? WHERE title_id = ? AND season_id = ?", platform, link, available, title_id, season_id);
+    getSeasonPlatformLinks(season_id, platform){
+        return util.dbPromise("SELECT * FROM seasonlinks WHERE (season_id, platform, country, timestamp) IN (SELECT season_id, platform, country, max(timestamp) from seasonlinks group by season_id, platform, country) AND season_id = ? AND platform = ?", season_id, platform);
     },
 
-    insertSeasonLink(title_id, season_id, platform, link, available){
-        return util.dbPromise("INSERT INTO seasonlinks (title_id, season_id, platform, link, available) VALUES (?, ?, ?, ?, ?)", title_id, season_id, platform, link, available);
+    insertSeasonLink(season_id, platform, country, available, timestamp){
+        return util.dbPromise("INSERT INTO seasonlinks (season_id, platform, country, available, timestamp) VALUES (?, ?, ?, ?, ?)", 
+            season_id, platform, country, available, timestamp);
     },
 
-    deleteSeaonLink(title_id, season_id, platform){
-        return util.dbPromise("DELETE FROM seasonlinks WHERE title_id = ? AND season_id = ? AND platform = ?", title_id, season_id, platform);
+    deleteSeaonLink(season_id, platform){
+        return util.dbPromise("DELETE FROM seasonlinks WHERE season_id = ? AND platform = ?", season_id, platform);
     },
 
-    deleteAllSeasonLinks(title_id, season_id){
-        return util.dbPromise("DELETE FROM seasonlinks WHERE title_id = ? AND season_id = ?", title_id, season_id);
+    deleteAllSeasonLinks(season_id){
+        return util.dbPromise("DELETE FROM seasonlinks WHERE season_id = ?", season_id);
     }
 
 }

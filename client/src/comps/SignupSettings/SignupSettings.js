@@ -2,6 +2,7 @@ import React from 'react';
 
 const Config = require('../../util/config.js');
 const validate = require('../../util/validate.js');
+const SVG = require('../../util/svg.js');
 
 class SignupSettings extends React.Component {
 
@@ -163,7 +164,7 @@ class SignupSettings extends React.Component {
                 .then(res => {
                     if (res.ok){
                         res.text().then(token => {
-                            Storage.setToken(token);
+                            this.props.setToken(token);
                         });
                     } else {
                         console.log('Failed to login after signup');
@@ -182,12 +183,10 @@ class SignupSettings extends React.Component {
             <div class="row my-3">
                 <div class="col-12">
                     <div class="input-group has-validation">
-                        <span class="input-group-text" >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                            </svg>
+                        <span class="input-group-text border-0 bg-highlight text-head2 shadow-none" >
+                            <SVG.UserFill w={'1.15em'} h={'1.15em'}/>
                         </span>
-                        <input type="text" class={"form-control "+this.state.usernameClass} id="signupUsername" placeholder="Username" value={this.state.username} onChange={this.usernameChange} onBlur={this.usernameValidate}/>
+                        <input type="text" class={"form-control border-0 bg-highlight text-head text-input "+this.state.usernameClass} id="signupUsername" placeholder="Username" value={this.state.username} onChange={this.usernameChange} onBlur={this.usernameValidate}/>
                         <div class="invalid-feedback">{this.state.usernameInvalid}</div>
                     </div>
                 </div>
@@ -195,12 +194,10 @@ class SignupSettings extends React.Component {
             <div class="row my-3">
                 <div class="col-12">
                     <div class="input-group has-validation">
-                        <span class="input-group-text" >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.15em" height="1.15em" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
-                            </svg>
+                        <span class="input-group-text border-0 bg-highlight text-head2 shadow-none" >
+                            <SVG.EmailFill w={'1.15em'} h={'1.15em'} />
                         </span>
-                        <input type="email" class={"form-control "+this.state.emailClass} id="signupEmail" placeholder="Email" value={this.state.email} onChange={this.emailChange} onBlur={this.emailValidate}/>
+                        <input type="email" class={"form-control border-0 bg-highlight text-head text-input "+this.state.emailClass} id="signupEmail" placeholder="Email" value={this.state.email} onChange={this.emailChange} onBlur={this.emailValidate}/>
                         <div class="invalid-feedback">Email invalid.</div>
                     </div>
                 </div>
@@ -208,12 +205,10 @@ class SignupSettings extends React.Component {
             <div class="row my-3">
                 <div class="col-12">
                     <div class="input-group has-validation">
-                        <span class="input-group-text" >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.15em" height="1.15em" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
-                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
-                            </svg>
+                        <span class="input-group-text border-0 bg-highlight text-head2 shadow-none" >
+                            <SVG.PasswordFill w={'1.15em'} h={'1.15em'} />
                         </span>
-                        <input type="password" class={"form-control "+this.state.passwordClass} id="signupPassword" placeholder="Password" value={this.state.password} onChange={this.passwordChange} onBlur={this.passwordValidate}/>
+                        <input type="password" class={"form-control border-0 bg-highlight text-head text-input "+this.state.passwordClass} id="signupPassword" placeholder="Password" value={this.state.password} onChange={this.passwordChange} onBlur={this.passwordValidate}/>
                         <div class="invalid-feedback">Password must be 8-64 characters long.</div>
                     </div>
                 </div>
@@ -221,26 +216,24 @@ class SignupSettings extends React.Component {
             <div class="row my-3">
                 <div class="col-12">
                     <div class="input-group has-validation">
-                        <span class="input-group-text" >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.15em" height="1.15em" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
-                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
-                            </svg>
+                        <span class="input-group-text border-0 bg-highlight text-head2 shadow-none" >
+                            <SVG.PasswordFill w={'1.15em'} h={'1.15em'} />
                         </span>
-                        <input type="password" class={"form-control "+this.state.passwordConfirmClass} id="signupPasswordConfirm" placeholder="Confirm Password" value={this.state.passwordConfirm} onChange={this.passwordConfirmChange} />
+                        <input type="password" class={"form-control border-0 bg-highlight text-head text-input "+this.state.passwordConfirmClass} id="signupPasswordConfirm" placeholder="Confirm Password" value={this.state.passwordConfirm} onChange={this.passwordConfirmChange} />
                         <div class="invalid-feedback">Passwords do not match.</div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 d-grid">
-                    <button type="submit" class="btn btn-primary">LOGIN</button>
+                    <button type="submit" class="btn btn-primary">SIGN UP</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <p class="text-center mt-3">
+                    <p class="text-center mt-3 text-main">
                     Already a member?
-                    <a href="javacript:void(0);" class="link-secondary ms-1" onClick={() => {this.props.switchPage('login')}}>Login now</a>
+                    <a href="javacript:void(0);" class="link-light ms-1" onClick={() => {this.props.switchPage('login')}}>Login now</a>
                     </p>
                 </div>
             </div>

@@ -1,9 +1,13 @@
+// Custom.scss
+// https://getbootstrap.com/docs/5.0/customize/sass/
 
-// import all bootstrap files
-// https://getbootstrap.com/docs/4.0/getting-started/theming/
-@import "node_modules/bootstrap/scss/bootstrap";
-
-$enable-gradients: true;
+:root{
+    --color-background: #180A0A;
+    --color-primary: #399697;
+    --color-secondary: #2C1313;
+    --color-tertiary: #999090;
+    --color-light: #7D7373;
+}
 
 @font-face {
     font-family: 'broadway';
@@ -25,6 +29,290 @@ $enable-gradients: true;
     src: url('./fonts/rialto_nf/RialtoNF.woff');
 }
 
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+// https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+$enable-gradients: true;
+
+// custom colors
+$color-background: #180A0A;
+$color-primary: #399697;
+$color-secondary: #2C1313;
+$color-tertiary: #999090;
+$color-light: #7D7373;
+
+$primary: $color-primary;
+$secondary: $color-secondary;
+$light: $color-light;
+
+$body-bg: $color-background;
+$body-color: #fff;
+
+// nav
+$nav-link-color: $color-light;
+$nav-link-hover-color: $color-light;
+$nav-tabs-border-color: $color-tertiary;
+$nav-tabs-link-active-border-color: $color-tertiary $color-tertiary transparent;
+$nav-tabs-link-hover-border-color: $color-tertiary $color-tertiary transparent;
+//$nav-tabs-link-active-bg: $color-secondary;
+$nav-tabs-link-active-color: #fff;
+
+// inputs
+$input-bg: $color-secondary;
+$input-color: #fff;
+$input-placeholder-color: $color-light;
+$input-border-width: 0;
+
+$input-group-addon-bg: $color-secondary;
+$input-group-addon-color: $color-light;
+
+// checkbox
+$form-check-input-width: 1.25em;
+$form-check-input-border: 1px solid shade-color($color-tertiary, 40%);
+$form-check-input-bg: $color-background;
+$form-check-input-checked-bg: $color-primary;
+$form-check-input-checked-border-color: $color-primary; 
+
+// modals
+$modal-content-bg: $color-background;
+
+// accordion
+$accordion-button-color: $color-light;
+$accordion-button-bg: $color-background;
+$accordion-button-active-bg: $color-secondary;
+$accordion-button-active-color: tint-color($color-light, 20%);
+$accordion-border-color: shade-color($color-tertiary, 40%);
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+// just comment out components not being used
+@import "../node_modules/bootstrap/scss/accordion";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/badge";
+@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/forms";
+// @import "../node_modules/bootstrap/scss/forms/floating-labels";
+// @import "../node_modules/bootstrap/scss/forms/form-check";
+// @import "../node_modules/bootstrap/scss/forms/form-control";
+// @import "../node_modules/bootstrap/scss/forms/form-range";
+// @import "../node_modules/bootstrap/scss/forms/form-select";
+// @import "../node_modules/bootstrap/scss/forms/form-text";
+// @import "../node_modules/bootstrap/scss/forms/input-group";
+// @import "../node_modules/bootstrap/scss/forms/labels";
+// @import "../node_modules/bootstrap/scss/forms/validation";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/popover";
+@import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/tooltip";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 5. Add additional custom code here
+
+p {
+    color: $color-light;
+}
+
+h5, h6 {
+    color: #999090; //shade-color($color-light, 40%);
+}
+
+footer{
+    background-color: shade-color($color-background, 30%);
+}
+
+.navbar {
+    background-image:none;
+}
+
+.navbar-brand {
+    font-family: 'rialto';
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.btn-secondary {
+    background-image: none;
+    color: $color-light;
+}
+
+.btn-secondary:hover {
+    background-image: none;
+}
+
+.btn-primary:disabled{
+    color: #fff;
+}
+
+.settings-select{
+    background-color:shade-color($color-secondary, 20%);
+}
+
+.settings-select:hover{
+    background-color: $color-secondary;
+}
+
+.settings-back{
+    color: #fff;
+}
+
+.btn-primary{
+    background-image: none;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover{
+    background-color: shade-color($color-primary, 20%);
+    color: #fff;
+    background-image: none;
+    border: none;
+}
+
+.pedestal{
+    background-color: $color-secondary;
+}
+
+.modal-header{
+    border: 0;
+    .btn-close {
+        margin: 0;
+    }
+}
+
+.season-body{
+    border: 1px solid $color-tertiary;
+    border-top: 0;
+    border-bottom-left-radius: .25em;
+    border-bottom-right-radius: .25em;
+}
+
+// horizontal scroll
+
+.horizontal-scroll{
+    position:relative;
+}
+
+.horizontal-scroll-body{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    // &:hover{
+    //     .horizontal-scroll-prev{
+    //         display: inline-block;
+    //     }
+    //     .horizontal-scroll-next{
+    //         display: inline-block;
+    //     }
+    // }
+    // .horizontal-scroll-prev{
+    //     display: none;
+    // }
+    // .horizontal-scroll-next{
+    //     display: none;
+    // }
+}
+
+.horizontal-scroll-body > *{
+    flex-wrap: nowrap;
+}
+
+.horizontal-scroll-prev, .horizontal-scroll-next{
+    @extend .btn;
+    background-color: rgba($color-background, .85);
+    padding: .4em;
+    color: shade-color($color-light, 10%);
+    box-shadow: none;
+    outline: 0;
+    height: calc(100% - 1px);
+    position:absolute;
+    top:0;
+    z-index: 9;
+    &:hover {
+        color: #fff;
+    }
+    &:focus, &:active, &.active, &:active:focus {
+        box-shadow: none;
+        outline: 0;
+    }
+}
+
+.horizontal-scroll-prev{
+    padding-right: .7em;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.horizontal-scroll-next{
+    right: 0;
+    padding-left: .7em;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.nav-tabs{
+    border: 0;
+    .nav-link, :not(.active) {
+        border-bottom: 1px solid $color-tertiary;
+    }
+    .nav-link, .active {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+@media (max-width: 576px){
+    .modal-dialog {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .modal-content {
+        height: auto;
+        min-height: 100%;
+        border-radius: 0;
+    }
+}
+
+@media (min-width: 576px){
+    #headerCollapseContent{
+        display: none;
+    }
+}
+
 /*
 :root{
     --bg-main: #110505;
@@ -35,20 +323,24 @@ $enable-gradients: true;
     --text-head: white;
     --text-head2: #5F5656;
     --text-main: #999090;
-}
-*/
 
-:root{
+    ---
+
     --bg-main: #180A0A;
     --bg-header: #180A0A;
     --bg-highlight: #2C1313;
     --bg-highlight2: #381818;
+    --bg-highlight3: #399697;
+    --bg-highlight4: #307D7E;
 
     --text-head: white;
     --text-head2: #7D7373;
     --text-head3: #5F5858;
     --text-main: #999090;
 }
+*/
+
+/*
 
 .bg-main{
     background-color: var(--bg-main);
@@ -64,6 +356,10 @@ $enable-gradients: true;
 
 .bg-highlight2{
     background-color: var(--bg-highlight2);
+}
+
+.bg-highlight3{
+    background-color: var(--bg-highlight3);
 }
 
 .text-main{
@@ -84,19 +380,7 @@ $enable-gradients: true;
 
 .text-logo{
     font-family: 'rialto';
-    //color: #540C0C;
 }
-
-/*
-
-BG-Main
-BG-Highlight
-BG-Highlight2
-
-TXT-HEAD
-TXT-HEAD2
-TXT-HEAD3
-TXT-P
 
 */
 
@@ -110,47 +394,3 @@ TXT-P
     width: 100%;
     height: 100%;
 }
-
-/*
-
-header: 540C0C
-gray text: 5F5656
-pop-bg: #1B0808
-
-*/
-
-/*
-.bg-main {
-    background-color: #110505;
-}
-
-.bg-header {
-    background-color: #540C0C;
-}
-
-.bg-alt {
-    background-color: #1B0808;
-}
-
-.text-logo {
-    color: white;
-    font-family: 'rialto';
-}
-
-.text-head1{
-    color: white;
-}
-
-.text-head2{
-    color: #5F5656;
-    font-family: 'rialto';
-}
-
-.text-main{
-    color: #999090;
-}
-
-.filter-text{
-    color: #5F5656;
-}
-*/

@@ -1,48 +1,53 @@
 import React from 'react';
 import './WatchNow.css';
-import * as bootstrap from 'bootstrap';
 
 const Platforms = require('../../util/platforms.json');
+const storage = require('../../util/storage.js');
+const SVG = require('../../util/svg.js');
 
 class WatchNow extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.openFilter = this.openFilter.bind(this);
-    }
-
-    componentDidMount(){
-        this.filterModal = new bootstrap.Modal(document.getElementById("country-filter-popup"), {keyboard: false});
-    }
-
-    openFilter(){
-        this.filterModal.show();
-    }
-
     render(){
+
+        let links = [];
+
+        const streamIcon = (link, platform) => {
+            return <>
+            <button type="button" class="btn p-0 m-2" onClick={() => {this.props.openStream(link.platform)}}>
+                <img src={platform.icon} alt="..." class="stream-icon rounded-3"/>
+            </button>
+            </>
+        }
+
+        const noLinks = <>
+            <p class="p-3">No streaming services are currently offering this title.</p>
+        </>
+
+        this.props.availability.map(available => {
+            if (storage.getFilterCountry())
+                for (let link of this.props.links)
+                    if (available.platform === link.platform && available.countries.indexOf(storage.getFilterCountry().toUpperCase()) == -1)
+                        return;
+            for (let platform of Platforms){
+                if (platform.id == available.platform){
+                    links.push(streamIcon(available, platform));
+                    return;
+                }
+            }
+        })
+
         return <>
             <div class="row my-3">
                 <div class="col">
                     <div class="d-flex flex-row justify-content-between align-items-top">
-                        <h5 class="text-head2 fw-bold">WHERE TO WATCH</h5>
-                        <button type="button" class="btn p-1 pt-0 shadow-none filter-streams-button text-head2" onClick={() => {this.openFilter()}}>
-                            <span class="fw-bold pe-1">FILTER</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
-                            <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
-                            </svg>
+                        <h5 class="fw-bold">WHERE TO WATCH</h5>
+                        <button type="button" class="btn p-1 pt-0 shadow-none filter-streams-button" onClick={() => {this.props.openFilter()}}>
+                            <span class="fw-bold pe-1 h6 m-0">FILTER</span>
+                            <SVG.FilterFunnelFill w={24} h={24} />
                         </button>
                     </div>
-                    <div class="bg-highlight">
-                        {this.props.links.map(link => {
-                            for (let platform of Platforms){
-                                if (platform.id == link.platform){
-                                    return <button type="button" class="btn p-0 m-2" onClick={() => {this.props.openStream(link.platform)}}>
-                                        <img src={platform.icon} alt="..." class="stream-icon rounded-3"/>
-                                        </button>
-                                }
-                            }
-                        })}
+                    <div class="pedestal">
+                        {links.length > 0 ? links : noLinks}
                     </div>
                 </div>
             </div>

@@ -3,9 +3,11 @@ const crypto = require('crypto');
 // controllers
 const titleController = require('../controllers/title.js');
 const genreController = require('../controllers/title.genre.js');
+const linksController = require('../controllers/links.js');
 
 // models
 const model = require('./model.js');
+const {Link, LinksAttribute} = require('../models/links.js');
 
 // helpers
 var config = require('../config.json');
@@ -47,6 +49,36 @@ class Title extends model.Model {
                 visible: true,
                 adminProtected: true
             }),
+            new model.StringAttribute({
+                name: "imdb_link",
+                editable: true,
+                visible: true,
+                adminProtected: true
+            }),
+            new model.StringAttribute({
+                name: "imdb_rating",
+                editable: true,
+                visible: true,
+                adminProtected: true
+            }),
+            new model.StringAttribute({
+                name: "rotten_tomatoes_link",
+                editable: true,
+                visible: true,
+                adminProtected: true
+            }),
+            new model.StringAttribute({
+                name: "rotten_tomatoes_rating",
+                editable: true,
+                visible: true,
+                adminProtected: true
+            }),
+            new LinksAttribute({
+                name: "links",
+                editable: true,
+                visible: true,
+                adminProtected: true
+            }),
             new GenresAttribute({
                 name: "genres",
                 editable: true,
@@ -61,6 +93,12 @@ class Title extends model.Model {
         for (let genre of genres){
             this.genres.value.push(genre.genre);
         }
+        // links
+        const links = await linksController.getLinks(this.get().id);
+        for (let val of links){
+            let li = new Link(val);
+            this.links.value.push(li);
+        }
     }
 
     async insert(){
@@ -68,12 +106,12 @@ class Title extends model.Model {
         // update id and password
         this.override({ id: id });
         let t = this.get();
-        await titleController.insertTitle(t.id, t.title, t.thumbnail, t.maturity, t.description);
+        await titleController.insertTitle(t.id, t.title, t.thumbnail, t.maturity, t.description, t.imdb_link, t.imdb_rating, t.rotten_tomatoes_link, t.rotten_tomatoes_rating);
     }
 
     async save(){
         let t = this.get();
-        await titleController.updateTitle(t.id, t.title, t.thumbnail, t.maturity, t.description);
+        await titleController.updateTitle(t.id, t.title, t.thumbnail, t.maturity, t.description, t.imdb_link, t.imdb_rating, t.rotten_tomatoes_link, t.rotten_tomatoes_rating);
         await genreController.deleteAllTitleGenres(t.id);
         for (let genre of t.genres){
             await genreController.insertGenre(t.id, genre);
@@ -84,6 +122,7 @@ class Title extends model.Model {
         let t = this.get();
         await titleController.deleteTitle(t.id);
         await genreController.deleteAllTitleGenres(t.id);
+        await linksController.deleteAllLinks(t.id);
     }
 
 }

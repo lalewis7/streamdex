@@ -1,0 +1,7 @@
+.settings-select{
+    background-color: $color-secondary;
+}
+
+.settings-select:hover{
+    background-color: shade-color($color-secondary, 20%);
+}

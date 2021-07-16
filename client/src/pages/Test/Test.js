@@ -1,10 +1,11 @@
 import React from 'react';
 
-import TitlePreview from '../../comps/TitlePreview/TitlePreview.js';
 import Movie from '../../comps/Movie/Movie.js';
+import Series from '../../comps/Series/Series.js';
 
 const titles = require('./titles_data.json');
 const movie = require('./movie_data.json');
+const series = require('./series_data.json');
 
 class Test extends React.Component {
 
@@ -21,7 +22,7 @@ class Test extends React.Component {
     render(){
         return <>
             <div class="container pt-3">
-                <Movie movie={movie} />
+                <Series series={series} />
             </div>
         </>;
     }

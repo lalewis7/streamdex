@@ -36,10 +36,12 @@ class Model {
 
     edit(data, requester){
         let fails = this.validate(data, requester);
+        if (fails.length > 0)
+            return fails;
         for (let key in data){
-            if (!fails.includes(key))
-                this[key].value = this[key].initValue(this, data[key], requester);
+            this[key].value = this[key].initValue(this, data[key], requester);
         }
+        return [];
     }
 
     override(data){
@@ -126,12 +128,70 @@ class DateAttribute extends Attribute {
     constructor(config) {
         super(config);
         this.defaultValue = null;
-        this.validate = (val) => {return typeof val.getMonth === 'function';};
-        this.convertDbValue = (val) => {return new Date(val)};
+        this.validate = (val) => {
+            let dateSplit = val.split('-');
+            if (dateSplit.length != 3)
+                return false;
+            if (isNaN(dateSplit[0]) || isNaN(dateSplit[1]) || isNaN(dateSplit[2]))
+                return false;
+            let month = parseInt(dateSplit[1]);
+            let day = parseInt(dateSplit[2]);
+            if (month < 1 || month > 12)
+                return false;
+            switch (month){
+                case 1: // jan
+                    if (day > 31) return false;
+                    break;
+                case 2: // feb
+                    if (day > 29) return false;
+                    break;
+                case 3: // mar
+                    if (day > 31) return false;
+                    break;
+                case 4: // apr
+                    if (day > 30) return false;
+                    break;
+                case 5: // may
+                    if (day > 31) return false;
+                    break;
+                case 6: // jun
+                    if (day > 30) return false;
+                    break;
+                case 7: // jul
+                    if (day > 31) return false;
+                    break;
+                case 8: // aug
+                    if (day > 31) return false;
+                    break;
+                case 9: // sep
+                    if (day > 30) return false;
+                    break;
+                case 10: // oct
+                    if (day > 31) return false;
+                    break;
+                case 11: // nov
+                    if (day > 30) return false;
+                    break;
+                case 12: // dec
+                    if (day > 31) return false;
+                    break;
+            }
+            return true;
+        };
+        this.convertDbValue = (val) => {
+            if (val)
+                return val.getFullYear()+"-"+(val.getMonth()+1)+"-"+val.getDate();
+            return val;
+        };
         // update with any custom config given
         for (let key in config)
             this[key] = config[key];
     }
+
+    // getValue(visibleOnly){
+    //     let d = this.value;
+    //     return d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate();
+    // }
 
 }
 

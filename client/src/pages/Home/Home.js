@@ -12,7 +12,7 @@ class Home extends React.Component {
     render() {
         return (
             <>
-            <div class="bg-light h-100">
+            <div class="bg-light h-100 flex-grow-1">
                 <div class="container h-100">
                     <div class="row h-100">
                         <div class="col">

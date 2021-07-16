@@ -50,5 +50,15 @@ module.exports = {
      */
     logger(){
         return logger;
+    },
+
+    handleResponseError(res){
+        return err => {
+            if (err.stack){
+                logger.error(err.stack);
+                res.sendStatus(500);
+            } else
+                res.status(err.http_code ? err.http_code : 400).send(err.http_msg ? err.http_msg : err);
+        }
     }
 }

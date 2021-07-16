@@ -3,6 +3,7 @@ var router = express.Router();
 var sha256 = require('js-sha256');
 
 var Token = require('../models/token.js');
+var util = require('../util.js');
 
 router.get('/', (req, res) => {
     // header values
@@ -22,21 +23,19 @@ router.get('/', (req, res) => {
         res.status(200).send(token);
     })
     // error
-    .catch(err => {
-        res.status(400).send(err);
-    });
+    .catch(util.handleResponseError(res));
 });
 
 router.post('/', (req, res) => {
-    res.sendStatus(405);
+    return res.sendStatus(405);
 });
 
 router.put('/', (req, res) => {
-    res.sendStatus(405);
+    return res.sendStatus(405);
 });
 
 router.delete('/', (req, res) => {
-    res.sendStatus(405);
+    return res.sendStatus(405);
 });
 
 module.exports = router;

@@ -3,15 +3,20 @@ const util = require('../util.js');
 module.exports = {
 
     getMovieLinks(title_id){
-        return util.dbPromise("SELECT * FROM movielinks WHERE title_id = ?", title_id);
+        return util.dbPromise("SELECT * FROM movielinks WHERE (title_id, platform, country, timestamp) IN (SELECT title_id, platform, country, max(timestamp) from movielinks group by title_id, platform, country) AND title_id = ?", title_id);
     },
 
-    editMovieLink(title_id, platform, link, available){
-        return util.dbPromise("UPDATE movielinks SET platform = ?, link = ?, available = ? WHERE title_id = ?", platform, link, available, title_id);
+    getMoviePlatformLinks(title_id, platform){
+        return util.dbPromise("SELECT * FROM movielinks WHERE (title_id, platform, country, timestamp) IN (SELECT title_id, platform, country, max(timestamp) from movielinks group by title_id, platform, country) AND title_id = ? AND platform = ?", title_id, platform);
     },
 
-    insertMovieLink(title_id, platform, link, available){
-        return util.dbPromise("INSERT INTO movielinks (title_id, platform, link, available) VALUES (?, ?, ?, ?)", title_id, platform, link, available);
+    // no need to edit just add another entry with more recent timestamp
+    // editMovieLink(title_id, platform, country, available, timestamp){
+    //     return util.dbPromise("UPDATE movielinks SET platform = ?, link = ?, available = ? WHERE title_id = ?", platform, link, available, title_id);
+    // },
+
+    insertMovieLink(title_id, platform, country, available, timestamp){
+        return util.dbPromise("INSERT INTO movielinks (title_id, platform, country, available, timestamp) VALUES (?, ?, ?, ?, ?)", title_id, platform, country, available, timestamp);
     },
 
     deleteMovieLink(title_id, platform){

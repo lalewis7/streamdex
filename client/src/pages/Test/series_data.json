@@ -1,0 +1,103 @@
+{
+    "title_id": "5e3ff9765e6310664a1e983bc454589cc577bd3230e95f5e511c274b50c49c2e",
+    "title": "Rick and Morty",
+    "type": "series",
+    "thumbnail": "rickandmorty.jpg",
+    "maturity": "PG-13",
+    "description": "After having been missing for nearly 20 years, Rick Sanchez suddenly arrives at daughter Beth's doorstep to move in with her and her family. Although Beth welcomes Rick into her home, her husband, Jerry, isn't as happy about the family reunion. Jerry is concerned about Rick, a sociopathic scientist, using the garage as his personal laboratory. In the lab, Rick works on a number of sci-fi gadgets, some of which could be considered dangerous. But that's not all Rick does that concerns Jerry. He also goes on adventures across the universe that often involve his grandchildren, Morty and Summer.",
+    "links": [
+        {
+            "platform": "netflix",
+            "link": "https://www.google.com/"
+        },
+        {
+            "platform": "hulu",
+            "link": "https://www.google.com/"
+        }
+    ],
+    "seasons":[
+        {
+            "season_id": "5e3ff9765e6310664a1e983bc45458",
+            "season_number": 1,
+            "rel_date": "",
+            "trailer": "BFTSrbB2wII",
+            "availability": [
+                {
+                    "platform": "netflix",
+                    "countries": ["US", "GB"]
+                }
+            ],
+            "episodes": [
+                {
+                    "episode_number": 1,
+                    "name": "Pilot",
+                    "runtime": 24,
+                    "description": "Rick moves in with his daughter's family and establishes himself as a bad influence on his grandson, Morty.",
+                    "rel_date": "2013-12-03",
+                    "availability": [
+                        {
+                            "platform": "netflix",
+                            "countries": ["US", "GB"]
+                        }
+                    ]
+                },
+                {
+                    "episode_number": 2,
+                    "name": "Lawnmower Dog",
+                    "runtime": 24,
+                    "description": "Rick and Morty try to incept Morty's math teacher into giving Morty an 'A'.  Meanwhile, Rick gives Jerry a device to train their dog, Snuffles.",
+                    "rel_date": "2013-12-09",
+                    "availability": [
+                        {
+                            "platform": "netflix",
+                            "countries": ["US", "GB"]
+                        }
+                    ]
+                },
+                {
+                    "episode_number": 3,
+                    "name": "Anatomy Park",
+                    "runtime": 24,
+                    "description": "Christmas day, Rick's friend, Reuben, comes over for his annual medical checkup.  Meanwhile Jerry learns his parents have a new friend.",
+                    "rel_date": "2013-12-16",
+                    "availability": [
+                        {
+                            "platform": "netflix",
+                            "countries": ["US", "GB"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "season_id": "5e3ff9765e6310664a1e983bc45458",
+            "season_number": 2,
+            "rel_date": "",
+            "trailer": "_IZfO_LfK5Q",
+            "availability": [
+                {
+                    "platform": "netflix",
+                    "countries": ["US", "GB"]
+                }
+            ],
+            "episodes": [
+                {
+                    "episode_number": 1,
+                    "name": "pineapple under the sea",
+                    "runtime": 24,
+                    "description": "spongebob squarepants lives in a pineapple",
+                    "rel_date": "2013-12-16",
+                    "availability": [
+                        {
+                            "platform": "netflix",
+                            "countries": ["US", "GB"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "genres": [
+        "science fiction", "dark comedy"
+    ]
+}

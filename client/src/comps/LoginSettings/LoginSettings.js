@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Config = require('../../util/config.js');
+const SVG = require('../../util/svg.js');
 
 class LoginSettings extends React.Component {
 
@@ -10,7 +11,8 @@ class LoginSettings extends React.Component {
             // form data
             user: '',
             password: '',
-            passwordClass: ''
+            passwordClass: '',
+            loading: false,
         };
         // bind this
         this.handleChange = this.handleChange.bind(this);
@@ -31,31 +33,24 @@ class LoginSettings extends React.Component {
      * @param {Object} evt 
      */
      login (evt) {
+        this.setState({loading: true});
         // do not submit form
         evt.preventDefault();
         // attempt to get token
         fetch(Config.API+"auth",
         {
             method: 'GET',
-            headers: {'user': this.state.loginData.user, 'password': this.state.loginData.password}
+            headers: {'user': this.state.user, 'password': this.state.password}
         })
         .then(res => {
             // successful credentials
             if (res.ok){
-                res.text().then(token => {
+                return res.text().then(token => {
                     // save token
+                    console.log(this.props);
                     this.props.setToken(token);
                     // remove login page
-                    window.$('#loginModal').modal('hide');
-                    // update self info
-                    fetch(Config.API+"self", {
-                        method: 'GET',
-                        headers: {'token': Storage.getToken()}
-                    })
-                    .then(res => res.json())
-                    .then(self => {
-                        this.props.setUser(self);
-                    });
+                    this.props.setVisible(false);
                 });
             }
             // incorrect credentials
@@ -66,45 +61,53 @@ class LoginSettings extends React.Component {
         err => {
             console.log(err);
         })
+        .finally(() => {
+            this.setState({loading: false});
+        })
     }
 
     render(){
+        let loginBtn = <button type="submit" class="btn btn-primary">LOGIN</button>;
+        if (this.state.loading)
+            loginBtn = <>
+                <button type="submit" class="btn btn-primary" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true">
+                    </span>
+                    <span class="visually-hidden">Loading...</span>
+                </button>
+            </>
         return  <form onSubmit={this.login}>
                     <div class="row my-3">
                         <div class="col-12">
                             <div class="input-group">
-                                <span class="input-group-text" >
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.15em" height="1.15em" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
-                                    </svg>
+                                <span class="input-group-text border-0 bg-highlight text-head2 shadow-none" >
+                                    <SVG.EmailFill w={'1.15em'} h={'1.15em'} />
                                 </span>
-                                <input type="text" class="form-control" id="loginUsername" placeholder="Email" value={this.state.user} name="user" onChange={this.handleChange}/>
+                                <input type="text" class="form-control border-0 bg-highlight text-head text-input" id="loginUsername" placeholder="Email" value={this.state.user} name="user" onChange={this.handleChange}/>
                             </div>
                         </div>
                     </div>
                     <div class="row my-3">
                         <div class="col-12">
                             <div class="input-group has-validation">
-                                <span class="input-group-text" >
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.15em" height="1.15em" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
-                                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
-                                    </svg>
+                                <span class="input-group-text border-0 bg-highlight text-head2 shadow-none" >
+                                    <SVG.PasswordFill w={'1.15em'} h={'1.15em'} />
                                 </span>
-                                <input type="password" class={"form-control "+this.state.passwordClass} id="loginPassword" placeholder="Password" value={this.state.password} name="loginPassword" onChange={this.passwordChange} />
+                                <input type="password" class={"form-control border-0 bg-highlight text-head text-input "+this.state.passwordClass} id="loginPassword" placeholder="Password" value={this.state.password} name="loginPassword" onChange={this.passwordChange} />
                                 <div class="invalid-feedback">Username or password incorrect. Please try again.</div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 d-grid">
-                            <button type="submit" class="btn btn-primary">LOGIN</button>
+                            {loginBtn}
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p class="text-center mt-3">
+                            <p class="text-center mt-3 text-main">
                             Not a member?
-                            <a href="javacript:void(0);" class="link-secondary ms-1" onClick={() => {this.props.switchPage('signup')}}>Sign up now</a>
+                            <a href="javacript:void(0);" class="link-light ms-1" onClick={() => {this.props.switchPage('signup')}}>Sign up now</a>
                             </p>
                         </div>
                     </div>

@@ -10,6 +10,18 @@ export function removeToken(){
     sessionStorage.removeItem('token');
 }
 
+export function getFilterCountry(){
+    return sessionStorage.getItem('filter_country');
+}
+
+export function setFilterCountry(val){
+    sessionStorage.setItem('filter_country', val);
+}
+
+export function removeFilterCountry(val){
+    sessionStorage.removeItem('filter_country');
+}
+
 /*
 export function getID(){
     return sessionStorage.getItem('id');
