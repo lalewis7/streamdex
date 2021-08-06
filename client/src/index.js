@@ -13,8 +13,6 @@ import reportWebVitals from './reportWebVitals';
 
 
 const bootstrap = require('bootstrap');
-console.log(bootstrap)
-
 
 ReactDOM.render(
   <React.StrictMode>

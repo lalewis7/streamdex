@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var cors = require('cors');
 var config = require('./config.json');
-var auth = require('./token_auth.js');
+var {getToken, log} = require('./auth.js');
 var util = require('./util.js');
 
 // import routes
@@ -13,13 +13,17 @@ const authRouter = require('./routes/auth.js');
 const handleRouter = require('./routes/handle.js');
 const titlesRouter = require('./routes/titles.js');
 const seasonsRouter = require('./routes/seasons.js');
-const episodesRouter = require('./routes/episodes.js')
+const episodesRouter = require('./routes/episodes.js');
+const imageRouter = require('./routes/image.js');
 
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
-app.use(auth);
+// app.use(express.static('public'));
+app.use(log);
+app.use(getToken);
+// app.use(busboy());
 
 // routes
 app.use('/', indexRouter);
@@ -29,6 +33,7 @@ app.use('/handle', handleRouter);
 app.use('/titles', titlesRouter);
 app.use('/seasons', seasonsRouter);
 app.use('/episodes', episodesRouter);
+app.use('/images', imageRouter);
 
 // start server
 app.listen(config.port, () => {

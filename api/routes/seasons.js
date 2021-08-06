@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var util = require('../util.js');
+const {isAdmin, isAuthenticated} = require('../auth.js');
 
 const seasonMethods = require('../model_functions/season.js');
 
@@ -18,13 +19,7 @@ router.post('/:seasonId', (req, res) => {
     return res.sendStatus(405);
 });
 
-router.put('/:seasonId', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.put('/:seasonId', isAuthenticated, isAdmin, (req, res) => {
     seasonMethods.editSeason(req.params.seasonId, req.body, {admin: req.user.admin})
         .then(() => {
             res.sendStatus(200);
@@ -32,13 +27,7 @@ router.put('/:seasonId', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.delete('/:seasonId', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.delete('/:seasonId', isAuthenticated, isAdmin, (req, res) => {
     seasonMethods.deleteSeason(req.params.seasonId)
         .then(() => {
             res.sendStatus(200);
@@ -78,13 +67,7 @@ router.get('/:seasonId/availability/:platform', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.post('/:seasonId/availability/:platform', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.post('/:seasonId/availability/:platform', isAuthenticated, isAdmin, (req, res) => {
     seasonMethods.createPlatformAvailability(req.params.seasonId, req.params.platform, req.body, {admin: req.user.admin})
         .then(() => {
             res.sendStatus(201);
@@ -110,13 +93,7 @@ router.get('/:seasonId/episodes', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.post('/:seasonId/episodes', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.post('/:seasonId/episodes', isAuthenticated, isAdmin, (req, res) => {
     seasonMethods.createEpisode(req.params.seasonId, req.body, {admin: req.user.admin})
         .then((id) => {
             res.status(201).send(id);

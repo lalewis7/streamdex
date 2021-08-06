@@ -23,6 +23,8 @@ class SignupSettings extends React.Component {
 
             // invalid messages
             usernameInvalid: '',
+
+            loading: false,
         }
         // bind this
         this.handleChange = this.handleChange.bind(this);
@@ -33,6 +35,7 @@ class SignupSettings extends React.Component {
         this.passwordChange = this.passwordChange.bind(this);
         this.passwordValidate = this.passwordValidate.bind(this);
         this.passwordConfirmChange = this.passwordConfirmChange.bind(this);
+        this.signup = this.signup.bind(this);
     }
 
     /**
@@ -143,6 +146,8 @@ class SignupSettings extends React.Component {
      * @param {Object} evt 
      */
      signup (evt) {
+        this.setState({loading: true});
+
         evt.preventDefault();
         // send post to create user
         fetch(Config.API+"users", 
@@ -156,15 +161,17 @@ class SignupSettings extends React.Component {
             // successfully created user
             if (res.ok)
                 // get token for newly created user
-                fetch(Config.API+"auth",
+                return fetch(Config.API+"auth",
                 {
                     method: "GET",
                     headers: {'user': this.state.username, 'password': this.state.password}
                 })
                 .then(res => {
                     if (res.ok){
-                        res.text().then(token => {
+                        return res.text().then(token => {
                             this.props.setToken(token);
+                            // remove login page
+                            this.props.setVisible(false);
                         });
                     } else {
                         console.log('Failed to login after signup');
@@ -176,9 +183,20 @@ class SignupSettings extends React.Component {
         }, err => {
             console.log(err);
         })
+        .finally(() => {
+            this.setState({loading: false});
+        });
     }
 
     render(){
+        let signupBtn = <button type="submit" class="btn btn-primary">SIGN UP</button>;
+        if (this.state.loading)
+            signupBtn = <>
+                <button type="submit" class="btn btn-primary">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Loading...</span>
+                </button>
+            </>
         return <form onSubmit={this.signup}>
             <div class="row my-3">
                 <div class="col-12">
@@ -226,7 +244,7 @@ class SignupSettings extends React.Component {
             </div>
             <div class="row">
                 <div class="col-12 d-grid">
-                    <button type="submit" class="btn btn-primary">SIGN UP</button>
+                    {signupBtn}
                 </div>
             </div>
             <div class="row">

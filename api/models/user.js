@@ -89,6 +89,8 @@ class User extends model.Model {
     async save(){
         let u = this.get(false);
         await userController.updateUserByID(u.id, u.handle, u.email, u.password, u.locked, u.admin);
+
+        // streams
         const oldStreams = await userStreamsController.findAllUserStreams(this.get().id);
         const newStreams = u.streams;
         var commands = [];

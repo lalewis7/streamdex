@@ -24,7 +24,7 @@ module.exports = {
     },
 
     searchAllUsers(search, page = 0){
-        return util.dbPromise('SELECT * FROM users WHERE MATCH(handle, email) AGAINST (? IN NATURAL LANGUAGE MODE) LIMIT ? OFFSET ?', search, config.user_page_length, page*config.user_page_length);
+        return util.dbPromise('SELECT * FROM users WHERE MATCH(handle, email, user_id) AGAINST (? IN BOOLEAN MODE) LIMIT ? OFFSET ?', "*"+search+"*", config.user_page_length, page*config.user_page_length);
     },
 
     insertUser(user_id, handle, email, password, locked, admin){

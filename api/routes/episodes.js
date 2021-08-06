@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var util = require('../util.js');
+const {isAdmin, isAuthenticated} = require('../auth.js');
 
 const episodeMethods = require('../model_functions/episode.js');
 
@@ -18,13 +19,7 @@ router.post('/:episodeId', (req, res) => {
     return res.sendStatus(405);
 });
 
-router.put('/:episodeId', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.put('/:episodeId', isAuthenticated, isAdmin, (req, res) => {
     episodeMethods.editEpisode(req.params.episodeId, req.body, {admin: req.user.admin})
         .then(() => {
             res.sendStatus(200);
@@ -32,13 +27,7 @@ router.put('/:episodeId', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.delete('/:episodeId', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.delete('/:episodeId', isAuthenticated, isAdmin, (req, res) => {
     episodeMethods.deleteEpisode(req.params.episodeId)
         .then(() => {
             res.sendStatus(200);
@@ -78,13 +67,7 @@ router.get('/:episodeId/availability/:platform', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.post('/:episodeId/availability/:platform', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.post('/:episodeId/availability/:platform', isAuthenticated, isAdmin, (req, res) => {
     episodeMethods.createPlatformAvailability(req.params.episodeId, req.params.platform, req.body, {admin: req.user.admin})
         .then(() => {
             res.sendStatus(201);

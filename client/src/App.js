@@ -44,8 +44,12 @@ class App extends React.Component{
     })
     .then(res => res.json())
     .then(self => {
+      console.log(self);
       this.setState({token: token, user: self});
-    });
+    })
+    .catch(err => {
+      this.deleteToken();
+    })
   }
 
   deleteToken(){
@@ -54,6 +58,7 @@ class App extends React.Component{
   }
 
   render(){
+    console.log(this.state.user);
     return (<div id="app-main" class="min-vh-100 d-flex flex-column bg-main">
       <BrowserRouter>
         <Header search={() => {this.forceUpdate()}} token={this.state.token} setToken={this.setToken} deleteToken={this.deleteToken} user={this.state.user} />
@@ -61,7 +66,7 @@ class App extends React.Component{
           <Route exact path="/" component={Home} />
           <Route path="/discover" component={Discover} />
           <Route path="/search" component={Search} token={this.state.token} />
-          <Route path="/title/:id" component={Title} token={this.state.token} />
+          <Route path="/title/:id" render={(props) => <Title {...props} token={this.state.token} user={this.state.user}/>} />
           <Route path="/test" component={Test} />
           <Route render={() => <NotFound/>} />
         </Switch>

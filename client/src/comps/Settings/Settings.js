@@ -64,7 +64,7 @@ class Settings extends React.Component {
 
     getContent(){
         if (this.state.focus === 'streams'){
-            return this.getPageWrapper('Streams', <StreamSettings />);
+            return this.getPageWrapper('Streams', <StreamSettings user={this.props.user} token={this.props.token} />);
         } 
         else if (this.state.focus === 'login'){
             return this.getPageWrapper('LOGIN', <LoginSettings switchPage={this.switchPage} setToken={this.props.setToken} setVisible={this.props.setVisible} />);
@@ -73,7 +73,7 @@ class Settings extends React.Component {
             return this.getPageWrapper('SIGN UP', <SignupSettings switchPage={this.switchPage} setToken={this.props.setToken} setVisible={this.props.setVisible} />);
         }
         else if (this.state.focus === 'usersettings'){
-            return this.getPageWrapper('User Profile', <UserSettings switchPage={this.switchPage} user={this.props.user} />);
+            return this.getPageWrapper('User Profile', <UserSettings switchPage={this.switchPage} user={this.props.user} token={this.props.token} />);
         }
         let options = [];
         if (this.props.token){
@@ -106,7 +106,7 @@ class Settings extends React.Component {
     render(){
         return <>
         <Modal id="settings-modal" show={this.props.show} setVisible={this.props.setVisible}>
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
                 <div class="modal-content">
                     {this.getContent()}
                 </div>

@@ -12,7 +12,7 @@ module.exports = {
     },
 
     searchAllTitles(search, page = 0){
-        return util.dbPromise('SELECT * FROM titles WHERE MATCH(title) AGAINST (? IN NATURAL LANGUAGE MODE) LIMIT ? OFFSET ?', search, config.title_page_length, page*config.title_page_length);
+        return util.dbPromise('SELECT * FROM titles WHERE MATCH(title) AGAINST (? IN BOOLEAN MODE) LIMIT ? OFFSET ?', "*"+search+"*", config.title_page_length, page*config.title_page_length);
     },
 
     insertTitle(title_id, title, cover_image, maturity_rating, description, imdb_link, imdb_rating, rotten_tomatoes_link, rotten_tomatoes_rating){

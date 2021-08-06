@@ -47,7 +47,6 @@ class LoginSettings extends React.Component {
             if (res.ok){
                 return res.text().then(token => {
                     // save token
-                    console.log(this.props);
                     this.props.setToken(token);
                     // remove login page
                     this.props.setVisible(false);

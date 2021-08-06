@@ -1,6 +1,7 @@
-var express = require('express');
+const express = require('express');
 var router = express.Router();
-var util = require('../util.js');
+const util = require('../util.js');
+const {isAdmin, isAuthenticated} = require('../auth.js');
 
 const titleMethods = require('../model_functions/title.js');
 
@@ -14,13 +15,7 @@ router.get('/', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.post('/', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.post('/', isAuthenticated, isAdmin, (req, res) => {
     titleMethods.createTitle(req.body, {admin: req.user.admin})
         .then((id) => {
             res.status(201).send(id);
@@ -50,13 +45,7 @@ router.post('/:titleId', (req, res) => {
     return res.sendStatus(405);
 });
 
-router.put('/:titleId', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.put('/:titleId', isAuthenticated, isAdmin, (req, res) => {
     titleMethods.editTitle(req.params.titleId, req.body, {admin: req.user.admin})
         .then(() => {
             res.sendStatus(200);
@@ -64,13 +53,7 @@ router.put('/:titleId', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.delete('/:titleId', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.delete('/:titleId', isAuthenticated, isAdmin, (req, res) => {
     titleMethods.deleteTitle(req.params.titleId, {admin: req.user.admin})
         .then(() => {
             res.sendStatus(200);
@@ -110,13 +93,7 @@ router.get('/:titleId/links/:platform', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.post('/:titleId/links/:platform', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.post('/:titleId/links/:platform', isAuthenticated, isAdmin, (req, res) => {
     titleMethods.createLink(req.params.titleId, req.params.platform, req.body, {admin: req.user.admin})
         .then(() => {
             res.sendStatus(201);
@@ -124,13 +101,7 @@ router.post('/:titleId/links/:platform', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.put('/:titleId/links/:platform', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.put('/:titleId/links/:platform', isAuthenticated, isAdmin, (req, res) => {
     titleMethods.editLink(req.params.titleId, req.params.platform, req.body, {admin: req.user.admin})
         .then(() => {
             res.sendStatus(200);
@@ -138,13 +109,7 @@ router.put('/:titleId/links/:platform', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.delete('/:titleId/links/:platform', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.delete('/:titleId/links/:platform', isAuthenticated, isAdmin, (req, res) => {
     titleMethods.deleteLink(req.params.titleId, req.params.platform)
         .then(() => {
             res.sendStatus(200);
@@ -184,13 +149,7 @@ router.get('/:titleId/availability/:platform', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.post('/:titleId/availability/:platform', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.post('/:titleId/availability/:platform', isAuthenticated, isAdmin, (req, res) => {
     titleMethods.createAvailability(req.params.titleId, req.params.platform, req.body, {admin: req.user.admin})
         .then(() => {
             res.sendStatus(201);
@@ -216,13 +175,7 @@ router.get('/:titleId/seasons', (req, res) => {
         .catch(util.handleResponseError(res));
 });
 
-router.post('/:titleId/seasons', (req, res) => {
-    // requires authentication
-    if (!req.user)
-        return res.sendStatus(401);
-    // requires authorization
-    if (!req.user.admin)
-        return res.sendStatus(403);
+router.post('/:titleId/seasons', isAuthenticated, isAdmin, (req, res) => {
     titleMethods.createSeason(req.params.titleId, req.body, {admin: req.user.admin})
         .then((id) => {
             res.status(201).send(id);

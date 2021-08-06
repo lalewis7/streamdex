@@ -13,7 +13,9 @@
     "title_id_length": 16,
     "season_id_length": 16,
     "episode_id_length": 16,
+    "image_name_length": 16,
     "user_rating_page_length": 20,
     "user_page_length": 20,
-    "title_page_length": 30
+    "title_page_length": 30,
+    "image_page_length": 30
 }

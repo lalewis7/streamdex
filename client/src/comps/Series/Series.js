@@ -9,6 +9,7 @@ import HorizontalScrollable from '../HorizontalScrollable/HorizontalScrollable.j
 const Utils = require('../../util/utils.js');
 const Platforms = require('../../util/platforms.json');
 const SVG = require('../../util/svg.js');
+const Config = require('../../util/config.js');
 
 class Series extends React.Component {
 
@@ -67,7 +68,7 @@ class Series extends React.Component {
                     <civ class="d-none d-lg-block col-lg-4">
                         <div class="row">
                             <div class="col">
-                                <img src={this.props.series.thumbnail} alt="..." class="w-100 rounded-top"/>
+                                <img src={Config.API+"images/"+this.props.series.thumbnail} alt="..." class="w-100 rounded-top"/>
                             </div>
                         </div>
                         <div class="row pedestal rounded-bottom py-2 g-0">

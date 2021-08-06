@@ -2,7 +2,6 @@ import React from 'react';
 
 var Validate = require('../../util/validate.js');
 var Config = require('../../util/config.js');
-var Storage = require('../../util/storage.js');
 const SVG = require('../../util/svg.js');
 
 class UserSettings extends React.Component {
@@ -12,7 +11,6 @@ class UserSettings extends React.Component {
         this.state = {
             username: "",
             email: "",
-            currentPassword: "",
             newPassword: "",
             newPasswordConf: "",
 
@@ -20,14 +18,19 @@ class UserSettings extends React.Component {
             usernameInvalid: "",
             emailClass: "",
             newPasswordClass: "",
-            newPasswordConfClass: ""
+            newPasswordConfClass: "",
+
+            responseMsg: <>An error occurred while saving changes.<br />Please try again later.</>,
+            responseMsgError: true,
+            responseMsgVisible: false,
+
+            loading: false
         }
         this.handleChange = this.handleChange.bind(this);
         this.usernameChange = this.usernameChange.bind(this);
         this.usernameValidate = this.usernameValidate.bind(this);
         this.emailChange = this.emailChange.bind(this);
         this.emailValidate = this.emailValidate.bind(this);
-        this.currentPasswordChange = this.currentPasswordChange.bind(this);
         this.newPasswordChange = this.newPasswordChange.bind(this);
         this.newPasswordValidate = this.newPasswordValidate.bind(this);
         this.newPasswordConfChange = this.newPasswordConfChange.bind(this);
@@ -74,10 +77,6 @@ class UserSettings extends React.Component {
             this.setState({emailClass: "is-invalid"});
     }
 
-    currentPasswordChange(evt){
-        this.setState({currentPassword: evt.target.value});
-    }
-
     newPasswordChange(evt) {
         this.setState({newPassword: evt.target.value});
         if (Validate.password(evt.target.value))
@@ -101,16 +100,53 @@ class UserSettings extends React.Component {
             this.setState({newPasswordConfClass: "is-valid"});
     }
 
-    submit(){
-        if (this.state.oldPassword || this.state.newPassword || this.state.newPasswordConf){
+    submit(evt){
+        this.setState({loading: true, responseMsgVisible: false});
+        // do not submit form
+        evt.preventDefault();
 
+        let body = {handle: this.state.username, email: this.state.email};
+
+        // entered a password
+        if (this.state.newPassword || this.state.newPasswordConf){
+            if (this.state.newPassword && this.state.newPasswordConf){
+                if (this.state.newPassword === this.state.newPasswordConf){
+                    body.password = this.state.newPassword;
+                }
+                // passwords do not match
+                else {
+                    this.setState({responseMsg:<>New passwords do not match.</>, responseMsgError: true, responseMsgVisible: true});
+                }
+            } 
+            // missing a password
+            else {
+                this.setState({responseMsg:<>Missing form for change password.</>, responseMsgError: true, responseMsgVisible: true});
+            }
         }
         fetch(Config.API+"users/"+this.props.user.id, 
         {
             method: 'PUT', 
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({handle: this.state.username, email: this.state.email, 
-                password: this.state.password})
+            headers: { 'Content-Type': 'application/json', 'token': this.props.token },
+            body: JSON.stringify(body)
+        })
+        .then(res => {
+            // successful credentials
+            if (res.ok){
+                return res.text().then(() => {
+                    this.setState({responseMsg:<>Changes saved successfully.</>, responseMsgError: false, responseMsgVisible: true});
+                });
+            }
+            // incorrect credentials
+            else{
+                this.setState({responseMsg:<>An error occurred while saving changes.<br />Please try again later.</>, responseMsgError: true, responseMsgVisible: true});
+            }
+        },
+        err => {
+            this.setState({responseMsg:<>An error occurred while saving changes.<br />Please try again later.</>, responseMsgError: true, responseMsgVisible: true});
+            console.log(err);
+        })
+        .finally(() => {
+            this.setState({loading: false});
         })
     }
 
@@ -125,10 +161,25 @@ class UserSettings extends React.Component {
     }
 
     render(){
+        let responseMsgColor = "text-danger";
+        if (!this.state.responseMsgError)
+            responseMsgColor = "text-success";
+        let saveChangesBtn = <>
+            <button type="submit" class="btn btn-primary float-right align-self-end justify-self-end" >
+                Save Changes
+            </button>
+        </>
+        if (this.state.loading)
+            saveChangesBtn = <>
+                <button type="submit" class="btn btn-primary float-right align-self-end justify-self-end" >
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Loading...</span>
+                </button>
+            </>
         return <>
             <div class="row">
                 <div class="col pe-3">
-                    <form >
+                    <form onSubmit={this.submit} class="needs-validation">
                         <h4>User Information</h4>
                         <div class="mb-3">
                             <label for="accUsername" class="form-label">Username</label>
@@ -143,13 +194,6 @@ class UserSettings extends React.Component {
                         <hr/>
                         <h4>Change Password</h4>
                         <div class="mb-3">
-                            <label for="accCurentPassword" class="form-label">Current Password</label>
-                            <input type="password" class="form-control " id="accCurentPassword" placeholder="Current Password" value={this.state.currentPassword} onChange={this.currentPasswordChange} />
-                            <small id="passwordHelpBlock" class="form-text text-muted">
-                                Your current password is required to change your password.
-                            </small>
-                        </div>
-                        <div class="mb-3">
                             <label for="accPassword" class="form-label">New Password</label>
                             <input type="password" class={"form-control "+this.state.newPasswordClass} id="accPassword" placeholder="New Password" value={this.state.newPassword} onChange={this.newPasswordChange} onBlur={this.newPasswordValidate}/>
                             <div class="invalid-feedback">Password must be 8-64 characters long.</div>
@@ -159,10 +203,9 @@ class UserSettings extends React.Component {
                             <input type="password" class={"form-control "+this.state.newPasswordConfClass} id="accPasswordConfirm" placeholder="Confirm Password" value={this.state.newPasswordConf} onChange={this.newPasswordConfChange} />
                             <div class="invalid-feedback">Passwords do not match.</div>
                         </div>
-                        <div class="w-100 d-flex flex-row justify-content-end">
-                            <button type="submit" class="btn btn-primary float-right" >
-                                Save Changes
-                            </button>
+                        <div class="w-100 d-flex flex-row justify-content-between">
+                            <span class={responseMsgColor+" fs-7 align-self-start"}>{this.state.responseMsgVisible ? this.state.responseMsg : ''}</span>
+                            {saveChangesBtn}
                         </div>
                     </form>
                 </div>

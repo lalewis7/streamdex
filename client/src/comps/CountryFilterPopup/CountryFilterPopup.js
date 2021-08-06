@@ -47,7 +47,7 @@ class CountryFilterPopup extends React.Component {
         
         return <>
             <Modal id="country-filter-popup" show={this.props.show} setVisible={this.props.setVisible}>
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
                     <div class="modal-content h-100">
                         <div class="modal-header">
                             <h3 class="ps-2 text-head">Filter Countries</h3>

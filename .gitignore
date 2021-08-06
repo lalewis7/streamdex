@@ -1,2 +1,4 @@
 api/node_modules
 client/node_modules
+client-admin/node_modules
+bot/node_modules

@@ -2,6 +2,7 @@ import React from 'react';
 import './StreamSettings.css';
 
 const Platforms = require('../../util/platforms.json');
+var Config = require('../../util/config.js');
 
 class StreamSettings extends React.Component {
 
@@ -9,15 +10,34 @@ class StreamSettings extends React.Component {
         super(props);
         this.state = {};
         Platforms.map(service => {
-            this.state[service.id+"_enabled"] = localStorage.getItem(service.id+"_enabled") !== null ? localStorage.getItem(service.id+"_enabled") === 'true' : false;
+            if (!this.props.user)
+                this.state[service.id+"_enabled"] = localStorage.getItem(service.id+"_enabled") !== null ? localStorage.getItem(service.id+"_enabled") === 'true' : false;
+            else
+                this.state[service.id+"_enabled"] = this.props.user.streams.indexOf(service.id) != -1;
         });
         this.streamPill = this.streamPill.bind(this);
         this.pillChanged = this.pillChanged.bind(this);
     }
 
     pillChanged(evt) {
+        let selectedStreams = [];
+        for (let stream in this.state){
+            if ((evt.target.checked && this.state[stream]) || (!evt.target.checked && this.state[stream] && stream !== evt.target.name))
+                selectedStreams.push(stream.substring(0, stream.length-"_enabled".length));
+        }
+        if (evt.target.checked)
+            selectedStreams.push(evt.target.name.substring(0, evt.target.name.length-"_enabled".length));
+        
         this.setState({[evt.target.name]: evt.target.checked});
-        localStorage.setItem(evt.target.name, evt.target.checked);
+        if (!this.state.user)
+            localStorage.setItem(evt.target.name, evt.target.checked);
+        else
+            fetch(Config.API+"users/"+this.props.user.id, 
+            {
+                method: 'PUT', 
+                headers: { 'Content-Type': 'application/json', 'token': this.props.token },
+                body: JSON.stringify({streams: selectedStreams})
+            })
     }
 
     streamPill(icon, name, id){

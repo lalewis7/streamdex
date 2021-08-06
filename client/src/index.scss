@@ -148,6 +148,10 @@ footer{
     background-color: shade-color($color-background, 30%);
 }
 
+.fs-7{
+    font-size: .75rem;
+}
+
 .navbar {
     background-image:none;
 }
@@ -253,7 +257,8 @@ footer{
     color: shade-color($color-light, 10%);
     box-shadow: none;
     outline: 0;
-    height: calc(100% - 1px);
+    //height: calc(100% - 1px);
+    height: 100%;
     position:absolute;
     top:0;
     z-index: 9;
@@ -292,6 +297,7 @@ footer{
     }
 }
 
+/*
 @media (max-width: 576px){
     .modal-dialog {
         width: 100%;
@@ -312,6 +318,7 @@ footer{
         display: none;
     }
 }
+*/
 
 /*
 :root{

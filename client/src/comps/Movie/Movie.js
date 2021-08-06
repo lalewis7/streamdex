@@ -11,6 +11,7 @@ import CountryFilterPopup from '../CountryFilterPopup/CountryFilterPopup.js';
 const Utils = require('../../util/utils.js');
 const Platforms = require('../../util/platforms.json');
 const SVG = require('../../util/svg.js');
+const Config = require('../../util/config.js');
 
 class Movie extends React.Component {
 
@@ -52,8 +53,26 @@ class Movie extends React.Component {
     }
 
     render(){
-        console.log(this.props.movie);
+        console.log(this.props);
         let genres = this.props.movie.genres;
+
+        let likeBtn = <button class="btn btn-outline-light px-3 py-2 lh-1 m-1" onClick={() => {this.props.like()}}>
+            <SVG.ThumbsUpFill />
+        </button>
+        if (this.props.liked)
+            likeBtn = <button class="btn btn-success px-3 py-2 lh-1 m-1" onClick={() => {this.props.like()}}>
+                <SVG.ThumbsUpFill />
+            </button>
+
+        let dislikeBtn = <button class="btn btn-outline-light px-3 py-2 lh-1 m-1" onClick={() => {this.props.dislike()}}>
+            <SVG.ThumbsDownFill />
+        </button>
+        if (this.props.disliked)
+            dislikeBtn = <button class="btn btn-danger px-3 py-2 lh-1 m-1" onClick={() => {this.props.dislike()}}>
+                <SVG.ThumbsDownFill />
+            </button>
+
+
         return <>
             <TitleStreamPopup stream={this.state.stream} show={this.state.showStreamModal} setVisible={(vis) => {this.setState({showStreamModal: vis})}} />
             <CountryFilterPopup show={this.state.showFilterModal} setVisible={(vis) => {this.setState({showFilterModal: vis})}} />
@@ -62,7 +81,7 @@ class Movie extends React.Component {
                     <civ class="d-none d-lg-block col-lg-4">
                         <div class="row">
                             <div class="col">
-                                <img src={this.props.movie.thumbnail} alt="..." class="w-100 rounded-top"/>
+                                <img src={Config.API+"images/"+this.props.movie.thumbnail} alt="..." class="w-100 rounded-top"/>
                             </div>
                         </div>
                         <div class="row pedestal rounded-bottom py-2 g-0">
@@ -101,15 +120,8 @@ class Movie extends React.Component {
                             <div class="col d-flex flex-row justify-content-between align-items-center">
                                 <h2 class="text-head">{this.props.movie.title}</h2>
                                 <div class="d-flex flex-row">
-                                    <button class="btn btn-outline-light px-3 py-2 lh-1 m-1">
-                                        <SVG.ThumbsUpFill />
-                                    </button>
-                                    <button class="btn btn-outline-light px-3 py-2 lh-1 m-1">
-                                        <SVG.ThumbsDownFill />
-                                    </button>
-                                    {/* <button class="btn">
-                                        <SVG.ShareFill w={24} h={24} />
-                                    </button> */}
+                                    {likeBtn}
+                                    {dislikeBtn}
                                 </div>
                             </div>
                         </div>

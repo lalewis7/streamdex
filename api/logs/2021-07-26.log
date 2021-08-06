@@ -1,0 +1,10 @@
+2021-07-26 22:25:15 [info]: API listening at http://localhost:9000
+2021-07-26 22:28:11 [info]: ::1 (GET) /auth
+2021-07-26 22:28:11 [info]: ::1 (GET) /users/self
+2021-07-26 22:28:15 [info]: ::1 (GET) /users/self
+2021-07-26 22:28:15 [info]: ::1 (GET) /users
+2021-07-26 22:28:18 [info]: ::1 (GET) /users/451827b3cd687515
+2021-07-26 22:28:21 [info]: ::1 (GET) /users/452d341c136763dc
+2021-07-26 22:28:25 [info]: ::1 (GET) /users/self
+2021-07-26 22:39:14 [info]: ::1 (GET) /users
+2021-07-26 22:39:14 [info]: ::1 (GET) /users/self

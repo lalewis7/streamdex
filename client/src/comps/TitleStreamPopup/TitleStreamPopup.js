@@ -23,7 +23,7 @@ class TitleStreamPopup extends React.Component {
     render(){
         return <>
             <Modal id="title-stream-popup" show={this.props.show} setVisible={this.props.setVisible}>
-                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
                     <div class="modal-content bg-main">
                         <div class="modal-header flex-column align-items-stretch">
                             <div class="d-flex flex-row justify-content-between mb-3">

@@ -1,0 +1,172 @@
+2021-07-18 00:19:48 [info]: API listening at http://localhost:9000
+2021-07-18 00:21:04 [info]: ::1 (POST) /upload?token=665b6a273e3f2209d02958d4f5b854718ce64f530531531c1d94a1bc6250aa70f3b4038de61d2f6ccc53cd1066fdaf6f858a40e01e8991e68b9ec780f4fd0b3b
+2021-07-18 00:21:33 [info]: API listening at http://localhost:9000
+2021-07-18 00:21:45 [info]: ::1 (POST) /upload
+2021-07-18 00:22:49 [info]: API listening at http://localhost:9000
+2021-07-18 00:22:52 [info]: ::1 (POST) /upload
+2021-07-18 00:23:35 [info]: API listening at http://localhost:9000
+2021-07-18 00:23:40 [info]: ::1 (POST) /upload
+2021-07-18 00:23:59 [info]: API listening at http://localhost:9000
+2021-07-18 00:24:01 [info]: ::1 (POST) /upload
+2021-07-18 14:27:46 [info]: API listening at http://localhost:9000
+2021-07-18 14:27:49 [info]: ::1 (POST) /upload
+2021-07-18 14:27:49 [info]: ::1 (GET) /
+2021-07-18 14:29:31 [info]: API listening at http://localhost:9000
+2021-07-18 14:29:34 [info]: ::1 (POST) /upload
+2021-07-18 14:29:34 [info]: ::1 (GET) /
+2021-07-18 14:31:16 [info]: API listening at http://localhost:9000
+2021-07-18 14:31:18 [info]: ::1 (POST) /upload
+2021-07-18 14:31:18 [info]: ::1 (GET) /
+2021-07-18 15:07:34 [info]: ::1 (POST) /upload
+2021-07-18 15:07:34 [info]: ::1 (GET) /
+2021-07-18 15:08:01 [info]: API listening at http://localhost:9000
+2021-07-18 15:08:04 [info]: ::1 (POST) /upload
+2021-07-18 15:08:04 [error]: ReferenceError: res is not defined
+    at D:\streamfinder\api\model_functions\upload.js:29:27
+    at new Promise (<anonymous>)
+    at Object.upload (D:\streamfinder\api\model_functions\upload.js:28:12)
+    at D:\streamfinder\api\routes\upload.js:18:19
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\streamfinder\api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\streamfinder\api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at D:\streamfinder\api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\streamfinder\api\node_modules\express\lib\router\index.js:335:12)
+2021-07-18 15:08:32 [info]: API listening at http://localhost:9000
+2021-07-18 15:08:34 [info]: ::1 (POST) /upload
+2021-07-18 15:08:34 [error]: TypeError: multerUpload is not a function
+    at D:\streamfinder\api\model_functions\upload.js:29:9
+    at new Promise (<anonymous>)
+    at Object.upload (D:\streamfinder\api\model_functions\upload.js:28:12)
+    at D:\streamfinder\api\routes\upload.js:18:19
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\streamfinder\api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\streamfinder\api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at D:\streamfinder\api\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\streamfinder\api\node_modules\express\lib\router\index.js:335:12)
+2021-07-18 15:09:22 [info]: API listening at http://localhost:9000
+2021-07-18 15:09:25 [info]: ::1 (POST) /upload
+2021-07-18 15:09:48 [info]: API listening at http://localhost:9000
+2021-07-18 15:09:50 [info]: ::1 (POST) /upload
+2021-07-18 16:27:14 [info]: API listening at http://localhost:9000
+2021-07-18 16:27:16 [info]: ::1 (POST) /upload
+2021-07-18 16:27:48 [info]: API listening at http://localhost:9000
+2021-07-18 16:27:50 [info]: ::1 (POST) /upload
+2021-07-18 16:27:50 [error]: Error: ENOENT: no such file or directory, open 'D:\streamfinder\api\public\images\e8c95a78618b08c13057f968d1054729.image\jpeg'
+2021-07-18 16:28:17 [info]: API listening at http://localhost:9000
+2021-07-18 16:28:19 [info]: ::1 (POST) /upload
+2021-07-18 16:29:31 [info]: API listening at http://localhost:9000
+2021-07-18 16:29:33 [info]: ::1 (POST) /upload
+2021-07-18 16:38:51 [info]: API listening at http://localhost:9000
+2021-07-18 16:39:04 [info]: ::1 (DELETE) /upload/ba56013f306e8e2ef0a9757b7062f81f.jpeg
+2021-07-18 16:39:04 [error]: Error: ENOENT: no such file or directory, unlink 'D:\streamfinder\api\ba56013f306e8e2ef0a9757b7062f81f.jpeg'
+2021-07-18 16:39:29 [info]: API listening at http://localhost:9000
+2021-07-18 16:39:33 [info]: ::1 (DELETE) /upload/ba56013f306e8e2ef0a9757b7062f81f.jpeg
+2021-07-18 16:39:55 [info]: ::1 (DELETE) /upload/5d3e369d92b5667970cf5cdaeaa4ca9f.jpeg
+2021-07-18 16:41:38 [info]: ::1 (POST) /upload
+2021-07-18 16:41:45 [info]: ::1 (POST) /upload
+2021-07-18 16:42:01 [info]: ::1 (DELETE) /upload/05a42ad28fe555aca649197fec10659b.jpeg
+2021-07-18 16:44:35 [info]: ::1 (POST) /upload
+2021-07-18 16:44:51 [info]: ::1 (POST) /upload
+2021-07-18 16:45:06 [info]: ::1 (POST) /upload
+2021-07-18 16:45:18 [info]: ::1 (POST) /upload
+2021-07-18 16:45:29 [info]: ::1 (POST) /upload
+2021-07-18 16:45:52 [info]: ::1 (DELETE) /upload/frozen.jpg
+2021-07-18 16:46:30 [info]: ::1 (GET) /users/self
+2021-07-18 16:48:05 [info]: ::1 (GET) /users/self
+2021-07-18 16:48:36 [info]: ::1 (GET) /users/self
+2021-07-18 16:48:53 [info]: ::1 (GET) /images//frozen.jpg
+2021-07-18 16:48:53 [info]: ::1 (GET) /images//frozen2.jpg
+2021-07-18 16:48:53 [info]: ::1 (GET) /images//moana.jpg
+2021-07-18 16:49:13 [info]: ::1 (GET) /images//frozen2.jpg
+2021-07-18 16:49:13 [info]: ::1 (GET) /images//moana.jpg
+2021-07-18 16:49:13 [info]: ::1 (GET) /images//frozen.jpg
+2021-07-18 16:50:26 [info]: ::1 (GET) /users/self
+2021-07-18 16:53:19 [info]: ::1 (GET) /titles/?q=avatar
+2021-07-18 16:53:20 [info]: ::1 (GET) /titles/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 16:53:20 [info]: ::1 (GET) /users/self
+2021-07-18 16:53:38 [info]: ::1 (GET) /titles/?q=test
+2021-07-18 16:53:40 [info]: ::1 (GET) /titles/bf037dbe11036e31af77a267082a82f7
+2021-07-18 16:53:40 [info]: ::1 (GET) /users/self
+2021-07-18 21:05:56 [info]: ::1 (POST) /users/452d341c136763dc5/ratings/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 21:06:26 [info]: API listening at http://localhost:9000
+2021-07-18 21:06:28 [info]: ::1 (POST) /users/452d341c136763dc5/ratings/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 21:06:48 [info]: ::1 (POST) /users/452d341c136763dc5/ratings/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 21:07:17 [info]: ::1 (POST) /users/452d341c136763dc/ratings/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 21:07:36 [info]: ::1 (POST) /users/452d341c136763dc/ratings/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 21:07:36 [error]: Error: ER_DUP_ENTRY: Duplicate entry '452d341c136763dc' for key 'ratings.PRIMARY'
+    at Query.Sequence._packetToError (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:200:13)
+    at addChunk (_stream_readable.js:294:12)
+    --------------------
+    at Pool.query (D:\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at D:\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (D:\streamfinder\api\util.js:40:16)
+    at Object.insertUserRating (D:\streamfinder\api\controllers\user.rating.js:19:21)
+    at Rating.insert (D:\streamfinder\api\models\rating.js:36:32)
+    at D:\streamfinder\api\model_functions\user.js:178:27
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-18 21:08:51 [info]: API listening at http://localhost:9000
+2021-07-18 21:08:55 [info]: ::1 (POST) /users/452d341c136763dc/ratings/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 21:09:11 [info]: ::1 (PUT) /users/452d341c136763dc/ratings/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 21:09:23 [info]: ::1 (PUT) /users/452d341c136763dc/ratings/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 21:09:36 [info]: ::1 (GET) /users/452d341c136763dc/ratings/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 21:09:43 [info]: ::1 (GET) /users/452d341c136763dc/ratings/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 21:09:50 [info]: ::1 (DELETE) /users/452d341c136763dc/ratings/4fc63cc45cb72566136015b9dcf1cf46
+2021-07-18 21:17:02 [info]: ::1 (GET) /titles/bf037dbe11036e31af77a267082a82f7
+2021-07-18 21:17:02 [info]: ::1 (GET) /users/self
+2021-07-18 21:17:21 [info]: ::1 (GET) /titles/bf037dbe11036e31af77a267082a82f7
+2021-07-18 21:17:21 [info]: ::1 (GET) /users/self
+2021-07-18 21:17:55 [info]: ::1 (GET) /titles/?q=test
+2021-07-18 21:17:56 [info]: ::1 (GET) /titles/c806a0fff00005b96942277995f27a77
+2021-07-18 21:17:56 [info]: ::1 (GET) /users/self
+2021-07-18 21:18:04 [info]: ::1 (GET) /titles/?q=moana
+2021-07-18 21:18:05 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:18:05 [info]: ::1 (GET) /users/self
+2021-07-18 21:20:36 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:20:36 [info]: ::1 (GET) /users/self
+2021-07-18 21:21:03 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:21:03 [info]: ::1 (GET) /users/self
+2021-07-18 21:21:51 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:21:51 [info]: ::1 (GET) /users/self
+2021-07-18 21:22:31 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:22:49 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:22:49 [info]: ::1 (GET) /users/self
+2021-07-18 21:24:53 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:24:53 [info]: ::1 (GET) /users/self
+2021-07-18 21:25:42 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:28:43 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:28:50 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:28:50 [info]: ::1 (GET) /users/self
+2021-07-18 21:29:05 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:29:26 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:29:26 [info]: ::1 (GET) /users/self
+2021-07-18 21:29:42 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:31:37 [info]: ::1 (GET) /users/self
+2021-07-18 21:31:42 [info]: ::1 (GET) /users/self
+2021-07-18 21:32:06 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:32:06 [info]: ::1 (GET) /users/self
+2021-07-18 21:32:06 [info]: ::1 (GET) /users/452d341c136763dc/ratings/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:32:06 [error]: Cannot read property 'user_id' of undefined
+2021-07-18 21:32:14 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:32:14 [info]: ::1 (GET) /users/self
+2021-07-18 21:33:20 [info]: ::1 (GET) /users/452d341c136763dc/ratings/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:33:20 [error]: Cannot read property 'user_id' of undefined
+2021-07-18 21:34:05 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:34:05 [info]: ::1 (GET) /users/452d341c136763dc/ratings/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:35:05 [info]: ::1 (POST) /users/452d341c136763dc/ratings/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:35:10 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:35:10 [info]: ::1 (GET) /users/self
+2021-07-18 21:35:27 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:35:27 [info]: ::1 (GET) /users/self
+2021-07-18 21:37:09 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-18 21:37:09 [info]: ::1 (GET) /users/self

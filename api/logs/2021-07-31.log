@@ -1,0 +1,132 @@
+2021-07-31 13:00:00 [info]: API listening at http://localhost:9000
+2021-07-31 13:00:03 [info]: ::1 (POST) /images
+2021-07-31 13:06:15 [info]: API listening at http://localhost:9000
+2021-07-31 13:06:17 [info]: ::1 (POST) /images
+2021-07-31 13:06:17 [error]: TypeError: Cannot read property 'filename' of undefined
+    at D:\streamfinder\api\model_functions\image.js:72:30
+    at multerMiddleware (D:\streamfinder\api\node_modules\multer\lib\make-middleware.js:18:41)
+    at D:\streamfinder\api\model_functions\image.js:68:9
+    at new Promise (<anonymous>)
+    at Object.upload (D:\streamfinder\api\model_functions\image.js:67:12)
+    at D:\streamfinder\api\routes\image.js:18:18
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\streamfinder\api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\streamfinder\api\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+2021-07-31 13:07:37 [info]: API listening at http://localhost:9000
+2021-07-31 13:07:40 [info]: ::1 (POST) /images
+2021-07-31 13:09:58 [info]: API listening at http://localhost:9000
+2021-07-31 13:10:00 [info]: ::1 (POST) /images
+2021-07-31 13:47:47 [info]: API listening at http://localhost:9000
+2021-07-31 13:47:50 [info]: ::1 (POST) /images
+2021-07-31 13:48:17 [info]: API listening at http://localhost:9000
+2021-07-31 13:48:20 [info]: ::1 (POST) /images
+2021-07-31 13:52:48 [info]: API listening at http://localhost:9000
+2021-07-31 13:52:50 [info]: ::1 (POST) /images
+2021-07-31 13:54:02 [info]: API listening at http://localhost:9000
+2021-07-31 13:54:05 [info]: ::1 (POST) /images
+2021-07-31 13:55:39 [info]: API listening at http://localhost:9000
+2021-07-31 13:55:41 [info]: ::1 (POST) /images
+2021-07-31 13:57:04 [info]: API listening at http://localhost:9000
+2021-07-31 13:57:06 [info]: ::1 (POST) /images
+2021-07-31 14:04:14 [info]: API listening at http://localhost:9000
+2021-07-31 14:04:21 [info]: ::1 (POST) /images
+2021-07-31 14:20:36 [info]: API listening at http://localhost:9000
+2021-07-31 14:20:38 [info]: ::1 (POST) /images
+2021-07-31 14:21:33 [info]: API listening at http://localhost:9000
+2021-07-31 14:21:35 [info]: ::1 (POST) /images
+2021-07-31 14:22:28 [info]: API listening at http://localhost:9000
+2021-07-31 14:22:31 [info]: ::1 (POST) /images
+2021-07-31 14:23:25 [info]: API listening at http://localhost:9000
+2021-07-31 14:23:28 [info]: ::1 (POST) /images
+2021-07-31 14:24:23 [info]: API listening at http://localhost:9000
+2021-07-31 14:24:26 [info]: ::1 (POST) /images
+2021-07-31 14:25:58 [info]: API listening at http://localhost:9000
+2021-07-31 14:26:00 [info]: ::1 (POST) /images
+2021-07-31 14:26:19 [info]: API listening at http://localhost:9000
+2021-07-31 14:26:21 [info]: ::1 (POST) /images
+2021-07-31 14:27:32 [info]: API listening at http://localhost:9000
+2021-07-31 14:27:35 [info]: ::1 (POST) /images
+2021-07-31 14:27:57 [info]: API listening at http://localhost:9000
+2021-07-31 14:28:02 [info]: ::1 (POST) /images
+2021-07-31 14:32:34 [info]: API listening at http://localhost:9000
+2021-07-31 14:32:40 [info]: ::1 (POST) /images
+2021-07-31 14:33:13 [info]: API listening at http://localhost:9000
+2021-07-31 14:33:24 [info]: ::1 (POST) /images
+2021-07-31 14:34:51 [info]: API listening at http://localhost:9000
+2021-07-31 14:34:53 [info]: ::1 (POST) /images
+2021-07-31 14:35:46 [info]: API listening at http://localhost:9000
+2021-07-31 14:35:48 [info]: ::1 (POST) /images
+2021-07-31 14:42:32 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 14:42:32 [error]: TypeError: Cannot read property 'admin' of undefined
+    at D:\streamfinder\api\model_functions\image.js:90:51
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-31 14:43:05 [info]: API listening at http://localhost:9000
+2021-07-31 14:43:12 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 14:43:12 [error]: TypeError: Cannot read property 'admin' of undefined
+    at D:\streamfinder\api\model_functions\image.js:49:51
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-31 14:43:44 [info]: API listening at http://localhost:9000
+2021-07-31 14:43:46 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 14:44:48 [info]: API listening at http://localhost:9000
+2021-07-31 14:44:50 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 14:45:37 [info]: ::1 (PUT) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 14:45:52 [info]: ::1 (PUT) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 14:45:59 [info]: ::1 (GET) /auth
+2021-07-31 14:45:59 [error]: Error: Email/Username or password incorrect.
+    at D:\streamfinder\api\models\token.js:43:27
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-31 14:46:52 [info]: ::1 (GET) /auth
+2021-07-31 14:47:03 [info]: ::1 (PUT) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:22:28 [info]: API listening at http://localhost:9000
+2021-07-31 15:22:31 [info]: ::1 (PUT) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:22:41 [info]: ::1 (PUT) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:23:20 [info]: API listening at http://localhost:9000
+2021-07-31 15:23:23 [info]: ::1 (PUT) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:23:39 [info]: ::1 (PUT) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:23:49 [info]: API listening at http://localhost:9000
+2021-07-31 15:23:57 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:24:55 [info]: API listening at http://localhost:9000
+2021-07-31 15:24:57 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:24:57 [error]: TypeError: path must be absolute or specify root to res.sendFile
+    at ServerResponse.sendFile (D:\streamfinder\api\node_modules\express\lib\response.js:421:11)
+    at D:\streamfinder\api\routes\image.js:31:24
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-31 15:27:10 [info]: API listening at http://localhost:9000
+2021-07-31 15:27:12 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:27:12 [error]: TypeError: path must be absolute or specify root to res.sendFile
+    at ServerResponse.sendFile (D:\streamfinder\api\node_modules\express\lib\response.js:421:11)
+    at D:\streamfinder\api\routes\image.js:31:24
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-31 15:27:33 [info]: API listening at http://localhost:9000
+2021-07-31 15:27:36 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:28:46 [info]: API listening at http://localhost:9000
+2021-07-31 15:28:48 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:29:04 [info]: API listening at http://localhost:9000
+2021-07-31 15:29:07 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:29:24 [info]: ::1 (PUT) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:29:28 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:29:54 [info]: ::1 (PUT) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:30:03 [info]: ::1 (GET) /images
+2021-07-31 15:31:53 [info]: API listening at http://localhost:9000
+2021-07-31 15:31:55 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:31:58 [info]: ::1 (GET) /images
+2021-07-31 15:32:07 [info]: ::1 (GET) /images?token=fc8982c9578f2b69cfec196e7af34827cf748b6d810056f46711948986451fca74f58a364b5cf89358e47712e33770ee5a9778f9bfc9d463f9de2d1ec2c8b288
+2021-07-31 15:32:25 [info]: ::1 (GET) /images
+2021-07-31 15:32:45 [info]: API listening at http://localhost:9000
+2021-07-31 15:32:47 [info]: ::1 (GET) /images
+2021-07-31 15:33:23 [info]: ::1 (PUT) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:33:26 [info]: ::1 (GET) /images
+2021-07-31 15:37:23 [info]: API listening at http://localhost:9000
+2021-07-31 15:37:51 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054/info
+2021-07-31 15:37:59 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054/info
+2021-07-31 15:37:59 [error]: ReferenceError: resp is not defined
+    at D:\streamfinder\api\routes\image.js:65:41
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-31 15:38:10 [info]: API listening at http://localhost:9000
+2021-07-31 15:38:12 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054/info
+2021-07-31 15:38:35 [info]: API listening at http://localhost:9000
+2021-07-31 15:38:37 [info]: ::1 (GET) /images/325bfd44a9a7df6e3222b9c512688054/info
+2021-07-31 15:50:50 [info]: ::1 (DELETE) /upload/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:51:01 [info]: ::1 (DELETE) /images/325bfd44a9a7df6e3222b9c512688054
+2021-07-31 15:51:06 [info]: ::1 (GET) /images

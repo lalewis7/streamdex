@@ -18,12 +18,12 @@ router.get('/', (req, res) => {
 
     // get token from auth model
     Token.getToken(user, sha256(pass))
-    // success
-    .then(token => {
-        res.status(200).send(token);
-    })
-    // error
-    .catch(util.handleResponseError(res));
+        // success
+        .then(token => {
+            res.status(200).send(token);
+        })
+        // error
+        .catch(util.handleResponseError(res));
 });
 
 router.post('/', (req, res) => {

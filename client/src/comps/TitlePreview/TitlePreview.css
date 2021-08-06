@@ -1,5 +1,7 @@
 .titlepreview-card {
     max-width: 160px;
+    min-width: 160px;
+    border: 0;
 }
 
 .titlepreview-img {

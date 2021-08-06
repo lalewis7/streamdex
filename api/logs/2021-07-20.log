@@ -1,0 +1,46 @@
+2021-07-20 03:08:09 [info]: ::1 (GET) /users/self
+2021-07-20 03:08:14 [info]: ::1 (GET) /titles/?q=moana
+2021-07-20 03:08:15 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-20 03:08:15 [info]: ::1 (GET) /users/self
+2021-07-20 03:08:15 [info]: ::1 (GET) /users/452d341c136763dc/ratings/273b352a34374b898a850afd13c09b8f
+2021-07-20 16:09:50 [info]: API listening at http://localhost:9000
+2021-07-20 16:13:23 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-20 16:13:23 [info]: ::1 (GET) /users/self
+2021-07-20 16:13:23 [info]: ::1 (GET) /users/452d341c136763dc/ratings/273b352a34374b898a850afd13c09b8f
+2021-07-20 17:37:17 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-20 17:37:38 [info]: ::1 (GET) /titles/?q=moana
+2021-07-20 17:37:40 [info]: ::1 (GET) /titles/273b352a34374b898a850afd13c09b8f
+2021-07-20 21:50:04 [info]: ::1 (GET) /auth
+2021-07-20 21:50:04 [info]: ::1 (GET) /users/self
+2021-07-20 21:50:26 [info]: ::1 (GET) /users/self
+2021-07-20 21:50:29 [info]: ::1 (GET) /auth
+2021-07-20 21:50:29 [error]: Error: Email/Username or password incorrect.
+    at D:\streamfinder\api\models\token.js:43:27
+    at processTicksAndRejections (internal/process/task_queues.js:89:5)
+2021-07-20 22:04:26 [info]: ::1 (GET) /users/self
+2021-07-20 22:09:39 [info]: ::1 (GET) /users/self
+2021-07-20 22:14:49 [info]: ::1 (GET) /auth
+2021-07-20 22:14:49 [info]: ::1 (GET) /users/self
+2021-07-20 22:14:55 [info]: ::1 (GET) /users/self
+2021-07-20 22:15:46 [info]: ::1 (GET) /users/self
+2021-07-20 22:15:52 [info]: ::1 (GET) /users/self
+2021-07-20 22:15:55 [info]: ::1 (GET) /users/self
+2021-07-20 22:15:59 [info]: ::1 (GET) /users/self
+2021-07-20 22:17:29 [info]: ::1 (GET) /users/self
+2021-07-20 22:17:31 [info]: ::1 (GET) /users/self
+2021-07-20 22:18:01 [info]: ::1 (GET) /users/self
+2021-07-20 22:18:03 [info]: ::1 (GET) /users/self
+2021-07-20 22:38:33 [info]: ::1 (GET) /users/self
+2021-07-20 22:38:47 [info]: ::1 (GET) /auth
+2021-07-20 22:38:47 [info]: ::1 (GET) /users/self
+2021-07-20 22:39:23 [info]: ::1 (GET) /users/self
+2021-07-20 22:39:29 [info]: ::1 (GET) /auth
+2021-07-20 22:39:29 [info]: ::1 (GET) /users/self
+2021-07-20 22:40:08 [info]: ::1 (GET) /auth
+2021-07-20 22:40:08 [info]: ::1 (GET) /users/self
+2021-07-20 22:40:14 [info]: ::1 (GET) /auth
+2021-07-20 22:40:14 [info]: ::1 (GET) /users/self
+2021-07-20 22:41:18 [info]: ::1 (GET) /users/self
+2021-07-20 22:41:25 [info]: ::1 (GET) /auth
+2021-07-20 22:41:25 [info]: ::1 (GET) /users/self
+2021-07-20 22:45:29 [info]: ::1 (GET) /users/self
