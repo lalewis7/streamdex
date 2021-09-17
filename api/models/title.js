@@ -4,6 +4,7 @@ const crypto = require('crypto');
 const titleController = require('../controllers/title.js');
 const genreController = require('../controllers/title.genre.js');
 const linksController = require('../controllers/links.js');
+const listTitlesController = require('../controllers/list.titles.js');
 
 // models
 const model = require('./model.js');
@@ -73,6 +74,12 @@ class Title extends model.Model {
                 visible: true,
                 adminProtected: true
             }),
+            new model.NumberAttribute({
+                name: "streamdex_rating",
+                editable: false,
+                visible: true,
+                adminProtected: true
+            }),
             new LinksAttribute({
                 name: "links",
                 editable: true,
@@ -107,6 +114,8 @@ class Title extends model.Model {
         this.override({ id: id });
         let t = this.get();
         await titleController.insertTitle(t.id, t.title, t.thumbnail, t.maturity, t.description, t.imdb_link, t.imdb_rating, t.rotten_tomatoes_link, t.rotten_tomatoes_rating);
+        for (let genre of t.genres)
+            await genreController.insertGenre(t.id, genre);
     }
 
     async save(){
@@ -123,6 +132,7 @@ class Title extends model.Model {
         await titleController.deleteTitle(t.id);
         await genreController.deleteAllTitleGenres(t.id);
         await linksController.deleteAllLinks(t.id);
+        await listTitlesController.deleteAllTitles(t.id);
     }
 
 }

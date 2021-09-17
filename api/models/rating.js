@@ -24,7 +24,7 @@ class Rating extends Model {
                 name: "positive",
                 editable: true,
                 visible: true,
-                adminProtected: true
+                adminProtected: false
             }),
         ], data)
     }

@@ -1,6 +1,11 @@
 import React from 'react';
+import { withResizeDetector } from 'react-resize-detector';
 
 const SVG = require('../../util/svg.js');
+
+/* 
+https://stackoverflow.com/questions/21064101/understanding-offsetwidth-clientwidth-scrollwidth-and-height-respectively
+*/
 
 class HorizontalScrollable extends React.Component {
 
@@ -21,13 +26,13 @@ class HorizontalScrollable extends React.Component {
         let updateNav = this.setNavigationVisibility;
 
         var slideTimer = setInterval(function(){
-            if(dir == 'left'){
+            if(dir === 'left'){
                 body.scrollLeft -= step;
             } else {
                 body.scrollLeft += step;
             }
             scrollAmount += step;
-            if(scrollAmount >= dist){
+            if(scrollAmount >= dist || body.scrollLeft == 0 || Math.floor(body.scrollLeft) == Math.floor(body.scrollWidth-body.clientWidth)){
                 updateNav();
                 window.clearInterval(slideTimer);
             }
@@ -35,8 +40,8 @@ class HorizontalScrollable extends React.Component {
     }
 
     componentDidMount(){
-        this.setNavigationVisibility();
         window.addEventListener("resize", this.setNavigationVisibility);
+        this.setNavigationVisibility();
     }
     
     componentWillUnmount() {
@@ -53,27 +58,38 @@ class HorizontalScrollable extends React.Component {
         if (body === null) return;
         let prev = body.querySelector('.horizontal-scroll-prev');
         let next = body.querySelector('.horizontal-scroll-next');
+
         let scrollVal = body.scrollLeft;
         let fullWidth = body.scrollWidth;
-        let width = body.offsetWidth;
+        let viewportWidth = body.clientWidth;
+
         if (scrollVal == 0 && prev)
             prev.classList.add('d-none');
         else if (prev)
             prev.classList.remove('d-none');
-        if (Math.floor(scrollVal) == Math.floor(fullWidth-width) && next)
+        
+        if (Math.floor(scrollVal) == Math.floor(fullWidth-viewportWidth) && next)
             next.classList.add('d-none');
         else if (next)
             next.classList.remove('d-none');
     }
 
     render(){
-        const speed = 8, dist = 150, step = 8;
+        const tot_time = 400;
+        const dist = (evt) => evt.currentTarget.parentElement.parentElement.clientWidth*.75;
+        const step = (evt) => Math.ceil(evt.currentTarget.parentElement.parentElement.clientWidth/64);
+        const speed = (evt) => Math.floor(tot_time / (dist(evt) / step(evt)));
+        const scroll = (dir, evt) => this.navigate(dir, speed(evt), dist(evt), step(evt));
         return <>
             <div class="horizontal-scroll" ref={this.scroll}>
                 <div class="horizontal-scroll-body">
-                    <button class="horizontal-scroll-prev" onClick={(evt) => {this.navigate('left', speed, evt.target.parentElement.parentElement.offsetWidth*.75, evt.target.parentElement.parentElement.offsetWidth/64)}}><SVG.CaretLeftFill w="1.2em" h="1.2em"/></button>
+                    <button type="button" class="horizontal-scroll-prev" onClick={evt => scroll('left', evt)}>
+                        <SVG.CaretLeftFill w="1.2em" h="1.2em"/>
+                    </button>
                     {this.props.children}
-                    <button class="horizontal-scroll-next" onClick={(evt) => {this.navigate('right', speed, evt.target.parentElement.parentElement.offsetWidth*.75, evt.target.parentElement.parentElement.offsetWidth/64)}}><SVG.CaretRightFill w="1.2em" h="1.2em"/></button>
+                    <button type="button" class="horizontal-scroll-next" onClick={evt => scroll('right', evt)}>
+                        <SVG.CaretRightFill w="1.2em" h="1.2em"/>
+                    </button>
                 </div>
             </div>
         </>
@@ -81,4 +97,4 @@ class HorizontalScrollable extends React.Component {
 
 }
 
-export default HorizontalScrollable;
+export default withResizeDetector(HorizontalScrollable);

@@ -30,8 +30,9 @@
 URL | GET | POST | PUT | DELETE
 --- | --- | --- | --- | --- |
 `/auth` | **200** | 405 | 405 | 405 |
-`/upload` | 405 | **201** | 405 | 405 |
-`/upload/:image` | 405 | 405 | 405 | **200** |
+`/images` | **200** | **201** | 405 | 405 |
+`/upload/:image` | **200** | 405 | **200** | **200** |
+`/upload/:image/info` | **200** | 405 | 405 | 405 |
 `/users` | **200** | **201** | 405 | 405 |
 `/users/:userId` | **200** | 405 | **200** | **200** |
 `/users/:userId/rating/:titleId` | **200** | **201** | **200** | **200** |
@@ -49,6 +50,9 @@ URL | GET | POST | PUT | DELETE
 `/episodes/:episodeId` | **200** | 405 | **200** | **200** |
 `/episodes/:episodeId/availability` | **200** | 405 | 405 | 405 |
 `/episodes/:episodeId/availability/:platform` | **200** | **201** | 405 | 405 |
+`/lists` | 405 | **201** | 405 | 405 |
+`/lists/:listId` | **200** | 405 | **200** | **200** |
+`/pages/:page` | **200** | 405 | 405 | 405 |
 
 ### Details
 

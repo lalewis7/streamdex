@@ -4,7 +4,7 @@ import isEqual from 'lodash/isEqual';
 import Modal from '../Modal.js';
 import Loading from '../Loading.js';
 import UserDetails from './UserDetails.js';
-import TextArray from './TextArray.js';
+import TextArray from '../TextArray.js';
 
 const SVG = require('../svg.js');
 const Config = require('../config.json');
@@ -15,8 +15,8 @@ class User extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            status: "waiting",
-            user: null,
+            status: "loading",
+            user: {},
             loading: false,
             admin: false,
             locked: false,
@@ -211,7 +211,7 @@ class User extends React.Component {
                                             <h6>Streaming Services</h6>
                                         </div>
                                     </div>
-                                    <TextArray values={this.state.user && this.props.show ? this.state.user.streams : []} placeholder="amazon_prime, netflix, hulu..." updateValues={vals => this.setState({streams: vals})} />
+                                    <TextArray values={this.state.user.streams} placeholder="amazon_prime, netflix, hulu..." updateValues={vals => this.setState({streams: vals})} show={this.props.show} />
                                 </Loading>
                             </div>
                             {footer}

@@ -80,9 +80,9 @@ class LoginSettings extends React.Component {
                         <div class="col-12">
                             <div class="input-group">
                                 <span class="input-group-text border-0 bg-highlight text-head2 shadow-none" >
-                                    <SVG.EmailFill w={'1.15em'} h={'1.15em'} />
+                                    <SVG.UserFill w={'1.15em'} h={'1.15em'} />
                                 </span>
-                                <input type="text" class="form-control border-0 bg-highlight text-head text-input" id="loginUsername" placeholder="Email" value={this.state.user} name="user" onChange={this.handleChange}/>
+                                <input type="text" class="form-control border-0 bg-highlight text-head text-input" id="loginUsername" placeholder="Username" value={this.state.user} name="user" onChange={this.handleChange}/>
                             </div>
                         </div>
                     </div>

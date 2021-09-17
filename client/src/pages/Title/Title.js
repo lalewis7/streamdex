@@ -22,34 +22,46 @@ class Title extends React.Component {
         this.like = this.like.bind(this);
         this.dislike = this.dislike.bind(this);
         this.sendRating = this.sendRating.bind(this);
+        this.loadRating = this.loadRating.bind(this);
     }
 
     componentDidMount(){
         fetch(Config.API + 'titles/' + this.props.match.params.id)
+            .then(res => res.ok ? res : Promise.reject())
             .then(res => res.json())
             .then((res) => {
                 this.setState({content: res, status: "loaded"});
-                if (this.props.user) // logged in
-                    return fetch(Config.API + "users/" + this.props.user.id + "/ratings/" + res.id, {
-                        method: 'GET',
-                        headers: {'token': this.props.token}
-                    })
-                        .then(res => res.json())
-                        .then(rating => {
-                            console.log(rating);
-                            if (rating.positive)
-                                this.setState({rating: rating, liked: true});
-                            else 
-                                this.setState({rating: rating, disliked: true});
-                        })
-                        .catch(err => {
-                            console.log(err);
-                        })
+                this.loadRating();
             })
             .catch((err) => {
                 console.log(err);
                 this.setState({status: 'error'});
             })
+    }
+
+    componentDidUpdate(prevProps){
+        if (this.props.user && !prevProps.user)
+            this.loadRating();
+    }
+
+    loadRating(){
+        if (this.props.user && this.state.content.id) // logged in
+            fetch(Config.API + "users/" + this.props.user.id + "/ratings/" + this.state.content.id, {
+                method: 'GET',
+                headers: {'token': this.props.token}
+            })
+                .then(res => res.ok ? res : Promise.reject())
+                .then(res => res.json())
+                .then(rating => {
+                    console.log(rating);
+                    if (rating.positive)
+                        this.setState({rating: rating, liked: true});
+                    else 
+                        this.setState({rating: rating, disliked: true});
+                })
+                .catch(err => {
+                    console.log(err);
+                })
     }
 
     like(){
@@ -64,18 +76,19 @@ class Title extends React.Component {
 
     sendRating(positive){
         if (this.state.rating){ // edit / delete
+            if (!this.props.user){
+                this.setState({liked: this.state.rating.positive, disliked: !this.state.rating.positive});
+                return;
+            }
             let promise;
             if (positive === this.state.rating.positive){ // delete
                 promise = fetch(Config.API + "users/" + this.props.user.id + "/ratings/" + this.state.content.id, {
                     method: 'DELETE',
                     headers: {'token': this.props.token}
                 })
-                .then(res => {
-                    if (res.ok){
-                        this.setState({rating: undefined});
-                    }
-                    else
-                        throw new Error(res.message);
+                .then(res => res.ok ? res : Promise.reject())
+                .then(() => {
+                    this.setState({rating: undefined});
                 })
             }
             else { // edit
@@ -84,12 +97,9 @@ class Title extends React.Component {
                     headers: {'Content-Type': 'application/json', 'token': this.props.token},
                     body: JSON.stringify({positive: positive})
                 })
-                .then(res => {
-                    if (res.ok){
-                        this.setState({rating: {positive: positive}});
-                    }
-                    else
-                        throw new Error(res.message);
+                .then(res => res.ok ? res : Promise.reject())
+                .then(() => {
+                    this.setState({rating: {positive: positive}});
                 })
             }
             promise
@@ -99,17 +109,18 @@ class Title extends React.Component {
                 });
         }
         else { // create
+            if (!this.props.user){
+                this.setState({liked: false, disliked: false});
+                return;
+            }
             fetch(Config.API + "users/" + this.props.user.id + "/ratings/" + this.state.content.id, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'token': this.props.token},
                 body: JSON.stringify({positive: positive})
             })
-            .then(res => {
-                if (res.ok){
-                    this.setState({rating: {positive: positive}});
-                }
-                else
-                    throw new Error(res.message);
+            .then(res => res.ok ? res : Promise.reject())
+            .then(() => {
+                this.setState({rating: {positive: positive}});
             })
             .catch(err => {
                 console.log(err);

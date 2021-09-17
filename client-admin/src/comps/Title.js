@@ -1,6 +1,8 @@
 import React from 'react';
+import isEqual from 'lodash/isEqual';
 
 import Movie from './Movie.js';
+import Series from './Series.js';
 import Modal from '../Modal.js';
 import Loading from '../Loading.js';
 
@@ -12,19 +14,19 @@ class Title extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            status: "waiting",
+            status: "loading",
             loading: false,
-            title: null, 
-            deleting: false,
-
-            responseMsgVisible: false,
-            responseMsg: "",
-            responseMsgError: true
+            title: null,
+            changesMade: false,
+            deleting: false
         }
+        this.edits = {};
         this.saveChanges = this.saveChanges.bind(this);
-        this.changesMade = this.changesMade.bind(this);
+        this.updateEdits = this.updateEdits.bind(this);
+        this.updateChangesMade = this.updateChangesMade.bind(this);
         this.loadTitle = this.loadTitle.bind(this);
         this.delete = this.delete.bind(this);
+        this.saveAvailabilityChanges = this.saveAvailabilityChanges.bind(this);
     }
 
     componentDidMount(){
@@ -33,19 +35,339 @@ class Title extends React.Component {
     }
 
     componentDidUpdate(prevProps){
+        this.updateChangesMade();
         if (prevProps.title !== this.props.title){
             this.loadTitle();
         }
     }
 
-    saveChanges(evt){
-        evt.preventDefault();
+    saveAvailabilityChanges(oldAvails, newAvails, url, requests){
+        newAvails.map(newAvail => {
+            let newCountries = [];
+            let removedCountries = [];
+
+            // new (add all countries)
+            if (oldAvails.map(avail => avail.platform).indexOf(newAvail.platform) === -1)
+                newCountries.push(...newAvail.countries);
+
+            // edits
+            else
+                oldAvails.map(oldAvail => {
+                    if (newAvail.platform === oldAvail.platform) {
+                        newCountries.push(...newAvail.countries.reduce((countries, newCountry) => {
+                            if (oldAvail.countries.indexOf(newCountry) === -1) countries.push(newCountry);
+                            return countries;
+                        }, []));
+                        removedCountries.push(...oldAvail.countries.reduce((countries, oldCountry) => {
+                            if (newAvail.countries.indexOf(oldCountry) === -1) countries.push(oldCountry);
+                            return countries;
+                        }, []));
+                    }
+                });
+            // add requests
+            newCountries.map(country => {
+                requests.push(
+                    fetch(url+newAvail.platform,
+                    {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json', 'token': this.props.token},
+                        body: JSON.stringify({country: country, available: true})
+                    })
+                    .then(res => res.ok ? res : Promise.reject())
+                );
+            });
+            removedCountries.map(country => {
+                requests.push(
+                    fetch(url+newAvail.platform,
+                    {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json', 'token': this.props.token},
+                        body: JSON.stringify({country: country, available: false})
+                    })
+                    .then(res => res.ok ? res : Promise.reject())
+                );
+            });
+        });
+        // delete
+        oldAvails.map(oldAvail => {
+            if (newAvails.map(avail => avail.platform).indexOf(oldAvail.platform) === -1)
+                oldAvail.countries.map(country => {
+                    requests.push(
+                        fetch(url+oldAvail.platform,
+                        {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json', 'token': this.props.token},
+                            body: JSON.stringify({country: country, available: false})
+                        })
+                        .then(res => res.ok ? res : Promise.reject())
+                    );
+                });
+        });
     }
 
-    loadTitle(silent = false){
+    saveChanges(evt){
+        this.setState({loading: true});
+        evt.preventDefault();
+
+        let requests = [];
+        let edits = {...this.edits};
+        let original = {...this.state.title};
+
+        let newLinks = edits.links;
+        let oldLinks = original.links;
+
+        if (newLinks){
+
+            delete edits.links;
+            delete original.links;
+
+            newLinks.map(newLink => {
+                // new
+                if (oldLinks.map(link => link.platform).indexOf(newLink.platform) === -1)
+                    requests.push(
+                        fetch(Config.API+"titles/"+this.props.title+"/links/"+newLink.platform,
+                        {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json', 'token': this.props.token},
+                            body: JSON.stringify({link: newLink.link})
+                        })
+                        .then(res => res.ok ? res : Promise.reject())
+                    );
+                // edit
+                else
+                    oldLinks.map(oldLink => {
+                        if (newLink.platform === oldLink.platform && !isEqual(newLink, oldLink))
+                            requests.push(
+                                fetch(Config.API+"titles/"+this.props.title+"/links/"+oldLink.platform,
+                                {
+                                    method: 'PUT',
+                                    headers: {'Content-Type': 'application/json', 'token': this.props.token},
+                                    body: JSON.stringify({link: newLink.link})
+                                })
+                                .then(res => res.ok ? res : Promise.reject())
+                            );
+                    });
+
+            });
+            // delete
+            oldLinks.map(oldLink => {
+                if (newLinks.map(link => link.platform).indexOf(oldLink.platform) === -1) 
+                    requests.push(
+                        fetch(Config.API+"titles/"+this.props.title+"/links/"+oldLink.platform,
+                        {
+                            method: 'DELETE',
+                            headers: {'token': this.props.token}
+                        })
+                        .then(res => res.ok ? res : Promise.reject())
+                    );
+            })
+        }
+
+        let newAvails = edits.availability;
+        let oldAvails = original.availability;
+
+        if (newAvails){
+
+            delete edits.availability;
+            delete original.availability;
+
+            this.saveAvailabilityChanges(oldAvails, newAvails, Config.API+"titles/"+this.props.title+"/availability/", requests);
+
+        }
+
+        if (edits.seasons){
+
+            let newSeasons = [...edits.seasons];
+            let oldSeasons = [...original.seasons];
+
+            delete edits.seasons;
+            delete original.seasons;
+
+            newSeasons.map(newSeason => {
+                let season = {...newSeason};
+                let seasonID = season.id;
+                let episodes = [...season.episodes];
+                let availability = [...season.availability];
+                delete season.availability;
+                delete season.id;
+                delete season.episodes;
+                // new season
+                if (seasonID === '' || seasonID === null || seasonID === undefined){
+                    requests.push(
+                        fetch(Config.API+"titles/"+this.props.title+"/seasons",
+                        {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json', 'token': this.props.token},
+                            body: JSON.stringify(season)
+                        })
+                        .then(res => res.ok ? res : Promise.reject())
+                        .then(res => res.text())
+                        .then(id => {
+                            this.saveAvailabilityChanges([], availability, Config.API+'seasons/'+id+'/availability/', requests);
+                            episodes.map(e => {
+                                let episode = {...e};
+                                let episodeAvailability = [...episode.availability];
+                                delete episode.id;
+                                delete episode.availability;
+                                requests.push(
+                                    fetch(Config.API+"seasons/"+id+"/episodes",
+                                    {
+                                        method: 'POST',
+                                        headers: {'Content-Type': 'application/json', 'token': this.props.token},
+                                        body: JSON.stringify(episode)
+                                    })
+                                    .then(res => res.ok ? res : Promise.reject())
+                                    .then(res => res.text())
+                                    .then(episodeID => {
+                                        this.saveAvailabilityChanges([], episodeAvailability, Config.API+'episodes/'+episodeID+'/availability/', requests);
+                                    })
+                                )
+                            })
+                        })
+                    );
+                }
+                // edit season
+                else {
+                    oldSeasons.map(os => {
+                        let oldSeason = {...os};
+                        let oldSeasonID = oldSeason.id;
+                        let oldEpisodes = [...oldSeason.episodes];
+                        let oldSeasonAvailability = [...oldSeason.availability];
+                        delete oldSeason.id;
+                        delete oldSeason.episodes;
+                        delete oldSeason.availability;
+                        if (seasonID === oldSeasonID){
+                            this.saveAvailabilityChanges(oldSeasonAvailability, availability, Config.API+'seasons/'+seasonID+'/availability/', requests);
+                            // season
+                            if (!isEqual(season, oldSeason)){
+                                requests.push(
+                                    fetch(Config.API+'seasons/'+seasonID,
+                                    {
+                                        method: 'PUT',
+                                        headers: {'Content-Type': 'application/json', 'token': this.props.token},
+                                        body: JSON.stringify(season)
+                                    })
+                                    .then(res => res.ok ? res : Promise.reject())
+                                );
+                            }
+                            // episodes
+                            episodes.map(e => {
+                                let episode = {...e};
+                                let episodeID = episode.id;
+                                let episodeAvailability = [...episode.availability];
+                                delete episode.id;
+                                delete episode.availability;
+                                // new episode
+                                if (episodeID === '' || episodeID === null || episodeID === undefined){
+                                    requests.push(
+                                        fetch(Config.API+'seasons/'+seasonID+'/episodes',
+                                        {
+                                            method: 'POST',
+                                            headers: {'Content-Type': 'application/json', 'token': this.props.token},
+                                            body: JSON.stringify(episode)
+                                        })
+                                        .then(res => res.ok ? res : Promise.reject())
+                                        .then(eID => {
+                                            this.saveAvailabilityChanges([], episodeAvailability, Config.API+'episodes/'+eID+'/availability/', requests);
+                                        })
+                                    );
+                                }
+                                // edit episode
+                                else {
+                                    oldEpisodes.map(oe => {
+                                        let oldEpisode = {...oe};
+                                        let oldEpisodeID = oldEpisode.id;
+                                        let oldEpisodeAvailability = [...oldEpisode.availability];
+                                        delete oldEpisode.id;
+                                        delete oldEpisode.availability;
+                                        if (episodeID === oldEpisodeID){
+                                            this.saveAvailabilityChanges(oldEpisodeAvailability, episodeAvailability, Config.API+'episodes/'+episodeID+'/availability/', requests);
+                                            if (!isEqual(episode, oldEpisode)){
+                                                requests.push(
+                                                    fetch(Config.API+'episodes/'+episodeID,
+                                                    {
+                                                        method: 'PUT',
+                                                        headers: {'Content-Type': 'application/json', 'token': this.props.token},
+                                                        body: JSON.stringify(episode)
+                                                    })
+                                                    .then(res => res.ok ? res : Promise.reject())
+                                                );
+                                            }
+                                        }
+                                    });
+                                }
+                            });
+                            // delete episodes not included
+                            oldEpisodes.map(oe => {
+                                let oldEpisode = {...oe};
+                                if (episodes.map(ne => ne.id).indexOf(oldEpisode.id) === -1){
+                                    requests.push(
+                                        fetch(Config.API+'episodes/'+oldEpisode.id,
+                                        {
+                                            method: 'DELETE',
+                                            headers: {'token': this.props.token}
+                                        })
+                                        .then(res => res.ok ? res : Promise.reject())
+                                    );
+                                }
+                            })
+                        }
+                    });
+                }
+            });
+            oldSeasons.map(os => {
+                let oldSeason = {...os};
+                if (newSeasons.map(s => s.id).indexOf(oldSeason.id) === -1){
+                    requests.push(
+                        fetch(Config.API+'seasons/'+oldSeason.id,
+                        {
+                            method: 'DELETE',
+                            headers: {'token': this.props.token}
+                        })
+                        .then(res => res.ok ? res : Promise.reject())
+                    );
+                }
+            });
+        }
+        
+        delete edits.id;
+        delete original.id;
+
+        if (!isEqual(edits, original))
+            requests.push(
+                fetch(Config.API+"titles/"+this.props.title,
+                {
+                    method: 'PUT',
+                    headers: {'Content-Type': 'application/json', 'token': this.props.token},
+                    body: JSON.stringify(edits)
+                })
+                .then(res => res.ok ? res : Promise.reject())
+            );
+
+        //let titleEdits = {...this.edits};
+
+        Promise.all(requests)
+            .then(() => {
+                this.props.setVisible(false);
+                this.props.toastMessage(<SVG.Check w="1.7em" h="1.7em" />, "text-success", "Changes saved.");
+                // this.setState({
+                //     title: {...titleEdits}
+                // });
+                this.loadTitle();
+            })
+            .catch(err => {
+                this.props.setVisible(false);
+                this.props.toastMessage(<SVG.Exclamation w="1.7em" h="1.7em" />, "text-danger", "An error occured while saving changes.");
+                console.log(err);
+            })
+            .finally(() => {
+                this.setState({loading: false});
+            });
+    }
+
+    loadTitle(){
         if (this.props.title){
-            if (!silent)
-                this.setState({status: "loading"});
+            this.setState({status: "loading"});
             fetch(Config.API+"titles/"+this.props.title,
             {
                 method: 'GET',
@@ -53,14 +375,10 @@ class Title extends React.Component {
             })
             .then(res => res.json())
             .then(title => {
-                if (!silent)
-                    this.setState({status: 'loaded', title: title});
-                else
-                    this.setState({title: title});
+                this.setState({status: 'loaded', title: title});
             })
             .catch(err => {
-                if (!silent)
-                    this.setState({status: "error"});
+                this.setState({status: "error"});
                 console.log(err);
             });
         }
@@ -96,15 +414,21 @@ class Title extends React.Component {
         }
     }
 
-    changesMade(){
-        return false;
+    updateEdits(newEdits){
+        this.edits = newEdits;
+        this.updateChangesMade();
+    }
+
+    updateChangesMade(){
+        if (!isEqual(this.state.title, this.edits) !== this.state.changesMade)
+            this.setState({changesMade: !this.state.changesMade});
     }
 
     render(){
 
         let saveChangesBtn = <button type="submit" class="btn btn-primary">Save Changes</button>
 
-        if (!this.changesMade())
+        if (!this.state.changesMade)
             saveChangesBtn = <button type="submit" class="btn btn-primary" disabled>Save Changes</button>
         
         if (this.state.loading)
@@ -119,10 +443,6 @@ class Title extends React.Component {
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 <span class="visually-hidden">Loading...</span>
             </button>;
-
-        let responseMsgColor = "text-danger";
-        if (!this.state.responseMsgError)
-            responseMsgColor = "text-success";
 
         let footer = <></>;
 
@@ -139,14 +459,14 @@ class Title extends React.Component {
         let content = <></>;
 
         if (this.state.title && this.state.title.seasons)
-            content = <></>
+            content = <Series htmlId="title-view" id={this.props.title} token={this.props.token} title={this.state.title} show={this.props.show} updateContent={this.updateEdits} />;
         else if (this.state.title && !this.state.title.seasons)
-            content = <Movie id={this.props.title} title={this.state.title} show={this.props.show} statusChange={status => this.setState({status: status})} setLoading={loading => this.setState({loading: loading})} />
+            content = <Movie htmlId="title-view" id={this.props.title} token={this.props.token} title={this.state.title} show={this.props.show} updateContent={this.updateEdits} />
 
         return <>
             <form onSubmit={this.saveChanges}>
                 <Modal show={this.props.show} id="title-edit-modal" setVisible={this.props.setVisible} >
-                <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable modal-fullscreen-sm-down">
                      <div class="modal-content">
                         <div class="modal-header">
                             <h2 class="modal-title">Edit Title</h2>

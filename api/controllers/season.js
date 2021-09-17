@@ -7,7 +7,7 @@ module.exports = {
     },
 
     getAllSeasons(title_id){
-        return util.dbPromise("SELECT * FROM seasons WHERE title_id = ?", title_id);
+        return util.dbPromise("SELECT * FROM seasons WHERE title_id = ? ORDER BY season_number ASC", title_id);
     },
 
     deleteAllSeasons(title_id){

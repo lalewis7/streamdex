@@ -17,8 +17,8 @@ class Header extends React.Component {
 
     render(){
         return <>
-            <div>
-                <nav class="navbar navbar-dark navbar-expand-sm">
+            <div class="pt-5">
+                <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="/">
                             <img src="/streamlogo.png" width="32" height="32" class="d-inline-block align-text-top"/>

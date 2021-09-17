@@ -12,7 +12,7 @@ class Footer extends React.Component {
                 <div class="row p-3 justify-content-center">
                     <div class="col-auto navbar-dark">
                         <a class="" href="/">
-                            <img src="/streamlogo.png" width="50" height="50" class="d-inline-block align-text-top"/>
+                            <img src="/logodesign4-8.svg" width="50" height="50" class="d-inline-block align-text-top"/>
                         </a>
                     </div>
                 </div>
@@ -21,7 +21,7 @@ class Footer extends React.Component {
                         <a class="text-decoration-none text-light" href="#">Contact Us</a>
                     </div>
                     <div class="col-6">
-                        <a class="text-decoration-none text-light" href="#">About</a>
+                        <a class="text-decoration-none text-light" href="/about">About</a>
                     </div>
                 </div>
             </footer>

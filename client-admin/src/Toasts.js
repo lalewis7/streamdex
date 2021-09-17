@@ -46,7 +46,6 @@ class Toasts extends React.Component {
         toastDOM.addEventListener('hidden.bs.toast', (event) => {
             let toasts = [...this.state.toasts];
             let index = toasts.map(t => t.id).indexOf(id);
-            console.log(index);
             if (index > -1){
                 toasts.splice(index, 1);
                 this.setState({toasts: toasts});

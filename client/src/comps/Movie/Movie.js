@@ -72,6 +72,14 @@ class Movie extends React.Component {
                 <SVG.ThumbsDownFill />
             </button>
 
+        let genreText = "N/A"
+        if (this.props.movie.genres.length > 0)
+            genreText = this.props.movie.genres.map((genre, i) => {
+                let val = genre.charAt(0).toUpperCase() + genre.slice(1) + ", ";
+                if (genres.indexOf(genre) == genres.length-1)
+                    val = val.slice(0, val.length-2);
+                return val;
+            });
 
         return <>
             <TitleStreamPopup stream={this.state.stream} show={this.state.showStreamModal} setVisible={(vis) => {this.setState({showStreamModal: vis})}} />
@@ -81,13 +89,13 @@ class Movie extends React.Component {
                     <civ class="d-none d-lg-block col-lg-4">
                         <div class="row">
                             <div class="col">
-                                <img src={Config.API+"images/"+this.props.movie.thumbnail} alt="..." class="w-100 rounded-top"/>
+                                <img src={Config.API+"images/"+this.props.movie.thumbnail} alt="..." class="w-100 rounded-top" onError={(e) => console.log('error loading image')} />
                             </div>
                         </div>
                         <div class="row pedestal rounded-bottom py-2 g-0">
-                        <div class="col d-flex flex-row align-items-center justify-content-center">
-                                <img src="/streamlogo.png" width="32" height="32" class="d-inline-block align-text-top"/>
-                                <h5 class="m-0">94%</h5>
+                            <div class="col d-flex flex-row align-items-center justify-content-center">
+                                <img src="/logodesign4-8.svg" width="28" height="28" class="d-inline-block align-text-top"/>
+                                <h5 class="m-0 ms-1">{this.props.movie.streamdex_rating ? this.props.movie.streamdex_rating+'%' : '0%'}</h5>
                             </div>
                             {this.props.movie.imdb_link ?
                                 <div class="col d-flex flex-row align-items-center justify-content-center">
@@ -125,19 +133,21 @@ class Movie extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div class="row my-3">
-                            <div class="col">
-                                <div class="ratio ratio-16x9">
-                                    <iframe src={"https://www.youtube.com/embed/"+this.props.movie.trailer} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                        {this.props.movie.trailer && this.props.movie.trailer.length > 0 ? 
+                            <div class="row my-3">
+                                <div class="col">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src={"https://www.youtube.com/embed/"+this.props.movie.trailer} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div> 
+                        : ''}
                         <WatchNow availability={this.props.movie.availability} links={this.props.movie.links} openStream={this.openStream} openFilter={this.openFilter}/>
                         <div class="row my-3">
                             <div class="col">
-                                <h5 class="text-head2 fw-bold">DESCRIPTION</h5>
+                                <h5 class="fw-bold">DESCRIPTION</h5>
                                 <div>
-                                    <p class="text-main">{this.props.movie.description}</p>
+                                    <p>{this.props.movie.description && this.props.movie.description.length > 0 ? this.props.movie.description : 'No description available.'}</p>
                                 </div>
                             </div>
                         </div>
@@ -145,14 +155,9 @@ class Movie extends React.Component {
                             <div class="col">
                                 <h5 class="text-head2 fw-bold">DETAILS</h5>
                                 <div>
-                                    <p class="text-main"><span class="fw-bold me-3">Genres</span>{genres.map(genre => {
-                                            let val = genre.charAt(0).toUpperCase() + genre.slice(1) + ", ";
-                                            if (genres.indexOf(genre) == genres.length-1)
-                                                val = val.slice(0, val.length-2);
-                                            return val;
-                                        })}</p>
-                                    <p class="text-main"><span class="fw-bold me-3">Maturity</span>{this.props.movie.maturity}</p>
-                                    <p class="text-main"><span class="fw-bold me-3">Runtime</span>{Utils.runtime(this.props.movie.runtime)}</p>
+                                    <p class="text-main"><span class="fw-bold me-3">Genres</span>{genreText}</p>
+                                    <p class="text-main"><span class="fw-bold me-3">Maturity</span>{this.props.movie.maturity && this.props.movie.maturity.length > 0 ? this.props.movie.maturity : 'N/A'}</p>
+                                    <p class="text-main"><span class="fw-bold me-3">Runtime</span>{this.props.movie.runtime ? Utils.runtime(this.props.movie.runtime) : 'N/A'}</p>
                                 </div>
                             </div>
                         </div>

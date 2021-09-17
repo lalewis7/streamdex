@@ -46,46 +46,70 @@ class Header extends React.Component{
         return <>
             <Settings show={this.state.showSettings} setVisible={(val) => {this.setState({showSettings: val})}} setToken={this.props.setToken} 
                 deleteToken={this.props.deleteToken} token={this.props.token} user={this.props.user} />
-            <div>
-                <nav class="navbar navbar-dark navbar-expand-sm">
-                    <div class="container-fluid">
+            <div class="navbar-top-padding">
+                <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
+                    <div class="container-md">
                         <a class="navbar-brand" href="/">
-                            <img src="/streamlogo.png" width="32" height="32" class="d-inline-block align-text-top"/>
-                            <span class="ps-1">
-                            streamdex
+                            <img src="/logodesign4-8.svg" width="32" height="32" class="d-inline-block align-text-top"/>
+                            <span class="ps-2">
+                            Streamdex
                             </span>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerCollapseContent" aria-controls="headerCollapseContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse">
-                            <div class="d-flex justify-content-between w-100">
-                                <form class="form-inline input-group w-50" onSubmit={this.search}>
+                            <ul class="navbar-nav me-auto mb-0">
+                                <li class="nav-item">
+                                    <a href="/browse" class={window.location.pathname.toLowerCase() === '/browse' ? "nav-link active" : "nav-link"}>Browse</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/new" class={window.location.pathname.toLowerCase() === '/new' ? "nav-link active" : "nav-link"}>New</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/popular" class={window.location.pathname.toLowerCase() === '/popular' ? "nav-link active" : "nav-link"}>Popular</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex w-100">
+                                <form class="form-inline input-group px-2" onSubmit={this.search}>
                                     <input id="header-searchbar" class="form-control" type="search" placeholder="Search" aria-label="Search" name="query" value={this.state.query} onChange={this.handleChange} />
                                     <button class="btn btn-secondary d-flex align-items-center" type="submit">
                                         <SVG.Search w={'1em'} h={'1em'} />
                                     </button>
                                 </form>
-                                <ul class="navbar-nav">
-                                    <button class="p-1 btn nav-link dropdown-toggle d-flex align-items-center shadow-none" onClick={() => {this.setState({showSettings: true})}}>
-                                        <SVG.SettingsGear w={'1.4em'} h={'1.4em'} />
-                                    </button>
-                                </ul>
+                                <button class="p-1 ps-3 pe-2 nav-link btn dropdown-toggle d-flex align-items-center shadow-none" onClick={() => {this.setState({showSettings: true})}}>
+                                    <SVG.SettingsGear w={'1.4em'} h={'1.4em'} />
+                                </button>
                             </div>
                         </div>
                     </div>
                 </nav>
-                <div class="collapse navbar-dark text-light p-2" id="headerCollapseContent">
-                    <div class="d-flex flex-row">
-                        <form class="form-inline input-group" onSubmit={this.search}>
-                            <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="query" value={this.state.query} onChange={this.handleChange} />
-                            <button class="btn btn-secondary d-flex align-items-center" type="submit">
-                                <SVG.Search w={'1.25em'} h={'1.25em'} />
+                <div class="collapse navbar-dark text-light p-2 fixed-top bg-dark header-mobile d-sm-none" id="headerCollapseContent" >
+                    <div class="d-flex flex-column">
+                        <div class="d-flex flex-row">
+                            <ul class="navbar-nav mb-2 flex-row justify-content-evenly w-100">
+                                <li class="nav-item">
+                                    <a href="/browse" class={window.location.pathname.toLowerCase() === '/browse' ? "nav-link active" : "nav-link"}>Browse</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/new" class={window.location.pathname.toLowerCase() === '/new' ? "nav-link active" : "nav-link"}>New</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/popular" class={window.location.pathname.toLowerCase() === '/popular' ? "nav-link active" : "nav-link"}>Popular</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <form class="form-inline input-group" onSubmit={this.search}>
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="query" value={this.state.query} onChange={this.handleChange} />
+                                <button class="btn btn-secondary d-flex align-items-center" type="submit">
+                                    <SVG.Search w={'1.25em'} h={'1.25em'} />
+                                </button>
+                            </form>
+                            <button class="btn p-2 mx-2 nav-link d-flex align-items-center shadow-none" onClick={() => {this.setState({showSettings: true})}}>
+                                <SVG.SettingsGear w={'1.65em'} h={'1.65em'} />
                             </button>
-                        </form>
-                        <button class="btn p-2 mx-2 nav-link d-flex align-items-center shadow-none" onClick={() => {this.setState({showSettings: true})}}>
-                            <SVG.SettingsGear w={'1.65em'} h={'1.65em'} />
-                        </button>
+                        </div>
                     </div>
                 </div>
            </div>

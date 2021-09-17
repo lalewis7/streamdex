@@ -27,6 +27,13 @@ class Home extends React.Component {
                         </a>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col text-center mt-3">
+                        <a class="btn btn-outline-light" href="/images">
+                            View Images
+                        </a>
+                    </div>
+                </div>
             </div>
         </>;
     }

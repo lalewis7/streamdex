@@ -75,7 +75,7 @@ class HorizontalScrollable extends React.Component {
     }
 
     render(){
-        const tot_time = 500;
+        const tot_time = 400;
         const dist = (evt) => evt.currentTarget.parentElement.parentElement.clientWidth*.75;
         const step = (evt) => Math.ceil(evt.currentTarget.parentElement.parentElement.clientWidth/64);
         const speed = (evt) => Math.floor(tot_time / (dist(evt) / step(evt)));

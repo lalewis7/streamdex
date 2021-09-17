@@ -88,7 +88,7 @@ class StringAttribute extends Attribute {
     constructor(config){
         super(config);
         this.defaultValue = "";
-        this.validate = (val) => {return typeof val === "string";};
+        this.validate = (val) => typeof val === "string";
         // update with any custom config given
         for (let key in config)
             this[key] = config[key];
@@ -101,7 +101,7 @@ class NumberAttribute extends Attribute {
     constructor(config) {
         super(config);
         this.defaultValue = 0;
-        this.validate = (val) => {return typeof val === "number";};
+        this.validate = (val) => val === null || (val !== null && typeof val === "number");
         // update with any custom config given
         for (let key in config)
             this[key] = config[key];
@@ -114,8 +114,8 @@ class BooleanAttribute extends Attribute {
     constructor(config) {
         super(config);
         this.defaultValue = false;
-        this.validate = (val) => {return typeof val === "boolean";};
-        this.convertDbValue = (val) => {return val == 1 ? true : false;};
+        this.validate = (val) => typeof val === "boolean";
+        this.convertDbValue = (val) => {return val === 1 ? true : false;};
         // update with any custom config given
         for (let key in config)
             this[key] = config[key];
@@ -129,6 +129,8 @@ class DateAttribute extends Attribute {
         super(config);
         this.defaultValue = null;
         this.validate = (val) => {
+            if (val === null)
+                return true;
             let dateSplit = val.split('-');
             if (dateSplit.length != 3)
                 return false;
@@ -188,10 +190,13 @@ class DateAttribute extends Attribute {
             this[key] = config[key];
     }
 
-    // getValue(visibleOnly){
-    //     let d = this.value;
-    //     return d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate();
-    // }
+    getValue(visibleOnly){
+        if (this.value){
+            let vals = this.value.split('-');
+            return vals[0]+'-'+('0'+vals[1]).slice(-2)+'-'+('0'+vals[2]).slice(-2);
+        }
+        return this.value;
+    }
 
 }
 

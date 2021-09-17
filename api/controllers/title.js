@@ -4,7 +4,7 @@ const config = require('../config.json');
 module.exports = {
 
     getTitlesByID(title_id){
-        return util.dbPromise("SELECT * FROM titles WHERE title_id = ?", title_id);
+        return util.dbPromise("SELECT *, FLOOR((SELECT COUNT(IF(positive=1,1,NULL))/COUNT(*)*100 FROM ratings GROUP BY title_id HAVING title_id = T.title_id)) as streamdex_rating FROM titles as T WHERE title_id = ?", title_id);
     },
 
     findAllTitles(page = 0){

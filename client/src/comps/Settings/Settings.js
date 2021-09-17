@@ -64,7 +64,7 @@ class Settings extends React.Component {
 
     getContent(){
         if (this.state.focus === 'streams'){
-            return this.getPageWrapper('Streams', <StreamSettings user={this.props.user} token={this.props.token} />);
+            return this.getPageWrapper('Streaming Services', <StreamSettings user={this.props.user} token={this.props.token} />);
         } 
         else if (this.state.focus === 'login'){
             return this.getPageWrapper('LOGIN', <LoginSettings switchPage={this.switchPage} setToken={this.props.setToken} setVisible={this.props.setVisible} />);
@@ -78,7 +78,7 @@ class Settings extends React.Component {
         let options = [];
         if (this.props.token){
             options.push(this.getGotoPage('User Profile', () => {this.switchPage('usersettings')}));
-            options.push(this.getGotoPage('Streams', () => {this.switchPage('streams')}));
+            options.push(this.getGotoPage('Streaming Services', () => {this.switchPage('streams')}));
             options.push(this.getGotoPage('Logout', () => {
                 this.props.setVisible(false);
                 this.props.deleteToken()
@@ -87,10 +87,10 @@ class Settings extends React.Component {
         else {
             options.push(this.getGotoPage('Login', () => {this.switchPage('login')}));
             options.push(this.getGotoPage('Sign Up', () => {this.switchPage('signup')}));
-            options.push(this.getGotoPage('Streams', () => {this.switchPage('streams')}));
+            options.push(this.getGotoPage('Streaming Services', () => {this.switchPage('streams')}));
         }
         return <>
-            <div class="modal-header pb-0">
+            <div class="modal-header pb-0 border-0">
                 <div class="text-head d-flex flex-row align-items-center">
                     <SVG.SettingsGear w={'1.75rem'} h={'1.75rem'} />
                     <h2 class="ps-2 m-0 text-head">Settings</h2>

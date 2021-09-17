@@ -15,6 +15,8 @@ const titlesRouter = require('./routes/titles.js');
 const seasonsRouter = require('./routes/seasons.js');
 const episodesRouter = require('./routes/episodes.js');
 const imageRouter = require('./routes/image.js');
+const listRouter = require('./routes/list.js');
+const pageRouter = require('./routes/page.js');
 
 // middleware
 app.use(express.json());
@@ -34,6 +36,8 @@ app.use('/titles', titlesRouter);
 app.use('/seasons', seasonsRouter);
 app.use('/episodes', episodesRouter);
 app.use('/images', imageRouter);
+app.use('/lists', listRouter);
+app.use('/pages', pageRouter);
 
 // start server
 app.listen(config.port, () => {

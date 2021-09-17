@@ -46,6 +46,7 @@ $color-light: #7D7373;
 $primary: $color-primary;
 $secondary: $color-secondary;
 $light: $color-light;
+$dark: $color-background;
 
 $body-bg: $color-background;
 $body-color: #fff;
@@ -117,7 +118,9 @@ $list-group-action-active-color: $color-tertiary;
 $dropdown-bg: $color-background;
 $dropdown-border-color: tint-color($color-background, 20%);
 $dropdown-color: $color-light;
-$dropdown-link-color:$color-light;
+$dropdown-link-color: $color-light;
+$dropdown-link-hover-color: $dropdown-link-color;
+$dropdown-link-hover-bg: $color-secondary;
 
 // toasts
 $toast-background-color: tint-color($color-secondary, 2%);
@@ -152,7 +155,6 @@ $toast-font-size: 1rem;
 // @import "../node_modules/bootstrap/scss/forms/labels";
 // @import "../node_modules/bootstrap/scss/forms/validation";
 @import "../node_modules/bootstrap/scss/grid";
-@import "../node_modules/bootstrap/scss/helpers";
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/list-group";
 @import "../node_modules/bootstrap/scss/modal";
@@ -172,6 +174,7 @@ $toast-font-size: 1rem;
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/helpers";
 
 // 5. Add additional custom code here
 
@@ -226,6 +229,21 @@ footer{
 
 .btn-primary:active, .btn-primary:focus{
     color: #fff;
+}
+
+.btn-dark{
+    background-image: none;
+    border-radius: 50%;
+    padding: .75rem;
+    &:hover, &:focus{
+        background-image: none;
+    }
+    &:hover{
+        background-color: tint-color($dark, 5%);
+    }
+    &:focus{
+        background-color: tint-color($dark, 10%);
+    }
 }
 
 .settings-select{
@@ -388,6 +406,10 @@ textarea{
 .text-nowrap{
     white-space: nowrap;
     overflow: hidden;
+}
+
+.lh-0{
+    line-height: 0;
 }
 
 /* dumbass fix to text area bug

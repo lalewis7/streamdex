@@ -46,7 +46,7 @@ class Search extends React.Component{
                 <div class="container pt-3 h-100 d-flex flex-column">
                     <div class="row g-3">
                         {this.state.titles.map(t => (
-                            <div class="col-lg-auto col-md-3 col-sm-4 col-auto"><TitlePreview title={t} /></div>
+                            <TitlePreview title={t} />
                         ))}
                     </div>
                 </div>

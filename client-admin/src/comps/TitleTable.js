@@ -6,6 +6,7 @@ import NewMovie from './NewMovie.js';
 import NewSeries from './NewSeries.js';
 import Title from './Title.js';
 import Toasts from '../Toasts.js';
+import Loading from '../Loading.js';
 
 const SVG = require('../svg.js');
 const Config = require('../config.json');
@@ -16,6 +17,7 @@ class TitleTable extends React.Component {
         super(props);
         this.state = {
             titles: [],
+            status: 'loading',
             selectedTitle: undefined,
             showNewMovie: false,
             showNewSeries: false,
@@ -48,6 +50,7 @@ class TitleTable extends React.Component {
     }
 
     loadTitles(){
+        this.setState({status: 'loading'});
         let url = Config.API+"titles";
         if (this.state.query.length > 0)
             url += "?q="+this.state.query;
@@ -58,10 +61,11 @@ class TitleTable extends React.Component {
         })
         .then(res => res.json())
         .then(titles => {
-            this.setState({titles: titles});
+            this.setState({titles: titles, status: 'loaded'});
         })
         .catch(err => {
             console.log(err);
+            this.setState({status: 'error'});
         });
     }
 
@@ -86,15 +90,6 @@ class TitleTable extends React.Component {
 
     render(){
 
-        // const titleRow = (title) => {
-        //     return <>
-        //         <tr role="button" onClick={() => this.viewTitle(title.id)}>
-        //         <th scope="row">{title.id}</th>
-        //         <td>{title.title}</td>
-        //         </tr>
-        //     </>
-        // }
-
         const titleRow = (title) => <>
             <button type="button" class="list-group-item list-group-item-action d-flex align-items-start justify-content-start" onClick={() => this.viewTitle(title.id)}>
                 <div class="d-flex flex-column">
@@ -107,7 +102,9 @@ class TitleTable extends React.Component {
         return <>
             <Header setToken={this.props.setToken} deleteToken={this.props.deleteToken} token={this.props.token}/>
             <Title show={this.state.showTitle} setVisible={this.setTitleVisible} loadTitles={this.loadTitles} token={this.props.token} title={this.state.selectedTitle} toastMessage={this.toastMessage} />
-            <div class="position-absolute p-3 bottom-0 end-0 toast-z">
+            <NewMovie show={this.state.showNewMovie} setVisible={vis => this.setState({showNewMovie: vis})} loadTitles={this.loadTitles} token={this.props.token} toastMessage={this.toastMessage} />
+            <NewSeries show={this.state.showNewSeries} setVisible={vis => this.setState({showNewSeries: vis})} loadTitles={this.loadTitles} token={this.props.token} toastMessage={this.toastMessage} />
+            <div class="position-fixed p-3 bottom-0 end-0 toast-z">
                 <Toasts id="title_toasts" message={this.state.toastMessage} counter={this.state.toastMessageCounter} />
             </div>
             <div class="container pt-3">
@@ -127,10 +124,10 @@ class TitleTable extends React.Component {
                             <SVG.PlusSquare w="1.2em" h="1.2em" />
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="newTitleDropdown">
-                            <li role="button" class="dropdown-item" >
+                            <li role="button" class="dropdown-item" onClick={() => {this.setState({showNewMovie: true})}}>
                                 <SVG.Movie w="1.3em" h="1.3em" /><span class="ms-2">New Movie</span>
                             </li>
-                            <li role="button" class="dropdown-item" >
+                            <li role="button" class="dropdown-item" onClick={() => {this.setState({showNewSeries: true})}}>
                                 <SVG.Show w="1.3em" h="1.3em" /><span class="ms-2">New Series</span>
                             </li>
                         </ul>
@@ -138,22 +135,11 @@ class TitleTable extends React.Component {
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="list-group list-group-flush my-3">
-                            {this.state.titles.map(title => titleRow(title))}
-                        </div>
-                        {/* <div class="table-responsive">
-                            <table class="table table-striped table-hover">
-                                <thead>
-                                    <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Title</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {this.state.titles.map(title => titleRow(title))}
-                                </tbody>
-                            </table>
-                        </div> */}
+                        <Loading status={this.state.status}>
+                            <div class="list-group list-group-flush my-3">
+                                {this.state.titles.map(title => titleRow(title))}
+                            </div>
+                        </Loading>
                     </div>
                 </div>
             </div>

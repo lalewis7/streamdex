@@ -51,7 +51,7 @@ function getImage(id, requester){
     let image;
     return imageController.getImage(id)
         .then(images => {
-            if (images.length === 0)
+            if (images.length == 0)
                 return Promise.reject({http_msg: "Image does not exist.", http_code: 404});
             image = new Image(images[0]);
             if (!image.get().public && !requester.admin)

@@ -29,6 +29,21 @@
     src: url('./fonts/rialto_nf/RialtoNF.woff');
 }
 
+@font-face {
+    font-family: 'nunito';
+    src: url('./fonts/Nunito/Nunito-Regular.woff2');
+}
+
+@font-face {
+    font-family: 'nunito-eb';
+    src: url('./fonts/Nunito/Nunito-ExtraBold.woff2');
+}
+
+@font-face {
+    font-family: 'nunito-sb';
+    src: url('./fonts/Nunito/Nunito-SemiBold.woff2');
+}
+
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
 
@@ -37,7 +52,8 @@
 $enable-gradients: true;
 
 // custom colors
-$color-background: #180A0A;
+//$color-background: #180A0A;
+$color-background: #170d0d;
 $color-primary: #399697;
 $color-secondary: #2C1313;
 $color-tertiary: #999090;
@@ -46,6 +62,7 @@ $color-light: #7D7373;
 $primary: $color-primary;
 $secondary: $color-secondary;
 $light: $color-light;
+$dark: $color-background;
 
 $body-bg: $color-background;
 $body-color: #fff;
@@ -58,6 +75,7 @@ $nav-tabs-link-active-border-color: $color-tertiary $color-tertiary transparent;
 $nav-tabs-link-hover-border-color: $color-tertiary $color-tertiary transparent;
 //$nav-tabs-link-active-bg: $color-secondary;
 $nav-tabs-link-active-color: #fff;
+$navbar-nav-link-padding-x: 1rem;
 
 // inputs
 $input-bg: $color-secondary;
@@ -68,6 +86,18 @@ $input-border-width: 0;
 $input-group-addon-bg: $color-secondary;
 $input-group-addon-color: $color-light;
 
+$input-disabled-bg: shade-color($input-bg, 0%);
+
+$btn-active-box-shadow: none;
+$btn-box-shadow: none;
+$box-shadow: none;
+$box-shadow-sm: none;
+$box-shadow-lg: none;
+$box-shadow-inset: none;
+$btn-focus-box-shadow: none;
+
+$form-floating-label-opacity: 1;
+
 // checkbox
 $form-check-input-width: 1.25em;
 $form-check-input-border: 1px solid shade-color($color-tertiary, 40%);
@@ -77,6 +107,8 @@ $form-check-input-checked-border-color: $color-primary;
 
 // modals
 $modal-content-bg: $color-background;
+$modal-header-border-color: shade-color($color-light, 30%);
+$modal-footer-border-color: $modal-header-border-color;
 
 // accordion
 $accordion-button-color: $color-light;
@@ -84,6 +116,33 @@ $accordion-button-bg: $color-background;
 $accordion-button-active-bg: $color-secondary;
 $accordion-button-active-color: tint-color($color-light, 20%);
 $accordion-border-color: shade-color($color-tertiary, 40%);
+
+// tables
+$table-color: $color-light;
+$table-border-color: $color-light;
+$table-striped-bg: $color-secondary;
+
+// list group
+$list-group-bg: $color-background;
+$list-group-color: $color-light;
+$list-group-border-color: $color-light;
+$list-group-action-color: $color-light;
+$list-group-action-active-bg: $color-secondary;
+$list-group-hover-bg: $color-secondary;
+$list-group-action-active-color: $color-tertiary;
+
+//dropdown
+$dropdown-bg: $color-background;
+$dropdown-border-color: tint-color($color-background, 20%);
+$dropdown-color: $color-light;
+$dropdown-link-color: $color-light;
+$dropdown-link-hover-color: $dropdown-link-color;
+$dropdown-link-hover-bg: $color-secondary;
+
+// toasts
+$toast-background-color: tint-color($color-secondary, 2%);
+$toast-color: $color-light;
+$toast-font-size: 1rem;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
@@ -113,7 +172,6 @@ $accordion-border-color: shade-color($color-tertiary, 40%);
 // @import "../node_modules/bootstrap/scss/forms/labels";
 // @import "../node_modules/bootstrap/scss/forms/validation";
 @import "../node_modules/bootstrap/scss/grid";
-@import "../node_modules/bootstrap/scss/helpers";
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/list-group";
 @import "../node_modules/bootstrap/scss/modal";
@@ -133,6 +191,7 @@ $accordion-border-color: shade-color($color-tertiary, 40%);
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/helpers";
 
 // 5. Add additional custom code here
 
@@ -148,19 +207,61 @@ footer{
     background-color: shade-color($color-background, 30%);
 }
 
+.bg-darker{
+    background-color: shade-color($color-background, 30%);
+}
+
+.streaming_services_img{
+    max-width: 300px;
+    @include media-breakpoint-down(lg) {
+        width: 200px;
+    }
+}
+
 .fs-7{
     font-size: .75rem;
 }
 
+.login-card{
+    max-width: 500px;
+}
+
+.header-mobile{
+    border-bottom: 2px solid tint-color($color-background, 20%);
+    top: 56px;
+}
+
 .navbar {
     background-image:none;
+    border-bottom: 2px solid tint-color($color-background, 20%);
+}
+
+.navbar-top-padding{
+    padding-top: 58px;
+}
+
+.text-nunito{
+    font-family: 'nunito-sb';
+}
+
+.text-nunito-eb{
+    font-family: 'nunito-eb';
+}
+
+.brand-text{
+    font-family: 'nunito-eb';
+    color: #fff;
 }
 
 .navbar-brand {
-    font-family: 'rialto';
+    font-family: 'nunito-eb';
     color: #fff;
     display: flex;
     align-items: center;
+    padding-top: 0;
+    span {
+        padding-top: $navbar-brand-padding-y;
+    }
 }
 
 .btn-secondary {
@@ -174,6 +275,25 @@ footer{
 
 .btn-primary:disabled{
     color: #fff;
+}
+
+.btn-primary:active, .btn-primary:focus{
+    color: #fff;
+}
+
+.btn-dark{
+    background-image: none;
+    border-radius: 50%;
+    padding: .75rem;
+    &:hover, &:focus{
+        background-image: none;
+    }
+    &:hover{
+        background-color: tint-color($dark, 5%);
+    }
+    &:focus{
+        background-color: tint-color($dark, 10%);
+    }
 }
 
 .settings-select{
@@ -206,7 +326,6 @@ footer{
 }
 
 .modal-header{
-    border: 0;
     .btn-close {
         margin: 0;
     }
@@ -226,28 +345,23 @@ footer{
 }
 
 .horizontal-scroll-body{
-    overflow: hidden;
     width: 100%;
     height: 100%;
     top: 0;
-    // &:hover{
-    //     .horizontal-scroll-prev{
-    //         display: inline-block;
-    //     }
-    //     .horizontal-scroll-next{
-    //         display: inline-block;
-    //     }
-    // }
-    // .horizontal-scroll-prev{
-    //     display: none;
-    // }
-    // .horizontal-scroll-next{
-    //     display: none;
-    // }
-}
-
-.horizontal-scroll-body > *{
-    flex-wrap: nowrap;
+    @include media-breakpoint-up(sm) {
+        overflow: hidden;
+    }
+    @include media-breakpoint-only(xs) {
+        overflow-x: auto;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    * {
+        flex-wrap: nowrap;
+    }
 }
 
 .horizontal-scroll-prev, .horizontal-scroll-next{
@@ -295,6 +409,104 @@ footer{
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
+}
+
+.form-control:disabled, .form-control[readonly] {
+    color: $color-light;
+}
+
+.form-floating > label {
+    color: $color-light;
+}
+
+textarea{
+    height: 100px;
+}
+
+.titlepreview-card {
+    max-width: 160px;
+    min-width: 160px;
+    max-height: 240px;
+    min-height: 240px;
+    border: 0;
+    // @include media-breakpoint-only(xs) {
+    //     margin: auto;
+    // }
+}
+
+// .titlepreview-card-col{
+//     @include media-breakpoint-only(xs){
+//         flex-grow: 1;
+//     }
+// }
+
+.titlepreview-img {
+    max-height: 400px;
+}
+
+.toast-z{
+    z-index: 1;
+}
+
+.text-nowrap{
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.lh-0{
+    line-height: 0;
+}
+
+/* dumbass fix to text area bug
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+    opacity: 1;
+    color: $color-light;
+    background-color: $color-secondary;
+    height: auto;
+    padding: 0px;
+    padding: 0px 0px 0px 10px;
+    width: 100%;
+    transform: scale(0.982) translateY(0.045rem) translateX(0.1rem);
+    border-radius: 5px 0 0 0;
+}
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+    opacity: 1;
+    color: $color-light;
+    background-color: $color-secondary;
+    height: auto;
+    padding: 0px 0px 0px 10px;
+    width: 100%;
+    transform: scale(0.982) translateY(0.045rem) translateX(0.1rem);
+    border-radius: 5px 0 0 0;
+}
+.form-floating > .form-control:-webkit-autofill ~ label {
+    opacity: 1;
+    color: $color-light;
+    background-color: $color-secondary;
+    height: auto;
+    padding: 0px;
+    padding: 0px 0px 0px 10px;
+    width: 100%;
+    transform: scale(0.982) translateY(0.045rem) translateX(0.1rem);
+    border-radius: 5px 0 0 0;
+}
+*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid $color-secondary;
+    box-shadow: 0 0 0px 1000px $color-secondary inset;
+    -webkit-text-fill-color: $input-color;
+    -webkit-box-shadow: 0 0 0px 1000px $color-secondary inset;
 }
 
 /*
@@ -393,7 +605,7 @@ footer{
 
 .showcase-gradient:after {
     display: inline-block;
-    background: linear-gradient(to top, rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, rgba(0, 0, 0, .35), rgba(0, 0, 0, 0));
     position: absolute;
     content: '';
     top: 0;

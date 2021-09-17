@@ -13,11 +13,10 @@ class ImageEdit extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tab: 'Preview',
             status: 'loading',
             loading: false,
             deleting: false,
-            image: null,
+            image: {},
             imagePreview: null,
 
             // form
@@ -29,7 +28,6 @@ class ImageEdit extends React.Component {
         this.changesMade = this.changesMade.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleCheck = this.handleCheck.bind(this);
-        this.resetTabs = this.resetTabs.bind(this);
         this.delete = this.delete.bind(this);
     }
 
@@ -41,12 +39,8 @@ class ImageEdit extends React.Component {
     componentDidUpdate(prevProps, prevState){
         if (prevProps.image !== this.props.image)
             this.loadImage();
-        if (!isEqual(this.state.image, prevState.image)){
+        if (!isEqual(this.state.image, prevState.image) || this.props.show != prevProps.show){
             this.resetForms();
-        }
-        if (this.props.show != prevProps.show && this.props.show){
-            this.resetForms();
-            this.resetTabs();
         }
     }
 
@@ -59,23 +53,9 @@ class ImageEdit extends React.Component {
     }
 
     resetForms(){
-        if (this.state.image)
-            this.setState({
-                // form
-                description: this.state.image.description ? this.state.image.description : '',
-                public: this.state.image.public ? this.state.image.public : false,
-            });
-        else
-            this.setState({
-                // form
-                description: '',
-                public: false,
-            });
-    }
-
-    resetTabs(){
         this.setState({
-            tab: 'Preview'
+            description: this.state.image.description,
+            public: this.state.image.public,
         });
     }
 
@@ -107,10 +87,10 @@ class ImageEdit extends React.Component {
         }
     }
 
-    loadImage(silent = false){
+    loadImage(){
         if (this.props.image){
-            if (!silent)
-                this.setState({status: "loading"});
+            let imageInfo;
+            this.setState({status: "loading"});
             fetch(Config.API+"images/"+this.props.image+"/info",
             {
                 method: 'GET',
@@ -118,7 +98,7 @@ class ImageEdit extends React.Component {
             })
             .then(res => res.json())
             .then(image => {
-                this.setState({image: image});
+                imageInfo = image;
                 return fetch(Config.API+"images/"+this.props.image, {
                     method: 'GET',
                     headers: {'token': this.props.token}
@@ -126,21 +106,17 @@ class ImageEdit extends React.Component {
             })
             .then(res => res.blob())
             .then(imageBlob => {
-                if (!silent)
-                    this.setState({status: 'loaded', imagePreview: URL.createObjectURL(imageBlob)});
-                else
-                    this.setState({imagePreview: URL.createObjectURL(imageBlob)});
+                this.setState({image: imageInfo, imagePreview: URL.createObjectURL(imageBlob), status: 'loaded'});
             })
             .catch(err => {
-                if (!silent)
-                    this.setState({status: "error"});
+                this.setState({status: "error"});
                 console.log(err);
             });
         }
     }
 
     saveChanges(evt){
-        this.setState({loading: true})
+        this.setState({loading: true});
         evt.preventDefault();
 
         const body = {
@@ -210,56 +186,7 @@ class ImageEdit extends React.Component {
                     </div>
                 </div>
             </>;
-
-        let content = <></>;
-
-        if (this.state.tab === 'Preview'){
-            content = <>
-                <div class="row my-3">
-                    <div class="col-12">
-                        <img src={this.state.imagePreview} class="w-100" />
-                    </div>
-                </div>
-            </>
-        }
-        else if (this.state.tab === "Details"){
-            content = <>
-                <div class="row my-3">
-                    <div class="col-12">
-                        <div class="input-group">
-                            <span class="input-group-text border-0 bg-highlight text-head2 shadow-none" >
-                                <SVG.Id w={'1.15em'} h={'1.15em'}/>
-                            </span>
-                            <input type="text" readOnly class="form-control border-0 bg-highlight text-head text-input disabled" placeholder="No ID. Image does not exist" value={this.state.image.id} onFocus={(evt) => evt.target.select()} />
-                        </div>
-                    </div>
-                </div>
-                <div class="row my-3">
-                    <div class="col-12">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" placeholder="Description" name="description" value={this.state.description} onChange={this.handleChange} />
-                            <label>Description</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row my-3">
-                    <div class="col d-flex">
-                        <div class="form-check">
-                            <input class="form-check-input" id="image-edit-public" type="checkbox" value="" name="public" checked={this.state.public} onChange={this.handleCheck} />
-                            <label class="form-check-label text-light" for="image-edit-public" >
-                                Publicily Visible
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </>
-        }
-        else if (this.state.tab === "Titles"){
-            content = <>
-                <p class="m-3">TODO: This section</p>
-            </>
-        }
-
+        console.log('render');
         return <>
             <form onSubmit={this.saveChanges}>
                 <Modal show={this.props.show} id="edit-image-modal" setVisible={this.props.setVisible}>
@@ -274,18 +201,63 @@ class ImageEdit extends React.Component {
                                     <div class="row">
                                         <div class="col-12">
                                             <HorizontalScrollable>
-                                                <ul class="nav nav-tabs">
-                                                    {["Preview", "Details", "Titles"].map(tab => 
-                                                        <li class="nav-item" role="button" onClick={() => this.setState({tab: tab})}>
-                                                            <span class={this.state.tab === tab ? "nav-link active" : "nav-link"}>{tab}</span>
-                                                        </li>
-                                                    )}
+                                                <ul class="nav nav-tabs" role="tablist">
+                                                    <li class="nav-item" role="button">
+                                                        <button class="nav-link text-nowrap active" data-bs-toggle="tab" data-bs-target="#image-preview" type="button">Preview</button>
+                                                    </li>
+                                                    <li class="nav-item" role="button">
+                                                        <button class="nav-link text-nowrap" data-bs-toggle="tab" data-bs-target="#image-details" type="button">Details</button>
+                                                    </li>
+                                                    <li class="nav-item" role="button">
+                                                        <button class="nav-link text-nowrap" data-bs-toggle="tab" data-bs-target="#image-titles" type="button">Titles</button>
+                                                    </li>
                                                     <div class="flex-grow-1"></div>
                                                 </ul>
                                             </HorizontalScrollable>
                                         </div>
                                     </div>
-                                    {content}
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="image-preview" role="tabpanel">
+                                            <div class="row my-3">
+                                                <div class="col-12">
+                                                    <img src={this.state.imagePreview} alt="..." class="w-100" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="image-details" role="tabpanel">
+                                            <div class="row my-3">
+                                                <div class="col-12">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text border-0 bg-highlight text-head2 shadow-none" >
+                                                            <SVG.Id w={'1.15em'} h={'1.15em'}/>
+                                                        </span>
+                                                        <input type="text" readOnly class="form-control border-0 bg-highlight text-head text-input" placeholder="No ID. Image does not exist" value={this.state.image.id} onFocus={(evt) => evt.target.select()} />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row my-3">
+                                                <div class="col-12">
+                                                    <div class="form-floating">
+                                                        <input type="text" class="form-control" placeholder="Description" name="description" value={this.state.description} onChange={this.handleChange} />
+                                                        <label>Description</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row my-3">
+                                                <div class="col d-flex">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" id="image-edit-public" type="checkbox" value="" name="public" checked={this.state.public} onChange={this.handleCheck} />
+                                                        <label class="form-check-label text-light" for="image-edit-public" >
+                                                            Publicily Visible
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="image-titles" role="tabpanel">
+                                            <p class="m-3">TODO: This section</p>
+                                        </div>
+                                    </div>
                                 </Loading>
                             </div>
                             {footer}
