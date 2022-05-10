@@ -11,12 +11,12 @@ module.exports = {
         return util.dbPromise("SELECT * FROM bots LIMIT ? OFFSET ?", config.bots_page_length, page);
     },
 
-    createBot(bot_id, name, status, curr_process){
-        return util.dbPromise("INSERT INTO bots (bot_id, name, status, curr_process) VALUES (?, ?, ?, ?)", bot_id, name, status, curr_process);
+    createBot(bot_id, controller, online, running, current_process){
+        return util.dbPromise("INSERT INTO bots (bot_id, controller, online, running, current_process) VALUES (?, ?, ?, ?, ?)", bot_id, controller, online, running, current_process);
     },
 
-    editBot(bot_id, name, status, curr_process){
-        return util.dbPromise("UPDATE bots SET name = ?, status = ?, curr_process = ? WHERE bot_id = ?", name, status, curr_process, bot_id);
+    editBot(bot_id, controller, online, running, current_process){
+        return util.dbPromise("UPDATE bots SET controller = ?, online = ?, running = ?, current_process = ? WHERE bot_id = ?", controller, online, running, current_process, bot_id);
     },
 
     deleteBot(bot_id){

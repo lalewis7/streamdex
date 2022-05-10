@@ -17,13 +17,13 @@ class Header extends React.Component {
 
     render(){
         return <>
-            <div class="pt-5">
+            <div class="navbar-top-padding">
                 <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
-                    <div class="container-fluid">
+                    <div class="container-md">
                         <a class="navbar-brand" href="/">
-                            <img src="/streamlogo.png" width="32" height="32" class="d-inline-block align-text-top"/>
-                            <span class="ps-1">
-                            streamdex
+                            <img src="/streamlogo.svg" width="32" height="32" class="d-inline-block align-text-top"/>
+                            <span class="ps-2">
+                            Streamdex <span class="badge bg-light text-secondary fs-7">Administrator</span>
                             </span>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerCollapseContent" aria-controls="headerCollapseContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,8 +51,8 @@ class Header extends React.Component {
                         </div>
                     </div>
                 </nav>
-                <div class="collapse navbar-dark text-light p-2" id="headerCollapseContent">
-                    <div class="d-flex flex-column align-items-center">
+                <div class="collapse navbar-dark text-light p-2 fixed-top bg-dark header-mobile d-sm-none" id="headerCollapseContent" >
+                <div class="d-flex flex-column align-items-center">
                         <ul class="navbar-nav">
                             <li class="nav-item p-2">
                                 <a class="nav-link" href="#">Users</a>
@@ -66,7 +66,7 @@ class Header extends React.Component {
                         </button>
                     </div>
                 </div>
-           </div>
+            </div>
         </>
     }
 

@@ -4,6 +4,7 @@ const movieController = require('../controllers/movie.js');
 const seasonController = require('../controllers/season.js');
 const episodeController = require('../controllers/episode.js');
 const listController = require('../controllers/list.js');
+const botController = require('../controllers/dc.bot.js');
 
 function titleExists(id){
     return titleController.getTitlesByID(id)
@@ -41,6 +42,16 @@ function listExists(id){
             // list does not exist
             if (res.length == 0)
                 return Promise.reject({http_msg: "List does not exist.", http_code: 404});
+            return res;
+        })
+}
+
+function botExists(id){
+    return botController.getBot(id)
+        .then(res => {
+            // bot does not exist
+            if (res.length == 0)
+                return Promise.reject({http_msg: "Bot does not exist.", http_code: 404});
             return res;
         })
 }
@@ -92,6 +103,7 @@ module.exports = {
     seasonExists,
     episodeExists,
     listExists,
+    botExists,
     titleIsMovie,
     isTitleMovie,
     titleIsShow,

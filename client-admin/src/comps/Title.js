@@ -331,6 +331,7 @@ class Title extends React.Component {
         }
         
         delete edits.id;
+        delete edits.streamdex_rating;
         delete original.id;
 
         if (!isEqual(edits, original))
@@ -415,6 +416,7 @@ class Title extends React.Component {
     }
 
     updateEdits(newEdits){
+        console.log(newEdits)
         this.edits = newEdits;
         this.updateChangesMade();
     }
