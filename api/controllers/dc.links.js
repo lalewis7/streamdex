@@ -20,7 +20,7 @@ module.exports = {
     },
 
     updateLink(link_id, link){
-        return util.dbPromise("UPDATE botlinks SET link = ? WHERE link_id = ?", link_id, link);
+        return util.dbPromise("UPDATE botlinks SET link = ? WHERE link_id = ?", link, link_id);
     },
 
     deleteLink(link_id){

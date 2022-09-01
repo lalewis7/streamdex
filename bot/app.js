@@ -14,7 +14,12 @@ async function start(){
 
 // authenticate bot
 function authenticate(){
-    return fetch(config.API+"/auth")
+    return fetch(config.API+"/auth", {
+            "headers": {
+                "username": config.API_USERNAME,
+                "password": config.API_PASSWORD
+            }  
+        })
         .then(response => response.text())
         .then(token => {
             apiToken = token;
@@ -23,7 +28,13 @@ function authenticate(){
 
 // get bot details
 function getBotDetails(){
-
+    return fetch(config.API + "/bots", {
+            "token": apiToken    
+        })
+        .then(response => response.json())
+        .then(botsJSON => {
+            
+        })
 }
 
 let botController = new IMDBCrawlerController();

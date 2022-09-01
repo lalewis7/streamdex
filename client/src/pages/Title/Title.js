@@ -133,7 +133,7 @@ class Title extends React.Component {
         console.log(this.props);
         let content = <></>;
         if (this.state.content && this.state.content.seasons)
-            content = <Series series={this.state.content} user={this.props.user} token={this.props.token} />
+            content = <Series series={this.state.content} user={this.props.user} token={this.props.token} liked={this.state.liked} disliked={this.state.disliked} like={this.like} dislike={this.dislike} />
         else if (this.state.content)
             content = <Movie movie={this.state.content} user={this.props.user} token={this.props.token} liked={this.state.liked} disliked={this.state.disliked} like={this.like} dislike={this.dislike}/>
         return (

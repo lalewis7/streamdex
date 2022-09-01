@@ -58,9 +58,9 @@ function getBots(query){
     let page = query.p === undefined ? 0 : query.p;
     let bots = [];
     return botController.getBots(page)
-        .then(bots => {
+        .then(dbbots => {
             let initPromises = [];
-            for (let botData of bots){
+            for (let botData of dbbots){
                 let bot = new Bot(botData);
                 initPromises.push(bot.init());
                 bots.push(bot);

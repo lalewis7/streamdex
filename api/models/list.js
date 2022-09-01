@@ -27,7 +27,7 @@ class List extends Model {
                 adminProtected: true
             }),
             new NumberAttribute({
-                name: "updated_last",
+                name: "updated",
                 editable: true,
                 visible: true,
                 adminProtected: true

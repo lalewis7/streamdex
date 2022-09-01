@@ -4,47 +4,48 @@ var util = require('../util.js');
 const {isAdmin, isAuthenticated} = require('../auth.js');
 
 const botMethods = require('../model_functions/bot.js');
+const taskMethods = require('../model_functions/task.js');
 
 router.get('/', isAuthenticated, isAdmin, (req, res) => {
-    titleMethods.getTitles(req.query)
-        .then(titles => {
-            res.status(200).send(titles);
+    botMethods.getBots(req.query)
+        .then(bots => {
+            res.status(200).send(bots);
         })
         .catch(util.handleResponseError(res));
 });
 
 router.post('/', isAuthenticated, isAdmin, (req, res) => {
-    titleMethods.createTitle(req.body, {admin: req.user.admin})
+    botMethods.createBot(req.body, {admin: req.user.admin})
         .then((id) => {
             res.status(201).send(id);
         })
         .catch(util.handleResponseError(res));
 });
 
-router.put('/', (req, res) => {
+router.put('/', isAuthenticated, isAdmin,  (req, res) => {
     return res.sendStatus(405);
 });
 
-router.delete('/', (req, res) => {
+router.delete('/', isAuthenticated, isAdmin, (req, res) => {
     return res.sendStatus(405);
 });
 
 //
 
-router.get('/:botId', (req, res) => {
-    titleMethods.getTitle(req.params.titleId)
-        .then((title) => {
-            res.status(200).send(title);
+router.get('/:botId', isAuthenticated, isAdmin, (req, res) => {
+    botMethods.getBot(req.params.botId)
+        .then((bot) => {
+            res.status(200).send(bot);
         })
         .catch(util.handleResponseError(res));
 });
 
-router.post('/:botId', (req, res) => {
+router.post('/:botId', isAuthenticated, isAdmin, (req, res) => {
     return res.sendStatus(405);
 });
 
 router.put('/:botId', isAuthenticated, isAdmin, (req, res) => {
-    titleMethods.editTitle(req.params.titleId, req.body, {admin: req.user.admin})
+    botMethods.editBot(req.params.botId, req.body, {admin: req.user.admin})
         .then(() => {
             res.sendStatus(200);
         })
@@ -52,7 +53,7 @@ router.put('/:botId', isAuthenticated, isAdmin, (req, res) => {
 });
 
 router.delete('/:botId', isAuthenticated, isAdmin, (req, res) => {
-    titleMethods.deleteTitle(req.params.titleId, {admin: req.user.admin})
+    botMethods.deleteBot(req.params.botId)
         .then(() => {
             res.sendStatus(200);
         })
@@ -61,22 +62,28 @@ router.delete('/:botId', isAuthenticated, isAdmin, (req, res) => {
 
 //
 
-router.get('/:botId/tasks', (req, res) => {
-    titleMethods.getLinks(req.params.titleId)
-        .then((links) => {
-            res.status(200).send(links);
+router.get('/:botId/tasks', isAuthenticated, isAdmin, (req, res) => {
+    taskMethods.getBotTasks(req.params.botId)
+        .then((tasks) => {
+            res.status(200).send(tasks);
         })
         .catch(util.handleResponseError(res));
 });
 
-router.post('/:botId/tasks', (req, res) => {
+router.post('/:botId/tasks', isAuthenticated, isAdmin, (req, res) => {
+    taskMethods.createTask(req.params.botId, req.body, {admin: req.user.admin})
+        .then(id => {
+            res.status(201).send(id);
+        })
+        .catch(util.handleResponseError(res));
+});
+
+router.put('/:botId/tasks', isAuthenticated, isAdmin, (req, res) => {
     return res.sendStatus(405);
 });
 
-router.put('/:botId/tasks', (req, res) => {
+router.delete('/:botId/tasks', isAuthenticated, isAdmin, (req, res) => {
     return res.sendStatus(405);
 });
 
-router.delete('/:botId/tasks', (req, res) => {
-    return res.sendStatus(405);
-});
+module.exports = router;

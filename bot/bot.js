@@ -2,9 +2,19 @@ const puppeteer = require('puppeteer');
 
 class Bot {
 
+    /* 
+    1. Sync with API
+        - Send GET for this bot
+        - Send PUT with new status 
+    2. 
+    */
+
     constructor(options = {}){
         this.schedule = [];
         this.running = false;
+        this.online = false;
+        this.id = null;
+        this.controller = null;
         this.options = options;
     }
 
@@ -21,7 +31,7 @@ class Bot {
     }
 
     start(){
-        if (this.runnin)
+        if (this.running)
             return;
         this.running = true;
         this.run();

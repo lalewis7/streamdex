@@ -22,13 +22,14 @@ function getSeason(id){
         })
 }
 
-function editSeason(id, data, requester){
+async function editSeason(id, data, requester){
     return seasonExists(id)
         .then(res => {
             let season = new Season(res[0]);
             return editModel(season, data, requester);
         })
         .then(season => {
+            console.log(season);
             return season.save();
         })
 }

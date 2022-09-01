@@ -67,7 +67,7 @@ class Title extends React.Component {
             // add requests
             newCountries.map(country => {
                 requests.push(
-                    fetch(url+newAvail.platform,
+                    () => fetch(url+newAvail.platform,
                     {
                         method: 'POST',
                         headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -78,7 +78,7 @@ class Title extends React.Component {
             });
             removedCountries.map(country => {
                 requests.push(
-                    fetch(url+newAvail.platform,
+                    () => fetch(url+newAvail.platform,
                     {
                         method: 'POST',
                         headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -93,7 +93,7 @@ class Title extends React.Component {
             if (newAvails.map(avail => avail.platform).indexOf(oldAvail.platform) === -1)
                 oldAvail.countries.map(country => {
                     requests.push(
-                        fetch(url+oldAvail.platform,
+                        () => fetch(url+oldAvail.platform,
                         {
                             method: 'POST',
                             headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -105,7 +105,7 @@ class Title extends React.Component {
         });
     }
 
-    saveChanges(evt){
+    async saveChanges(evt){
         this.setState({loading: true});
         evt.preventDefault();
 
@@ -125,7 +125,7 @@ class Title extends React.Component {
                 // new
                 if (oldLinks.map(link => link.platform).indexOf(newLink.platform) === -1)
                     requests.push(
-                        fetch(Config.API+"titles/"+this.props.title+"/links/"+newLink.platform,
+                        () => fetch(Config.API+"titles/"+this.props.title+"/links/"+newLink.platform,
                         {
                             method: 'POST',
                             headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -138,7 +138,7 @@ class Title extends React.Component {
                     oldLinks.map(oldLink => {
                         if (newLink.platform === oldLink.platform && !isEqual(newLink, oldLink))
                             requests.push(
-                                fetch(Config.API+"titles/"+this.props.title+"/links/"+oldLink.platform,
+                                () => fetch(Config.API+"titles/"+this.props.title+"/links/"+oldLink.platform,
                                 {
                                     method: 'PUT',
                                     headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -153,7 +153,7 @@ class Title extends React.Component {
             oldLinks.map(oldLink => {
                 if (newLinks.map(link => link.platform).indexOf(oldLink.platform) === -1) 
                     requests.push(
-                        fetch(Config.API+"titles/"+this.props.title+"/links/"+oldLink.platform,
+                        () => fetch(Config.API+"titles/"+this.props.title+"/links/"+oldLink.platform,
                         {
                             method: 'DELETE',
                             headers: {'token': this.props.token}
@@ -194,7 +194,7 @@ class Title extends React.Component {
                 // new season
                 if (seasonID === '' || seasonID === null || seasonID === undefined){
                     requests.push(
-                        fetch(Config.API+"titles/"+this.props.title+"/seasons",
+                        () => fetch(Config.API+"titles/"+this.props.title+"/seasons",
                         {
                             method: 'POST',
                             headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -204,12 +204,13 @@ class Title extends React.Component {
                         .then(res => res.text())
                         .then(id => {
                             this.saveAvailabilityChanges([], availability, Config.API+'seasons/'+id+'/availability/', requests);
+                            let episodePromises = [];
                             episodes.map(e => {
                                 let episode = {...e};
                                 let episodeAvailability = [...episode.availability];
                                 delete episode.id;
                                 delete episode.availability;
-                                requests.push(
+                                episodePromises.push(
                                     fetch(Config.API+"seasons/"+id+"/episodes",
                                     {
                                         method: 'POST',
@@ -223,6 +224,7 @@ class Title extends React.Component {
                                     })
                                 )
                             })
+                            return Promise.all(episodePromises);
                         })
                     );
                 }
@@ -241,7 +243,7 @@ class Title extends React.Component {
                             // season
                             if (!isEqual(season, oldSeason)){
                                 requests.push(
-                                    fetch(Config.API+'seasons/'+seasonID,
+                                    () => fetch(Config.API+'seasons/'+seasonID,
                                     {
                                         method: 'PUT',
                                         headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -260,7 +262,7 @@ class Title extends React.Component {
                                 // new episode
                                 if (episodeID === '' || episodeID === null || episodeID === undefined){
                                     requests.push(
-                                        fetch(Config.API+'seasons/'+seasonID+'/episodes',
+                                        () => fetch(Config.API+'seasons/'+seasonID+'/episodes',
                                         {
                                             method: 'POST',
                                             headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -284,7 +286,7 @@ class Title extends React.Component {
                                             this.saveAvailabilityChanges(oldEpisodeAvailability, episodeAvailability, Config.API+'episodes/'+episodeID+'/availability/', requests);
                                             if (!isEqual(episode, oldEpisode)){
                                                 requests.push(
-                                                    fetch(Config.API+'episodes/'+episodeID,
+                                                    () => fetch(Config.API+'episodes/'+episodeID,
                                                     {
                                                         method: 'PUT',
                                                         headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -302,7 +304,7 @@ class Title extends React.Component {
                                 let oldEpisode = {...oe};
                                 if (episodes.map(ne => ne.id).indexOf(oldEpisode.id) === -1){
                                     requests.push(
-                                        fetch(Config.API+'episodes/'+oldEpisode.id,
+                                        () => fetch(Config.API+'episodes/'+oldEpisode.id,
                                         {
                                             method: 'DELETE',
                                             headers: {'token': this.props.token}
@@ -319,7 +321,7 @@ class Title extends React.Component {
                 let oldSeason = {...os};
                 if (newSeasons.map(s => s.id).indexOf(oldSeason.id) === -1){
                     requests.push(
-                        fetch(Config.API+'seasons/'+oldSeason.id,
+                        () => fetch(Config.API+'seasons/'+oldSeason.id,
                         {
                             method: 'DELETE',
                             headers: {'token': this.props.token}
@@ -336,7 +338,7 @@ class Title extends React.Component {
 
         if (!isEqual(edits, original))
             requests.push(
-                fetch(Config.API+"titles/"+this.props.title,
+                () => fetch(Config.API+"titles/"+this.props.title,
                 {
                     method: 'PUT',
                     headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -347,8 +349,15 @@ class Title extends React.Component {
 
         //let titleEdits = {...this.edits};
 
-        Promise.all(requests)
-            .then(() => {
+        let lm = null
+        requests.map(req => {
+            if (lm == null)
+                lm = req();
+            else
+                lm.then(() => req());
+        })
+
+        lm.then(() => {
                 this.props.setVisible(false);
                 this.props.toastMessage(<SVG.Check w="1.7em" h="1.7em" />, "text-success", "Changes saved.");
                 // this.setState({

@@ -60,10 +60,10 @@ class Movie extends Title {
     }
 
     async delete(){
-        await super.delete();
         let val = this.get();
-        await movieController.deleteMovie(val.id);
         await linkController.deleteAllMovieLinks(val.id);
+        await movieController.deleteMovie(val.id);
+        await super.delete();
     }
 
 }

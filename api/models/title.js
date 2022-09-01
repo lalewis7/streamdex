@@ -129,10 +129,10 @@ class Title extends model.Model {
 
     async delete(){
         let t = this.get();
-        await titleController.deleteTitle(t.id);
         await genreController.deleteAllTitleGenres(t.id);
         await linksController.deleteAllLinks(t.id);
         await listTitlesController.deleteAllTitles(t.id);
+        await titleController.deleteTitle(t.id);
     }
 
 }
