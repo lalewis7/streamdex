@@ -40,12 +40,24 @@ class User extends model.Model {
                 adminProtected: false,
                 validate: validate.email
             }),
+            new model.BooleanAttribute({
+                name: "email_verified",
+                editable: true,
+                visible: true,
+                adminProtected: true,
+            }),
             new model.StringAttribute({
                 name: "password",
                 editable: true,
                 visible: true,
                 adminProtected: false,
                 validate: validate.password
+            }),
+            new model.StringAttribute({
+                name: "country",
+                editable: true,
+                visible: true,
+                adminProtected: false
             }),
             new model.BooleanAttribute({
                 name: "locked",
@@ -55,6 +67,12 @@ class User extends model.Model {
             }),
             new model.BooleanAttribute({
                 name: "admin",
+                editable: true,
+                visible: true,
+                adminProtected: true,
+            }),
+            new model.BooleanAttribute({
+                name: "super_admin",
                 editable: true,
                 visible: true,
                 adminProtected: true,
@@ -83,12 +101,12 @@ class User extends model.Model {
         // update id and password
         this.override({ id: id, password: sha256(this.get().password) });
         let u = this.get();
-        await userController.insertUser(u.id, u.handle, u.email, u.password, u.locked, u.admin);
+        await userController.insertUser(u.id, u.handle, u.email, u.email_verified, u.password, u.country, u.locked, u.admin, u.super_admin);
     }
 
     async save(){
         let u = this.get(false);
-        await userController.updateUserByID(u.id, u.handle, u.email, u.password, u.locked, u.admin);
+        await userController.updateUserByID(u.id, u.handle, u.email, u.email_verified, u.password, u.country, u.locked, u.admin, u.super_admin);
 
         // streams
         const oldStreams = await userStreamsController.findAllUserStreams(this.get().id);

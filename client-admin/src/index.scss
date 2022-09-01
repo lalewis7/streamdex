@@ -29,6 +29,21 @@
     src: url('./fonts/rialto_nf/RialtoNF.woff');
 }
 
+@font-face {
+    font-family: 'nunito';
+    src: url('./fonts/Nunito/Nunito-Regular.woff2');
+}
+
+@font-face {
+    font-family: 'nunito-eb';
+    src: url('./fonts/Nunito/Nunito-ExtraBold.woff2');
+}
+
+@font-face {
+    font-family: 'nunito-sb';
+    src: url('./fonts/Nunito/Nunito-SemiBold.woff2');
+}
+
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
 
@@ -37,7 +52,8 @@
 $enable-gradients: true;
 
 // custom colors
-$color-background: #180A0A;
+//$color-background: #180A0A;
+$color-background: #170d0d;
 $color-primary: #399697;
 $color-secondary: #2C1313;
 $color-tertiary: #999090;
@@ -59,6 +75,7 @@ $nav-tabs-link-active-border-color: $color-tertiary $color-tertiary transparent;
 $nav-tabs-link-hover-border-color: $color-tertiary $color-tertiary transparent;
 //$nav-tabs-link-active-bg: $color-secondary;
 $nav-tabs-link-active-color: #fff;
+$navbar-nav-link-padding-x: 1rem;
 
 // inputs
 $input-bg: $color-secondary;
@@ -190,6 +207,17 @@ footer{
     background-color: shade-color($color-background, 30%);
 }
 
+.bg-darker{
+    background-color: shade-color($color-background, 30%);
+}
+
+.streaming_services_img{
+    max-width: 300px;
+    @include media-breakpoint-down(lg) {
+        width: 200px;
+    }
+}
+
 .fs-7{
     font-size: .75rem;
 }
@@ -198,20 +226,42 @@ footer{
     max-width: 500px;
 }
 
+.header-mobile{
+    border-bottom: 2px solid tint-color($color-background, 20%);
+    top: 56px;
+}
+
 .navbar {
     background-image:none;
+    border-bottom: 2px solid tint-color($color-background, 20%);
+}
+
+.navbar-top-padding{
+    padding-top: 58px;
+}
+
+.text-nunito{
+    font-family: 'nunito-sb';
+}
+
+.text-nunito-eb{
+    font-family: 'nunito-eb';
 }
 
 .brand-text{
-    font-family: 'rialto';
+    font-family: 'nunito-eb';
     color: #fff;
 }
 
 .navbar-brand {
-    font-family: 'rialto';
+    font-family: 'nunito-eb';
     color: #fff;
     display: flex;
     align-items: center;
+    padding-top: 0;
+    span {
+        padding-top: $navbar-brand-padding-y;
+    }
 }
 
 .btn-secondary {
@@ -295,28 +345,23 @@ footer{
 }
 
 .horizontal-scroll-body{
-    overflow: hidden;
     width: 100%;
     height: 100%;
     top: 0;
-    // &:hover{
-    //     .horizontal-scroll-prev{
-    //         display: inline-block;
-    //     }
-    //     .horizontal-scroll-next{
-    //         display: inline-block;
-    //     }
-    // }
-    // .horizontal-scroll-prev{
-    //     display: none;
-    // }
-    // .horizontal-scroll-next{
-    //     display: none;
-    // }
-}
-
-.horizontal-scroll-body > *{
-    flex-wrap: nowrap;
+    @include media-breakpoint-up(sm) {
+        overflow: hidden;
+    }
+    @include media-breakpoint-only(xs) {
+        overflow-x: auto;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    * {
+        flex-wrap: nowrap;
+    }
 }
 
 .horizontal-scroll-prev, .horizontal-scroll-next{
@@ -458,7 +503,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    border: 1px solid #fff;
+    border: 1px solid $color-secondary;
     box-shadow: 0 0 0px 1000px $color-secondary inset;
     -webkit-text-fill-color: $input-color;
     -webkit-box-shadow: 0 0 0px 1000px $color-secondary inset;
@@ -560,7 +605,7 @@ select:-webkit-autofill:focus {
 
 .showcase-gradient:after {
     display: inline-block;
-    background: linear-gradient(to top, rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, rgba(0, 0, 0, .35), rgba(0, 0, 0, 0));
     position: absolute;
     content: '';
     top: 0;

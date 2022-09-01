@@ -20,7 +20,7 @@ function getPage(page, user){
 }
 
 function newPage(user){
-    const list_ids = ['bf7541f56e4eef5476d5564bf7e92ca8'];
+    const list_ids = ['742d8529', '4bcac230', '5f5101ec', '6a29f82a', '82928be0', 'bc165d5f'];
     let promises = [];
     list_ids.map(id => {
         let list;

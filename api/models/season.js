@@ -71,7 +71,7 @@ class Season extends Model {
 
     async insert(){
         const id = await getNewID();
-        // update id and password
+        // update id
         this.override({ id: id });
         let s = this.get();
         await seasonController.insertSeason(s.title_id, s.id, s.season_number, s.trailer);
@@ -84,9 +84,12 @@ class Season extends Model {
 
     async delete(){
         let val = this.get();
-        await seasonController.deleteSeason(val.id);
         await linkController.deleteAllSeasonLinks(val.id);
+        this.episodes.value.map(async (ep) => {
+            await ep.delete();
+        })
         await episodeController.deleteAllEpisode(val.id);
+        await seasonController.deleteSeason(val.id);
     }
 
 }

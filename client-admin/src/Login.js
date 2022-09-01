@@ -82,8 +82,8 @@ class Login extends React.Component {
                     <div class="container-fluid login-card">
                         <div class="row my-3 mb-4">
                             <div class="col d-flex flex-column align-items-center">
-                                <img src="/streamlogo.png" width="64" height="64"/>
-                                <h4 class="brand-text mt-2">streamdex</h4>
+                                <img src="/streamlogo.svg" width="64" height="64"/>
+                                <h4 class="brand-text mt-2">Streamdex</h4>
                             </div>
                         </div>
                         <div class="row my-3">

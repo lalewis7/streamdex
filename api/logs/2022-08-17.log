@@ -1,0 +1,1342 @@
+2022-08-17 11:33:18 [info]: API listening at http://localhost:9000
+2022-08-17 11:33:49 [info]: ::1 (GET) /pages/new
+2022-08-17 11:34:34 [info]: ::1 (GET) /auth
+2022-08-17 11:34:34 [info]: ::1 (GET) /users/self
+2022-08-17 11:34:43 [info]: ::1 (GET) /images/
+2022-08-17 11:34:43 [info]: ::1 (GET) /titles
+2022-08-17 11:34:43 [info]: ::1 (GET) /users/self
+2022-08-17 11:34:43 [info]: ::1 (GET) /images/
+2022-08-17 11:41:57 [info]: ::1 (POST) /titles/
+2022-08-17 11:41:57 [info]: ::1 (POST) /titles/28b43e54887abbe25867a143ffce26e0/seasons
+2022-08-17 11:41:57 [info]: ::1 (POST) /seasons/b5cf5d04f5a38f353be00abe9a206d94/episodes
+2022-08-17 11:41:57 [info]: ::1 (POST) /seasons/b5cf5d04f5a38f353be00abe9a206d94/episodes
+2022-08-17 11:41:57 [info]: ::1 (POST) /seasons/b5cf5d04f5a38f353be00abe9a206d94/episodes
+2022-08-17 11:41:57 [info]: ::1 (POST) /seasons/b5cf5d04f5a38f353be00abe9a206d94/episodes
+2022-08-17 11:41:58 [info]: ::1 (POST) /seasons/b5cf5d04f5a38f353be00abe9a206d94/episodes
+2022-08-17 11:41:58 [info]: ::1 (POST) /seasons/b5cf5d04f5a38f353be00abe9a206d94/episodes
+2022-08-17 11:41:58 [info]: ::1 (POST) /seasons/b5cf5d04f5a38f353be00abe9a206d94/episodes
+2022-08-17 11:41:58 [info]: ::1 (GET) /titles
+2022-08-17 11:41:59 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:41:59 [info]: ::1 (GET) /images/
+2022-08-17 11:42:19 [info]: ::1 (GET) /titles/?q=breaking%20bad
+2022-08-17 11:42:19 [info]: ::1 (GET) /images/
+2022-08-17 11:43:07 [info]: ::1 (GET) /images
+2022-08-17 11:43:07 [info]: ::1 (GET) /users/self
+2022-08-17 11:43:07 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 11:43:31 [info]: ::1 (POST) /images/
+2022-08-17 11:43:31 [info]: ::1 (GET) /images
+2022-08-17 11:43:31 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c/info
+2022-08-17 11:43:31 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:43:31 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 11:43:31 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:43:41 [info]: ::1 (PUT) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:43:56 [info]: ::1 (GET) /images/
+2022-08-17 11:43:56 [info]: ::1 (GET) /images/
+2022-08-17 11:43:56 [info]: ::1 (GET) /titles
+2022-08-17 11:43:56 [info]: ::1 (GET) /users/self
+2022-08-17 11:43:58 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:43:58 [info]: ::1 (GET) /images/
+2022-08-17 11:44:03 [info]: ::1 (GET) /images
+2022-08-17 11:44:03 [info]: ::1 (GET) /users/self
+2022-08-17 11:44:03 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:44:03 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 11:44:04 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c/info
+2022-08-17 11:44:04 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:44:07 [info]: ::1 (GET) /images
+2022-08-17 11:44:07 [info]: ::1 (GET) /users/self
+2022-08-17 11:44:07 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:44:07 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 11:44:08 [info]: ::1 (GET) /images/
+2022-08-17 11:44:08 [info]: ::1 (GET) /images/
+2022-08-17 11:44:08 [info]: ::1 (GET) /users/self
+2022-08-17 11:44:08 [info]: ::1 (GET) /titles
+2022-08-17 11:44:08 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:44:08 [info]: ::1 (GET) /images/
+2022-08-17 11:44:10 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:44:11 [info]: ::1 (PUT) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:44:11 [info]: ::1 (GET) /images/
+2022-08-17 11:44:11 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:44:11 [info]: ::1 (GET) /images/
+2022-08-17 11:44:11 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:44:13 [info]: ::1 (GET) /titles/?q=breaking%20bad
+2022-08-17 11:44:13 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:44:15 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:44:15 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:46:56 [info]: ::1 (PUT) /seasons/b5cf5d04f5a38f353be00abe9a206d94
+2022-08-17 11:46:56 [info]: ::1 (PUT) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:46:56 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:46:56 [info]: ::1 (GET) /images/
+2022-08-17 11:46:56 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:46:58 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:46:58 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:49:57 [info]: ::1 (POST) /titles/28b43e54887abbe25867a143ffce26e0/seasons
+2022-08-17 11:49:57 [info]: ::1 (PUT) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteSeason (C:\Users\larth\Coding\streamfinder\api\controllers\season.js:18:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:87:32)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:47:29)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:49:57 [info]: ::1 (POST) /seasons/1fb0aac48948321f45cb5eaf2396c34c/episodes
+2022-08-17 11:50:07 [info]: ::1 (GET) /images/
+2022-08-17 11:50:07 [info]: ::1 (GET) /titles
+2022-08-17 11:50:07 [info]: ::1 (GET) /users/self
+2022-08-17 11:50:07 [info]: ::1 (GET) /images/
+2022-08-17 11:50:08 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:50:08 [info]: ::1 (GET) /images/
+2022-08-17 11:50:08 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:52:28 [info]: ::1 (POST) /titles/28b43e54887abbe25867a143ffce26e0/seasons
+2022-08-17 11:52:28 [info]: ::1 (PUT) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [info]: ::1 (POST) /seasons/c91cf3f2f7d00f77450b4dd2b5fb3c6b/episodes
+2022-08-17 11:52:28 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteSeason (C:\Users\larth\Coding\streamfinder\api\controllers\season.js:18:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:87:32)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:47:29)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 11:52:40 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:52:40 [info]: ::1 (GET) /favicon.ico
+2022-08-17 11:52:54 [info]: ::1 (GET) /images/
+2022-08-17 11:52:54 [info]: ::1 (GET) /images/
+2022-08-17 11:52:54 [info]: ::1 (GET) /titles
+2022-08-17 11:52:54 [info]: ::1 (GET) /users/self
+2022-08-17 11:52:56 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:52:56 [info]: ::1 (GET) /images/
+2022-08-17 11:52:56 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:55:10 [info]: ::1 (POST) /titles/28b43e54887abbe25867a143ffce26e0/seasons
+2022-08-17 11:55:10 [info]: ::1 (PUT) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:10 [info]: ::1 (POST) /seasons/f1646747551e0f7d91a641448aefd117/episodes
+2022-08-17 11:55:11 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteSeason (C:\Users\larth\Coding\streamfinder\api\controllers\season.js:18:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:87:32)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:47:29)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 11:55:16 [info]: ::1 (GET) /images/
+2022-08-17 11:55:16 [info]: ::1 (GET) /images/
+2022-08-17 11:55:16 [info]: ::1 (GET) /titles
+2022-08-17 11:55:16 [info]: ::1 (GET) /users/self
+2022-08-17 11:55:17 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:55:17 [info]: ::1 (GET) /images/
+2022-08-17 11:55:17 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:55:29 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:55:29 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:55:54 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:55:54 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 11:59:26 [info]: ::1 (POST) /titles/28b43e54887abbe25867a143ffce26e0/seasons
+2022-08-17 11:59:26 [info]: ::1 (PUT) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [info]: ::1 (POST) /seasons/7c707671b4d78ee52845e4f99ed2451d/episodes
+2022-08-17 11:59:26 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteSeason (C:\Users\larth\Coding\streamfinder\api\controllers\season.js:18:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:87:32)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:47:29)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 12:02:45 [info]: ::1 (POST) /titles/
+2022-08-17 12:02:45 [info]: ::1 (POST) /titles/c4356f11201cd23abfc1d46d196a51e2/seasons
+2022-08-17 12:02:45 [info]: ::1 (POST) /seasons/5c5f8e66ac662642d218e4c13fd5ad42/episodes
+2022-08-17 12:02:45 [info]: ::1 (POST) /seasons/5c5f8e66ac662642d218e4c13fd5ad42/episodes
+2022-08-17 12:02:45 [info]: ::1 (POST) /seasons/5c5f8e66ac662642d218e4c13fd5ad42/episodes
+2022-08-17 12:02:45 [info]: ::1 (POST) /seasons/5c5f8e66ac662642d218e4c13fd5ad42/episodes
+2022-08-17 12:02:45 [info]: ::1 (POST) /seasons/5c5f8e66ac662642d218e4c13fd5ad42/episodes
+2022-08-17 12:02:45 [info]: ::1 (POST) /seasons/5c5f8e66ac662642d218e4c13fd5ad42/episodes
+2022-08-17 12:02:45 [info]: ::1 (GET) /titles
+2022-08-17 12:02:48 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:02:48 [info]: ::1 (GET) /images/
+2022-08-17 12:04:01 [info]: ::1 (POST) /titles/c4356f11201cd23abfc1d46d196a51e2/seasons
+2022-08-17 12:04:01 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:04:01 [info]: ::1 (POST) /seasons/b3c9a42f45391bf6dd68037c00cdbad5/episodes
+2022-08-17 12:04:01 [info]: ::1 (POST) /seasons/b3c9a42f45391bf6dd68037c00cdbad5/episodes
+2022-08-17 12:04:01 [info]: ::1 (POST) /seasons/b3c9a42f45391bf6dd68037c00cdbad5/episodes
+2022-08-17 12:04:01 [info]: ::1 (POST) /seasons/b3c9a42f45391bf6dd68037c00cdbad5/episodes
+2022-08-17 12:04:01 [info]: ::1 (POST) /seasons/b3c9a42f45391bf6dd68037c00cdbad5/episodes
+2022-08-17 12:04:01 [info]: ::1 (POST) /seasons/b3c9a42f45391bf6dd68037c00cdbad5/episodes
+2022-08-17 12:04:01 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteSeason (C:\Users\larth\Coding\streamfinder\api\controllers\season.js:18:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:87:32)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:47:29)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 12:04:11 [info]: ::1 (GET) /images/
+2022-08-17 12:04:11 [info]: ::1 (GET) /images/
+2022-08-17 12:04:11 [info]: ::1 (GET) /titles
+2022-08-17 12:04:11 [info]: ::1 (GET) /users/self
+2022-08-17 12:04:11 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:04:11 [info]: ::1 (GET) /images/
+2022-08-17 12:04:35 [info]: ::1 (POST) /titles/c4356f11201cd23abfc1d46d196a51e2/seasons
+2022-08-17 12:04:35 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:04:35 [info]: ::1 (POST) /seasons/f3ab8c748627035eaef3da842d37ea7b/episodes
+2022-08-17 12:04:35 [error]: Error: ER_NO_REFERENCED_ROW: Cannot add or update a child row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.insertEpisode (C:\Users\larth\Coding\streamfinder\api\controllers\episode.js:15:21)
+    at Episode.insert (C:\Users\larth\Coding\streamfinder\api\models\episode.js:79:33)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 12:04:35 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:04:35 [info]: ::1 (GET) /images/
+2022-08-17 12:04:42 [info]: ::1 (GET) /images/
+2022-08-17 12:04:42 [info]: ::1 (GET) /images/
+2022-08-17 12:04:42 [info]: ::1 (GET) /titles
+2022-08-17 12:04:42 [info]: ::1 (GET) /users/self
+2022-08-17 12:04:43 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:04:43 [info]: ::1 (GET) /images/
+2022-08-17 12:04:48 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 12:04:48 [info]: ::1 (GET) /images/
+2022-08-17 12:04:48 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 12:04:50 [info]: ::1 (GET) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 12:04:50 [info]: ::1 (GET) /images/
+2022-08-17 12:04:50 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 12:04:56 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:04:56 [info]: ::1 (GET) /images/
+2022-08-17 12:05:08 [info]: ::1 (POST) /titles/c4356f11201cd23abfc1d46d196a51e2/seasons
+2022-08-17 12:05:08 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:05:08 [info]: ::1 (POST) /seasons/f5725c07d1082b0a4d5780e144418a39/episodes
+2022-08-17 12:05:08 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteSeason (C:\Users\larth\Coding\streamfinder\api\controllers\season.js:18:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:87:32)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:47:29)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 12:05:10 [info]: ::1 (GET) /images/
+2022-08-17 12:05:10 [info]: ::1 (GET) /images/
+2022-08-17 12:05:10 [info]: ::1 (GET) /titles
+2022-08-17 12:05:10 [info]: ::1 (GET) /users/self
+2022-08-17 12:05:11 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:05:11 [info]: ::1 (GET) /images/
+2022-08-17 12:06:09 [info]: ::1 (POST) /seasons/f5725c07d1082b0a4d5780e144418a39/episodes
+2022-08-17 12:06:09 [info]: ::1 (POST) /seasons/f5725c07d1082b0a4d5780e144418a39/episodes
+2022-08-17 12:06:09 [info]: ::1 (POST) /seasons/f5725c07d1082b0a4d5780e144418a39/episodes
+2022-08-17 12:06:09 [info]: ::1 (POST) /seasons/f5725c07d1082b0a4d5780e144418a39/episodes
+2022-08-17 12:06:09 [info]: ::1 (POST) /seasons/f5725c07d1082b0a4d5780e144418a39/episodes
+2022-08-17 12:06:09 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:06:09 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:06:09 [info]: ::1 (GET) /images/
+2022-08-17 12:06:11 [info]: ::1 (GET) /images/
+2022-08-17 12:06:11 [info]: ::1 (GET) /images/
+2022-08-17 12:06:11 [info]: ::1 (GET) /titles
+2022-08-17 12:06:11 [info]: ::1 (GET) /users/self
+2022-08-17 12:06:12 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:06:12 [info]: ::1 (GET) /images/
+2022-08-17 12:07:26 [info]: ::1 (POST) /titles/c4356f11201cd23abfc1d46d196a51e2/seasons
+2022-08-17 12:07:26 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:07:26 [info]: ::1 (POST) /seasons/00b429172a43822281f1e902b292924e/episodes
+2022-08-17 12:07:26 [info]: ::1 (POST) /seasons/00b429172a43822281f1e902b292924e/episodes
+2022-08-17 12:07:26 [info]: ::1 (POST) /seasons/00b429172a43822281f1e902b292924e/episodes
+2022-08-17 12:07:26 [info]: ::1 (POST) /seasons/00b429172a43822281f1e902b292924e/episodes
+2022-08-17 12:07:26 [info]: ::1 (POST) /seasons/00b429172a43822281f1e902b292924e/episodes
+2022-08-17 12:07:26 [info]: ::1 (POST) /seasons/00b429172a43822281f1e902b292924e/episodes
+2022-08-17 12:07:26 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteSeason (C:\Users\larth\Coding\streamfinder\api\controllers\season.js:18:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:87:32)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:47:29)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 12:07:28 [info]: ::1 (GET) /images/
+2022-08-17 12:07:28 [info]: ::1 (GET) /images/
+2022-08-17 12:07:28 [info]: ::1 (GET) /titles
+2022-08-17 12:07:28 [info]: ::1 (GET) /users/self
+2022-08-17 12:07:28 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:07:29 [info]: ::1 (GET) /images/
+2022-08-17 12:10:11 [info]: ::1 (POST) /titles/c4356f11201cd23abfc1d46d196a51e2/seasons
+2022-08-17 12:10:11 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:10:11 [info]: ::1 (POST) /seasons/e7359325859168a0ec03eb80b9e9c7ca/episodes
+2022-08-17 12:10:11 [info]: ::1 (POST) /seasons/e7359325859168a0ec03eb80b9e9c7ca/episodes
+2022-08-17 12:10:11 [info]: ::1 (POST) /seasons/e7359325859168a0ec03eb80b9e9c7ca/episodes
+2022-08-17 12:10:11 [info]: ::1 (POST) /seasons/e7359325859168a0ec03eb80b9e9c7ca/episodes
+2022-08-17 12:10:11 [info]: ::1 (POST) /seasons/e7359325859168a0ec03eb80b9e9c7ca/episodes
+2022-08-17 12:10:11 [info]: ::1 (POST) /seasons/e7359325859168a0ec03eb80b9e9c7ca/episodes
+2022-08-17 12:10:11 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteSeason (C:\Users\larth\Coding\streamfinder\api\controllers\season.js:18:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:87:32)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:47:29)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 12:10:12 [info]: ::1 (GET) /images/
+2022-08-17 12:10:12 [info]: ::1 (GET) /titles
+2022-08-17 12:10:12 [info]: ::1 (GET) /users/self
+2022-08-17 12:10:12 [info]: ::1 (GET) /images/
+2022-08-17 12:10:13 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:10:13 [info]: ::1 (GET) /images/
+2022-08-17 12:11:19 [info]: ::1 (POST) /titles/c4356f11201cd23abfc1d46d196a51e2/seasons
+2022-08-17 12:11:19 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:11:19 [info]: ::1 (POST) /seasons/fc7791b9faed8d32191f9d6028dfce1a/episodes
+2022-08-17 12:11:19 [info]: ::1 (POST) /seasons/fc7791b9faed8d32191f9d6028dfce1a/episodes
+2022-08-17 12:11:19 [info]: ::1 (POST) /seasons/fc7791b9faed8d32191f9d6028dfce1a/episodes
+2022-08-17 12:11:19 [info]: ::1 (POST) /seasons/fc7791b9faed8d32191f9d6028dfce1a/episodes
+2022-08-17 12:11:19 [info]: ::1 (POST) /seasons/fc7791b9faed8d32191f9d6028dfce1a/episodes
+2022-08-17 12:11:19 [info]: ::1 (POST) /seasons/fc7791b9faed8d32191f9d6028dfce1a/episodes
+2022-08-17 12:11:19 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteSeason (C:\Users\larth\Coding\streamfinder\api\controllers\season.js:18:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:87:32)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:47:29)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 12:11:21 [info]: ::1 (GET) /images/
+2022-08-17 12:11:21 [info]: ::1 (GET) /images/
+2022-08-17 12:11:21 [info]: ::1 (GET) /titles
+2022-08-17 12:11:21 [info]: ::1 (GET) /users/self
+2022-08-17 12:11:22 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:11:22 [info]: ::1 (GET) /images/
+2022-08-17 12:11:41 [info]: ::1 (GET) /images
+2022-08-17 12:11:41 [info]: ::1 (GET) /users/self
+2022-08-17 12:11:41 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 12:11:41 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 12:18:17 [info]: ::1 (POST) /images/
+2022-08-17 12:18:17 [info]: ::1 (GET) /images
+2022-08-17 12:18:17 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d/info
+2022-08-17 12:18:17 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 12:18:17 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:18:17 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 12:18:17 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:18:26 [info]: ::1 (PUT) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:18:28 [info]: ::1 (GET) /images/
+2022-08-17 12:18:28 [info]: ::1 (GET) /images/
+2022-08-17 12:18:28 [info]: ::1 (GET) /titles
+2022-08-17 12:18:28 [info]: ::1 (GET) /users/self
+2022-08-17 12:18:29 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:18:29 [info]: ::1 (GET) /images/
+2022-08-17 12:18:31 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:18:32 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:18:32 [info]: ::1 (GET) /images/
+2022-08-17 12:18:32 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:18:32 [info]: ::1 (GET) /images/
+2022-08-17 12:18:32 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:19:49 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:19:49 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c4356f11201cd23abfc1d46d196a51e2' for key 'titlegenres.PRIMARY'
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.insertGenre (C:\Users\larth\Coding\streamfinder\api\controllers\title.genre.js:10:21)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\title.js:126:35)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:37:9)
+2022-08-17 12:19:55 [info]: ::1 (GET) /titles/?q=peaky
+2022-08-17 12:19:55 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:19:56 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:19:56 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:20:07 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:20:07 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c4356f11201cd23abfc1d46d196a51e2' for key 'titlegenres.PRIMARY'
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.insertGenre (C:\Users\larth\Coding\streamfinder\api\controllers\title.genre.js:10:21)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\title.js:126:35)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:37:9)
+2022-08-17 12:20:09 [info]: ::1 (GET) /images/
+2022-08-17 12:20:09 [info]: ::1 (GET) /users/self
+2022-08-17 12:20:09 [info]: ::1 (GET) /titles
+2022-08-17 12:20:09 [info]: ::1 (GET) /images/
+2022-08-17 12:20:09 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:20:10 [info]: ::1 (GET) /images/
+2022-08-17 12:20:10 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:20:15 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:20:15 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c4356f11201cd23abfc1d46d196a51e2' for key 'titlegenres.PRIMARY'
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.insertGenre (C:\Users\larth\Coding\streamfinder\api\controllers\title.genre.js:10:21)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\title.js:126:35)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:37:9)
+2022-08-17 12:20:17 [info]: ::1 (GET) /images/
+2022-08-17 12:20:17 [info]: ::1 (GET) /titles
+2022-08-17 12:20:17 [info]: ::1 (GET) /users/self
+2022-08-17 12:20:17 [info]: ::1 (GET) /images/
+2022-08-17 12:20:17 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:20:17 [info]: ::1 (GET) /images/
+2022-08-17 12:20:18 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:26:33 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:26:33 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c4356f11201cd23abfc1d46d196a51e2' for key 'titlegenres.PRIMARY'
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.insertGenre (C:\Users\larth\Coding\streamfinder\api\controllers\title.genre.js:10:21)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\title.js:126:35)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:37:9)
+2022-08-17 12:26:35 [info]: ::1 (GET) /images/
+2022-08-17 12:26:35 [info]: ::1 (GET) /titles
+2022-08-17 12:26:35 [info]: ::1 (GET) /users/self
+2022-08-17 12:26:35 [info]: ::1 (GET) /images/
+2022-08-17 12:26:36 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:26:36 [info]: ::1 (GET) /images/
+2022-08-17 12:26:36 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:26:50 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:26:50 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c4356f11201cd23abfc1d46d196a51e2' for key 'titlegenres.PRIMARY'
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.insertGenre (C:\Users\larth\Coding\streamfinder\api\controllers\title.genre.js:10:21)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\title.js:126:35)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:37:9)
+2022-08-17 12:26:51 [info]: ::1 (GET) /images/
+2022-08-17 12:26:51 [info]: ::1 (GET) /images/
+2022-08-17 12:26:51 [info]: ::1 (GET) /titles
+2022-08-17 12:26:51 [info]: ::1 (GET) /users/self
+2022-08-17 12:26:52 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:26:52 [info]: ::1 (GET) /images/
+2022-08-17 12:26:52 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:27:13 [info]: ::1 (GET) /images/
+2022-08-17 12:27:13 [info]: ::1 (GET) /titles
+2022-08-17 12:27:13 [info]: ::1 (GET) /images/
+2022-08-17 12:27:13 [info]: ::1 (GET) /users/self
+2022-08-17 12:27:27 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:27:27 [info]: ::1 (GET) /images/
+2022-08-17 12:27:27 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:27:43 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:27:43 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c4356f11201cd23abfc1d46d196a51e2' for key 'titlegenres.PRIMARY'
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.insertGenre (C:\Users\larth\Coding\streamfinder\api\controllers\title.genre.js:10:21)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\title.js:126:35)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:37:9)
+2022-08-17 12:28:25 [info]: ::1 (GET) /images/
+2022-08-17 12:28:25 [info]: ::1 (GET) /titles
+2022-08-17 12:28:25 [info]: ::1 (GET) /users/self
+2022-08-17 12:28:25 [info]: ::1 (GET) /images/
+2022-08-17 12:28:26 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:28:26 [info]: ::1 (GET) /images/
+2022-08-17 12:28:26 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:28:31 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:28:31 [error]: Error: ER_DUP_ENTRY: Duplicate entry 'c4356f11201cd23abfc1d46d196a51e2' for key 'titlegenres.title_id_UNIQUE'
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.insertGenre (C:\Users\larth\Coding\streamfinder\api\controllers\title.genre.js:10:21)
+    at Show.save (C:\Users\larth\Coding\streamfinder\api\models\title.js:126:35)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Show.save (C:\Users\larth\Coding\streamfinder\api\models\show.js:37:9)
+2022-08-17 12:28:38 [info]: ::1 (GET) /images/
+2022-08-17 12:28:38 [info]: ::1 (GET) /titles
+2022-08-17 12:28:38 [info]: ::1 (GET) /images/
+2022-08-17 12:28:38 [info]: ::1 (GET) /users/self
+2022-08-17 12:28:39 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:28:39 [info]: ::1 (GET) /images/
+2022-08-17 12:28:39 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:28:51 [info]: ::1 (GET) /images/
+2022-08-17 12:28:51 [info]: ::1 (GET) /titles
+2022-08-17 12:28:51 [info]: ::1 (GET) /users/self
+2022-08-17 12:28:51 [info]: ::1 (GET) /images/
+2022-08-17 12:28:52 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:28:52 [info]: ::1 (GET) /images/
+2022-08-17 12:28:52 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:28:56 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:28:56 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 12:28:56 [info]: ::1 (GET) /images/
+2022-08-17 12:28:56 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:35:21 [info]: ::1 (POST) /titles/
+2022-08-17 12:35:21 [info]: ::1 (POST) /titles/c3e35a8936f8019223df2e60833e9534/seasons
+2022-08-17 12:35:21 [info]: ::1 (POST) /titles/c3e35a8936f8019223df2e60833e9534/seasons
+2022-08-17 12:35:21 [info]: ::1 (POST) /titles/c3e35a8936f8019223df2e60833e9534/seasons
+2022-08-17 12:35:21 [info]: ::1 (POST) /titles/c3e35a8936f8019223df2e60833e9534/seasons
+2022-08-17 12:35:21 [info]: ::1 (POST) /titles/c3e35a8936f8019223df2e60833e9534/seasons
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/63be694c9ba440df0c2cdd41e5822c01/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/63be694c9ba440df0c2cdd41e5822c01/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/63be694c9ba440df0c2cdd41e5822c01/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/ef9f8288836d8c0af5a22c771b09662e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/ef9f8288836d8c0af5a22c771b09662e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/ef9f8288836d8c0af5a22c771b09662e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/ef9f8288836d8c0af5a22c771b09662e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/840667b03aff464c64f8f35024f0a38e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/840667b03aff464c64f8f35024f0a38e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/840667b03aff464c64f8f35024f0a38e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/840667b03aff464c64f8f35024f0a38e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/212ce6c80f9d052702117bd5ac837cde/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/840667b03aff464c64f8f35024f0a38e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/840667b03aff464c64f8f35024f0a38e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/212ce6c80f9d052702117bd5ac837cde/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/212ce6c80f9d052702117bd5ac837cde/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/212ce6c80f9d052702117bd5ac837cde/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/212ce6c80f9d052702117bd5ac837cde/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/212ce6c80f9d052702117bd5ac837cde/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/156ee6a11b28bd61e1071fa9217caa1e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/156ee6a11b28bd61e1071fa9217caa1e/episodes
+2022-08-17 12:35:21 [info]: ::1 (POST) /seasons/156ee6a11b28bd61e1071fa9217caa1e/episodes
+2022-08-17 12:35:21 [info]: ::1 (GET) /titles
+2022-08-17 12:35:23 [info]: ::1 (GET) /titles/c3e35a8936f8019223df2e60833e9534
+2022-08-17 12:35:23 [info]: ::1 (GET) /images/
+2022-08-17 12:35:46 [info]: ::1 (PUT) /titles/c3e35a8936f8019223df2e60833e9534
+2022-08-17 12:35:46 [info]: ::1 (GET) /titles/c3e35a8936f8019223df2e60833e9534
+2022-08-17 12:35:46 [info]: ::1 (GET) /images/
+2022-08-17 12:35:48 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 12:35:49 [info]: ::1 (GET) /images/
+2022-08-17 12:35:49 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 12:36:11 [info]: ::1 (GET) /images
+2022-08-17 12:36:11 [info]: ::1 (GET) /users/self
+2022-08-17 12:36:11 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 12:36:11 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 12:36:11 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:36:19 [info]: ::1 (POST) /images/
+2022-08-17 12:36:19 [info]: ::1 (GET) /images
+2022-08-17 12:36:19 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990/info
+2022-08-17 12:36:19 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 12:36:19 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 12:36:19 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 12:36:19 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:36:19 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 12:36:25 [info]: ::1 (PUT) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 12:36:27 [info]: ::1 (GET) /images/
+2022-08-17 12:36:27 [info]: ::1 (GET) /images/
+2022-08-17 12:36:27 [info]: ::1 (GET) /titles
+2022-08-17 12:36:27 [info]: ::1 (GET) /users/self
+2022-08-17 12:36:28 [info]: ::1 (GET) /titles/c3e35a8936f8019223df2e60833e9534
+2022-08-17 12:36:28 [info]: ::1 (GET) /images/
+2022-08-17 12:36:30 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 12:36:31 [info]: ::1 (PUT) /titles/c3e35a8936f8019223df2e60833e9534
+2022-08-17 12:36:31 [info]: ::1 (GET) /images/
+2022-08-17 12:36:31 [info]: ::1 (GET) /titles/c3e35a8936f8019223df2e60833e9534
+2022-08-17 12:36:31 [info]: ::1 (GET) /images/
+2022-08-17 12:36:31 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 12:43:50 [info]: ::1 (POST) /titles/
+2022-08-17 12:43:50 [info]: ::1 (POST) /titles/535459cf2a696dc16eac8c3e26aeed5c/seasons
+2022-08-17 12:43:50 [info]: ::1 (POST) /titles/535459cf2a696dc16eac8c3e26aeed5c/seasons
+2022-08-17 12:43:50 [info]: ::1 (POST) /titles/535459cf2a696dc16eac8c3e26aeed5c/seasons
+2022-08-17 12:43:50 [info]: ::1 (POST) /titles/535459cf2a696dc16eac8c3e26aeed5c/seasons
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c4c9fcd5c34aeccfa6c9a847d9c8f179/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c4c9fcd5c34aeccfa6c9a847d9c8f179/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c4c9fcd5c34aeccfa6c9a847d9c8f179/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c4c9fcd5c34aeccfa6c9a847d9c8f179/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c4c9fcd5c34aeccfa6c9a847d9c8f179/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c4c9fcd5c34aeccfa6c9a847d9c8f179/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c4c9fcd5c34aeccfa6c9a847d9c8f179/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c4c9fcd5c34aeccfa6c9a847d9c8f179/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c4c9fcd5c34aeccfa6c9a847d9c8f179/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/39a7a77ddda8f50369ff912f3da245f8/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/39a7a77ddda8f50369ff912f3da245f8/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/39a7a77ddda8f50369ff912f3da245f8/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/39a7a77ddda8f50369ff912f3da245f8/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/39a7a77ddda8f50369ff912f3da245f8/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/39a7a77ddda8f50369ff912f3da245f8/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/39a7a77ddda8f50369ff912f3da245f8/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/39a7a77ddda8f50369ff912f3da245f8/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/39a7a77ddda8f50369ff912f3da245f8/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/854212de47a60a6be3fd2d69e50af097/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/854212de47a60a6be3fd2d69e50af097/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/854212de47a60a6be3fd2d69e50af097/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/854212de47a60a6be3fd2d69e50af097/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/854212de47a60a6be3fd2d69e50af097/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/854212de47a60a6be3fd2d69e50af097/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/854212de47a60a6be3fd2d69e50af097/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/854212de47a60a6be3fd2d69e50af097/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c1ce9516f6bd3a58609d8fba23f661ca/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c1ce9516f6bd3a58609d8fba23f661ca/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c1ce9516f6bd3a58609d8fba23f661ca/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c1ce9516f6bd3a58609d8fba23f661ca/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c1ce9516f6bd3a58609d8fba23f661ca/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c1ce9516f6bd3a58609d8fba23f661ca/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c1ce9516f6bd3a58609d8fba23f661ca/episodes
+2022-08-17 12:43:51 [info]: ::1 (POST) /seasons/c1ce9516f6bd3a58609d8fba23f661ca/episodes
+2022-08-17 12:43:51 [info]: ::1 (GET) /titles
+2022-08-17 12:44:19 [info]: ::1 (GET) /images
+2022-08-17 12:44:19 [info]: ::1 (GET) /users/self
+2022-08-17 12:44:19 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 12:44:19 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 12:44:19 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:44:19 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 12:44:25 [info]: ::1 (POST) /images/
+2022-08-17 12:44:25 [info]: ::1 (GET) /images
+2022-08-17 12:44:25 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c/info
+2022-08-17 12:44:25 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 12:44:25 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 12:44:25 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:44:25 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 12:44:25 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 12:44:25 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 12:44:31 [info]: ::1 (PUT) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 12:44:32 [info]: ::1 (GET) /images/
+2022-08-17 12:44:32 [info]: ::1 (GET) /images/
+2022-08-17 12:44:32 [info]: ::1 (GET) /titles
+2022-08-17 12:44:32 [info]: ::1 (GET) /users/self
+2022-08-17 12:44:34 [info]: ::1 (GET) /titles/535459cf2a696dc16eac8c3e26aeed5c
+2022-08-17 12:44:34 [info]: ::1 (GET) /images/
+2022-08-17 12:44:36 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 12:44:38 [info]: ::1 (PUT) /titles/535459cf2a696dc16eac8c3e26aeed5c
+2022-08-17 12:44:38 [info]: ::1 (GET) /images/
+2022-08-17 12:44:38 [info]: ::1 (GET) /titles/535459cf2a696dc16eac8c3e26aeed5c
+2022-08-17 12:44:38 [info]: ::1 (GET) /images/
+2022-08-17 12:44:38 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 12:50:53 [info]: ::1 (POST) /titles/
+2022-08-17 12:50:54 [info]: ::1 (POST) /titles/a3c03a6ef7af66b25319abb88b72c9bc/seasons
+2022-08-17 12:50:54 [info]: ::1 (POST) /titles/a3c03a6ef7af66b25319abb88b72c9bc/seasons
+2022-08-17 12:50:54 [info]: ::1 (POST) /titles/a3c03a6ef7af66b25319abb88b72c9bc/seasons
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/6238ad82ad12b470d01bb33d0cf0640d/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/6238ad82ad12b470d01bb33d0cf0640d/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/6238ad82ad12b470d01bb33d0cf0640d/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/6238ad82ad12b470d01bb33d0cf0640d/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/6238ad82ad12b470d01bb33d0cf0640d/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/6238ad82ad12b470d01bb33d0cf0640d/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/6238ad82ad12b470d01bb33d0cf0640d/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/6238ad82ad12b470d01bb33d0cf0640d/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/7fe2b63727cb33ea372831821b418edd/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/7fe2b63727cb33ea372831821b418edd/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/7fe2b63727cb33ea372831821b418edd/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/7fe2b63727cb33ea372831821b418edd/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/7fe2b63727cb33ea372831821b418edd/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/7fe2b63727cb33ea372831821b418edd/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/7fe2b63727cb33ea372831821b418edd/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/7fe2b63727cb33ea372831821b418edd/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/04aea369458f234ff90282a5d44b02aa/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/04aea369458f234ff90282a5d44b02aa/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/04aea369458f234ff90282a5d44b02aa/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/04aea369458f234ff90282a5d44b02aa/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/04aea369458f234ff90282a5d44b02aa/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/04aea369458f234ff90282a5d44b02aa/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/04aea369458f234ff90282a5d44b02aa/episodes
+2022-08-17 12:50:54 [info]: ::1 (POST) /seasons/04aea369458f234ff90282a5d44b02aa/episodes
+2022-08-17 12:50:54 [info]: ::1 (GET) /titles
+2022-08-17 12:51:42 [info]: ::1 (GET) /images
+2022-08-17 12:51:42 [info]: ::1 (GET) /users/self
+2022-08-17 12:51:42 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 12:51:42 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 12:51:42 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:51:42 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 12:51:42 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 12:51:46 [info]: ::1 (POST) /images/
+2022-08-17 12:51:46 [info]: ::1 (GET) /images
+2022-08-17 12:51:46 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6/info
+2022-08-17 12:51:46 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 12:51:46 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-17 12:51:46 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 12:51:46 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 12:51:46 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 12:51:46 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 12:51:46 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-17 12:51:52 [info]: ::1 (PUT) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-17 12:51:53 [info]: ::1 (GET) /images/
+2022-08-17 12:51:53 [info]: ::1 (GET) /images/
+2022-08-17 12:51:53 [info]: ::1 (GET) /titles
+2022-08-17 12:51:53 [info]: ::1 (GET) /users/self
+2022-08-17 12:51:54 [info]: ::1 (GET) /titles/a3c03a6ef7af66b25319abb88b72c9bc
+2022-08-17 12:51:54 [info]: ::1 (GET) /images/
+2022-08-17 12:51:55 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-17 12:51:57 [info]: ::1 (PUT) /titles/a3c03a6ef7af66b25319abb88b72c9bc
+2022-08-17 12:51:57 [info]: ::1 (GET) /images/
+2022-08-17 12:51:57 [info]: ::1 (GET) /titles/a3c03a6ef7af66b25319abb88b72c9bc
+2022-08-17 12:51:57 [info]: ::1 (GET) /images/
+2022-08-17 12:51:57 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-17 12:52:02 [info]: ::1 (GET) /titles/?q=test
+2022-08-17 12:52:02 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 12:52:04 [info]: ::1 (GET) /titles/?q=
+2022-08-17 12:52:04 [error]: Error: ER_PARSE_ERROR: syntax error, unexpected $end, expecting FTS_TERM or FTS_NUMB or '*'
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.searchAllTitles (C:\Users\larth\Coding\streamfinder\api\controllers\title.js:15:21)
+    at Object.getTitles (C:\Users\larth\Coding\streamfinder\api\model_functions\title.js:157:38)
+    at C:\Users\larth\Coding\streamfinder\api\routes\titles.js:11:18
+    at Layer.handle [as handle_request] (C:\Users\larth\Coding\streamfinder\api\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\larth\Coding\streamfinder\api\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\larth\Coding\streamfinder\api\node_modules\express\lib\router\route.js:112:3)
+2022-08-17 12:52:13 [info]: ::1 (GET) /titles/?q=test
+2022-08-17 12:52:13 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 12:52:16 [info]: ::1 (GET) /pages/new
+2022-08-17 13:06:34 [info]: ::1 (GET) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 13:06:34 [info]: ::1 (GET) /images/
+2022-08-17 13:06:34 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 13:06:37 [info]: ::1 (DELETE) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 13:06:37 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteTitle (C:\Users\larth\Coding\streamfinder\api\controllers\title.js:29:21)
+    at Show.delete (C:\Users\larth\Coding\streamfinder\api\models\title.js:132:31)
+    at Show.delete (C:\Users\larth\Coding\streamfinder\api\models\show.js:64:27)
+    at C:\Users\larth\Coding\streamfinder\api\model_functions\title.js:144:39
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 13:06:40 [info]: ::1 (GET) /images/
+2022-08-17 13:06:40 [info]: ::1 (GET) /titles
+2022-08-17 13:06:40 [info]: ::1 (GET) /users/self
+2022-08-17 13:06:40 [info]: ::1 (GET) /images/
+2022-08-17 13:06:42 [info]: ::1 (GET) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 13:06:42 [info]: ::1 (GET) /images/
+2022-08-17 13:06:42 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 13:06:44 [info]: ::1 (DELETE) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 13:06:44 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteTitle (C:\Users\larth\Coding\streamfinder\api\controllers\title.js:29:21)
+    at Show.delete (C:\Users\larth\Coding\streamfinder\api\models\title.js:132:31)
+    at Show.delete (C:\Users\larth\Coding\streamfinder\api\models\show.js:64:27)
+    at C:\Users\larth\Coding\streamfinder\api\model_functions\title.js:144:39
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 13:06:46 [info]: ::1 (GET) /images/
+2022-08-17 13:06:46 [info]: ::1 (GET) /titles
+2022-08-17 13:06:46 [info]: ::1 (GET) /users/self
+2022-08-17 13:06:46 [info]: ::1 (GET) /images/
+2022-08-17 13:06:51 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 13:06:51 [info]: ::1 (GET) /images/
+2022-08-17 13:06:51 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 15:45:09 [info]: ::1 (POST) /titles/
+2022-08-17 15:45:09 [info]: ::1 (POST) /titles/0bbffa8cca43b958b81fdf60ea2a302c/seasons
+2022-08-17 15:45:09 [info]: ::1 (POST) /titles/0bbffa8cca43b958b81fdf60ea2a302c/seasons
+2022-08-17 15:45:09 [info]: ::1 (POST) /titles/0bbffa8cca43b958b81fdf60ea2a302c/seasons
+2022-08-17 15:45:09 [info]: ::1 (POST) /titles/0bbffa8cca43b958b81fdf60ea2a302c/seasons
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/654dbd1b78544d038c533390fa91caca/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/654dbd1b78544d038c533390fa91caca/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/654dbd1b78544d038c533390fa91caca/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/654dbd1b78544d038c533390fa91caca/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/654dbd1b78544d038c533390fa91caca/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/654dbd1b78544d038c533390fa91caca/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/654dbd1b78544d038c533390fa91caca/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/654dbd1b78544d038c533390fa91caca/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/654dbd1b78544d038c533390fa91caca/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/654dbd1b78544d038c533390fa91caca/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/f4f85aab91a864f522aeacd325954faa/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/f4f85aab91a864f522aeacd325954faa/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/f4f85aab91a864f522aeacd325954faa/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/f4f85aab91a864f522aeacd325954faa/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/f4f85aab91a864f522aeacd325954faa/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/f4f85aab91a864f522aeacd325954faa/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/f4f85aab91a864f522aeacd325954faa/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/f4f85aab91a864f522aeacd325954faa/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/f4f85aab91a864f522aeacd325954faa/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/f4f85aab91a864f522aeacd325954faa/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/009f95053725376a106448e59d30269c/episodes
+2022-08-17 15:45:09 [info]: ::1 (POST) /seasons/009f95053725376a106448e59d30269c/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/009f95053725376a106448e59d30269c/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/009f95053725376a106448e59d30269c/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/009f95053725376a106448e59d30269c/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/009f95053725376a106448e59d30269c/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/009f95053725376a106448e59d30269c/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/009f95053725376a106448e59d30269c/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/009f95053725376a106448e59d30269c/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/009f95053725376a106448e59d30269c/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/04fe07030df369040f1f39dd4695f01d/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/04fe07030df369040f1f39dd4695f01d/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/04fe07030df369040f1f39dd4695f01d/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/04fe07030df369040f1f39dd4695f01d/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/04fe07030df369040f1f39dd4695f01d/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/04fe07030df369040f1f39dd4695f01d/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/04fe07030df369040f1f39dd4695f01d/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/04fe07030df369040f1f39dd4695f01d/episodes
+2022-08-17 15:45:10 [info]: ::1 (POST) /seasons/04fe07030df369040f1f39dd4695f01d/episodes
+2022-08-17 15:45:10 [info]: ::1 (GET) /titles
+2022-08-17 15:45:12 [info]: ::1 (GET) /titles/0bbffa8cca43b958b81fdf60ea2a302c
+2022-08-17 15:45:12 [info]: ::1 (GET) /images/
+2022-08-17 15:45:16 [info]: ::1 (GET) /images
+2022-08-17 15:45:16 [info]: ::1 (GET) /users/self
+2022-08-17 15:45:16 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 15:45:16 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-17 15:45:16 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 15:45:16 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 15:45:16 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 15:45:16 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 15:45:45 [info]: ::1 (POST) /images/
+2022-08-17 15:45:45 [info]: ::1 (GET) /images
+2022-08-17 15:45:45 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6/info
+2022-08-17 15:45:45 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-17 15:45:45 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 15:45:45 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-17 15:45:45 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 15:45:45 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 15:45:45 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 15:45:45 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 15:45:45 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-17 15:45:54 [info]: ::1 (PUT) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-17 15:45:55 [info]: ::1 (GET) /images
+2022-08-17 15:45:55 [info]: ::1 (GET) /users/self
+2022-08-17 15:45:55 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 15:45:55 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-17 15:45:55 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-17 15:45:55 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 15:45:55 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 15:45:55 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 15:45:55 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 15:45:56 [info]: ::1 (GET) /images/
+2022-08-17 15:45:56 [info]: ::1 (GET) /images/
+2022-08-17 15:45:56 [info]: ::1 (GET) /users/self
+2022-08-17 15:45:56 [info]: ::1 (GET) /titles
+2022-08-17 15:45:57 [info]: ::1 (GET) /titles/0bbffa8cca43b958b81fdf60ea2a302c
+2022-08-17 15:45:57 [info]: ::1 (GET) /images/
+2022-08-17 15:45:58 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-17 15:45:59 [info]: ::1 (PUT) /titles/0bbffa8cca43b958b81fdf60ea2a302c
+2022-08-17 15:45:59 [info]: ::1 (GET) /images/
+2022-08-17 15:45:59 [info]: ::1 (GET) /titles/0bbffa8cca43b958b81fdf60ea2a302c
+2022-08-17 15:45:59 [info]: ::1 (GET) /images/
+2022-08-17 15:45:59 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-17 15:46:01 [info]: ::1 (GET) /images
+2022-08-17 15:46:01 [info]: ::1 (GET) /users/self
+2022-08-17 15:46:01 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 15:46:01 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-17 15:46:01 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-17 15:46:01 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 15:46:01 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 15:46:01 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 15:46:01 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 15:46:22 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d/info
+2022-08-17 15:46:22 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 15:46:26 [info]: ::1 (GET) /images/
+2022-08-17 15:46:26 [info]: ::1 (GET) /images/
+2022-08-17 15:46:26 [info]: ::1 (GET) /titles
+2022-08-17 15:46:26 [info]: ::1 (GET) /users/self
+2022-08-17 15:58:37 [info]: ::1 (POST) /titles/
+2022-08-17 15:58:37 [info]: ::1 (POST) /titles/1b1416d0e88fd7094199f31b1ab572f9/seasons
+2022-08-17 15:58:37 [info]: ::1 (POST) /titles/1b1416d0e88fd7094199f31b1ab572f9/seasons
+2022-08-17 15:58:37 [info]: ::1 (POST) /titles/1b1416d0e88fd7094199f31b1ab572f9/seasons
+2022-08-17 15:58:37 [info]: ::1 (POST) /titles/1b1416d0e88fd7094199f31b1ab572f9/seasons
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/39f97d525dd13b2711a1bbabbb2c42d8/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/a5de20457d8264ee24cafeb01f951b71/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/a5de20457d8264ee24cafeb01f951b71/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/a5de20457d8264ee24cafeb01f951b71/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/a5de20457d8264ee24cafeb01f951b71/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/a5de20457d8264ee24cafeb01f951b71/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/a5de20457d8264ee24cafeb01f951b71/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/a5de20457d8264ee24cafeb01f951b71/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/a5de20457d8264ee24cafeb01f951b71/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/a5de20457d8264ee24cafeb01f951b71/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/a5de20457d8264ee24cafeb01f951b71/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/487b0f546e89568b8868b9392b12c8fa/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/487b0f546e89568b8868b9392b12c8fa/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/487b0f546e89568b8868b9392b12c8fa/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/487b0f546e89568b8868b9392b12c8fa/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/487b0f546e89568b8868b9392b12c8fa/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/487b0f546e89568b8868b9392b12c8fa/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/487b0f546e89568b8868b9392b12c8fa/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/487b0f546e89568b8868b9392b12c8fa/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/487b0f546e89568b8868b9392b12c8fa/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/487b0f546e89568b8868b9392b12c8fa/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/83260b357055283208bf5978182c2400/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/83260b357055283208bf5978182c2400/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/83260b357055283208bf5978182c2400/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/83260b357055283208bf5978182c2400/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/83260b357055283208bf5978182c2400/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/83260b357055283208bf5978182c2400/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/83260b357055283208bf5978182c2400/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/83260b357055283208bf5978182c2400/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/83260b357055283208bf5978182c2400/episodes
+2022-08-17 15:58:37 [info]: ::1 (POST) /seasons/83260b357055283208bf5978182c2400/episodes
+2022-08-17 15:58:37 [info]: ::1 (GET) /titles
+2022-08-17 16:06:53 [info]: ::1 (GET) /auth
+2022-08-17 16:06:53 [info]: ::1 (GET) /users/self
+2022-08-17 16:07:16 [info]: ::1 (GET) /titles/?q=peaky
+2022-08-17 16:07:16 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 16:07:17 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 16:07:17 [info]: ::1 (GET) /users/self
+2022-08-17 16:07:17 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 16:07:17 [info]: ::1 (GET) /users/28eb5ad4bdc905f3/ratings/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 16:07:20 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 16:07:20 [info]: ::1 (GET) /users/self
+2022-08-17 16:07:20 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 16:07:20 [info]: ::1 (GET) /users/28eb5ad4bdc905f3/ratings/c4356f11201cd23abfc1d46d196a51e2
+2022-08-17 16:08:05 [info]: ::1 (GET) /titles/?q=breaking
+2022-08-17 16:08:05 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 16:08:06 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-17 16:08:06 [info]: ::1 (GET) /users/self
+2022-08-17 16:08:06 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 16:08:06 [info]: ::1 (GET) /users/28eb5ad4bdc905f3/ratings/28b43e54887abbe25867a143ffce26e0
+2022-08-17 16:12:48 [info]: ::1 (GET) /images
+2022-08-17 16:12:48 [info]: ::1 (GET) /users/self
+2022-08-17 16:12:48 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 16:12:48 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-17 16:12:48 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-17 16:12:48 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 16:12:48 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 16:12:48 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 16:12:48 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 16:15:30 [info]: ::1 (POST) /images/
+2022-08-17 16:15:30 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263/info
+2022-08-17 16:15:30 [info]: ::1 (GET) /images
+2022-08-17 16:15:30 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-17 16:15:30 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-17 16:15:30 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-17 16:15:30 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-17 16:15:30 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 16:15:30 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-17 16:15:30 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-17 16:15:30 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-17 16:15:30 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-17 16:15:37 [info]: ::1 (PUT) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-17 16:15:38 [info]: ::1 (GET) /images/
+2022-08-17 16:15:38 [info]: ::1 (GET) /images/
+2022-08-17 16:15:38 [info]: ::1 (GET) /titles
+2022-08-17 16:15:38 [info]: ::1 (GET) /users/self
+2022-08-17 16:15:39 [info]: ::1 (GET) /titles/1b1416d0e88fd7094199f31b1ab572f9
+2022-08-17 16:15:39 [info]: ::1 (GET) /images/
+2022-08-17 16:15:41 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-17 16:15:42 [info]: ::1 (PUT) /titles/1b1416d0e88fd7094199f31b1ab572f9
+2022-08-17 16:15:42 [info]: ::1 (GET) /images/
+2022-08-17 16:15:42 [info]: ::1 (GET) /titles/1b1416d0e88fd7094199f31b1ab572f9
+2022-08-17 16:15:42 [info]: ::1 (GET) /images/
+2022-08-17 16:15:42 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-17 16:15:50 [info]: ::1 (GET) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 16:15:50 [info]: ::1 (GET) /images/
+2022-08-17 16:15:50 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 16:15:54 [info]: ::1 (DELETE) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 16:15:54 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteTitle (C:\Users\larth\Coding\streamfinder\api\controllers\title.js:29:21)
+    at Show.delete (C:\Users\larth\Coding\streamfinder\api\models\title.js:132:31)
+    at Show.delete (C:\Users\larth\Coding\streamfinder\api\models\show.js:64:27)
+    at C:\Users\larth\Coding\streamfinder\api\model_functions\title.js:144:39
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 16:16:01 [info]: ::1 (GET) /images/
+2022-08-17 16:16:01 [info]: ::1 (GET) /images/
+2022-08-17 16:16:01 [info]: ::1 (GET) /titles
+2022-08-17 16:16:01 [info]: ::1 (GET) /users/self
+2022-08-17 16:16:02 [info]: ::1 (GET) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 16:16:02 [info]: ::1 (GET) /images/
+2022-08-17 16:16:02 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 16:16:08 [info]: ::1 (DELETE) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 16:16:08 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteTitle (C:\Users\larth\Coding\streamfinder\api\controllers\title.js:29:21)
+    at Show.delete (C:\Users\larth\Coding\streamfinder\api\models\title.js:132:31)
+    at Show.delete (C:\Users\larth\Coding\streamfinder\api\models\show.js:64:27)
+    at C:\Users\larth\Coding\streamfinder\api\model_functions\title.js:144:39
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 16:19:56 [info]: API listening at http://localhost:9000
+2022-08-17 16:20:03 [info]: ::1 (DELETE) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 16:20:03 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteSeason (C:\Users\larth\Coding\streamfinder\api\controllers\season.js:18:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:87:32)
+    at Show.delete (C:\Users\larth\Coding\streamfinder\api\models\show.js:65:32)
+    at C:\Users\larth\Coding\streamfinder\api\model_functions\title.js:144:39
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-17 16:20:53 [info]: API listening at http://localhost:9000
+2022-08-17 16:20:57 [info]: ::1 (GET) /images/
+2022-08-17 16:20:57 [info]: ::1 (GET) /users/self
+2022-08-17 16:20:57 [info]: ::1 (GET) /titles
+2022-08-17 16:20:57 [info]: ::1 (GET) /images/
+2022-08-17 16:20:58 [info]: ::1 (GET) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 16:20:58 [info]: ::1 (GET) /images/
+2022-08-17 16:20:58 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 16:21:00 [info]: ::1 (DELETE) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 16:21:00 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteAllEpisode (C:\Users\larth\Coding\streamfinder\api\controllers\episode.js:34:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:88:33)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Show.delete (C:\Users\larth\Coding\streamfinder\api\models\show.js:65:13)
+2022-08-17 16:21:22 [info]: API listening at http://localhost:9000
+2022-08-17 16:21:25 [info]: ::1 (GET) /images/
+2022-08-17 16:21:25 [info]: ::1 (GET) /titles
+2022-08-17 16:21:25 [info]: ::1 (GET) /users/self
+2022-08-17 16:21:25 [info]: ::1 (GET) /images/
+2022-08-17 16:21:26 [info]: ::1 (GET) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 16:21:26 [info]: ::1 (GET) /images/
+2022-08-17 16:21:26 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-17 16:21:28 [info]: ::1 (DELETE) /titles/6e2549079cfe83ddd0f882486230dd5f
+2022-08-17 16:21:28 [error]: Error: ER_ROW_IS_REFERENCED: Cannot delete or update a parent row: a foreign key constraint fails
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.deleteAllEpisode (C:\Users\larth\Coding\streamfinder\api\controllers\episode.js:34:21)
+    at Season.delete (C:\Users\larth\Coding\streamfinder\api\models\season.js:88:33)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Show.delete (C:\Users\larth\Coding\streamfinder\api\models\show.js:65:13)

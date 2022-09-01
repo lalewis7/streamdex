@@ -1,0 +1,412 @@
+2022-08-27 16:12:43 [info]: ::1 (PUT) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-27 16:12:50 [info]: ::1 (GET) /images/
+2022-08-27 16:12:50 [info]: ::1 (GET) /images/
+2022-08-27 16:12:50 [info]: ::1 (GET) /users/self
+2022-08-27 16:12:50 [info]: ::1 (GET) /titles
+2022-08-27 16:12:50 [error]: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:561:11)
+    at ServerResponse.header (C:\Users\larth\Coding\streamfinder\api\node_modules\express\lib\response.js:767:10)
+    at ServerResponse.send (C:\Users\larth\Coding\streamfinder\api\node_modules\express\lib\response.js:170:12)
+    at ServerResponse.json (C:\Users\larth\Coding\streamfinder\api\node_modules\express\lib\response.js:267:15)
+    at ServerResponse.send (C:\Users\larth\Coding\streamfinder\api\node_modules\express\lib\response.js:158:21)
+    at C:\Users\larth\Coding\streamfinder\api\routes\titles.js:13:29
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-27 16:12:56 [info]: ::1 (GET) /auth
+2022-08-27 16:12:56 [info]: ::1 (GET) /users/self
+2022-08-27 16:13:07 [info]: ::1 (GET) /images/
+2022-08-27 16:13:07 [info]: ::1 (GET) /titles
+2022-08-27 16:13:07 [info]: ::1 (GET) /users/self
+2022-08-27 16:13:07 [info]: ::1 (GET) /images/
+2022-08-27 16:13:10 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-27 16:13:11 [info]: ::1 (GET) /images/
+2022-08-27 16:13:11 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 16:13:13 [info]: ::1 (PUT) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-27 16:13:13 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-27 16:13:13 [info]: ::1 (GET) /images/
+2022-08-27 16:13:13 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 16:14:09 [info]: ::1 (GET) /titles/1b1416d0e88fd7094199f31b1ab572f9
+2022-08-27 16:14:09 [info]: ::1 (GET) /images/
+2022-08-27 16:14:09 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 16:14:14 [info]: ::1 (GET) /titles/4a2271444ac00e862396172b7de18bf0
+2022-08-27 16:14:14 [info]: ::1 (GET) /images/
+2022-08-27 16:14:14 [info]: ::1 (GET) /images/45304a77a1b10d3121a8098c7b7e218f
+2022-08-27 16:15:46 [info]: ::1 (POST) /titles/4a2271444ac00e862396172b7de18bf0/links/hbo_max
+2022-08-27 16:15:46 [info]: ::1 (PUT) /titles/4a2271444ac00e862396172b7de18bf0
+2022-08-27 16:15:46 [info]: ::1 (GET) /titles/4a2271444ac00e862396172b7de18bf0
+2022-08-27 16:15:46 [info]: ::1 (GET) /images/
+2022-08-27 16:15:46 [info]: ::1 (GET) /images/45304a77a1b10d3121a8098c7b7e218f
+2022-08-27 16:15:55 [info]: ::1 (POST) /seasons/bc2eecc49090d5ad6e79ba33992819ba/availability/hbo_max
+2022-08-27 16:15:55 [info]: ::1 (PUT) /titles/4a2271444ac00e862396172b7de18bf0
+2022-08-27 16:15:55 [info]: ::1 (GET) /titles/4a2271444ac00e862396172b7de18bf0
+2022-08-27 16:15:55 [info]: ::1 (GET) /images/
+2022-08-27 16:15:55 [info]: ::1 (GET) /images/45304a77a1b10d3121a8098c7b7e218f
+2022-08-27 16:15:57 [info]: ::1 (GET) /titles/535459cf2a696dc16eac8c3e26aeed5c
+2022-08-27 16:15:57 [info]: ::1 (GET) /images/
+2022-08-27 16:15:57 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 16:16:41 [info]: ::1 (POST) /titles/535459cf2a696dc16eac8c3e26aeed5c/links/netflix
+2022-08-27 16:16:41 [info]: ::1 (POST) /seasons/c1ce9516f6bd3a58609d8fba23f661ca/availability/netflix
+2022-08-27 16:16:41 [info]: ::1 (POST) /seasons/39a7a77ddda8f50369ff912f3da245f8/availability/netflix
+2022-08-27 16:16:41 [info]: ::1 (POST) /seasons/854212de47a60a6be3fd2d69e50af097/availability/netflix
+2022-08-27 16:16:41 [info]: ::1 (POST) /seasons/c4c9fcd5c34aeccfa6c9a847d9c8f179/availability/netflix
+2022-08-27 16:16:41 [info]: ::1 (PUT) /titles/535459cf2a696dc16eac8c3e26aeed5c
+2022-08-27 16:16:41 [info]: ::1 (GET) /titles/535459cf2a696dc16eac8c3e26aeed5c
+2022-08-27 16:16:41 [info]: ::1 (GET) /images/
+2022-08-27 16:16:41 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 16:16:56 [info]: ::1 (GET) /titles/902c07b42b7eb3c040f79b9e017127f1
+2022-08-27 16:16:56 [info]: ::1 (GET) /images/
+2022-08-27 16:16:56 [info]: ::1 (GET) /images/3cd925d70f75c9316babdca26617d610
+2022-08-27 16:21:12 [info]: ::1 (POST) /titles/902c07b42b7eb3c040f79b9e017127f1/links/netflix
+2022-08-27 16:21:12 [info]: ::1 (POST) /seasons/566e97f614b0f7b199b49d683db70b4f/availability/netflix
+2022-08-27 16:21:12 [info]: ::1 (POST) /seasons/958c6bd787a266c1065b1cab2bd7b9aa/availability/netflix
+2022-08-27 16:21:12 [info]: ::1 (POST) /seasons/5815d1e65566e71e538f3a13dd26044e/availability/netflix
+2022-08-27 16:21:12 [info]: ::1 (PUT) /seasons/566e97f614b0f7b199b49d683db70b4f
+2022-08-27 16:21:12 [info]: ::1 (PUT) /seasons/958c6bd787a266c1065b1cab2bd7b9aa
+2022-08-27 16:21:12 [info]: ::1 (PUT) /seasons/5815d1e65566e71e538f3a13dd26044e
+2022-08-27 16:21:12 [info]: ::1 (PUT) /titles/902c07b42b7eb3c040f79b9e017127f1
+2022-08-27 16:21:12 [info]: ::1 (GET) /titles/902c07b42b7eb3c040f79b9e017127f1
+2022-08-27 16:21:12 [info]: ::1 (GET) /images/
+2022-08-27 16:21:12 [info]: ::1 (GET) /images/3cd925d70f75c9316babdca26617d610
+2022-08-27 16:21:15 [info]: ::1 (GET) /titles/9bd62abb31a6d7e289ca91ca96739483
+2022-08-27 16:21:15 [info]: ::1 (GET) /images/
+2022-08-27 16:21:15 [info]: ::1 (GET) /images/789cf3ccc116cb985c52e8156d662a43
+2022-08-27 16:21:44 [info]: ::1 (POST) /titles/9bd62abb31a6d7e289ca91ca96739483/links/hbo_max
+2022-08-27 16:21:44 [info]: ::1 (PUT) /titles/9bd62abb31a6d7e289ca91ca96739483
+2022-08-27 16:21:44 [info]: ::1 (GET) /titles/9bd62abb31a6d7e289ca91ca96739483
+2022-08-27 16:21:44 [info]: ::1 (GET) /images/
+2022-08-27 16:21:44 [info]: ::1 (GET) /images/789cf3ccc116cb985c52e8156d662a43
+2022-08-27 16:22:12 [info]: ::1 (GET) /titles/a3c03a6ef7af66b25319abb88b72c9bc
+2022-08-27 16:22:12 [info]: ::1 (GET) /images/
+2022-08-27 16:22:12 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 16:23:29 [info]: ::1 (POST) /titles/a3c03a6ef7af66b25319abb88b72c9bc/links/amazon_prime
+2022-08-27 16:23:29 [error]: Error: ER_DATA_TOO_LONG: Data too long for column 'platform' at row 1
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.insertLink (C:\Users\larth\Coding\streamfinder\api\controllers\links.js:14:21)
+    at Link.insert (C:\Users\larth\Coding\streamfinder\api\models\links.js:238:31)
+    at C:\Users\larth\Coding\streamfinder\api\model_functions\title.js:208:25
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-27 16:26:19 [info]: ::1 (POST) /titles/a3c03a6ef7af66b25319abb88b72c9bc/links/amazon_prime
+2022-08-27 16:26:19 [info]: ::1 (PUT) /seasons/6238ad82ad12b470d01bb33d0cf0640d
+2022-08-27 16:26:19 [info]: ::1 (PUT) /seasons/04aea369458f234ff90282a5d44b02aa
+2022-08-27 16:26:19 [info]: ::1 (PUT) /seasons/7fe2b63727cb33ea372831821b418edd
+2022-08-27 16:26:19 [info]: ::1 (PUT) /titles/a3c03a6ef7af66b25319abb88b72c9bc
+2022-08-27 16:26:19 [info]: ::1 (GET) /titles/a3c03a6ef7af66b25319abb88b72c9bc
+2022-08-27 16:26:19 [info]: ::1 (GET) /images/
+2022-08-27 16:26:19 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 16:28:35 [info]: ::1 (GET) /titles/a6d0850a32f326cae995d9adc391bd8c
+2022-08-27 16:28:35 [info]: ::1 (GET) /images/
+2022-08-27 16:28:35 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 16:29:52 [info]: ::1 (POST) /titles/a6d0850a32f326cae995d9adc391bd8c/links/hbo_max
+2022-08-27 16:29:52 [info]: ::1 (POST) /seasons/c25d88acc0a04d27318f4bf425f9619e/availability/hbo_max
+2022-08-27 16:29:52 [info]: ::1 (POST) /seasons/0539233281207ccb85774270be7723e8/availability/hbo_max
+2022-08-27 16:29:52 [info]: ::1 (PUT) /seasons/c25d88acc0a04d27318f4bf425f9619e
+2022-08-27 16:29:52 [info]: ::1 (PUT) /seasons/0539233281207ccb85774270be7723e8
+2022-08-27 16:29:52 [info]: ::1 (PUT) /titles/a6d0850a32f326cae995d9adc391bd8c
+2022-08-27 16:29:52 [info]: ::1 (GET) /titles/a6d0850a32f326cae995d9adc391bd8c
+2022-08-27 16:29:52 [info]: ::1 (GET) /images/
+2022-08-27 16:29:52 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 16:30:29 [info]: ::1 (GET) /titles/aaa4b42bb6fd4e984c09a061fbe08fa0
+2022-08-27 16:30:29 [info]: ::1 (GET) /images/
+2022-08-27 16:30:29 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 16:31:08 [info]: ::1 (POST) /titles/aaa4b42bb6fd4e984c09a061fbe08fa0/links/hulu
+2022-08-27 16:31:08 [info]: ::1 (POST) /seasons/4f9a710a1cff57ba5c0990658f9b0be7/availability/hulu
+2022-08-27 16:31:08 [info]: ::1 (POST) /seasons/bcb1698c4ad595eabff5c9662b05c401/availability/hulu
+2022-08-27 16:31:08 [info]: ::1 (POST) /seasons/6288f49e4b1e678048a821e18b51ca23/availability/hulu
+2022-08-27 16:31:08 [info]: ::1 (POST) /seasons/39fd70e7880c97d1d311085a9979f935/availability/hulu
+2022-08-27 16:31:08 [info]: ::1 (PUT) /titles/aaa4b42bb6fd4e984c09a061fbe08fa0
+2022-08-27 16:31:08 [info]: ::1 (GET) /titles/aaa4b42bb6fd4e984c09a061fbe08fa0
+2022-08-27 16:31:08 [info]: ::1 (GET) /images/
+2022-08-27 16:31:08 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 16:31:21 [info]: ::1 (GET) /titles/c3e35a8936f8019223df2e60833e9534
+2022-08-27 16:31:21 [info]: ::1 (GET) /images/
+2022-08-27 16:31:21 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 16:35:26 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-27 16:35:26 [info]: ::1 (GET) /images/
+2022-08-27 16:35:26 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-27 16:38:40 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-27 16:38:40 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:22:37 [info]: ::1 (GET) /images/
+2022-08-27 22:22:37 [info]: ::1 (GET) /images/
+2022-08-27 22:22:37 [info]: ::1 (GET) /titles
+2022-08-27 22:22:37 [info]: ::1 (GET) /users/self
+2022-08-27 22:22:37 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-27 22:22:37 [info]: ::1 (GET) /images/
+2022-08-27 22:22:37 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-27 22:23:27 [info]: ::1 (POST) /titles/c4356f11201cd23abfc1d46d196a51e2/links/netflix
+2022-08-27 22:23:27 [info]: ::1 (PUT) /seasons/fc7791b9faed8d32191f9d6028dfce1a
+2022-08-27 22:23:27 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-27 22:23:27 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-27 22:23:27 [info]: ::1 (GET) /images/
+2022-08-27 22:23:27 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-27 22:24:02 [info]: ::1 (POST) /seasons/5c5f8e66ac662642d218e4c13fd5ad42/availability/netflix
+2022-08-27 22:24:02 [info]: ::1 (POST) /seasons/b3c9a42f45391bf6dd68037c00cdbad5/availability/netflix
+2022-08-27 22:24:02 [info]: ::1 (POST) /seasons/f5725c07d1082b0a4d5780e144418a39/availability/netflix
+2022-08-27 22:24:02 [info]: ::1 (POST) /seasons/00b429172a43822281f1e902b292924e/availability/netflix
+2022-08-27 22:24:02 [info]: ::1 (POST) /seasons/e7359325859168a0ec03eb80b9e9c7ca/availability/netflix
+2022-08-27 22:24:02 [info]: ::1 (POST) /seasons/fc7791b9faed8d32191f9d6028dfce1a/availability/netflix
+2022-08-27 22:24:02 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-27 22:24:02 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-27 22:24:02 [info]: ::1 (GET) /images/
+2022-08-27 22:24:02 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-27 22:24:16 [info]: ::1 (PUT) /seasons/e7359325859168a0ec03eb80b9e9c7ca
+2022-08-27 22:24:16 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-27 22:24:16 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-27 22:24:16 [info]: ::1 (GET) /images/
+2022-08-27 22:24:16 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-27 22:25:56 [info]: ::1 (PUT) /seasons/00b429172a43822281f1e902b292924e
+2022-08-27 22:25:56 [info]: ::1 (PUT) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-27 22:25:56 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-27 22:25:56 [info]: ::1 (GET) /images/
+2022-08-27 22:25:56 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-27 22:26:01 [info]: ::1 (GET) /titles/?q=peaky%20blinders
+2022-08-27 22:26:01 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-27 22:26:02 [info]: ::1 (GET) /titles/c4356f11201cd23abfc1d46d196a51e2
+2022-08-27 22:26:02 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-27 22:26:51 [info]: ::1 (GET) /titles/de724745f88c65fedfc0e01ebba05eab
+2022-08-27 22:26:51 [info]: ::1 (GET) /images/
+2022-08-27 22:26:51 [info]: ::1 (GET) /images/35f334f9a26e74c2f5edfbd06426a264
+2022-08-27 22:27:49 [info]: ::1 (POST) /titles/de724745f88c65fedfc0e01ebba05eab/links/hulu
+2022-08-27 22:27:49 [info]: ::1 (POST) /titles/de724745f88c65fedfc0e01ebba05eab/links/hbo_max
+2022-08-27 22:27:49 [info]: ::1 (POST) /seasons/8306799d1deead7f0e0505118a8d861f/availability/hulu
+2022-08-27 22:27:49 [info]: ::1 (POST) /seasons/8306799d1deead7f0e0505118a8d861f/availability/hbo_max
+2022-08-27 22:27:49 [info]: ::1 (POST) /seasons/eeb2756a3a939197c08f0289046fb8b4/availability/hulu
+2022-08-27 22:27:49 [info]: ::1 (POST) /seasons/eeb2756a3a939197c08f0289046fb8b4/availability/hbo_max
+2022-08-27 22:27:49 [info]: ::1 (POST) /seasons/f13fa9d7506235f6160792767834cf4a/availability/hulu
+2022-08-27 22:27:49 [info]: ::1 (POST) /seasons/f13fa9d7506235f6160792767834cf4a/availability/hbo_max
+2022-08-27 22:27:49 [info]: ::1 (POST) /seasons/ba6929a18653f4f28071a40ac01bb12b/availability/hulu
+2022-08-27 22:27:49 [info]: ::1 (POST) /seasons/ba6929a18653f4f28071a40ac01bb12b/availability/hbo_max
+2022-08-27 22:27:49 [info]: ::1 (PUT) /titles/de724745f88c65fedfc0e01ebba05eab
+2022-08-27 22:27:50 [info]: ::1 (GET) /titles/de724745f88c65fedfc0e01ebba05eab
+2022-08-27 22:27:50 [info]: ::1 (GET) /images/
+2022-08-27 22:27:50 [info]: ::1 (GET) /images/35f334f9a26e74c2f5edfbd06426a264
+2022-08-27 22:27:51 [info]: ::1 (GET) /images/
+2022-08-27 22:27:51 [info]: ::1 (GET) /images/
+2022-08-27 22:27:51 [info]: ::1 (GET) /titles
+2022-08-27 22:27:51 [info]: ::1 (GET) /users/self
+2022-08-27 22:28:04 [info]: ::1 (GET) /titles/?q=nathan
+2022-08-27 22:28:04 [info]: ::1 (GET) /images/35f334f9a26e74c2f5edfbd06426a264
+2022-08-27 22:28:05 [info]: ::1 (GET) /titles/de724745f88c65fedfc0e01ebba05eab
+2022-08-27 22:28:05 [info]: ::1 (GET) /images/35f334f9a26e74c2f5edfbd06426a264
+2022-08-27 22:33:39 [info]: ::1 (GET) /pages/new
+2022-08-27 22:33:39 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:33:39 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:33:39 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:33:39 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:33:39 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:33:39 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 22:33:39 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:33:39 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 22:33:39 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:33:39 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 22:33:40 [info]: ::1 (GET) /titles/10fa17ca9157be44959290f3f892aab6
+2022-08-27 22:33:40 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:33:50 [info]: ::1 (GET) /pages/new
+2022-08-27 22:33:50 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:33:50 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:33:50 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:33:50 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:33:50 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:33:50 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 22:33:50 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:33:50 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:33:50 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 22:33:50 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 22:33:52 [info]: ::1 (GET) /pages/new
+2022-08-27 22:33:52 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:33:52 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:33:52 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:33:52 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:33:52 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:33:52 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 22:33:52 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:33:52 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:33:52 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 22:33:52 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 22:33:55 [info]: ::1 (GET) /titles/a3c03a6ef7af66b25319abb88b72c9bc
+2022-08-27 22:33:55 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:34:08 [info]: ::1 (GET) /titles/a3c03a6ef7af66b25319abb88b72c9bc
+2022-08-27 22:34:09 [info]: ::1 (GET) /images/
+2022-08-27 22:34:09 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:34:26 [info]: ::1 (POST) /seasons/6238ad82ad12b470d01bb33d0cf0640d/availability/amazon_prime
+2022-08-27 22:34:26 [error]: Error: ER_DATA_TOO_LONG: Data too long for column 'platform' at row 1
+    at Query.Sequence._packetToError (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (C:\Users\larth\Coding\streamfinder\api\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\larth\Coding\streamfinder\api\util.js:41:18
+    at new Promise (<anonymous>)
+    at Object.dbPromise (C:\Users\larth\Coding\streamfinder\api\util.js:40:16)
+    at Object.insertSeasonLink (C:\Users\larth\Coding\streamfinder\api\controllers\season.links.js:14:21)
+    at SeasonLink.insert (C:\Users\larth\Coding\streamfinder\api\models\links.js:142:37)
+    at C:\Users\larth\Coding\streamfinder\api\model_functions\season.js:83:25
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+2022-08-27 22:37:07 [info]: ::1 (POST) /seasons/6238ad82ad12b470d01bb33d0cf0640d/availability/amazon_prime
+2022-08-27 22:37:07 [info]: ::1 (POST) /seasons/04aea369458f234ff90282a5d44b02aa/availability/amazon_prime
+2022-08-27 22:37:07 [info]: ::1 (POST) /seasons/7fe2b63727cb33ea372831821b418edd/availability/amazon_prime
+2022-08-27 22:37:07 [info]: ::1 (PUT) /titles/a3c03a6ef7af66b25319abb88b72c9bc
+2022-08-27 22:37:07 [info]: ::1 (GET) /titles/a3c03a6ef7af66b25319abb88b72c9bc
+2022-08-27 22:37:07 [info]: ::1 (GET) /images/
+2022-08-27 22:37:07 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:37:10 [info]: ::1 (GET) /titles/a3c03a6ef7af66b25319abb88b72c9bc
+2022-08-27 22:37:10 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:37:15 [info]: ::1 (GET) /pages/new
+2022-08-27 22:37:15 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:37:15 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:37:15 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:37:15 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:37:15 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 22:37:15 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:37:15 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:37:15 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 22:37:15 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:37:15 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 22:37:16 [info]: ::1 (GET) /titles/1a93573058112f572f2eedf660ae3caa
+2022-08-27 22:37:16 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:37:18 [info]: ::1 (GET) /pages/new
+2022-08-27 22:37:19 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:37:19 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:37:19 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:37:19 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:37:19 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:37:19 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 22:37:19 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:37:19 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:37:19 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 22:37:19 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 22:37:20 [info]: ::1 (GET) /titles/0bbffa8cca43b958b81fdf60ea2a302c
+2022-08-27 22:37:20 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:37:30 [info]: ::1 (GET) /pages/new
+2022-08-27 22:37:30 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:37:30 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:37:30 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:37:30 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:37:30 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:37:30 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 22:37:30 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:37:30 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:37:30 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 22:37:30 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 22:37:34 [info]: ::1 (GET) /titles/a6d0850a32f326cae995d9adc391bd8c
+2022-08-27 22:37:34 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:38:49 [info]: ::1 (GET) /titles/a6d0850a32f326cae995d9adc391bd8c
+2022-08-27 22:38:49 [info]: ::1 (GET) /images/
+2022-08-27 22:38:49 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:38:53 [info]: ::1 (PUT) /seasons/0539233281207ccb85774270be7723e8
+2022-08-27 22:38:53 [info]: ::1 (PUT) /titles/a6d0850a32f326cae995d9adc391bd8c
+2022-08-27 22:38:53 [info]: ::1 (GET) /titles/a6d0850a32f326cae995d9adc391bd8c
+2022-08-27 22:38:53 [info]: ::1 (GET) /images/
+2022-08-27 22:38:53 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:38:55 [info]: ::1 (GET) /titles/a6d0850a32f326cae995d9adc391bd8c
+2022-08-27 22:38:55 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:39:22 [info]: ::1 (PUT) /seasons/c25d88acc0a04d27318f4bf425f9619e
+2022-08-27 22:39:22 [info]: ::1 (PUT) /titles/a6d0850a32f326cae995d9adc391bd8c
+2022-08-27 22:39:22 [info]: ::1 (GET) /titles/a6d0850a32f326cae995d9adc391bd8c
+2022-08-27 22:39:22 [info]: ::1 (GET) /images/
+2022-08-27 22:39:22 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:40:18 [info]: ::1 (GET) /pages/new
+2022-08-27 22:40:18 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:40:18 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:40:18 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:40:18 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:40:18 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:40:18 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:40:18 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 22:40:18 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:40:18 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 22:40:18 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 22:40:30 [info]: ::1 (GET) /pages/new
+2022-08-27 22:40:30 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:40:30 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:40:30 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:40:30 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:40:30 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:40:30 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 22:40:30 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:40:30 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:40:30 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 22:40:30 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 22:40:31 [info]: ::1 (GET) /titles/28b43e54887abbe25867a143ffce26e0
+2022-08-27 22:40:31 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:41:02 [info]: ::1 (GET) /pages/new
+2022-08-27 22:41:02 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:41:02 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:41:02 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:41:02 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:41:02 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:41:02 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 22:41:02 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:41:02 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:41:02 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 22:41:02 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 22:41:53 [info]: ::1 (GET) /pages/new
+2022-08-27 22:41:53 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:41:53 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:41:53 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:41:53 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:41:53 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:41:53 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 22:41:53 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:41:53 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:41:53 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 22:41:53 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 22:41:57 [info]: ::1 (GET) /titles/1b1416d0e88fd7094199f31b1ab572f9
+2022-08-27 22:41:57 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:42:15 [info]: ::1 (GET) /titles/0bbffa8cca43b958b81fdf60ea2a302c
+2022-08-27 22:42:15 [info]: ::1 (GET) /images/
+2022-08-27 22:42:15 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:42:52 [info]: ::1 (GET) /users/self
+2022-08-27 22:42:54 [info]: ::1 (GET) /users
+2022-08-27 22:42:54 [info]: ::1 (GET) /users/self
+2022-08-27 22:42:55 [info]: ::1 (GET) /users/28eb5ad4bdc905f3
+2022-08-27 22:43:01 [info]: ::1 (GET) /users/self
+2022-08-27 22:43:03 [info]: ::1 (GET) /images
+2022-08-27 22:43:03 [info]: ::1 (GET) /users/self
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/08479238349c0ad801415616c0c2ad97
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/35f334f9a26e74c2f5edfbd06426a264
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/3cd925d70f75c9316babdca26617d610
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/40ee03823bc8c3dab09b38cc91b6e84c
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/45304a77a1b10d3121a8098c7b7e218f
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/46cbb94d3b08d1a7b33a864b3069dc6d
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/68316122f5484591f68de6c98ea99b40
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/789cf3ccc116cb985c52e8156d662a43
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/846626b96e29fa7c099ed04435f028e6
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/9235ed8fd378deb1157ea5b1f8ac0263
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/bd05c437c7220323136e6f6d9c27b3c6
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/ccb25265e42a4da0a78dcbe32e694672
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/cf8455ea97ae68d4416496573efdc35d
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/e4c476fe40a6121d62ea299433305990
+2022-08-27 22:43:03 [info]: ::1 (GET) /images/ed62bf962cc57d836915bb1b1282a64c
+2022-08-27 22:43:07 [info]: ::1 (GET) /images/3cd925d70f75c9316babdca26617d610/info
+2022-08-27 22:43:07 [info]: ::1 (GET) /images/3cd925d70f75c9316babdca26617d610
+2022-08-27 22:43:16 [info]: ::1 (GET) /users/self
+2022-08-27 22:43:18 [info]: ::1 (GET) /images/
+2022-08-27 22:43:18 [info]: ::1 (GET) /images/
+2022-08-27 22:43:18 [info]: ::1 (GET) /titles
+2022-08-27 22:43:18 [info]: ::1 (GET) /users/self
+2022-08-27 22:43:20 [info]: ::1 (GET) /titles/902c07b42b7eb3c040f79b9e017127f1
+2022-08-27 22:43:20 [info]: ::1 (GET) /images/
+2022-08-27 22:43:20 [info]: ::1 (GET) /images/3cd925d70f75c9316babdca26617d610

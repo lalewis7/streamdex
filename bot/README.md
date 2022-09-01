@@ -91,3 +91,12 @@ How to generate tasks?
 How to find links?
 
 - crawler
+
+approval types ie. what can the bot/users request to do?
+
+- create new movie/show
+- edit movie/show
+- delete movie/show
+- upload image
+- edit image details
+- delete image

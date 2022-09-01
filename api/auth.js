@@ -25,7 +25,7 @@ module.exports = {
     
     getToken: function (req, res, next){
         // get token from header
-        var token = req.get('token');
+        let token = req.get('token');
         // no token sent
         if (!token)
             next();
@@ -35,6 +35,9 @@ module.exports = {
                 .then(tokens => {
                     // token does not exist
                     if (tokens.length == 0)
+                        next();
+                    // token expired
+                    if (tokens[0].expires < Date.now())
                         next();
                     // find user for token
                     return userController.findUsersByID(tokens[0].user_id);

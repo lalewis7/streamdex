@@ -5,7 +5,7 @@
         "host": "localhost",
         "user": "api",
         "password": "552cea5751affd5e67d8f95725258c4f2d334d22df455130ca0f9652be8c1fdddc91a80d5e00fc4034bfa4af805fc7fba06731311f2641dab1bef383d4b6fc8a",
-        "database": "streamfinder"
+        "database": "streamdex"
     },
     "token_lifetime": 86400000,
     "token_length": 64,
@@ -14,10 +14,14 @@
     "season_id_length": 16,
     "episode_id_length": 16,
     "image_name_length": 16,
-    "list_id_length": 16,
+    "list_id_length": 4,
+    "bot_id_length": 2,
+    "task_id_length": 16,
+    "bot_links_id_length": 32,
     "user_rating_page_length": 20,
     "user_page_length": 20,
     "title_page_length": 30,
     "image_page_length": 30,
-    "bots_page_length": 30
+    "bots_page_length": 30,
+    "bot_links_page_length": 30
 }

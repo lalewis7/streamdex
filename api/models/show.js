@@ -22,6 +22,7 @@ class Show extends Title {
     async init(){
         await super.init();
         const seasons = await seasonController.getAllSeasons(this.get().id);
+        console.log(seasons);
         for (let s of seasons){
             let season = new Season(s);
             await season.init();
@@ -61,10 +62,10 @@ class Show extends Title {
     }
 
     async delete(){
-        await super.delete();
         for (let season of this.seasons.value){
             await season.delete();
         }
+        await super.delete();
     }
 
 }

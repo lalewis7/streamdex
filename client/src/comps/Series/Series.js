@@ -60,6 +60,32 @@ class Series extends React.Component {
     render(){
         let genres = this.props.series.genres;
         let season = this.props.series.seasons[this.state.season-1];
+
+        let likeBtn = <button class="btn btn-outline-light px-3 py-2 lh-1 m-1" onClick={() => {this.props.like()}}>
+            <SVG.ThumbsUpFill />
+        </button>
+        if (this.props.liked)
+            likeBtn = <button class="btn btn-success px-3 py-2 lh-1 m-1" onClick={() => {this.props.like()}}>
+                <SVG.ThumbsUpFill />
+            </button>
+
+        let dislikeBtn = <button class="btn btn-outline-light px-3 py-2 lh-1 m-1" onClick={() => {this.props.dislike()}}>
+            <SVG.ThumbsDownFill />
+        </button>
+        if (this.props.disliked)
+            dislikeBtn = <button class="btn btn-danger px-3 py-2 lh-1 m-1" onClick={() => {this.props.dislike()}}>
+                <SVG.ThumbsDownFill />
+            </button>
+
+        let genreText = "N/A"
+        if (genres.length > 0)
+            genreText = genres.map((genre, i) => {
+                let val = genre.charAt(0).toUpperCase() + genre.slice(1) + ", ";
+                if (genres.indexOf(genre) == genres.length-1)
+                    val = val.slice(0, val.length-2);
+                return val;
+            });
+
         return <>
             <TitleStreamPopup stream={this.state.stream} show={this.state.showStreamModal} setVisible={(vis) => {this.setState({showStreamModal: vis})}} />
             <CountryFilterPopup show={this.state.showFilterModal} setVisible={(vis) => {this.setState({showFilterModal: vis})}} />
@@ -73,8 +99,8 @@ class Series extends React.Component {
                         </div>
                         <div class="row pedestal rounded-bottom py-2 g-0">
                             <div class="col d-flex flex-row align-items-center justify-content-center">
-                                <img src="/streamlogo.png" width="32" height="32" class="d-inline-block align-text-top"/>
-                                <h5 class="m-0">94%</h5>
+                                <img src="/logodesign4-8.svg" width="28" height="28" class="d-inline-block align-text-top"/>
+                                <h5 class="m-0 ms-1">{this.props.series.streamdex_rating ? this.props.series.streamdex_rating+'%' : '0%'}</h5>
                             </div>
                             {this.props.series.imdb_link ?
                                 <div class="col d-flex flex-row align-items-center justify-content-center">
@@ -107,15 +133,8 @@ class Series extends React.Component {
                             <div class="col d-flex flex-row justify-content-between align-items-center">
                                 <h2 class="text-head">{this.props.series.title}</h2>
                                 <div class="d-flex flex-row">
-                                    <button class="btn btn-outline-light px-3 py-2 lh-1 m-1">
-                                        <SVG.ThumbsUpFill />
-                                    </button>
-                                    <button class="btn btn-outline-light px-3 py-2 lh-1 m-1">
-                                        <SVG.ThumbsDownFill />
-                                    </button>
-                                    {/* <button class="btn">
-                                        <SVG.ShareFill w={24} h={24} />
-                                    </button> */}
+                                    {likeBtn}
+                                    {dislikeBtn}
                                 </div>
                             </div>
                         </div>
@@ -135,13 +154,15 @@ class Series extends React.Component {
                                     </ul>
                                 </HorizontalScrollable>
                                 <div class="rounded-bottom">
-                                    <div class="row my-3">
-                                        <div class="col">
-                                            <div class="ratio ratio-16x9">
-                                                <iframe src={"https://www.youtube.com/embed/"+season.trailer} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                                    {season.trailer && season.trailer.length > 0 ? 
+                                        <div class="row my-3">
+                                            <div class="col">
+                                                <div class="ratio ratio-16x9">
+                                                    <iframe src={"https://www.youtube.com/embed/"+season.trailer} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
+                                        </div> 
+                                    : ''}
                                     <WatchNow availability={season.availability} links={this.props.series.links} openStream={(stream_id) => {this.openStream(stream_id, season.availability)}} openFilter={this.openFilter}/>
                                     <div class="row my-3">
                                         <div class="col">
@@ -184,13 +205,8 @@ class Series extends React.Component {
                             <div class="col">
                                 <h5 class="text-head2 fw-bold">DETAILS</h5>
                                 <div>
-                                    <p class="text-main"><span class="fw-bold me-3">Genres</span>{genres.map(genre => {
-                                            let val = genre.charAt(0).toUpperCase() + genre.slice(1) + ", ";
-                                            if (genres.indexOf(genre) == genres.length-1)
-                                                val = val.slice(0, val.length-2);
-                                            return val;
-                                        })}</p>
-                                    <p class="text-main"><span class="fw-bold me-3">Maturity</span>{this.props.series.maturity}</p>
+                                    <p class="text-main"><span class="fw-bold me-3">Genres</span>{genreText}</p>
+                                    <p class="text-main"><span class="fw-bold me-3">Maturity</span>{this.props.series.maturity && this.props.series.maturity.length > 0 ? this.props.series.maturity : 'N/A'}</p>
                                 </div>
                             </div>
                         </div>

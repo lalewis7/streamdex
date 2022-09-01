@@ -27,8 +27,8 @@ module.exports = {
         return util.dbPromise('SELECT * FROM users WHERE MATCH(handle, email, user_id) AGAINST (? IN BOOLEAN MODE) LIMIT ? OFFSET ?', "*"+search+"*", config.user_page_length, page*config.user_page_length);
     },
 
-    insertUser(user_id, handle, email, password, locked, admin){
-        return util.dbPromise('INSERT INTO users(user_id, handle, email, password, locked, admin) VALUES (?, ?, ?, ?, ?, ?)', user_id, handle, email, password, locked, admin);
+    insertUser(user_id, handle, email, email_verified, password, country, locked, admin, super_admin){
+        return util.dbPromise('INSERT INTO users(user_id, handle, email, email_verified, password, country, locked, admin, super_admin) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', user_id, handle, email, email_verified, password, country, locked, admin, super_admin);
     },
 
     /* ------------- /users/:userId METHODS ------------- */
@@ -41,8 +41,8 @@ module.exports = {
         return util.dbPromise('SELECT * FROM users WHERE handle = ?', handle);
     },
 
-    updateUserByID(user_id, handle, email, password, locked, admin){
-        return util.dbPromise('UPDATE users SET handle = ?, email = ?, password = ?, locked = ?, admin = ? WHERE user_id = ?', handle, email, password, locked ? 1 : 0, admin ? 1 : 0, user_id);
+    updateUserByID(user_id, handle, email, email_verified, password, country, locked, admin, super_admin){
+        return util.dbPromise('UPDATE users SET handle = ?, email = ?, email_verified = ?, password = ?, country = ?, locked = ?, admin = ?, super_admin = ? WHERE user_id = ?', handle, email, email_verified, password, country, locked ? 1 : 0, admin ? 1 : 0, super_admin ? 1 : 0, user_id);
     },
 
     deleteUser(user_id){

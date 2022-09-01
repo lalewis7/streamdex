@@ -1,0 +1,19 @@
+2021-12-21 19:54:59 [info]: API listening at http://localhost:9000
+2021-12-21 19:58:06 [info]: ::1 (GET) /auth
+2021-12-21 19:58:06 [info]: ::1 (GET) /users/self
+2021-12-21 19:58:13 [info]: ::1 (GET) /users
+2021-12-21 19:58:13 [info]: ::1 (GET) /users/self
+2021-12-21 19:58:15 [info]: ::1 (GET) /users/28eb5ad4bdc905f3
+2021-12-21 19:58:19 [info]: ::1 (GET) /images/
+2021-12-21 19:58:19 [info]: ::1 (GET) /titles
+2021-12-21 19:58:19 [info]: ::1 (GET) /images/
+2021-12-21 19:58:19 [info]: ::1 (GET) /users/self
+2021-12-21 19:58:20 [info]: ::1 (GET) /titles/6e2549079cfe83ddd0f882486230dd5f
+2021-12-21 19:58:20 [info]: ::1 (GET) /images/
+2021-12-21 19:58:20 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2021-12-21 19:58:28 [info]: ::1 (GET) /images
+2021-12-21 19:58:28 [info]: ::1 (GET) /users/self
+2021-12-21 19:58:28 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2021-12-21 19:58:29 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8/info
+2021-12-21 19:58:29 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2021-12-21 19:58:39 [info]: ::1 (GET) /users/self

@@ -4,6 +4,9 @@ const movieController = require('../controllers/movie.js');
 const seasonController = require('../controllers/season.js');
 const episodeController = require('../controllers/episode.js');
 const listController = require('../controllers/list.js');
+const botController = require('../controllers/dc.bot.js');
+const taskController = require('../controllers/dc.task.js');
+const botLinkController = require('../controllers/dc.links.js');
 
 function titleExists(id){
     return titleController.getTitlesByID(id)
@@ -41,6 +44,36 @@ function listExists(id){
             // list does not exist
             if (res.length == 0)
                 return Promise.reject({http_msg: "List does not exist.", http_code: 404});
+            return res;
+        })
+}
+
+function botExists(id){
+    return botController.getBot(id)
+        .then(res => {
+            // bot does not exist
+            if (res.length == 0)
+                return Promise.reject({http_msg: "Bot does not exist.", http_code: 404});
+            return res;
+        })
+}
+
+function taskExists(id){
+    return taskController.getTask(id)
+        .then(res => {
+            // bot does not exist
+            if (res.length == 0)
+                return Promise.reject({http_msg: "Task does not exist.", http_code: 404});
+            return res;
+        })
+}
+
+function botLinkExists(id){
+    return botLinkController.getLink(id)
+        .then(res => {
+            // bot does not exist
+            if (res.length == 0)
+                return Promise.reject({http_msg: "Link does not exist.", http_code: 404});
             return res;
         })
 }
@@ -92,6 +125,9 @@ module.exports = {
     seasonExists,
     episodeExists,
     listExists,
+    botExists,
+    taskExists,
+    botLinkExists,
     titleIsMovie,
     isTitleMovie,
     titleIsShow,

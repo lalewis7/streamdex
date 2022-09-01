@@ -1,0 +1,16 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "webscraper",
+  "main": "app.js",
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "puppeteer": "^14.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

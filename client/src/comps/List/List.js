@@ -7,7 +7,7 @@ class List extends React.Component {
 
     render(){
         return <>
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col">
                     <h3 class="pb-2">{this.props.name}</h3>
                     <HorizontalScrollable>

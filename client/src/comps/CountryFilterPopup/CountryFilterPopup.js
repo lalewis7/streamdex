@@ -57,7 +57,7 @@ class CountryFilterPopup extends React.Component {
                             {selectedCountry ?  
                             <>
                             <div class="p-2 w-100 d-flex flex-row justify-content-start align-items-center">
-                                <img src={"flags/"+selectedCountry.code.toLowerCase()+".png"} class="flag-icon rounded-2 m-1" />
+                                <img src={"/flags/"+selectedCountry.code.toLowerCase()+".png"} class="flag-icon rounded-2 m-1" />
                                 <h4 class="m-0 ms-2">{selectedCountry.name}</h4>
                             </div>
                             <hr/>
@@ -74,7 +74,7 @@ class CountryFilterPopup extends React.Component {
                                     return <li class={"d-flex flex-row justify-content-between rounded-3 align-items-center mt-2 settings-select " + filtered}>
                                                 <button class="btn p-2 w-100 d-flex flex-row justify-content-between align-items-center" onClick={() => {this.filter(country.code)}}>
                                                     <div>
-                                                        <img src={"flags/"+country.code.toLowerCase()+".png"} class="flag-icon rounded-2 m-1" />
+                                                        <img src={"/flags/"+country.code.toLowerCase()+".png"} class="flag-icon rounded-2 m-1" />
                                                         <span class="ms-2 text-head">{country.name}</span>
                                                     </div>
                                                     <div class={selected}>

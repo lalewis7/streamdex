@@ -1,0 +1,8 @@
+2021-12-29 00:18:15 [info]: API listening at http://localhost:9000
+2021-12-29 00:18:44 [info]: ::1 (GET) /titles/?q=test
+2021-12-29 00:18:44 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2021-12-29 00:18:45 [info]: ::1 (GET) /titles/6e2549079cfe83ddd0f882486230dd5f
+2021-12-29 00:18:45 [info]: ::1 (GET) /images/9c150de3298955c528a28aaf24da3dd8
+2021-12-29 00:21:18 [info]: ::1 (GET) /pages/new
+2021-12-29 00:21:29 [info]: ::1 (GET) /pages/new
+2021-12-29 00:21:32 [info]: ::1 (GET) /pages/new

@@ -86,8 +86,8 @@ class Episode extends Model {
 
     async delete(){
         let e = this.get();
-        await episodeController.deleteEpisode(e.id);
         await linkController.deleteAllEpisodeLinks(e.id);
+        await episodeController.deleteEpisode(e.id);
     }
 
 }
