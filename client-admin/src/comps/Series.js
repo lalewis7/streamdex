@@ -12,7 +12,6 @@ import Season from './Season.js';
 import Episode from './Episode.js';
 
 const SVG = require('../svg.js');
-const Config = require('../config.json');
 
 class Series extends React.Component {
 

@@ -1,6 +1,5 @@
 import React from 'react';
 
-const Config = require('../../util/config.js');
 const SVG = require('../../util/svg.js');
 
 class LoginSettings extends React.Component {
@@ -37,7 +36,7 @@ class LoginSettings extends React.Component {
         // do not submit form
         evt.preventDefault();
         // attempt to get token
-        fetch(Config.API+"auth",
+        fetch(process.env.REACT_APP_API+"auth",
         {
             method: 'GET',
             headers: {'user': this.state.user, 'password': this.state.password}

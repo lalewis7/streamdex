@@ -1,7 +1,6 @@
 import React from 'react';
 
 var Validate = require('../../util/validate.js');
-var Config = require('../../util/config.js');
 const SVG = require('../../util/svg.js');
 
 class UserSettings extends React.Component {
@@ -45,7 +44,7 @@ class UserSettings extends React.Component {
         this.setState({username: evt.target.value});
         if (Validate.username(evt.target.value))
             this.setState({usernameClass: "is-valid"});
-        fetch(Config.API+"handle/"+evt.target.value)
+        fetch(process.env.REACT_APP_API+"handle/"+evt.target.value)
         .then(res => {
             if (res.status == 200 && Validate.username(evt.target.value))
                 this.setState({usernameClass: "is-valid"});
@@ -123,7 +122,7 @@ class UserSettings extends React.Component {
                 this.setState({responseMsg:<>Missing form for change password.</>, responseMsgError: true, responseMsgVisible: true});
             }
         }
-        fetch(Config.API+"users/"+this.props.user.id, 
+        fetch(process.env.REACT_APP_API+"users/"+this.props.user.id, 
         {
             method: 'PUT', 
             headers: { 'Content-Type': 'application/json', 'token': this.props.token },

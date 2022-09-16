@@ -9,7 +9,6 @@ import Toasts from '../Toasts.js';
 import Loading from '../Loading.js';
 
 const SVG = require('../svg.js');
-const Config = require('../config.json');
 
 class TitleTable extends React.Component {
 
@@ -51,7 +50,7 @@ class TitleTable extends React.Component {
 
     loadTitles(){
         this.setState({status: 'loading'});
-        let url = Config.API+"titles";
+        let url = process.env.REACT_APP_API+"titles";
         if (this.state.query.length > 0)
             url += "?q="+this.state.query;
         fetch(url,

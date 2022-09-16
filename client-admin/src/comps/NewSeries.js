@@ -4,7 +4,6 @@ import isEqual from 'lodash/isEqual';
 import Series from './Series.js';
 import Modal from '../Modal.js';
 
-const Config = require('../config.json');
 const SVG = require('../svg.js');
 
 class NewSeries extends React.Component {
@@ -49,7 +48,7 @@ class NewSeries extends React.Component {
             })
         }
 
-        fetch(Config.API+"titles/",
+        fetch(process.env.REACT_APP_API+"titles/",
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -61,7 +60,7 @@ class NewSeries extends React.Component {
                 if (links)
                     links.map(link => {
                         requests.push(
-                            fetch(Config.API+"titles/"+id+"/links/"+link.platform,
+                            fetch(process.env.REACT_APP_API+"titles/"+id+"/links/"+link.platform,
                             {
                                 method: 'POST',
                                 headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -80,7 +79,7 @@ class NewSeries extends React.Component {
                         delete season.availability;
                         delete season.episodes;
                         requests.push(
-                            fetch(Config.API+"titles/"+id+"/seasons",
+                            fetch(process.env.REACT_APP_API+"titles/"+id+"/seasons",
                             {
                                 method: 'POST',
                                 headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -97,7 +96,7 @@ class NewSeries extends React.Component {
                                     delete episode.id;
                                     delete episode.availability;
                                     episodeRequests.push(
-                                        fetch(Config.API+"seasons/"+sID+"/episodes",
+                                        fetch(process.env.REACT_APP_API+"seasons/"+sID+"/episodes",
                                         {
                                             method: 'POST',
                                             headers: {'Content-Type': 'application/json', 'token': this.props.token},

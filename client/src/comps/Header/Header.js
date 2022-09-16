@@ -45,12 +45,13 @@ class Header extends React.Component{
     render(){
         return <>
             <Settings show={this.state.showSettings} setVisible={(val) => {this.setState({showSettings: val})}} setToken={this.props.setToken} 
-                deleteToken={this.props.deleteToken} token={this.props.token} user={this.props.user} />
+                deleteToken={this.props.deleteToken} token={this.props.token} user={this.props.user} isLoginPrompted={this.props.isLoginPrompted} 
+                loginPrompted={() => {this.setState({showSettings: true});this.props.loginPrompted();}} />
             <div class="navbar-top-padding">
                 <nav class="navbar navbar-dark navbar-expand-sm fixed-top bg-dark">
                     <div class="container-md">
                         <a class="navbar-brand" href="/">
-                            <img src="/logodesign4-8.svg" width="32" height="32" class="d-inline-block align-text-top"/>
+                            <img src="/streamdex-icon.svg" width="32" height="32" class="d-inline-block align-text-top"/>
                             <span class="ps-2">
                             Streamdex
                             </span>

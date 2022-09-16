@@ -8,8 +8,6 @@ import ImagesTable from './comps/ImagesTable.js';
 import NotFound from './NotFound.js';
 import Login from './Login.js';
 
-const Config = require('./config.json');
-
 class App extends React.Component{
 
   constructor(props){
@@ -36,7 +34,7 @@ class App extends React.Component{
     sessionStorage.setItem('token', token);
     this.setState({token: token});
     // update self info
-    fetch(Config.API+"users/self", {
+    fetch(process.env.REACT_APP_API+"users/self", {
       method: 'GET',
       headers: {'token': token}
     })

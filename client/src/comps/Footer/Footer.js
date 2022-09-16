@@ -12,7 +12,7 @@ class Footer extends React.Component {
                 <div class="row p-3 justify-content-center">
                     <div class="col-auto navbar-dark">
                         <a class="" href="/">
-                            <img src="/logodesign4-8.svg" width="50" height="50" class="d-inline-block align-text-top"/>
+                            <img src="/streamdex-icon.svg" width="50" height="50" class="d-inline-block align-text-top"/>
                         </a>
                     </div>
                 </div>

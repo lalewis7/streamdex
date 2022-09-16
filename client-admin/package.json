@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^12.2.2",
     "bootstrap": "^5.0.1",
     "lodash.isequal": "^4.5.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.3",
     "popper.js": "^1.16.1",
     "react": "^17.0.2",
     "react-beautiful-dnd": "^13.1.0",
@@ -17,7 +17,7 @@
     "react-resize-detector": "^6.7.4",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

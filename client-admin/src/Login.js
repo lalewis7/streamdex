@@ -2,7 +2,6 @@ import React from 'react';
 import { withRouter } from "react-router";
 
 const SVG = require('./svg.js');
-const Config = require('./config.json');
 
 class Login extends React.Component {
 
@@ -38,7 +37,7 @@ class Login extends React.Component {
         // do not submit form
         evt.preventDefault();
         // attempt to get token
-        fetch(Config.API+"auth",
+        fetch(process.env.REACT_APP_API+"auth",
         {
             method: 'GET',
             headers: {'user': this.state.user, 'password': this.state.password}

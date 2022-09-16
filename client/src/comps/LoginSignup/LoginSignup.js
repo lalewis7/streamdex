@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
-import Config from '../../util/config.js';
 
 import LoginForm from './LoginForm.js';
 import SignupForm from './SignupForm.js';
@@ -53,7 +52,7 @@ class LoginSignup extends React.Component {
     signup (evt) {
         evt.preventDefault();
         // send post to create user
-        fetch(Config.API+"users", 
+        fetch(process.env.REACT_APP_API+"users", 
         {
             method: 'POST', 
             headers: { 'Content-Type': 'application/json' },
@@ -64,7 +63,7 @@ class LoginSignup extends React.Component {
             // successfully created user
             if (res.ok)
                 // get token for newly created user
-                fetch(Config.API+"auth",
+                fetch(process.env.REACT_APP_API+"auth",
                 {
                     method: "GET",
                     headers: {'user': this.state.signupData.username, 'password': this.state.signupData.password}
@@ -96,7 +95,7 @@ class LoginSignup extends React.Component {
         evt.preventDefault();
         console.log(this.state.loginData);
         // attempt to get token
-        fetch(Config.API+"auth",
+        fetch(process.env.REACT_APP_API+"auth",
         {
             method: 'GET',
             headers: {'user': this.state.loginData.user, 'password': this.state.loginData.password}
@@ -110,7 +109,7 @@ class LoginSignup extends React.Component {
                     // remove login page
                     window.$('#loginModal').modal('hide');
                     // update self info
-                    fetch(Config.API+"self", {
+                    fetch(process.env.REACT_APP_API+"self", {
                         method: 'GET',
                         headers: {'token': Storage.getToken()}
                     })

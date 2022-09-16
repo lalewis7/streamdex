@@ -1,5 +1,4 @@
 import React from 'react';
-import Config from '../../util/config.js';
 
 const validate = require('../../util/validate.js');
 
@@ -76,7 +75,7 @@ const validate = require('../../util/validate.js');
         if (validate.username(evt.target.value))
             this.setState({usernameClass: "is-valid"});
         // check if username is available
-        fetch(Config.API+"handle/"+evt.target.value)
+        fetch(process.env.REACT_APP_API+"handle/"+evt.target.value)
         .then(res => {
             if (res.status == 200 && validate.username(evt.target.value))
                 this.setState({usernameClass: "is-valid"});

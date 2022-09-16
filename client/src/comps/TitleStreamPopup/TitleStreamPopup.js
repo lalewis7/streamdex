@@ -29,7 +29,7 @@ class TitleStreamPopup extends React.Component {
                             <div class="d-flex flex-row justify-content-between mb-3">
                                 <div class="d-flex flex-row align-items-center">
                                     <img src={this.props.stream.icon} alt="..." class="stream-icon rounded-3"/>
-                                    <h3 class="ps-2">{this.props.stream.title}</h3>
+                                    <h3 class="ps-2 m-0">{this.props.stream.title}</h3>
                                 </div>
                                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
@@ -37,11 +37,11 @@ class TitleStreamPopup extends React.Component {
                                 <SVG.PlayCircle w={'2rem'} h={'2rem'} />
                             </a>
                         </div>
-                        <div class="modal-body pt-0">
+                        <div class="modal-body">
                             <h5>Countries</h5>
                             {this.props.stream.countries.map((country) => {
                                 return <div class="my-3">
-                                        <img src={"/flags/"+country.toLowerCase()+".png"} class="flag-icon rounded-2" />
+                                        <img src={"/flags/"+country.toLowerCase()+".svg"} class="flag-icon rounded-3" />
                                         <span class="ms-2">{this.getCountryName(country)}</span>
                                     </div>;
                             })}

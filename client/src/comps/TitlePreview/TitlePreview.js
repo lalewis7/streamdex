@@ -2,8 +2,6 @@ import React from 'react';
 
 import './TitlePreview.css';
 
-const Config = require('../../util/config.js');
-
 class TitlePreview extends React.Component {
 
     constructor(props) {
@@ -27,7 +25,7 @@ class TitlePreview extends React.Component {
             <div class="col-lg-auto col-md-3 col-sm-4 col-auto">
                 <a class="card bg-gradient-primary bg-transparent border-0 overflow-hidden" onMouseEnter={this.hover} onMouseLeave={this.hover} href={"/title/"+this.props.title.id}>
                     <div class={this.state.hovering ? 'showcase-gradient' : ''}>
-                        <img src={Config.API+"images/"+this.props.title.thumbnail} class="rounded-3" style={{width: '160px', height: '240px'}} alt="..."/>
+                        <img src={process.env.REACT_APP_API+"images/"+this.props.title.thumbnail} class="rounded-3" style={{width: '160px', height: '240px'}} alt="..."/>
                     </div>
                     {/* {this.state.hovering ? (
                         <div class="card-img-overlay d-flex align-items-end justify-content-center">

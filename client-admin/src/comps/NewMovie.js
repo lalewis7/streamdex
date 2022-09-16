@@ -4,7 +4,6 @@ import isEqual from 'lodash/isEqual';
 import Movie from './Movie.js';
 import Modal from '../Modal.js';
 
-const Config = require('../config.json');
 const SVG = require('../svg.js');
 
 class NewMovie extends React.Component {
@@ -51,7 +50,7 @@ class NewMovie extends React.Component {
         let availability = edits.availability;
         delete edits.availability;
 
-        fetch(Config.API+"titles/",
+        fetch(process.env.REACT_APP_API+"titles/",
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -63,7 +62,7 @@ class NewMovie extends React.Component {
                 if (links)
                     links.map(link => {
                         requests.push(
-                            fetch(Config.API+"titles/"+id+"/links/"+link.platform,
+                            fetch(process.env.REACT_APP_API+"titles/"+id+"/links/"+link.platform,
                             {
                                 method: 'POST',
                                 headers: {'Content-Type': 'application/json', 'token': this.props.token},
@@ -77,7 +76,7 @@ class NewMovie extends React.Component {
                     availability.map(available => {
                         available.countries.map(country => {
                             requests.push(
-                                fetch(Config.API+"titles/"+id+"/availability/"+available.platform,
+                                fetch(process.env.REACT_APP_API+"titles/"+id+"/availability/"+available.platform,
                                 {
                                     method: 'POST',
                                     headers: {'Content-Type': 'application/json', 'token': this.props.token},

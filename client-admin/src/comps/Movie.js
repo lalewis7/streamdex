@@ -9,7 +9,6 @@ import HorizontalScrollable from '../HorizontalScrollable.js';
 import LinkAvailability from './LinkAvailability.js';
 
 const SVG = require('../svg.js');
-const Config = require('../config.json');
 
 class Movie extends React.Component {
 

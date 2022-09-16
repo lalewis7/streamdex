@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Footer from '../../comps/Footer/Footer.js';
-import Config from '../../util/config.js';
 import List from '../../comps/List/List.js';
 import Loading from '../../comps/Loading/Loading.js';
 
@@ -17,7 +16,7 @@ class New extends React.Component {
 
     componentDidMount(){
         this.setState({status: 'loading'});
-        fetch(Config.API + 'pages/new')
+        fetch(process.env.REACT_APP_API + 'pages/new')
             .then(res => res.ok ? res : Promise.reject())
             .then(res => res.json())
             .then((res) => {
