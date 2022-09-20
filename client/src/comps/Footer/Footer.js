@@ -18,7 +18,7 @@ class Footer extends React.Component {
                 </div>
                 <div class="row justify-content-center p-3 pt-0">
                     <div class="col-6 border-end border-1 border-light d-flex justify-content-end">
-                        <a class="text-decoration-none text-light" href="#">Contact Us</a>
+                        <a class="text-decoration-none text-light" href="/contact">Contact</a>
                     </div>
                     <div class="col-6">
                         <a class="text-decoration-none text-light" href="/about">About</a>

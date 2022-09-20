@@ -590,3 +590,4 @@
 2022-09-16 03:07:59 [info]: ::1 (GET) /users/28eb5ad4bdc905f3/ratings/10fa17ca9157be44959290f3f892aab6
 2022-09-16 03:08:33 [info]: ::1 (GET) /users/self
 2022-09-16 03:08:52 [info]: ::1 (GET) /users/self
+2022-09-16 12:52:37 [info]: API listening at http://localhost:9000
