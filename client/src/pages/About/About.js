@@ -39,6 +39,7 @@ class About extends React.Component {
                                 with some other minor changes we hope to have Streamdex ready for market.</p>
                         </div>
                     </div>
+                    {/*
                     <div class="row my-3">
                         <div class="col">
                             <h3 class="text-center text-nunito-eb">Technical Information</h3>
@@ -92,6 +93,7 @@ class About extends React.Component {
                                 to have data autonomously be added to our database.</p>
                         </div>
                     </div>
+                    */}
                 </div>
             </div>
             <Footer />

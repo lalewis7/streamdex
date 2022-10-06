@@ -8,20 +8,37 @@ class Footer extends React.Component {
 
     render(){
         return (
-            <footer class="container-fluid">
-                <div class="row p-3 justify-content-center">
-                    <div class="col-auto navbar-dark">
-                        <a class="" href="/">
-                            <img src="/streamdex-icon.svg" width="50" height="50" class="d-inline-block align-text-top"/>
-                        </a>
-                    </div>
-                </div>
-                <div class="row justify-content-center p-3 pt-0">
-                    <div class="col-6 border-end border-1 border-light d-flex justify-content-end">
-                        <a class="text-decoration-none text-light" href="/contact">Contact</a>
-                    </div>
-                    <div class="col-6">
-                        <a class="text-decoration-none text-light" href="/about">About</a>
+            <footer class="container-fluid p-0">
+                <div class="container-sm">
+                    <div class="row py-4 justify-content-center">
+                        <div class="col-md-5 navbar-dark my-2">
+                            <a class="navbar-brand" href="/">
+                                <img src="/streamdex-icon.svg" width="48" height="48" class="d-inline-block align-text-top"/>
+                                <span class="ps-2">
+                                Streamdex
+                                </span>
+                            </a>
+                            <p class="mt-2 mb-0">Helping users discover and watch their favorite titles from one convenient location.</p>
+                        </div>
+                        <div class="col-md-4 d-flex flex-column my-2">
+                            <h5>Sitemap</h5>
+                            <div class="row">
+                                <div class="col-6 d-flex flex-column">
+                                    <a class="text-decoration-none text-light" href="/">Home</a>
+                                    <a class="text-decoration-none text-light" href="/new">New</a>
+                                    <a class="text-decoration-none text-light" href="/about">About</a>
+                                </div>
+                                <div class="col-6 d-flex flex-column">
+                                    <a class="text-decoration-none text-light" href="/browse">Browse</a>
+                                    <a class="text-decoration-none text-light" href="/popular">Popular</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex flex-column my-2">
+                            <h5>Contact Us</h5>
+                            <a class="text-decoration-none text-light" href="mailto: steamdex1@gmail.com">steamdex1@gmail.com</a>
+                            <a class="text-decoration-none text-light" href="https://www.linkedin.com/in/arthur-lewis/" target="blank" rel="noopener noreferrer">Developer LinkedIn</a>
+                        </div>
                     </div>
                 </div>
             </footer>

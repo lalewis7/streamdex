@@ -13,7 +13,6 @@ import Search from './pages/Search/Search.js';
 import Title from './pages/Title/Title.js';
 import Test from './pages/Test/Test.js';
 import About from './pages/About/About.js';
-import Contact from './pages/Contact/Contact.js';
 import New from './pages/New/New.js';
 import Browse from './pages/Browse/Browse.js';
 import Popular from './pages/Popular/Popular.js';
@@ -74,7 +73,6 @@ class App extends React.Component{
           <Route path="/title/:id" render={(props) => <Title {...props} token={this.state.token} user={this.state.user} 
             promptLogin={() => {this.setState({loginPrompted: true})}}/>} />
           <Route path="/about" component={About}/>
-          <Route path="/contact" component={Contact}/>
           <Route path="/browse" component={Browse}/>
           <Route path="/new" component={New}/>
           <Route path="/popular" component={Popular}/>
