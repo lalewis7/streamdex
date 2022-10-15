@@ -24,19 +24,19 @@ class Footer extends React.Component {
                             <h5>Sitemap</h5>
                             <div class="row">
                                 <div class="col-6 d-flex flex-column">
-                                    <a class="text-decoration-none text-light" href="/">Home</a>
-                                    <a class="text-decoration-none text-light" href="/new">New</a>
+                                    <a class="text-decoration-none text-light mb-1" href="/">Home</a>
+                                    <a class="text-decoration-none text-light mb-1" href="/new">New</a>
                                     <a class="text-decoration-none text-light" href="/about">About</a>
                                 </div>
                                 <div class="col-6 d-flex flex-column">
-                                    <a class="text-decoration-none text-light" href="/browse">Browse</a>
+                                    <a class="text-decoration-none text-light mb-1" href="/browse">Browse</a>
                                     <a class="text-decoration-none text-light" href="/popular">Popular</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 d-flex flex-column my-2">
-                            <h5>Contact Us</h5>
-                            <a class="text-decoration-none text-light" href="mailto: steamdex1@gmail.com">steamdex1@gmail.com</a>
+                            <h5>Contact</h5>
+                            <a class="text-decoration-none text-light mb-1" href="mailto: steamdex1@gmail.com">steamdex1@gmail.com</a>
                             <a class="text-decoration-none text-light" href="https://www.linkedin.com/in/arthur-lewis/" target="blank" rel="noopener noreferrer">Developer LinkedIn</a>
                         </div>
                     </div>
