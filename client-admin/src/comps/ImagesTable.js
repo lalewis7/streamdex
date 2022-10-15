@@ -9,7 +9,6 @@ import ImageEdit from './ImageEdit.js';
 import Toasts from '../Toasts.js';
 
 const SVG = require('../svg.js');
-const Config = require('../config.json');
 
 class ImagesTable extends React.Component {
 
@@ -50,7 +49,7 @@ class ImagesTable extends React.Component {
 
     loadImages(){
         this.setState({status: 'loading'});
-        let url = Config.API+"images";
+        let url = process.env.REACT_APP_API+"images";
         if (this.state.query.length > 0)
             url += "?q="+this.state.query;
         fetch(url,

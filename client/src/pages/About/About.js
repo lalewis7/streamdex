@@ -8,13 +8,38 @@ class About extends React.Component {
         return <>
             <div class="h-100 flex-grow-1">
                 <div class="container my-4">
-                    <h2 class="text-center my-3">About Us</h2>
-                    <h5 class="lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus. Fringilla urna porttitor rhoncus dolor purus non enim. Nam libero justo laoreet sit amet cursus sit amet dictum. Egestas erat imperdiet sed euismod nisi porta lorem. Diam maecenas sed enim ut sem. Risus feugiat in ante metus dictum. Ac tortor vitae purus faucibus ornare suspendisse sed nisi. Ornare lectus sit amet est placerat in egestas erat. Massa id neque aliquam vestibulum morbi blandit cursus risus.</h5>
-
-                    <h5 class="lh-base">Tempor nec feugiat nisl pretium fusce id velit. Sed tempus urna et pharetra pharetra massa massa. Quam nulla porttitor massa id neque aliquam vestibulum morbi blandit. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Diam vel quam elementum pulvinar etiam. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Malesuada pellentesque elit eget gravida cum. Netus et malesuada fames ac turpis egestas integer. Fermentum dui faucibus in ornare quam viverra orci sagittis. Scelerisque eleifend donec pretium vulputate sapien nec sagittis. Senectus et netus et malesuada. Neque aliquam vestibulum morbi blandit cursus. Egestas maecenas pharetra convallis posuere morbi leo.</h5>
-
-                    <h5 class="lh-base">Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Enim sed faucibus turpis in eu mi bibendum neque egestas. Id donec ultrices tincidunt arcu non sodales neque. Condimentum lacinia quis vel eros donec. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Laoreet id donec ultrices tincidunt arcu. Eget nunc scelerisque viverra mauris in. Interdum velit euismod in pellentesque massa placerat duis. Bibendum ut tristique et egestas quis. Et netus et malesuada fames. Congue quisque egestas diam in arcu cursus. Egestas sed tempus urna et pharetra. Suspendisse interdum consectetur libero id. Nisi scelerisque eu ultrices vitae auctor eu. Dictum varius duis at consectetur lorem.</h5>
-
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="text-center text-nunito-eb">About Streamdex</h2>
+                            <h6 class="text-center">Helping users discover and watch their favorite titles from one convenient location.</h6>
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col">
+                            <h4>Objectives</h4>
+                            <p>The popularity of streaming services has grown exponentially in the past decade, making subscriptions to various 
+                                platforms a necessity to have access to all your favorite releases. Many movies and TV shows are exclusive to 
+                                each service &#x2013; especially as they&#x2019;ve moved from just carrying these titles to now producing them &#x2013; making it 
+                                sometimes hard to find where certain titles are available to stream. Streamdex solves this problem. Using our 
+                                service, you can check which streaming services are offering your favorite movies and TV shows and be directed 
+                                to watch them instantly. In addition to showing the offerings of various streaming services, we also let users 
+                                check the availability in different countries. Streamdex also strives to help users decide what to watch by giving 
+                                tailored recommendations and showing new and popular releases. Streamdex aims to consolidate the cluttered world 
+                                of streaming services to get you watching quicker.</p>
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col">
+                            <h4>Future</h4>
+                            <p>Streamdex is currently in an alpha state and is missing a lot of the core functionality that it needs to fulfill its purpose. 
+                                We are in the process of autonomously propagating our database using web-scraping bots. Everything has been hardcoded to 
+                                give a template of what the site will look like when our service is ready for release. With the addition of bots, we will
+                                 be able to ensure that our data is reliable and accurate. Once we start to fill our databases, we will start implementing 
+                                 algorithms to give users custom recommendations on the browse, new, and popular tabs for titles we think they might like. 
+                                 Additionally, we want to expand the list of streaming services we offer to include every major service. With these additions, 
+                                 along with some other minor changes, we hope that Streamdex will help its users find and watch all their favorite titles.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <Footer />

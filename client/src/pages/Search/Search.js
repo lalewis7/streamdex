@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import Footer from '../../comps/Footer/Footer.js';
-import Config from '../../util/config.js';
 
 import TitlePreview from '../../comps/TitlePreview/TitlePreview.js';
 
@@ -19,7 +18,7 @@ class Search extends React.Component{
 
     componentDidMount(){
         //let queries = queryString.parse(this.props.location.search);
-        fetch(Config.API + 'titles/' + this.props.location.search).then((res) => {
+        fetch(process.env.REACT_APP_API + 'titles/' + this.props.location.search).then((res) => {
             if (res.ok)
                 return res.json();
         }).then((res) => {
@@ -30,7 +29,7 @@ class Search extends React.Component{
     componentDidUpdate(previousProps, previousState){
         console.log(previousProps);
         if (previousProps.location.search != this.props.location.search){
-            fetch(Config.API + 'titles/' + this.props.location.search).then((res) => {
+            fetch(process.env.REACT_APP_API + 'titles/' + this.props.location.search).then((res) => {
                 if (res.ok)
                     return res.json();
             }).then((res) => {

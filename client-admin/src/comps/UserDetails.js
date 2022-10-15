@@ -2,7 +2,6 @@ import React from 'react';
 import isEqual from 'lodash/isEqual';
 
 const SVG = require('../svg.js');
-const Config = require('../config.json');
 const validate = require('../validate.js');
 
 class UserDetails extends React.Component {
@@ -135,7 +134,7 @@ class UserDetails extends React.Component {
             this.setState({usernameValid: true});
         // check if username is available
         if (name !== '')
-            fetch(Config.API+"handle/"+name)
+            fetch(process.env.REACT_APP_API+"handle/"+name)
                 .then(res => {
                     if (res.status == 200 && validate.username(name) && this.state.username === name)
                         this.setState({usernameShowValid: true});

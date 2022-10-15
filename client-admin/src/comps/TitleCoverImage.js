@@ -3,8 +3,6 @@ import isEqual from 'lodash/isEqual';
 
 import Loading from '../Loading.js';
 
-const Config = require('../config.json');
-
 class TitleCoverImage extends React.Component {
 
     constructor(props){
@@ -84,7 +82,7 @@ class TitleCoverImagePreview extends React.Component {
     }
 
     loadImage(){
-        fetch(Config.API+"images/"+this.props.image, {
+        fetch(process.env.REACT_APP_API+"images/"+this.props.image, {
             method: 'GET',
             headers: {'token': this.props.token}
         })

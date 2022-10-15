@@ -2,7 +2,6 @@ import React from 'react';
 import './StreamSettings.css';
 
 const Platforms = require('../../util/platforms.json');
-var Config = require('../../util/config.js');
 
 class StreamSettings extends React.Component {
 
@@ -29,10 +28,10 @@ class StreamSettings extends React.Component {
             selectedStreams.push(evt.target.name.substring(0, evt.target.name.length-"_enabled".length));
         
         this.setState({[evt.target.name]: evt.target.checked});
-        if (!this.state.user)
+        if (!this.props.user)
             localStorage.setItem(evt.target.name, evt.target.checked);
         else
-            fetch(Config.API+"users/"+this.props.user.id, 
+            fetch(process.env.REACT_APP_API+"users/"+this.props.user.id, 
             {
                 method: 'PUT', 
                 headers: { 'Content-Type': 'application/json', 'token': this.props.token },

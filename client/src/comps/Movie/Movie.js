@@ -11,7 +11,6 @@ import CountryFilterPopup from '../CountryFilterPopup/CountryFilterPopup.js';
 const Utils = require('../../util/utils.js');
 const Platforms = require('../../util/platforms.json');
 const SVG = require('../../util/svg.js');
-const Config = require('../../util/config.js');
 
 class Movie extends React.Component {
 
@@ -89,12 +88,12 @@ class Movie extends React.Component {
                     <civ class="d-none d-lg-block col-lg-4">
                         <div class="row">
                             <div class="col">
-                                <img src={Config.API+"images/"+this.props.movie.thumbnail} alt="..." class="w-100 rounded-top" onError={(e) => console.log('error loading image')} />
+                                <img src={process.env.REACT_APP_API+"images/"+this.props.movie.thumbnail} alt="..." class="w-100 rounded-top" onError={(e) => console.log('error loading image')} />
                             </div>
                         </div>
                         <div class="row pedestal rounded-bottom py-2 g-0">
                             <div class="col d-flex flex-row align-items-center justify-content-center">
-                                <img src="/logodesign4-8.svg" width="28" height="28" class="d-inline-block align-text-top"/>
+                                <img src="/streamdex-icon.svg" width="28" height="28" class="d-inline-block align-text-top"/>
                                 <h5 class="m-0 ms-1">{this.props.movie.streamdex_rating ? this.props.movie.streamdex_rating+'%' : '0%'}</h5>
                             </div>
                             {this.props.movie.imdb_link ?
@@ -160,6 +159,36 @@ class Movie extends React.Component {
                                     <p class="text-main"><span class="fw-bold me-3">Runtime</span>{this.props.movie.runtime ? Utils.runtime(this.props.movie.runtime) : 'N/A'}</p>
                                 </div>
                             </div>
+                        </div>
+                        <div class="row my-3 d-flex d-lg-none pedestal rounded-3 py-2 g-0">
+                            <div class="col d-flex flex-row align-items-center justify-content-center">
+                                <img src="/streamdex-icon.svg" width="28" height="28" class="d-inline-block align-text-top"/>
+                                <h5 class="m-0 ms-1">{this.props.movie.streamdex_rating ? this.props.movie.streamdex_rating+'%' : '0%'}</h5>
+                            </div>
+                            {this.props.movie.imdb_link ?
+                                <div class="col d-flex flex-row align-items-center justify-content-center">
+                                    <h5 class="mb-0">
+                                        <a href={this.props.movie.imdb_link} class="d-flex flex-row align-items-center link-light">
+                                            <img src="/imdblogo.png" width="42" height="18" class="d-inline-block align-text-top"/>
+                                            {this.props.movie.imdb_rating ? 
+                                                <span class="ms-1">{this.props.movie.imdb_rating}</span>
+                                            : ''}
+                                        </a>
+                                    </h5>
+                                </div>
+                            : ''}
+                            {this.props.movie.rotten_tomatoes_link ?
+                                <div class="col d-flex flex-row align-items-center justify-content-center">
+                                    <h5 class="mb-0">
+                                        <a href={this.props.movie.rotten_tomatoes_link} class="d-flex flex-row align-items-center link-light">
+                                            <img src="/rottentomatoeslogo.png" width="24" height="24" class="d-inline-block align-text-top"/>
+                                            {this.props.movie.rotten_tomatoes_rating ? 
+                                                <span class="ms-1">{this.props.movie.rotten_tomatoes_rating}</span>
+                                            : ''}
+                                        </a>
+                                    </h5>
+                                </div>
+                            : ''}
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Movie from '../../comps/Movie/Movie.js';
 import Series from '../../comps/Series/Series.js';
-import Config from '../../util/config.js';
 import Loading from '../../comps/Loading/Loading.js';
 
 import Footer from '../../comps/Footer/Footer.js';
@@ -26,7 +25,7 @@ class Title extends React.Component {
     }
 
     componentDidMount(){
-        fetch(Config.API + 'titles/' + this.props.match.params.id)
+        fetch(process.env.REACT_APP_API + 'titles/' + this.props.match.params.id)
             .then(res => res.ok ? res : Promise.reject())
             .then(res => res.json())
             .then((res) => {
@@ -46,7 +45,7 @@ class Title extends React.Component {
 
     loadRating(){
         if (this.props.user && this.state.content.id) // logged in
-            fetch(Config.API + "users/" + this.props.user.id + "/ratings/" + this.state.content.id, {
+            fetch(process.env.REACT_APP_API + "users/" + this.props.user.id + "/ratings/" + this.state.content.id, {
                 method: 'GET',
                 headers: {'token': this.props.token}
             })
@@ -78,11 +77,12 @@ class Title extends React.Component {
         if (this.state.rating){ // edit / delete
             if (!this.props.user){
                 this.setState({liked: this.state.rating.positive, disliked: !this.state.rating.positive});
+                this.props.promptLogin();
                 return;
             }
             let promise;
             if (positive === this.state.rating.positive){ // delete
-                promise = fetch(Config.API + "users/" + this.props.user.id + "/ratings/" + this.state.content.id, {
+                promise = fetch(process.env.REACT_APP_API + "users/" + this.props.user.id + "/ratings/" + this.state.content.id, {
                     method: 'DELETE',
                     headers: {'token': this.props.token}
                 })
@@ -92,7 +92,7 @@ class Title extends React.Component {
                 })
             }
             else { // edit
-                promise = fetch(Config.API + "users/" + this.props.user.id + "/ratings/" + this.state.content.id, {
+                promise = fetch(process.env.REACT_APP_API + "users/" + this.props.user.id + "/ratings/" + this.state.content.id, {
                     method: 'PUT',
                     headers: {'Content-Type': 'application/json', 'token': this.props.token},
                     body: JSON.stringify({positive: positive})
@@ -111,9 +111,10 @@ class Title extends React.Component {
         else { // create
             if (!this.props.user){
                 this.setState({liked: false, disliked: false});
+                this.props.promptLogin();
                 return;
             }
-            fetch(Config.API + "users/" + this.props.user.id + "/ratings/" + this.state.content.id, {
+            fetch(process.env.REACT_APP_API + "users/" + this.props.user.id + "/ratings/" + this.state.content.id, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'token': this.props.token},
                 body: JSON.stringify({positive: positive})

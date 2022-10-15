@@ -3,8 +3,6 @@ import isEqual from 'lodash/isEqual';
 
 import Modal from '../Modal.js';
 
-const Config = require('../config.json');
-
 class NewImage extends React.Component {
 
     constructor(props) {
@@ -48,7 +46,7 @@ class NewImage extends React.Component {
         const formData = new FormData();
         formData.append('file', this.state.file);
 
-        fetch(Config.API+"images/", {
+        fetch(process.env.REACT_APP_API+"images/", {
             method: 'POST', 
             headers: { 'token': this.props.token },
             body: formData

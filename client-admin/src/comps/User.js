@@ -7,7 +7,6 @@ import UserDetails from './UserDetails.js';
 import TextArray from '../TextArray.js';
 
 const SVG = require('../svg.js');
-const Config = require('../config.json');
 const validate = require('../validate.js');
 
 class User extends React.Component {
@@ -57,7 +56,7 @@ class User extends React.Component {
         if (this.props.user){
             if (!silent)
                 this.setState({status: "loading"});
-            fetch(Config.API+"users/"+this.props.user,
+            fetch(process.env.REACT_APP_API+"users/"+this.props.user,
             {
                 method: 'GET',
                 headers: {'token': this.props.token}
@@ -113,7 +112,7 @@ class User extends React.Component {
         if (this.state.userDetails.password)
             body.password = this.state.userDetails.password;
         
-        fetch(Config.API+"users/"+this.state.id, 
+        fetch(process.env.REACT_APP_API+"users/"+this.state.id, 
         {
             method: 'PUT', 
             headers: { 'Content-Type': 'application/json', 'token': this.props.token },

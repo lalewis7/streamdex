@@ -17,8 +17,6 @@ import New from './pages/New/New.js';
 import Browse from './pages/Browse/Browse.js';
 import Popular from './pages/Popular/Popular.js';
 
-const Config = require('./util/config.js');
-
 class App extends React.Component{
 
   constructor(props){
@@ -26,7 +24,8 @@ class App extends React.Component{
 
     this.state = {
       token: null,
-      user: null
+      user: null,
+      loginPrompted: false
     }
 
     this.setToken = this.setToken.bind(this);
@@ -42,7 +41,7 @@ class App extends React.Component{
   setToken(token){
     sessionStorage.setItem('token', token);
     // update self info
-    fetch(Config.API+"users/self", {
+    fetch(process.env.REACT_APP_API+"users/self", {
       method: 'GET',
       headers: {'token': token}
     })
@@ -65,12 +64,14 @@ class App extends React.Component{
     console.log(this.state.user);
     return (<div id="app-main" class="min-vh-100 d-flex flex-column bg-main">
       <BrowserRouter>
-        <Header search={() => {this.forceUpdate()}} token={this.state.token} setToken={this.setToken} deleteToken={this.deleteToken} user={this.state.user} />
+        <Header search={() => {this.forceUpdate()}} token={this.state.token} setToken={this.setToken} deleteToken={this.deleteToken} user={this.state.user}
+          isLoginPrompted={this.state.loginPrompted} loginPrompted={() => {this.setState({loginPrompted: false})}} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/discover" component={Discover} />
           <Route path="/search" component={Search} token={this.state.token} />
-          <Route path="/title/:id" render={(props) => <Title {...props} token={this.state.token} user={this.state.user}/>} />
+          <Route path="/title/:id" render={(props) => <Title {...props} token={this.state.token} user={this.state.user} 
+            promptLogin={() => {this.setState({loginPrompted: true})}}/>} />
           <Route path="/about" component={About}/>
           <Route path="/browse" component={Browse}/>
           <Route path="/new" component={New}/>

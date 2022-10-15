@@ -11,8 +11,8 @@
     },
     {
         "id": "amazon_prime",
-        "title": "Amazone Prime",
-        "icon": "/services/prime.jpg"
+        "title": "Amazon Prime",
+        "icon": "/services/prime.png"
     },
     {
         "id": "hulu",
@@ -25,14 +25,9 @@
         "icon": "/services/hbo_max.png"
     },
     {
-        "id": "yt_prem",
-        "title": "YouTube Premium",
-        "icon": "/services/yt_prem.png"
-    },
-    {
         "id": "peacock",
         "title": "Peacock",
-        "icon": "/services/peacock.png"
+        "icon": "/services/peacock.svg"
     },
     {
         "id": "espn_plus",

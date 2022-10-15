@@ -1,6 +1,5 @@
 import React from 'react';
 
-const Config = require('../../util/config.js');
 const validate = require('../../util/validate.js');
 const SVG = require('../../util/svg.js');
 
@@ -58,7 +57,7 @@ class SignupSettings extends React.Component {
         if (validate.username(evt.target.value))
             this.setState({usernameClass: "is-valid"});
         // check if username is available
-        fetch(Config.API+"handle/"+evt.target.value)
+        fetch(process.env.REACT_APP_API+"handle/"+evt.target.value)
         .then(res => {
             if (res.status == 200 && validate.username(evt.target.value))
                 this.setState({usernameClass: "is-valid"});
@@ -150,7 +149,7 @@ class SignupSettings extends React.Component {
 
         evt.preventDefault();
         // send post to create user
-        fetch(Config.API+"users", 
+        fetch(process.env.REACT_APP_API+"users", 
         {
             method: 'POST', 
             headers: { 'Content-Type': 'application/json' },
@@ -161,7 +160,7 @@ class SignupSettings extends React.Component {
             // successfully created user
             if (res.ok)
                 // get token for newly created user
-                return fetch(Config.API+"auth",
+                return fetch(process.env.REACT_APP_API+"auth",
                 {
                     method: "GET",
                     headers: {'user': this.state.username, 'password': this.state.password}

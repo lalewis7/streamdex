@@ -6,7 +6,6 @@ import NewUser from './NewUser.js';
 import User from './User.js';
 
 const SVG = require('../svg.js');
-const Config = require('../config.json');
 
 class UsersTable extends React.Component {
 
@@ -43,7 +42,7 @@ class UsersTable extends React.Component {
     }
 
     loadUsers(){
-        let url = Config.API+"users";
+        let url = process.env.REACT_APP_API+"users";
         if (this.state.query.length > 0)
             url += "?q="+this.state.query;
         fetch(url,

@@ -3,8 +3,6 @@ import React from 'react';
 import Modal from '../Modal.js';
 import UserDetails from './UserDetails.js';
 
-const Config = require('../config.json');
-
 class NewUser extends React.Component {
 
     constructor(props){
@@ -31,7 +29,7 @@ class NewUser extends React.Component {
         }
 
         // send post to create user
-        fetch(Config.API+"users", 
+        fetch(process.env.REACT_APP_API+"users", 
         {
             method: 'POST', 
             headers: { 'Content-Type': 'application/json' },

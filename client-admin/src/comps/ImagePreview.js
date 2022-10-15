@@ -2,8 +2,6 @@ import React from 'react';
 
 import Loading from '../Loading.js';
 
-const Config = require('../config.json');
-
 class ImagePreview extends React.Component {
 
     constructor(props) {
@@ -20,7 +18,7 @@ class ImagePreview extends React.Component {
 
     loadImage(){
         this.setState({status: 'loading'});
-        fetch(Config.API+"images/"+this.props.content.id,
+        fetch(process.env.REACT_APP_API+"images/"+this.props.content.id,
         {
             method: 'GET',
             headers: {'token': this.props.token}

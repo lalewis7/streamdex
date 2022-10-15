@@ -30,6 +30,14 @@ class Settings extends React.Component {
         });
     }
 
+    componentDidUpdate(){
+        console.log(this.props)
+        if (this.props.isLoginPrompted){
+            this.switchPage('login');
+            this.props.loginPrompted();
+        }
+    }
+
     getPageWrapper(title, content){
         return <>
             <div class="modal-header">

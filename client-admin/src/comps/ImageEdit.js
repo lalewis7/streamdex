@@ -5,7 +5,6 @@ import Modal from '../Modal.js';
 import HorizontalScrollable from '../HorizontalScrollable.js';
 import Loading from '../Loading.js';
 
-const Config = require('../config.json');
 const SVG = require('../svg.js');
 
 class ImageEdit extends React.Component {
@@ -62,7 +61,7 @@ class ImageEdit extends React.Component {
     delete(){
         if (window.confirm("Are you sure you want to delete this image?")){
             this.setState({deleting: true});
-            fetch(Config.API+"images/"+this.props.image,
+            fetch(process.env.REACT_APP_API+"images/"+this.props.image,
             {
                 method: 'DELETE',
                 headers: {'token': this.props.token}
@@ -91,7 +90,7 @@ class ImageEdit extends React.Component {
         if (this.props.image){
             let imageInfo;
             this.setState({status: "loading"});
-            fetch(Config.API+"images/"+this.props.image+"/info",
+            fetch(process.env.REACT_APP_API+"images/"+this.props.image+"/info",
             {
                 method: 'GET',
                 headers: {'token': this.props.token}
@@ -99,7 +98,7 @@ class ImageEdit extends React.Component {
             .then(res => res.json())
             .then(image => {
                 imageInfo = image;
-                return fetch(Config.API+"images/"+this.props.image, {
+                return fetch(process.env.REACT_APP_API+"images/"+this.props.image, {
                     method: 'GET',
                     headers: {'token': this.props.token}
                 });
@@ -124,7 +123,7 @@ class ImageEdit extends React.Component {
             public: this.state.public
         };
         
-        fetch(Config.API+"images/"+this.state.image.id, 
+        fetch(process.env.REACT_APP_API+"images/"+this.state.image.id, 
         {
             method: 'PUT', 
             headers: { 'Content-Type': 'application/json', 'token': this.props.token },

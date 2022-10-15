@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Config from '../util/config.js';
 import TitlePreview from './TitlePreview.js';
 import TitleDetails from './TitleDetails.js';
 
@@ -18,7 +17,7 @@ class Title extends React.Component{
     componentDidMount(){
         if (!this.props.id)
             return;
-        fetch(Config.API+"title/"+this.props.id).then(res => {
+        fetch(process.env.REACT_APP_API+"title/"+this.props.id).then(res => {
             if (res.ok)
                 return res.json();
         }).then(data => {
