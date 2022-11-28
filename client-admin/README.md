@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# Streamdex Admin Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A website for performing adminstrative actions on the Streamdex website using the REST API. This project is built with ReactJS, JavaScript, Bootstrap, and SASS.
 
-## Available Scripts
+Available at [admin.streamdex.net](https://admin.streamdex.net)
 
-In the project directory, you can run:
+# Project Status
 
-### `npm start`
+This project is currently in development. It can be used to make administrator changes to the website such as creating/editing titles, users, and images. There are still mutliple bugs and missing features that need to be addressed before it is complete.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Project Screenshots
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+| ![login page](/misc/readme-images/admin-login.png) |
+| :--: |
+| Login Page |
 
-### `npm test`
+| ![home page](/misc/readme-images/admin-home.png) |
+| :--: |
+| Home Page |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| ![view all users](/misc/readme-images/admin-users.png) |
+| :--: |
+| View all Users |
 
-### `npm run build`
+| ![add new user model](/misc/readme-images/admin-add-user.png) |
+| :--: |
+| Add New User  |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| ![edit user](/misc/readme-images/admin-edit-user.png) |
+| :--: |
+| Edit User |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| ![titles page](/misc/readme-images/admin-titles.png) |
+| :--: |
+| Titles Page |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| ![edit show title](/misc/readme-images/admin-edit-show-title.png) |
+| :--: |
+| Edit Show (Title Tab) |
 
-### `npm run eject`
+| ![edit show cover image](/misc/readme-images/admin-edit-show-cover-image.png) |
+| :--: |
+| Edit Show (Cover Image Tab) |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| ![edit show links](/misc/readme-images/admin-edit-show-links.png) |
+| :--: |
+| Edit Show (Links Tab) |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| ![edit show genres](/misc/readme-images/admin-edit-show-genres.png) |
+| :--: |
+| Edit Show (Genres Tab) |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+| ![edit show seasons](/misc/readme-images/admin-edit-show-seasons.png) |
+| :--: |
+| Edit Show (Seasons Tab) |
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+| ![edit season](/misc/readme-images/admin-edit-show-seasons-season.png) |
+| :--: |
+| Edit Season (Season Tab) |
 
-## Learn More
+| ![edit season link availability](/misc/readme-images/admin-edit-show-seasons-avail.png) |
+| :--: |
+| Edit Season (Link Availability Tab) |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| ![edit season episodes](/misc/readme-images/admin-edit-show-episodes.png) |
+| :--: |
+| Edit Season (Episodes Tab) |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| ![edit episode](/misc/readme-images/admin-edit-show-episodes-episode.png) |
+| :--: |
+| Edit Episode (Episode Tab) |
 
-### Code Splitting
+| ![edit episode link availability](/misc/readme-images/admin-edit-show-episodes-avail.png) |
+| :--: |
+| Edit Episode (Link Availability Tab) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| ![edit movie title](/misc/readme-images/admin-edit-movie-title.png) |
+| :--: |
+| Edit Movie (Title Tab) |
 
-### Analyzing the Bundle Size
+| ![edit movie cover image](/misc/readme-images/admin-edit-movie-cover-image.png) |
+| :--: |
+| Edit Movie (Cover Image Tab) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| ![edit movie links](/misc/readme-images/admin-edit-movie-links.png) |
+| :--: |
+| Edit Movie (Links Tab) |
 
-### Making a Progressive Web App
+| ![edit movie genres](/misc/readme-images/admin-edit-movie-genres.png) |
+| :--: |
+| Edit Movie (Genres Tab) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| ![edit movie](/misc/readme-images/admin-edit-movie-movie.png) |
+| :--: |
+| Edit Movie (Movie Tab) |
 
-### Advanced Configuration
+| ![edit movie link availability](/misc/readme-images/admin-edit-movie-avail.png) |
+| :--: |
+| Edit Movie (Link Availaility Tab) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| ![images page](/misc/readme-images/admin-images.png) |
+| :--: |
+| Images Page |
 
-### Deployment
+| ![edit image preview](/misc/readme-images/admin-edit-image-preview.png) |
+| :--: |
+| Edit Image (Preview Tab) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| ![edit image details](/misc/readme-images/admin-edit-image-details.png) |
+| :--: |
+| Edit Image (Details Tab) |
 
-### `npm run build` fails to minify
+| ![edit image details](/misc/readme-images/admin-edit-image-details.png) |
+| :--: |
+| Edit Image (Details Tab) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| ![upload image](/misc/readme-images/admin-upload-image.png) |
+| :--: |
+| Upload Image |
+
+# Installation
+
+1. In a terminal move to the `/client-admin` directory in the repository.
+
+2. Install all dependencies with `npm install`.
+
+3. Run the server with `npm start`.
+
+4. If it prompts to select a different port select yes.
+
+5. Use the existing admin user to login.
+    - username: `admin`
+    - password: `password123`

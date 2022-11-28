@@ -76,7 +76,7 @@ We are in the development of adding a web scraping bot to help propagate our dat
 
 ### Admin Website
 
-1. In a terminal move to the `/api` directory in the repository.
+1. In a terminal move to the `/client-admin` directory in the repository.
 
 2. Install all dependencies with `npm install`.
 
@@ -87,8 +87,6 @@ We are in the development of adding a web scraping bot to help propagate our dat
 5. Use the existing admin user to login.
     - username: `admin`
     - password: `password123`
-
----
 
 ## **Deploying Changes**
 
