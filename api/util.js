@@ -6,7 +6,7 @@ require('winston-daily-rotate-file');
 const pool  = mysql.createPool(config.db);
 
 var fileTransport = new winston.transports.DailyRotateFile({
-    filename: './logs/%DATE%.log',
+    filename: process.env.STREAMDEX_LOGS || './logs/%DATE%.log',
     datePattern: 'YYYY-MM-DD',
     level: 'verbose'
 });

@@ -1,6 +1,6 @@
 api/node_modules
-api/public/images
-api/logs/*.log
+api/logs/*
+# api/images/*
 
 client/node_modules
 client/build

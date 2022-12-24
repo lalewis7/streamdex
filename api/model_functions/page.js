@@ -20,7 +20,7 @@ function getPage(page, user){
 }
 
 function newPage(user){
-    const list_ids = ['742d8529', '4bcac230', '5f5101ec', '6a29f82a', '82928be0', 'bc165d5f'];
+    let list_ids = ['db11b0be', '6b701e72', '742d8529', 'bc165d5f'];
     let promises = [];
     list_ids.map(id => {
         let list;
@@ -37,11 +37,37 @@ function newPage(user){
 }
 
 function browsePage(user){
-    return this.newPage(user);
+    let list_ids = ['5f5101ec', '742d8529', '6b701e72', 'bc165d5f'];
+    let promises = [];
+    list_ids.map(id => {
+        let list;
+        promises.push(
+            listExists(id)
+                .then(listsData => {
+                    list = new List(listsData[0]);
+                    return list.init();
+                })
+                .then(() => listToPageList(list))
+        )
+    });
+    return Promise.all(promises);
 }
 
 function popularPage(user){
-    return this.newPage(user);
+    let list_ids = ['4bcac230', '742d8529', '5f5101ec', 'bc165d5f', '6a29f82a'];
+    let promises = [];
+    list_ids.map(id => {
+        let list;
+        promises.push(
+            listExists(id)
+                .then(listsData => {
+                    list = new List(listsData[0]);
+                    return list.init();
+                })
+                .then(() => listToPageList(list))
+        )
+    });
+    return Promise.all(promises);
 }
 
 function listToPageList(list){
