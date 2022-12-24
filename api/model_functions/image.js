@@ -59,7 +59,7 @@ function getImage(id, requester){
             image = new Image(images[0]);
             if (!image.get().public && !requester.admin)
                 return Promise.reject({http_msg: "Access denied.", http_code: 403});
-            return path.join(__dirname, images_path_back, image.get().filename);
+            return path.join(images_path_back, image.get().filename);
         })
 }
 
