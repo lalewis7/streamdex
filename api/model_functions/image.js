@@ -10,7 +10,7 @@ const multer  = require('multer');
 const path = require('path');
 
 const images_path = process.env.STREAMDEX_IMAGES || './images/';
-const images_path_back = process.env.STREAMDEX_IMAGES || '../images/';
+const images_path_back = process.env.STREAMDEX_IMAGES || __dirname + '/../images/';
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {

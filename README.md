@@ -54,7 +54,7 @@ We are in the development of adding a web scraping bot to help propagate our dat
 
 4. Setup a new user by going to `Server > Users and Privilges` in the menu bar.
     - Select "Add Account" in the bottom left corner.
-    - Under the Login tabe set the login name to "admin" and password to "password".
+    - Under the Login tabe set the login name to "api" and password to "password".
     - Under the Administrative Rights tab select the DBA role.
     - Click "Apply".
 

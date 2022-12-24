@@ -24,6 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "aws --profile streamdex s3 sync ./dist s3://streamdex.net --delete",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
