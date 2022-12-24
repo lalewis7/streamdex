@@ -3,7 +3,7 @@ const config = require('./config.json');
 const winston = require('winston');
 require('winston-daily-rotate-file');
 
-const pool  = mysql.createPool(config.db);
+const pool = require('./db.js');
 
 var fileTransport = new winston.transports.DailyRotateFile({
     filename: process.env.STREAMDEX_LOGS || './logs/%DATE%.log',
