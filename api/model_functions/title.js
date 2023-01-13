@@ -151,7 +151,7 @@ function getTitles(query){
     var page = query.p === undefined ? 0 : query.p;
     var controller;
     let titles = [];
-    if (query.q === undefined)
+    if (query.q === undefined || query.q === '')
         controller = titleController.findAllTitles(page);
     else 
         controller = titleController.searchAllTitles(query.q, page);

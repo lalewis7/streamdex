@@ -23,5 +23,7 @@
     "title_page_length": 30,
     "image_page_length": 30,
     "bots_page_length": 30,
-    "bot_links_page_length": 30
+    "bot_links_page_length": 30,
+    "bot_task_page_length": 30,
+    "bot_queries_page_length": 30
 }

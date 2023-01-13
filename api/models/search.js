@@ -1,26 +1,25 @@
-// controlers
-const snapshotController = require('../controllers/dc.snapshot.js');
+// controllers
+const searchController = require('../controllers/dc.searches.js');
 const taskController = require('../controllers/dc.task.js');
 
 // models
-const {Model, StringAttribute, Attribute} = require('./model.js');
+const {Model, Attribute, StringAttribute, NumberAttribute} = require('./model.js');
 const Task = require('./task.js');
 
-class Snapshot extends Model {
+class Search extends Model {
 
     constructor(data){
         super([
             new StringAttribute({
-                name: "link_id",
-                editable: false,
-                visible: false,
+                name: "query",
+                editable: true,
+                visible: true,
                 adminProtected: true
             }),
             new StringAttribute({
-                name: "data",
+                name: "site",
                 editable: true,
                 visible: true,
-                defaultValue: '{}',
                 adminProtected: true
             }),
             new StringAttribute({
@@ -44,18 +43,18 @@ class Snapshot extends Model {
     }
 
     async insert(){
-        let b = this.get();
-        await snapshotController.insertSnapshot(b.link_id, b.task_id, b.data);
+        let q = this.get();
+        await searchController.insertSearch(q.query, q.site, q.task_id);
     }
 
     async save(){
         let q = this.get();
-        await snapshotController.updateSnapshot(q.task_id, q.data);
+        await searchController.updateSearch(q.query, q.site, q.task_id);
     }
 
     async delete(){
         let q = this.get();
-        await snapshotController.deleteSnapshot(q.task_id);
+        await searchController.deleteSearch(q.query, q.site);
     }
 
 }
@@ -88,4 +87,4 @@ class TaskAttribute extends Attribute {
 
 }
 
-module.exports = Snapshot;
+module.exports = Search;

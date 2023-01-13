@@ -42,7 +42,7 @@ class Search extends React.Component{
         return (
             <>
             <div class="h-100 flex-grow-1">
-                <div class="container pt-3 h-100 d-flex flex-column">
+                <div class="container py-3 h-100 d-flex flex-column">
                     <div class="row g-3">
                         {this.state.titles.map(t => (
                             <TitlePreview title={t} />

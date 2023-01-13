@@ -5,20 +5,29 @@ const taskController = require('../controllers/dc.task.js');
 const Task = require('../models/task.js');
 
 // helpers
-const {botExists, taskExists, editModel} = require('./common.js');
+const {taskExists, editModel} = require('./common.js');
 
-function getBotTasks(bot_id){
-    return botExists(bot_id)
-        .then(() => {
-            return taskController.getBotTasks(bot_id);
-        })
-        .then(tasks => tasks.map(task => new Task(task)))
-        .then(tasks => tasks.map(task => task.get()))
+function getTasks(query){
+    let page = query.p === undefined ? 0 : query.p;
+    let status = query.status;
+    let controller;
+    if (status === undefined || status === null){
+        if (query.q === undefined)
+            controller = taskController.getTasks(page);
+        else 
+            controller = taskController.searchTasks(query.q, page);
+    } else {
+        controller = taskController.getTasksByStatus(status, page);
+    }
+    let tasks = [];
+    return controller
+        .then(tasksData => tasks = tasksData.map(task => new Task(task)))
+        .then(() => Promise.all(tasks.map(task => task.init())))
+        .then(() => tasks.map(task => task.get(true)));
 }
 
-function createTask(bot_id, data, requester){
+function createTask(data, requester){
     let t = new Task();
-    t.override({bot_id: bot_id});
     return editModel(t, data, requester)
         .then(t => t.insert())
         .then(() => t.get().id);
@@ -34,6 +43,7 @@ function getTask(task_id){
 
 function editTask(task_id, data, requester){
     let t;
+    console.log(data);
     return taskExists(task_id)
         .then(task => {
             t = new Task(task[0]);
@@ -54,7 +64,7 @@ function deleteTask(task_id){
 
 
 module.exports = {
-    getBotTasks,
+    getTasks,
     createTask,
     getTask,
     editTask,

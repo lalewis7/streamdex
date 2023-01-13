@@ -147,3 +147,20 @@ export const ExclamationTriangle = (props) => {
         </svg>
     </>
 }
+
+export const BoxArrowUpRight = props => {
+    return <>
+        <svg xmlns="http://www.w3.org/2000/svg" width={props.w ? props.w : 16} height={props.h ? props.h : 16} fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+        </svg>
+    </>
+}
+
+export const MovieReel = props => {
+    return <>
+        <svg xmlns="http://www.w3.org/2000/svg" width={props.w ? props.w : 16} height={props.h ? props.h : 16} fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
+        <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z"/>
+        </svg>
+    </>
+}

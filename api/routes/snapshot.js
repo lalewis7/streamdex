@@ -3,25 +3,17 @@ var router = express.Router();
 var util = require('../util.js');
 const {isAdmin, isAuthenticated} = require('../auth.js');
 
-const taskMethods = require('../model_functions/task.js');
+const snapshotMethods = require('../model_functions/snapshot.js');
 
 router.get('/', isAuthenticated, isAdmin, (req, res) => {
-    taskMethods.getTasks(req.query)
-        .then((tasks) => {
-            res.status(200).send(tasks);
-        })
-        .catch(util.handleResponseError(res));
+    return res.sendStatus(405);
 });
 
 router.post('/', isAuthenticated, isAdmin, (req, res) => {
-    taskMethods.createTask(req.body, {admin: req.user.admin})
-        .then(id => {
-            res.status(201).send(id);
-        })
-        .catch(util.handleResponseError(res));
+    return res.sendStatus(405);
 });
 
-router.put('/', isAuthenticated, isAdmin, (req, res) => {
+router.put('/', isAuthenticated, isAdmin,  (req, res) => {
     return res.sendStatus(405);
 });
 
@@ -29,12 +21,10 @@ router.delete('/', isAuthenticated, isAdmin, (req, res) => {
     return res.sendStatus(405);
 });
 
-//
-
 router.get('/:taskId', isAuthenticated, isAdmin, (req, res) => {
-    taskMethods.getTask(req.params.taskId)
-        .then((task) => {
-            res.status(200).send(task);
+    return snapshotMethods.getSnapshot(req.params.taskId)
+        .then(snap => {
+            res.status(200).send(snap);
         })
         .catch(util.handleResponseError(res));
 });
@@ -43,8 +33,8 @@ router.post('/:taskId', isAuthenticated, isAdmin, (req, res) => {
     return res.sendStatus(405);
 });
 
-router.put('/:taskId', isAuthenticated, isAdmin, (req, res) => {
-    taskMethods.editTask(req.params.taskId, req.body, {admin: req.user.admin})
+router.put('/:taskId', isAuthenticated, isAdmin,  (req, res) => {
+    return snapshotMethods.editSnapshot(req.params.taskId, req.body, {admin: req.user.admin})
         .then(() => {
             res.sendStatus(200);
         })
@@ -52,7 +42,7 @@ router.put('/:taskId', isAuthenticated, isAdmin, (req, res) => {
 });
 
 router.delete('/:taskId', isAuthenticated, isAdmin, (req, res) => {
-    taskMethods.deleteTask(req.params.taskId)
+    return snapshotMethods.deleteSnapshot(req.params.taskId)
         .then(() => {
             res.sendStatus(200);
         })
