@@ -1,6 +1,0 @@
-2021-07-16 15:13:34 [info]: API listening at http://localhost:9000
-2021-07-16 15:22:49 [info]: ::1 (GET) /auth
-2021-07-16 15:22:49 [info]: ::1 (GET) /users/self
-2021-07-16 15:35:12 [info]: ::1 (POST) /users
-2021-07-16 15:35:17 [info]: ::1 (GET) /users
-2021-07-16 15:35:41 [info]: ::1 (PUT) /users/e9a236da82541fbf

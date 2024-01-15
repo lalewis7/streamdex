@@ -1,8 +1,10 @@
 // controlers
 const taskController = require('../controllers/dc.task.js');
+const linkController = require('../controllers/dc.links.js');
 
 // models
-const {Model, StringAttribute, NumberAttribute} = require('./model.js');
+const {Model, Attribute, StringAttribute, NumberAttribute} = require('./model.js');
+const BotLinks = require('./botlinks.js');
 
 // helpers
 const crypto = require('crypto');
@@ -20,14 +22,14 @@ class Task extends Model {
                 adminProtected: true
             }),
             new StringAttribute({
-                name: "bot_id",
-                editable: true,
-                visible: true,
-                adminProtected: true
-            }),
-            new StringAttribute({
                 name: "link_id",
                 editable: true,
+                visible: false,
+                adminProtected: true
+            }),
+            new LinkAttribute({
+                name: "link",
+                editable: false,
                 visible: true,
                 adminProtected: true
             }),
@@ -58,24 +60,50 @@ class Task extends Model {
         ], data);
     }
 
-    async init(){}
+    async init(){
+        let link = await linkController.getLink(this.get().link_id).then(res => res[0]);
+        this.link.value = new BotLinks(link);
+    }
 
     async insert(){
         const id = await getNewID();
         // update id and password
         this.override({ id: id });
         let b = this.get();
-        await taskController.insertTask(b.id, b.bot_id, b.link_id, b.type, b.status)
+        await taskController.insertTask(b.id, b.link_id, b.type, b.status)
     }
 
     async save(){
         let b = this.get();
-        await taskController.editTask(b.id, b.bot_id, b.link_id, b.type, b.status, b.started, b.ended);
+        await taskController.editTask(b.id, b.link_id, b.type, b.status, b.started, b.ended);
     }
 
     async delete(){
         let b = this.get();
         await taskController.deleteTask(b.id);
+    }
+
+}
+
+class LinkAttribute extends Attribute {
+
+    constructor(config) {
+        super(config);
+        this.defaultValue = null;
+        this.validate = (val) => {
+            if (typeof val !== 'object' || !Array.isArray(val))
+                return false;
+            for (let v of val)
+                if (!new BotLinks().validate(v, {admin: true}))
+                    return false;
+            return true;
+        };
+    }
+
+    getValue(visibleOnly){
+        if (this.value)
+            return this.value.get(visibleOnly);
+        return null;
     }
 
 }

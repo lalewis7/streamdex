@@ -101,7 +101,7 @@ class Settings extends React.Component {
             <div class="modal-header pb-0 border-0">
                 <div class="text-head d-flex flex-row align-items-center">
                     <SVG.SettingsGear w={'1.75rem'} h={'1.75rem'} />
-                    <h2 class="ps-2 m-0 text-head">Settings</h2>
+                    <h2 class="ps-3 m-0 text-head">Settings</h2>
                 </div>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>

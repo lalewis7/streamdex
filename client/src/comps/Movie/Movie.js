@@ -22,12 +22,14 @@ class Movie extends React.Component {
                 countries: []
             },
             showFilterModal: false,
-            showStreamModal: false
+            showStreamModal: false,
+            thumbnailLoadFailed: false
         }
         this.open = false;
 
         this.openStream = this.openStream.bind(this);
         this.openFilter = this.openFilter.bind(this);
+        this.thumbnailFailedToLoad = this.thumbnailFailedToLoad.bind(this);
     }
 
     openStream(stream_id){
@@ -51,6 +53,10 @@ class Movie extends React.Component {
         this.setState({showFilterModal: true});
     }
 
+    thumbnailFailedToLoad(e){
+        this.setState({thumbnailLoadFailed: true}); 
+    }
+
     render(){
         console.log(this.props);
         let genres = this.props.movie.genres;
@@ -71,6 +77,17 @@ class Movie extends React.Component {
                 <SVG.ThumbsDownFill />
             </button>
 
+        let rating = (logo, logo_width, logo_height, platform, link, rating) => 
+            <div class="col d-flex flex-row align-items-center justify-content-between ps-1 pe-3 my-2">
+                <div class="d-flex flex-row align-items-center">
+                    <img src={logo} width={logo_width} height={logo_height} class="d-inline-block align-text-top"/>
+                    <h6 class="m-0 ms-2">{platform}</h6>
+                </div>
+                {link ? <a target="_blank" rel="noopener noreferrer" href={link}class="d-flex flex-row align-items-center link-light">
+                <h6 class="m-0 ms-1 d-flex align-items-center">{rating ? rating : 'N/A'}<span class="ms-1 d-flex align-content-center">
+                    <SVG.BoxArrowUpRight /></span></h6></a> : rating ? <h6 class="m-0 ms-1">{rating}</h6> : ''}
+            </div>;
+
         let genreText = "N/A"
         if (this.props.movie.genres.length > 0)
             genreText = this.props.movie.genres.map((genre, i) => {
@@ -81,18 +98,27 @@ class Movie extends React.Component {
             });
 
         return <>
-            <TitleStreamPopup stream={this.state.stream} show={this.state.showStreamModal} setVisible={(vis) => {this.setState({showStreamModal: vis})}} />
+            <TitleStreamPopup stream={this.state.stream} title={this.props.movie.title} show={this.state.showStreamModal} setVisible={(vis) => {this.setState({showStreamModal: vis})}} />
             <CountryFilterPopup show={this.state.showFilterModal} setVisible={(vis) => {this.setState({showFilterModal: vis})}} />
             <div class="container-fluid p-0">
                 <div class="row p-2">
-                    <civ class="d-none d-lg-block col-lg-4">
+                    <div class="d-none d-lg-block col-lg-4 mb-5">
                         <div class="row">
                             <div class="col">
-                                <img src={process.env.REACT_APP_API+"images/"+this.props.movie.thumbnail} alt="..." class="w-100 rounded-top" onError={(e) => console.log('error loading image')} />
+                                {this.state.thumbnailLoadFailed || !this.props.movie.thumbnail ? 
+                                <div class="failed-thumbnail-page"><SVG.MovieReel w="80%" h="auto"/></div> :
+                                    <img src={process.env.REACT_APP_API+"images/"+this.props.movie.thumbnail} alt="..." class="w-100" 
+                                    onError={this.thumbnailFailedToLoad}/>}
                             </div>
                         </div>
-                        <div class="row pedestal rounded-bottom py-2 g-0">
-                            <div class="col d-flex flex-row align-items-center justify-content-center">
+                        <h5 class="fw-bold mt-3 mb-0">RATINGS</h5>
+                        <div class="row g-0 py-2 flex-column">
+                            {rating("/streamdex-icon.svg", 28, 28, "Streamdex", null, this.props.movie.streamdex_rating ? this.props.movie.streamdex_rating+'%' : 'N/A')}
+                            {this.props.movie.imdb_link ? rating("/imdblogo.png", 42, 18, "IMDb", 
+                            this.props.movie.imdb_link, this.props.movie.imdb_rating) : ''}
+                            {this.props.movie.rotten_tomatoes_link ? rating("/rottentomatoeslogo.png", 24, 24, "Rotten Tomatoes", 
+                            this.props.movie.rotten_tomatoes_link, this.props.movie.rotten_tomatoes_rating) : ''}
+                            {/* <div class="col d-flex flex-row align-items-center justify-content-center">
                                 <img src="/streamdex-icon.svg" width="28" height="28" class="d-inline-block align-text-top"/>
                                 <h5 class="m-0 ms-1">{this.props.movie.streamdex_rating ? this.props.movie.streamdex_rating+'%' : '0%'}</h5>
                             </div>
@@ -119,9 +145,9 @@ class Movie extends React.Component {
                                         </a>
                                     </h5>
                                 </div>
-                            : ''}
+                            : ''} */}
                         </div>
-                    </civ>
+                    </div>
                     <div class="col-12 col-lg-8">
                         <div class="row mb-3">
                             <div class="col d-flex flex-row justify-content-between align-items-center">
@@ -132,17 +158,29 @@ class Movie extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        <WatchNow availability={this.props.movie.availability} links={this.props.movie.links} openStream={this.openStream} openFilter={this.openFilter}/>
                         {this.props.movie.trailer && this.props.movie.trailer.length > 0 ? 
-                            <div class="row my-3">
+                            <div class="row my-4">
                                 <div class="col">
                                     <div class="ratio ratio-16x9">
-                                        <iframe src={"https://www.youtube.com/embed/"+this.props.movie.trailer} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                                        <iframe src={"https://www.youtube.com/embed/"+this.props.movie.trailer} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowFullScreen SameSite="Strict"></iframe>
                                     </div>
                                 </div>
                             </div> 
                         : ''}
-                        <WatchNow availability={this.props.movie.availability} links={this.props.movie.links} openStream={this.openStream} openFilter={this.openFilter}/>
-                        <div class="row my-3">
+                        <div class="row my-4 d-lg-none">
+                            <div class="col">
+                                <h5 class="fw-bold mt-3 mb-0">RATINGS</h5>
+                                <div class="row rounded-bottom py-2 g-0 flex-column">
+                                    {rating("/streamdex-icon.svg", 28, 28, "Streamdex", null, this.props.movie.streamdex_rating ? this.props.movie.streamdex_rating+'%' : 'N/A')}
+                                    {this.props.movie.imdb_link ? rating("/imdblogo.png", 42, 18, "IMDb", 
+                                    this.props.movie.imdb_link, this.props.movie.imdb_rating) : ''}
+                                    {this.props.movie.rotten_tomatoes_link ? rating("/rottentomatoeslogo.png", 24, 24, "Rotten Tomatoes", 
+                                    this.props.movie.rotten_tomatoes_link, this.props.movie.rotten_tomatoes_rating) : ''}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4">
                             <div class="col">
                                 <h5 class="fw-bold">DESCRIPTION</h5>
                                 <div>
@@ -150,17 +188,17 @@ class Movie extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div class="row my-3">
+                        <div class="row mt-4 mb-5">
                             <div class="col">
                                 <h5 class="text-head2 fw-bold">DETAILS</h5>
                                 <div>
-                                    <p class="text-main"><span class="fw-bold me-3">Genres</span>{genreText}</p>
-                                    <p class="text-main"><span class="fw-bold me-3">Maturity</span>{this.props.movie.maturity && this.props.movie.maturity.length > 0 ? this.props.movie.maturity : 'N/A'}</p>
+                                    <p class="text-main  mb-2"><span class="fw-bold me-3">Genres</span>{genreText}</p>
+                                    <p class="text-main  mb-2"><span class="fw-bold me-3">Maturity</span>{this.props.movie.maturity && this.props.movie.maturity.length > 0 ? this.props.movie.maturity : 'N/A'}</p>
                                     <p class="text-main"><span class="fw-bold me-3">Runtime</span>{this.props.movie.runtime ? Utils.runtime(this.props.movie.runtime) : 'N/A'}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="row my-3 d-flex d-lg-none pedestal rounded-3 py-2 g-0">
+                        {/* <div class="row my-3 d-flex d-lg-none pedestal rounded-3 py-2 g-0">
                             <div class="col d-flex flex-row align-items-center justify-content-center">
                                 <img src="/streamdex-icon.svg" width="28" height="28" class="d-inline-block align-text-top"/>
                                 <h5 class="m-0 ms-1">{this.props.movie.streamdex_rating ? this.props.movie.streamdex_rating+'%' : '0%'}</h5>
@@ -189,7 +227,7 @@ class Movie extends React.Component {
                                     </h5>
                                 </div>
                             : ''}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

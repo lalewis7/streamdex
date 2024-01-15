@@ -13,7 +13,7 @@ class WatchNow extends React.Component {
 
         const streamIcon = (link, platform) => {
             return <>
-            <button type="button" class="btn p-0 m-2" onClick={() => {this.props.openStream(link.platform)}}>
+            <button type="button" class="btn p-0 m-2 stream-link-icon" onClick={() => {this.props.openStream(link.platform)}}>
                 <img src={platform.icon} alt="..." class="stream-icon rounded-3"/>
             </button>
             </>
@@ -40,7 +40,7 @@ class WatchNow extends React.Component {
             <div class="row my-3">
                 <div class="col">
                     <div class="d-flex flex-row justify-content-between align-items-top">
-                        <h5 class="fw-bold">WHERE TO WATCH</h5>
+                        <h5 class="fw-bold">WATCH NOW ON</h5>
                         <button type="button" class="btn p-1 pt-0 shadow-none filter-streams-button" onClick={() => {this.props.openFilter()}}>
                             <span class="fw-bold pe-1 h6 m-0">FILTER</span>
                             <SVG.FilterFunnelFill w={24} h={24} />

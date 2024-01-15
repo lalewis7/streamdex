@@ -53,37 +53,39 @@ $enable-gradients: true;
 
 // custom colors
 //$color-background: #180A0A;
-$color-background: #170d0d;
+$color-background: #100909;// #170d0d;
 $color-primary: #399697;
-$color-secondary: #2C1313;
+$color-secondary: #240505;
 $color-tertiary: #999090;
 $color-light: #7D7373;
 
 $primary: $color-primary;
 $secondary: $color-secondary;
 $light: $color-light;
-$dark: $color-background;
+$dark: #420606;//$color-background;
 
 $body-bg: $color-background;
 $body-color: #fff;
 
 // nav
 $nav-link-color: $color-light;
-$nav-link-hover-color: $color-light;
+$nav-link-hover-color: #a49c9c;
 $nav-tabs-border-color: $color-tertiary;
 $nav-tabs-link-active-border-color: $color-tertiary $color-tertiary transparent;
 $nav-tabs-link-hover-border-color: $color-tertiary $color-tertiary transparent;
 //$nav-tabs-link-active-bg: $color-secondary;
-$nav-tabs-link-active-color: #fff;
+$nav-tabs-link-active-color: #e0e0e0;
+$nav-tabs-link-active-bg: #250C0C;
+
 $navbar-nav-link-padding-x: 1rem;
 
 // inputs
-$input-bg: $color-secondary;
+$input-bg: #240505;//$color-secondary;
 $input-color: #fff;
 $input-placeholder-color: $color-light;
 $input-border-width: 0;
 
-$input-group-addon-bg: $color-secondary;
+$input-group-addon-bg: #240505;//$color-secondary;
 $input-group-addon-color: $color-light;
 
 $input-disabled-bg: shade-color($input-bg, 0%);
@@ -106,7 +108,7 @@ $form-check-input-checked-bg: $color-primary;
 $form-check-input-checked-border-color: $color-primary; 
 
 // modals
-$modal-content-bg: $color-background;
+$modal-content-bg: #120505;//$color-background;
 $modal-header-border-color: shade-color($color-light, 30%);
 $modal-footer-border-color: $modal-header-border-color;
 
@@ -204,7 +206,7 @@ h5, h6 {
 }
 
 footer{
-    background-color: shade-color($color-background, 30%);
+    background-color: #1F0A0A;
 }
 
 .bg-darker{
@@ -216,6 +218,30 @@ footer{
     @include media-breakpoint-down(lg) {
         width: 200px;
     }
+}
+
+.failed-thumbnail-preview{
+    padding: .75rem;
+    color: shade-color(#999090, 30%);
+    display:flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items:center;
+    background-color: #250C0C;
+    aspect-ratio: 2 / 3;
+    text-decoration: none;
+}
+
+.failed-thumbnail-page{
+    color: rgba(16,9,9,.6);
+    padding: .75rem;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    background-color: #250C0C;
+    aspect-ratio: 2 / 3;
+    text-decoration: none;
 }
 
 .fs-7{
@@ -233,7 +259,6 @@ footer{
 
 .navbar {
     background-image:none;
-    border-bottom: 2px solid tint-color($color-background, 20%);
 }
 
 .navbar-top-padding{
@@ -266,11 +291,13 @@ footer{
 
 .btn-secondary {
     background-image: none;
-    color: $color-light;
+    color: #7D7373;
+    background-color: #2a0505;
 }
 
 .btn-secondary:hover {
     background-image: none;
+    background-color: #370707;
 }
 
 .btn-primary:disabled{
@@ -279,6 +306,12 @@ footer{
 
 .btn-primary:active, .btn-primary:focus{
     color: #fff;
+}
+
+.stream-link-icon{
+    &:hover{
+        filter: brightness(110%);
+    }
 }
 
 .btn-dark{
@@ -296,12 +329,31 @@ footer{
     }
 }
 
+.btn-outline-light{
+    &:hover{
+        background-color: #250C0C;
+    }
+}
+
+.btn-success{
+    &, &:active, &:hover{
+        background-image:none;
+    }
+}
+
+.btn-danger{
+    &, &:active, &:hover{
+        background-image:none;
+    }
+}
+
 .settings-select{
-    background-color:shade-color($color-secondary, 20%);
+    background-color:#2a0505;
+    color: #7D7373;
 }
 
 .settings-select:hover{
-    background-color: $color-secondary;
+    background-color: #370707;
 }
 
 .settings-back{
@@ -322,14 +374,29 @@ footer{
 }
 
 .pedestal{
-    background-color: $color-secondary;
+    background-color: #250c0c;
+}
+
+.filter-streams-button{
+    color: #999090;
+    &:hover {
+        span, svg {
+            color: #c7bebe;
+        }
+    }
 }
 
 .modal-header{
     margin-bottom: 1px;
+    border: 0;
     .btn-close {
         margin: 0;
     }
+}
+
+.modal-body{
+    padding-top: 0;
+    padding-bottom: .25rem;
 }
 
 .season-body{
@@ -401,14 +468,11 @@ footer{
     border-top-right-radius: 0;
 }
 
-.nav-tabs{
-    border: 0;
-    .nav-link, :not(.active) {
-        border-bottom: 1px solid $color-tertiary;
-    }
-    .nav-link, .active {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+.nav-pills{
+    .nav-link.active {
+        color: #d8cbcb;
+        background-color: #250C0C;
+        background-image:none;
     }
 }
 

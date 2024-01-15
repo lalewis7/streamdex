@@ -1,102 +1,67 @@
 # Streamfinder Bot
 
-What should a bot do?
+A NodeJS server running a puppeteer web crawler that collects data from IMDB, Rotten Tomatoes, and all the provided streaming platforms (Netflix, Hulu, Amazon Prime, etc.).
 
-- Take snapshots of imdb/rotten tomatoes for data
-- Create new titles
-- Update existing titles
-- Check availability on different streaming platforms
-- Check availability in different countries
+This part is uncomplete so currently all data was manually added through the admin website.
 
-### Webcrawler bot -> finds new titles / links
+## Workflow
 
-1. 
+### Step 1: Getting title links
 
+- Method 1: Using the search page
+   - Iterate over a table of movie/show names and search using the IMDb and RT search pages.
+   - Add all links found on the page to the links table.
+   - Searched pages are then marked in the name table.
+- Method 2: Crawler page
+   - Check the home, new, popular page every hour for new additions.
 
-### Snapshot bot -> collects basic info (rel_date, name, runtime)
+### Step 2: Snapshot the link task
 
-1. Take snapshot and save with time
-2. If title does not yet exist put in POST request
-3. If title does exist check if snapshot is different then last snapshot, if so put in PUT request
+- Trigger 1: No snapshot exists for the link.
+- Trigger 2: The most recent snapshot is 1 month old.
 
-### Streaming serivce bot -> check streaming service links to see if title is available
+### Step 3: Push changes to snapshot
 
-1. If title contains link check link and update accordingly
-2. If title does not contain link search for it and add if found
+- Manually review and approve / deny by a moderator?
 
-### Cover image bot -> find useable cover images and upload them for later use
+## Major processes running
 
-**Automatically do above tasks**
+- Running instances of puppeteer
+   - How many instances are run at the same time and how are they assigned tasks?
+      - Use bot table I guess
+   - Separate RPC API for adding bots / removing
 
-What needs to be reviewed by moderators?
+- Adding tasks to instances / creating new tasks
+    1. Create task queue by looking for conditions above (triggers for snapshot).
+    2. When a bot has no current tasks assign one from the queue.
 
-1. Bot requests to create titles
-2. Bot requests to update titles
-3. Titles with incomplete data
-4. Error reports from users
+> Seperate RPC API for the bot commands
 
-## Tables
+## Bot RPC API
 
-- `snapshot(service, link, data, ver, time)`
-- `moderator-review()`
-- `bots(bot_id, description, process, vpn, status)`
-- `tasks(task_id, type, url, status, started, finished)`
-  - type -> imdb-snapshot, netflix-snapshot, netflix-us, netflix-ca
-  - status -> waiting, running, finished
-- `bot-requests(bot_id, url, method, body_data, status, reviewed_time)` => for making changes to the titles that are first reviewed by an admin/moderator.
+- https://trpc.io/
 
-All bots:
-- webcrawler for finding links
-- snapshot bot who takes snapshots of links
-- streaming service updater who connects through vpn
+- For running puppeteer instances as well.
 
-How to turn snapshots into title entries?
+- Add more concurrent running puppeteer instance
 
-- some sort of content review process with a real person
+## Title data
 
-**Tables**
+### Movie
 
-- `bots(bot_id, online, status)`
-- `snapshots(link_id, data, ver, time)`
-- `tasks(task_id, bot_id, type, url, status, started, finished)`
-  - status -> pending, running, finished, canceled
-- `dclinks(link_id, link)`
+- ID - not relevant
+- Title - *IMPORTANT!* | Streaming Services > RT > IMDb
+- Trailer - Less important -> manual
+- Description - *IMPORTANT!* | RT > Streaming Services > IMDb
+- Maturity Rating - *LESS IMPMORTANT!* |
 
-Task Types
-- Snapshot
-- Crawl link
-- Crawl link and add links
-- Sleep
-- Check availability of streaming service title
+In general pick RT or IMDb for the title, desc, maturity rating, and genres.
 
-Bot Queuer: responsible for queuing tasks for the bot to perform
+Availability for streaming services should use their own website (Netflix, Hulu, Disney+).
 
-- Connect different links to one title entry.
-- Take snapshots of websites
-- Find titles with missing data and update it with stuff found online
+RT and IMDb rating should come from their website.
 
-# API
+**IMPORTANT**
 
-- `/dc/bots`
-- `/dc/bots/:botId`
-- `/dc/bots/:botId/queue/:queueType`
-- `/dc/bots/:botId/tasks`
-- `/dc/tasks/:taskId`
-- `/dc/links`
-- `/dc/links/:linkId`
-- `/dc/links/:linkId/snapshots`
+Shows that release a new episode every week need to use the streaming service as the main source.
 
-How to generate tasks?
-
-How to find links?
-
-- crawler
-
-approval types ie. what can the bot/users request to do?
-
-- create new movie/show
-- edit movie/show
-- delete movie/show
-- upload image
-- edit image details
-- delete image

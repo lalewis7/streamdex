@@ -900,107 +900,111 @@ Gets the settings for the image.
 }
 ```
 
-## Get Bots
+## Get Bot Configuration
 
-`[GET] /bots ?query=imdbscraper&page=1&limit=20`
+`[GET] /bot`
 
-Get a list of bots.
-
-**Requires Authentication and Administrator Rights.**
-
-### Variables
-- query: a search query to search over any indexed fields.
-- page: the page number to respond with.
-- limit: the limit of results to show per page.
-
-### Response
-```json
-[
-    {
-        "id": "dji2o1d1dasd2",
-        "controller": "imdb.scraper.js",
-        "online": true,
-        "running": true,
-        "current_process": "Loading"
-    },
-    {
-        "id": "d1wadadwd11d1",
-        "controller": "imdb.spider.js",
-        "online": true,
-        "running": true,
-        "current_process": "Idle"
-    }
-]
-```
-
-## Create Bot
-
-`[POST] /bots`
-
-Create a bot.
-
-**Requires Authentication and Administrator Rights.**
-
-### Request Body
-```json
-{
-    "controller": "imdb.scraper.js",
-    "online": true,
-    "running": true,
-    "current_process": "Loading"
-}
-```
-
-## Get Bot
-
-`[GET] /bots/:botId`
-
-Get a bots info.
+Get the bot configuration.
 
 **Requires Authentication and Administrator Rights.**
 
 ## Response
 ```json
 {
-    "id": "dji2o1d1dasd2",
-    "controller": "imdb.scraper.js",
-    "online": true,
     "running": true,
-    "current_process": "Loading"
+    "threads": 8
 }
 ```
 
-## Edit Bot
+## Edit Bot Configuration
 
-`[PUT] /bots/:botId`
+`[PUT] /bot`
 
-Edit a bots info.
+Edit the bot configuration.
 
 **Requires Authentication and Administrator Rights.**
 
 ### Request Body
 ```json
 {
-    "controller": "imdb.scraper.js",
-    "online": true,
     "running": true,
-    "current_process": "Loading"
+    "threads": 8
 }
 ```
 
-## Delete a Bot
+## Get Queries
 
-`[DELETE] /bots/:botId`
+`[GET] /queries ?query=avatar&page=1&limit=20`
 
-Deletes a bot.
+Get list of queries.
+
+### Response
+```json
+[
+    {
+        "query": "avatar",
+        "last_checked": 21979837189312
+    },
+    {
+        "query": "avatar: the last airbender",
+        "last_checked": 378109382913801
+    }
+]
+```
+
+## Create a Query
+
+`[POST] /queries`
+
+Create a query
 
 **Requires Authentication and Administrator Rights.**
 
-## Get Bot Tasks
+### Request Body
+```json
+{
+    "query": "avatar"
+}
+```
 
-`[GET] /bots/:botId/tasks`
+## Get a Query
 
-Get bots tasks.
+`[GET] /queries/:query`
+
+Get a query.
+
+## Response
+```json
+{
+    "query": "avatar: the last airbender",
+    "last_checked": 378109382913801
+}
+```
+
+## Edit a Query
+
+`[PUT] /queries/:query`
+
+Edit a query.
+
+### Request Body
+```json
+{
+    "last_checked": 378109382913801
+}
+```
+
+## Delete a Query
+
+`[DELETE] /links/:query`
+
+Delete a query.
+
+## Get Tasks
+
+`[GET] /tasks`
+
+Get tasks.
 
 **Requires Authentication and Administrator Rights.**
 
@@ -1028,7 +1032,7 @@ Get bots tasks.
 
 ## Create a Task
 
-`[POST] /bots/:botId/tasks`
+`[POST] /tasks`
 
 Create a task
 
@@ -1125,7 +1129,7 @@ Create a link.
 
 `[GET] /links/:linkId`
 
-Get and individual link
+Get an individual link
 
 ## Response
 ```json

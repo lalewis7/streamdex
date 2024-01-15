@@ -16,7 +16,7 @@ class Browse extends React.Component {
 
     componentDidMount(){
         this.setState({status: 'loading'});
-        fetch(process.env.REACT_APP_API + 'pages/new')
+        fetch(process.env.REACT_APP_API + 'pages/browse')
             .then(res => res.ok ? res : Promise.reject())
             .then(res => res.json())
             .then((res) => {

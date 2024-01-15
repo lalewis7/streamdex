@@ -4,7 +4,9 @@ const movieController = require('../controllers/movie.js');
 const seasonController = require('../controllers/season.js');
 const episodeController = require('../controllers/episode.js');
 const listController = require('../controllers/list.js');
-const botController = require('../controllers/dc.bot.js');
+const queryController = require('../controllers/dc.queries.js');
+const snapshotController = require('../controllers/dc.snapshot.js');
+const searchController = require('../controllers/dc.searches.js');
 const taskController = require('../controllers/dc.task.js');
 const botLinkController = require('../controllers/dc.links.js');
 
@@ -48,8 +50,28 @@ function listExists(id){
         })
 }
 
-function botExists(id){
-    return botController.getBot(id)
+function queryExists(query){
+    return queryController.getQueries(query)
+        .then(res => {
+            // bot does not exist
+            if (res.length == 0)
+                return Promise.reject({http_msg: "Bot does not exist.", http_code: 404});
+            return res;
+        })
+}
+
+function snapshotExists(task_id){
+    return snapshotController.getSnapshot(task_id)
+        .then(res => {
+            // bot does not exist
+            if (res.length == 0)
+                return Promise.reject({http_msg: "Bot does not exist.", http_code: 404});
+            return res;
+        })
+}
+
+function searchExists(query, site){
+    return searchController.getSearch(query, site)
         .then(res => {
             // bot does not exist
             if (res.length == 0)
@@ -70,6 +92,16 @@ function taskExists(id){
 
 function botLinkExists(id){
     return botLinkController.getLink(id)
+        .then(res => {
+            // bot does not exist
+            if (res.length == 0)
+                return Promise.reject({http_msg: "Link does not exist.", http_code: 404});
+            return res;
+        })
+}
+
+function botLinkExistsByLink(link){
+    return botLinkController.getLinkByLink(link)
         .then(res => {
             // bot does not exist
             if (res.length == 0)
@@ -125,12 +157,15 @@ module.exports = {
     seasonExists,
     episodeExists,
     listExists,
-    botExists,
+    queryExists,
+    snapshotExists,
     taskExists,
     botLinkExists,
+    botLinkExistsByLink,
     titleIsMovie,
     isTitleMovie,
     titleIsShow,
     editModel,
-    dataMissingParameter
+    dataMissingParameter,
+    searchExists
 }

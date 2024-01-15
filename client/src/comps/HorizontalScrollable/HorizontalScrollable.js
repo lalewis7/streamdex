@@ -12,6 +12,10 @@ class HorizontalScrollable extends React.Component {
     constructor(props){
         super(props);
 
+        this.state = {
+            mouseOver: false
+        }
+
         this.scroll = React.createRef();
 
         this.navigate = this.navigate.bind(this);
@@ -63,12 +67,12 @@ class HorizontalScrollable extends React.Component {
         let fullWidth = body.scrollWidth;
         let viewportWidth = body.clientWidth;
 
-        if (scrollVal == 0 && prev)
+        if ((scrollVal == 0 && prev) || !this.state.mouseOver)
             prev.classList.add('d-none');
         else if (prev)
             prev.classList.remove('d-none');
         
-        if (Math.floor(scrollVal) == Math.floor(fullWidth-viewportWidth) && next)
+        if ((Math.floor(scrollVal) == Math.floor(fullWidth-viewportWidth) && next) || !this.state.mouseOver)
             next.classList.add('d-none');
         else if (next)
             next.classList.remove('d-none');
@@ -81,7 +85,7 @@ class HorizontalScrollable extends React.Component {
         const speed = (evt) => Math.floor(tot_time / (dist(evt) / step(evt)));
         const scroll = (dir, evt) => this.navigate(dir, speed(evt), dist(evt), step(evt));
         return <>
-            <div class="horizontal-scroll" ref={this.scroll}>
+            <div class="horizontal-scroll" ref={this.scroll} onMouseOver={() => {this.setState({mouseOver: true})}} onMouseLeave={() => {this.setState({mouseOver: false})}}>
                 <div class="horizontal-scroll-body">
                     <button type="button" class="horizontal-scroll-prev" onClick={evt => scroll('left', evt)}>
                         <SVG.CaretLeftFill w="1.2em" h="1.2em"/>

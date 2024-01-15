@@ -6,11 +6,19 @@ const {isAdmin, isAuthenticated} = require('../auth.js');
 const taskMethods = require('../model_functions/task.js');
 
 router.get('/', isAuthenticated, isAdmin, (req, res) => {
-    return res.sendStatus(405);
+    taskMethods.getTasks(req.query)
+        .then((tasks) => {
+            res.status(200).send(tasks);
+        })
+        .catch(util.handleResponseError(res));
 });
 
 router.post('/', isAuthenticated, isAdmin, (req, res) => {
-    return res.sendStatus(405);
+    taskMethods.createTask(req.body, {admin: req.user.admin})
+        .then(id => {
+            res.status(201).send(id);
+        })
+        .catch(util.handleResponseError(res));
 });
 
 router.put('/', isAuthenticated, isAdmin, (req, res) => {

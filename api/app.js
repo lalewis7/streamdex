@@ -20,8 +20,11 @@ const pageRouter = require('./routes/page.js');
 const botRouter = require('./routes/bot.js');
 const taskRouter = require('./routes/task.js');
 const linkRouter = require('./routes/link.js');
+const queryRouter = require('./routes/query.js');
+const snapshotRouter = require('./routes/snapshot.js');
 
 // middleware
+app.set('trust proxy', true);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
@@ -41,9 +44,11 @@ app.use('/episodes', episodesRouter);
 app.use('/images', imageRouter);
 app.use('/lists', listRouter);
 app.use('/pages', pageRouter);
-app.use('/bots', botRouter);
+app.use('/bot', botRouter);
 app.use('/tasks', taskRouter);
 app.use('/links', linkRouter);
+app.use('/queries', queryRouter);
+app.use('/snapshots', snapshotRouter);
 
 // start server
 app.listen(config.port, () => {

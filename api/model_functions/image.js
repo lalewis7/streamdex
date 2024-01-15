@@ -9,9 +9,12 @@ const fs = require('fs-extra');       //File System - for file manipulation
 const multer  = require('multer');
 const path = require('path');
 
+const images_path = process.env.STREAMDEX_IMAGES || './images/';
+const images_path_back = process.env.STREAMDEX_IMAGES || __dirname + '/../images/';
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './public/images/');
+        cb(null, images_path);
     },
 
     filename: function (req, file, cb) {
@@ -56,7 +59,7 @@ function getImage(id, requester){
             image = new Image(images[0]);
             if (!image.get().public && !requester.admin)
                 return Promise.reject({http_msg: "Access denied.", http_code: 403});
-            return path.join(__dirname, "../public/images/", image.get().filename);
+            return path.join(images_path_back, image.get().filename);
         })
 }
 
@@ -102,7 +105,7 @@ function deleteImage(id){
         })
         .then(() =>
             new Promise((res, rej) => {
-                fs.unlink("./public/images/"+image.get().filename, (err) => {
+                fs.unlink(images_path+image.get().filename, (err) => {
                     if (err) rej(err);
                     res();
                 });

@@ -43,7 +43,7 @@ class IMDB extends Instruction {
             runtimeText.map(len => {
                 if (len.length >= 2 && len.charAt(len.length - 1) === 'h')
                     contents.runtime += Number.parseInt(len.substring(0, len.length - 1)) * 60;
-                else if (len.length >= 4 && len.substring(len.length - 3) === 'min')
+                else if (len.length >= 2 && len.substring(len.length - 1) === 'm')
                     contents.runtime += Number.parseInt(len.substring(0, len.length - 3));
             })
         } catch(err){

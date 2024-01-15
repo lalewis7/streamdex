@@ -15,6 +15,7 @@ router.get('/', isAuthenticated, isAdmin, (req, res) => {
 });
 
 router.post('/', isAuthenticated, isAdmin, (req, res) => {
+    console.log(req.body);
     linkMethods.createLink(req.body, {admin: req.user.admin})
         .then((id) => {
             res.status(201).send(id);

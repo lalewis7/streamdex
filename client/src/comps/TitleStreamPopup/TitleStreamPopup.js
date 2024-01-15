@@ -33,7 +33,8 @@ class TitleStreamPopup extends React.Component {
                                 </div>
                                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <a type="button" href={this.props.stream.link} class="btn btn-primary btn-lg text-head border-0 bg-highlight3 submit-btn">
+                            <p>Watch {this.props.title} now on {this.props.stream.title}.</p>
+                            <a type="button" href={this.props.stream.link} class="btn btn-secondary btn-lg text-head border-0 bg-highlight3 submit-btn">
                                 <SVG.PlayCircle w={'2rem'} h={'2rem'} />
                             </a>
                         </div>

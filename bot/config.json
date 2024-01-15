@@ -1,19 +1,22 @@
 {
-    "API": "http://localhost:9000/",
-    "API_USERNAME": "bot",
-    "API_PASSWORD": "password123",
+    "API": "http://localhost:9000",
+    "API_USERNAME": "streamdexbot",
+    "API_PASSWORD": "cORL$uN&30y5",
     "IMDB": {
-        "title": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.TitlePage__StyledPageBackground-wzlr49-0.dDUGgO > section > div:nth-child(4) > section > section > div.TitleBlock__Container-sc-1nlhx7j-0.hglRHk > div.TitleBlock__TitleContainer-sc-1nlhx7j-1.jxsVNt > h1",
-        "maturity_rating": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.TitlePage__StyledPageBackground-wzlr49-0.dDUGgO > section > div:nth-child(4) > section > section > div.TitleBlock__Container-sc-1nlhx7j-0.hglRHk > div.TitleBlock__TitleContainer-sc-1nlhx7j-1.jxsVNt > div.TitleBlock__TitleMetaDataContainer-sc-1nlhx7j-2.hWHMKr > ul > li:nth-child(2) > a",
-        "runtime": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.TitlePage__StyledPageBackground-wzlr49-0.dDUGgO > section > div:nth-child(4) > section > section > div.TitleBlock__Container-sc-1nlhx7j-0.hglRHk > div.TitleBlock__TitleContainer-sc-1nlhx7j-1.jxsVNt > div.TitleBlock__TitleMetaDataContainer-sc-1nlhx7j-2.hWHMKr > ul > li:nth-child(3)",
-        "rating": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.TitlePage__StyledPageBackground-wzlr49-0.dDUGgO > section > div:nth-child(4) > section > section > div.TitleBlock__Container-sc-1nlhx7j-0.hglRHk > div.RatingBar__RatingContainer-sc-85l9wd-0.hNqCJh.TitleBlock__HideableRatingBar-sc-1nlhx7j-4.bhTVMj > div > div:nth-child(1) > a > div > div > div.AggregateRatingButton__ContentWrap-sc-1ll29m0-0.hmJkIS > div.AggregateRatingButton__Rating-sc-1ll29m0-2.bmbYRW > span.AggregateRatingButton__RatingScore-sc-1ll29m0-1.iTLWoV",
-        "rel_date": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.TitlePage__StyledPageBackground-wzlr49-0.dDUGgO > div > section > div > div.TitleMainBelowTheFoldGroup__TitleMainPrimaryGroup-sc-1vpywau-1.btXiqv.ipc-page-grid__item.ipc-page-grid__item--span-2 > section:nth-child(44) > div.styles__MetaDataContainer-sc-12uhu9s-0.cgqHBf > ul > li:nth-child(1) > div > ul > li > a",        
-        "genres_list": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.TitlePage__StyledPageBackground-wzlr49-0.dDUGgO > div > section > div > div.TitleMainBelowTheFoldGroup__TitleMainPrimaryGroup-sc-1vpywau-1.btXiqv.ipc-page-grid__item.ipc-page-grid__item--span-2 > section:nth-child(31) > div.Storyline__StorylineWrapper-sc-1b58ttw-0.iywpty > ul.ipc-metadata-list.ipc-metadata-list--dividers-all.Storyline__StorylineMetaDataList-sc-1b58ttw-1.esngIX.ipc-metadata-list--base > li:nth-child(2) > div > ul",
-        "genre": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.TitlePage__StyledPageBackground-wzlr49-0.dDUGgO > div > section > div > div.TitleMainBelowTheFoldGroup__TitleMainPrimaryGroup-sc-1vpywau-1.btXiqv.ipc-page-grid__item.ipc-page-grid__item--span-2 > section:nth-child(31) > div.Storyline__StorylineWrapper-sc-1b58ttw-0.iywpty > ul.ipc-metadata-list.ipc-metadata-list--dividers-all.Storyline__StorylineMetaDataList-sc-1b58ttw-1.esngIX.ipc-metadata-list--base > li:nth-child(2) > div > ul > li > a",
-        "description": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.TitlePage__StyledPageBackground-wzlr49-0.dDUGgO > div > section > div > div.TitleMainBelowTheFoldGroup__TitleMainPrimaryGroup-sc-1vpywau-1.btXiqv.ipc-page-grid__item.ipc-page-grid__item--span-2 > section:nth-child(31) > div.Storyline__StorylineWrapper-sc-1b58ttw-0.iywpty > div.ipc-overflowText.ipc-overflowText--pageSection.ipc-overflowText--height-long.ipc-overflowText--long.ipc-overflowText--base > div.ipc-html-content.ipc-html-content--base > div"
+        "title": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-9b716f3b-0.hWwhTB > section > div:nth-child(4) > section > section > div.sc-80d4314-0.fjPRnj > div.sc-80d4314-1.fbQftq > h1",
+        "maturity_rating": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-9b716f3b-0.hWwhTB > section > div:nth-child(4) > section > section > div.sc-80d4314-0.fjPRnj > div.sc-80d4314-1.fbQftq > div > ul > li:nth-child(2) > a",
+        "runtime": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-9b716f3b-0.hWwhTB > section > div:nth-child(4) > section > section > div.sc-80d4314-0.fjPRnj > div.sc-80d4314-1.fbQftq > div > ul > li:nth-child(3)",
+        "rating": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-9b716f3b-0.hWwhTB > section > div:nth-child(4) > section > section > div.sc-80d4314-0.fjPRnj > div.sc-db8c1937-0.eGmDjE.sc-80d4314-3.iBtAhY > div > div:nth-child(1) > a > div > div > div.sc-7ab21ed2-0.fAePGh > div.sc-7ab21ed2-2.kYEdvH > span.sc-7ab21ed2-1.jGRxWM",
+        "rel_date": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-9b716f3b-0.hWwhTB > section > div:nth-child(4) > section > section > div.sc-80d4314-0.fjPRnj > div.sc-80d4314-1.fbQftq > div > ul > li:nth-child(1) > a",        
+        "genres_list": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-9b716f3b-0.hWwhTB > section > div:nth-child(4) > section > section > div.sc-83544c38-2.dxVPLZ > div.sc-83544c38-10.bHJsUC > div.sc-83544c38-4.fanXuH > div.sc-16ede01-9.bbiYSi.sc-83544c38-11.bFnVvb > div.ipc-chip-list--baseAlt.ipc-chip-list.sc-16ede01-5.ggbGKe > div.ipc-chip-list__scroller",
+        "genre": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-9b716f3b-0.hWwhTB > section > div:nth-child(4) > section > section > div.sc-83544c38-2.dxVPLZ > div.sc-83544c38-10.bHJsUC > div.sc-83544c38-4.fanXuH > div.sc-16ede01-9.bbiYSi.sc-83544c38-11.bFnVvb > div.ipc-chip-list--baseAlt.ipc-chip-list.sc-16ede01-5.ggbGKe > div.ipc-chip-list__scroller > a > span",
+        "description": "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-9b716f3b-0.hWwhTB > section > div:nth-child(4) > section > section > div.sc-83544c38-2.dxVPLZ > div.sc-83544c38-10.bHJsUC > div.sc-83544c38-4.fanXuH > div.sc-16ede01-9.bbiYSi.sc-83544c38-11.bFnVvb > div.sc-16ede01-7.hrgVKw > span.sc-16ede01-1.kgphFu"
     },
     "RottenTomatoes": {
         "title": "head > meta[property='og:title']",
+        "movie_section": "#mainColumn > section.panel.panel-rt.panel-box.movie_info.media",
+        "movie_info_list": "#mainColumn > section.panel.panel-rt.panel-box.movie_info.media > div > div > ul",
+        "movie_info_item": "#mainColumn > section.panel.panel-rt.panel-box.movie_info.media > div > div > ul > li",
         "maturity_rating": "#mainColumn > section.panel.panel-rt.panel-box.movie_info.media > div > div > ul > li:nth-child(1) > div.meta-value",
         "runtime": "#mainColumn > section.panel.panel-rt.panel-box.movie_info.media > div > div > ul > li:nth-child(10) > div.meta-value > time",
         "rating_1": "#topSection > div.thumbnail-scoreboard-wrap > score-board",
@@ -21,6 +24,15 @@
         "rating_3": "div > span.percentage",
         "rel_date": "#mainColumn > section.panel.panel-rt.panel-box.movie_info.media > div > div > ul > li:nth-child(7) > div.meta-value > time",
         "genres": "#mainColumn > section.panel.panel-rt.panel-box.movie_info.media > div > div > ul > li:nth-child(2) > div.meta-value.genre",
-        "description": "#movieSynopsis"
+        "description": "#movieSynopsis",
+        "seasons_section": "#seasonList",
+        "season_link": "#seasonList > div > a",
+        "show_info_list": "#mainColumn > div.episode-list-wrap > section.panel.panel-rt.panel-box.movie_info > div > div > ul",
+        "show_info_item": "#mainColumn > div.episode-list-wrap > section.panel.panel-rt.panel-box.movie_info > div > div > ul > li",
+        "episode_link": "#episode-list-root > div > div > div > div > a",
+        "episode_title": "#topSection > section > div.mop-ratings-wrap.score_panel.js-mop-ratings-wrap > h1",
+        "episode_description": "#movieSynopsis",
+        "episode_info_list": "#mainColumn > section:nth-child(4) > div > ul",
+        "episode_info_item": "#mainColumn > section:nth-child(4) > div > ul > li"
     }
 }

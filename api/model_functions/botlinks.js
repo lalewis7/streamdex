@@ -1,5 +1,6 @@
 // controllers
 const linkController = require('../controllers/dc.links.js');
+const botLinkController = require('../controllers/dc.links.js');
 
 // models
 const BotLinks = require('../models/botlinks.js');
@@ -9,8 +10,14 @@ const {botLinkExists, dataMissingParameter, editModel} = require('./common.js');
 
 function getLinks(query){
     let page = query.p === undefined ? 0 : query.p;
+    let need_snapshot = query.need_snapshot ? false : query.need_snapshot;
     let links = [];
-    return linkController.getLinks(page)
+    let controller;
+    if (need_snapshot)
+        controller = linkController.getLinksThatNeedSnapshot(page);
+    else
+        controller = linkController.getLinks(page);
+    return controller
         .then(dblinks => {
             let initPromises = [];
             for (let linkData of dblinks){
@@ -30,13 +37,25 @@ function getLinks(query){
 }
 
 function createLink(data, requester){
-    let l = new BotLinks();
-    return editModel(l, data, requester)
-        .then(() => {
-            return l.insert();
-        })
-        .then(() => {
-            return l.get().id;
+    // ensure all parameters exist
+    let param;
+    if (param = dataMissingParameter(data, ["link"]))
+        return Promise.reject("Missing " + param + " parameter.");
+
+    return botLinkController.getLinkByLink(data.link)
+        .then(res => {
+            if (res.length > 0){
+                let bl = new BotLinks(res[0]);
+                return bl.init().then(() => bl.get().id);
+            }
+            let l = new BotLinks();
+            return editModel(l, data, requester)
+                .then(() => {
+                    return l.insert();
+                })
+                .then(() => {
+                    return l.get().id;
+                })
         })
 }
 
