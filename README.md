@@ -1,7 +1,7 @@
 # **Streamdex**
 
 <p align="center">
-<a href="https://streamdex.net"><img width="100" height="100" src="https://streamdex.net/streamdex-icon.svg"></a>
+<a href="https://streamdex.net"><img width="100" height="100" src="https://raw.githubusercontent.com/lalewis7/streamdex/main/client/public/streamdex-icon.svg"></a>
 </p>
 
 ## **Objectives**
